@@ -1,0 +1,124 @@
+{
+  "title": "Reading the sale_items table",
+  "tags": [
+    "select",
+    "columns"
+  ],
+  "difficulty": 1,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Every column with *",
+      "prompt": "The star ( * ) means 'every column'.\nHere we open the whole sale_items table and take every column it has.",
+      "task": "Try typing: SELECT * FROM sale_items;",
+      "hints": [
+        "Start with SELECT *.",
+        "Then FROM sale_items.",
+        "Finish with a semicolon ;",
+        "Write: SELECT * FROM sale_items;"
+      ],
+      "expected_sql": "SELECT * FROM sale_items;",
+      "memory_trick": "* = all the columns, in table order."
+    },
+    {
+      "type": "type",
+      "title": "Read the id column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the id column from the sale_items table.",
+      "task": "Try typing: SELECT id FROM sale_items;",
+      "hints": [
+        "Start with SELECT id.",
+        "The table is sale_items.",
+        "FROM names the table you read from.",
+        "Write: SELECT id FROM sale_items;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the sale_id column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the sale_id column from the sale_items table.",
+      "task": "Try typing: SELECT sale_id FROM sale_items;",
+      "hints": [
+        "Start with SELECT sale_id.",
+        "The table is sale_items.",
+        "FROM names the table you read from.",
+        "Write: SELECT sale_id FROM sale_items;"
+      ],
+      "expected_sql": "SELECT sale_id FROM sale_items;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the product_id column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the product_id column from the sale_items table.",
+      "task": "Try typing: SELECT product_id FROM sale_items;",
+      "hints": [
+        "Start with SELECT product_id.",
+        "The table is sale_items.",
+        "FROM names the table you read from.",
+        "Write: SELECT product_id FROM sale_items;"
+      ],
+      "expected_sql": "SELECT product_id FROM sale_items;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the quantity column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the quantity column from the sale_items table.",
+      "task": "Try typing: SELECT quantity FROM sale_items;",
+      "hints": [
+        "Start with SELECT quantity.",
+        "The table is sale_items.",
+        "FROM names the table you read from.",
+        "Write: SELECT quantity FROM sale_items;"
+      ],
+      "expected_sql": "SELECT quantity FROM sale_items;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the unit_price column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the unit_price column from the sale_items table.",
+      "task": "Try typing: SELECT unit_price FROM sale_items;",
+      "hints": [
+        "Start with SELECT unit_price.",
+        "The table is sale_items.",
+        "FROM names the table you read from.",
+        "Write: SELECT unit_price FROM sale_items;"
+      ],
+      "expected_sql": "SELECT unit_price FROM sale_items;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Two columns at once",
+      "prompt": "List columns after SELECT, separated by commas.\nHere we ask for id and sale_id together.",
+      "task": "Try typing: SELECT id, sale_id FROM sale_items;",
+      "hints": [
+        "Start with SELECT id,",
+        "Add the second column sale_id.",
+        "FROM sale_items.",
+        "Write: SELECT id, sale_id FROM sale_items;"
+      ],
+      "expected_sql": "SELECT id, sale_id FROM sale_items;",
+      "memory_trick": "A comma says 'and also show me this'."
+    },
+    {
+      "type": "type",
+      "title": "Three columns",
+      "prompt": "More columns, same idea - just keep adding commas.",
+      "task": "Try typing: SELECT id, sale_id, product_id FROM sale_items;",
+      "hints": [
+        "Start with SELECT id, sale_id,",
+        "Add the third column product_id.",
+        "Two commas in total.",
+        "Write: SELECT id, sale_id, product_id FROM sale_items;"
+      ],
+      "expected_sql": "SELECT id, sale_id, product_id FROM sale_items;",
+      "memory_trick": "Three columns need two commas."
+    }
+  ],
+  "id": "L142",
+  "order": 142
+}

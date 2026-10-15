@@ -1,0 +1,109 @@
+{
+  "id": "L12",
+  "order": 12,
+  "difficulty": 3,
+  "tags": [
+    "update",
+    "write"
+  ],
+  "title": "UPDATE: changing what's already there",
+  "steps": [
+    {
+      "type": "type",
+      "title": "Self-service: top up stock",
+      "prompt": "UPDATE rewrites values in EXISTING rows - like topping up the honey jar.\nSET stock = stock + 10 says 'the new stock is the old stock plus ten'.",
+      "task": "Try typing: UPDATE products SET stock = stock + 10 WHERE id = 1;",
+      "hints": [
+        "Start with UPDATE products.",
+        "SET names the column to change.",
+        "stock + 10 adds ten to the old value.",
+        "Write: UPDATE products SET stock = stock + 10 WHERE id = 1;"
+      ],
+      "expected_sql": "UPDATE products SET stock = stock + 10 WHERE id = 1;",
+      "memory_trick": "SET = 'change this column to…'",
+      "check": {
+        "require": [
+          "update"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "A 10% price rise",
+      "prompt": "Sometimes a whole category gets a price rise.\nUPDATE … SET price = price * 1.1 … hits every matching row at once.",
+      "task": "Try typing: UPDATE products SET price = price * 1.1 WHERE category_id = 5;",
+      "hints": [
+        "UPDATE products SET …",
+        "Multiply the old price: price * 1.1.",
+        "Only category 5 should change.",
+        "Write: UPDATE products SET price = price * 1.1 WHERE category_id = 5;"
+      ],
+      "expected_sql": "UPDATE products SET price = price * 1.1 WHERE category_id = 5;",
+      "memory_trick": "One UPDATE, many rows - the WHERE decides how many.",
+      "check": {
+        "require": [
+          "update"
+        ]
+      }
+    },
+    {
+      "type": "fill",
+      "title": "Fix one price",
+      "prompt": "One product has a wrong price. Fill the SET clause:\nUPDATE products SET ___ WHERE id = 2;",
+      "task": "Set the price of product id 2 to 24.99.",
+      "hints": [
+        "The change is about money.",
+        "The column is price.",
+        "The new value is 24.99.",
+        "Fill: price = 24.99"
+      ],
+      "expected_sql": "UPDATE products SET price = 24.99 WHERE id = 2;",
+      "seed_sql": "UPDATE products SET ___ WHERE id = 2;",
+      "memory_trick": "SET column = new value - that's the whole medicine."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the forgetful UPDATE",
+      "prompt": "If someone writes UPDATE products SET stock = 0; (no WHERE at all)…\nWhat happens to the 40 rows?",
+      "task": "How many products end up with zero stock?",
+      "check": {
+        "answer": [
+          "40",
+          "all 40",
+          "40 rows",
+          "every row",
+          "all of them"
+        ]
+      },
+      "hints": [
+        "No WHERE means no filtering.",
+        "The UPDATE touches every row it can.",
+        "There are 40 products.",
+        "Answer: all 40."
+      ],
+      "memory_trick": "No WHERE = every row. That's why safety warnings exist."
+    },
+    {
+      "type": "answer",
+      "title": "The safety habit",
+      "prompt": "You'll see a friendly warning before UPDATE/DELETE that touches many rows.\nIt's not a scolding - it's a check-in, because the practice shop is YOURS to test.\nReset (the ↺ button) always brings everything back.",
+      "task": "What does the ↺ Reset button do?",
+      "check": {
+        "answer": [
+          "restores the original data",
+          "puts everything back",
+          "restores the original shop",
+          "undoes my changes",
+          "resets the database"
+        ]
+      },
+      "hints": [
+        "Look at the little arrow button near the output.",
+        "It looks like the redo/refresh symbol.",
+        "It brings back the shop you started with.",
+        "Answer: restores the original data."
+      ],
+      "memory_trick": "Reset = always your safety net."
+    }
+  ]
+}

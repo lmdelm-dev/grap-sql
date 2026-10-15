@@ -1,0 +1,798 @@
+{
+  "title": "Filtering the sale_items table by numbers · part 67",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Count rows product_id < 29",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id < 29;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id < 29.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id < 29;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id < 29;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id < 29",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id < 29 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id < 29.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id < 29 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id < 29 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id <= 29",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is at most 29.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id <= 29;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id <= 29.",
+        "Write: SELECT id FROM sale_items WHERE product_id <= 29;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id <= 29;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id <= 29",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id <= 29;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id <= 29.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id <= 29;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id <= 29;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id <= 29",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id <= 29 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id <= 29.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id <= 29 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id <= 29 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id = 29",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is exactly 29.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id = 29;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id = 29.",
+        "Write: SELECT id FROM sale_items WHERE product_id = 29;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id = 29;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id = 29",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id = 29;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id = 29.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id = 29;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id = 29;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id = 29",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id = 29 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id = 29.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id = 29 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id = 29 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id != 29",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is not equal to 29.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id != 29;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id != 29.",
+        "Write: SELECT id FROM sale_items WHERE product_id != 29;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id != 29;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id != 29",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id != 29;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id != 29.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id != 29;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id != 29;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id != 29",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id != 29 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id != 29.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id != 29 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id != 29 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id > 30",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is bigger than 30.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id > 30;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id > 30.",
+        "Write: SELECT id FROM sale_items WHERE product_id > 30;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id > 30;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id > 30",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id > 30;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id > 30.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id > 30;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id > 30;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id > 30",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id > 30 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id > 30.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id > 30 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id > 30 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id >= 30",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is at least 30.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id >= 30;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id >= 30.",
+        "Write: SELECT id FROM sale_items WHERE product_id >= 30;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id >= 30;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id >= 30",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id >= 30;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id >= 30.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id >= 30;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id >= 30;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id >= 30",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id >= 30 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id >= 30.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id >= 30 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id >= 30 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id < 30",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is smaller than 30.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id < 30;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id < 30.",
+        "Write: SELECT id FROM sale_items WHERE product_id < 30;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id < 30;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id < 30",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id < 30;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id < 30.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id < 30;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id < 30;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id < 30",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id < 30 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id < 30.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id < 30 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id < 30 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id <= 30",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is at most 30.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id <= 30;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id <= 30.",
+        "Write: SELECT id FROM sale_items WHERE product_id <= 30;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id <= 30;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id <= 30",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id <= 30;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id <= 30.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id <= 30;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id <= 30;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id <= 30",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id <= 30 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id <= 30.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id <= 30 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id <= 30 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id = 30",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is exactly 30.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id = 30;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id = 30.",
+        "Write: SELECT id FROM sale_items WHERE product_id = 30;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id = 30;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id = 30",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id = 30;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id = 30.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id = 30;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id = 30;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id = 30",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id = 30 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id = 30.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id = 30 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id = 30 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id != 30",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is not equal to 30.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id != 30;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id != 30.",
+        "Write: SELECT id FROM sale_items WHERE product_id != 30;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id != 30;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id != 30",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id != 30;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id != 30.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id != 30;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id != 30;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id != 30",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id != 30 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id != 30.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id != 30 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id != 30 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id > 31",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is bigger than 31.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id > 31;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id > 31.",
+        "Write: SELECT id FROM sale_items WHERE product_id > 31;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id > 31;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id > 31",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id > 31;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id > 31.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id > 31;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id > 31;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id > 31",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id > 31 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id > 31.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id > 31 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id > 31 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id >= 31",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is at least 31.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id >= 31;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id >= 31.",
+        "Write: SELECT id FROM sale_items WHERE product_id >= 31;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id >= 31;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id >= 31",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id >= 31;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id >= 31.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id >= 31;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id >= 31;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id >= 31",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id >= 31 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id >= 31.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id >= 31 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id >= 31 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id < 31",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is smaller than 31.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id < 31;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id < 31.",
+        "Write: SELECT id FROM sale_items WHERE product_id < 31;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id < 31;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id < 31",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id < 31;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id < 31.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id < 31;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id < 31;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: product_id < 31",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id < 31 ORDER BY product_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id < 31.",
+        "Add ORDER BY product_id LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE product_id < 31 ORDER BY product_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id < 31 ORDER BY product_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id <= 31",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where product_id is at most 31.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id <= 31;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is product_id <= 31.",
+        "Write: SELECT id FROM sale_items WHERE product_id <= 31;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id <= 31;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows product_id <= 31",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE product_id <= 31;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE product_id <= 31.",
+        "Write: SELECT count(*) FROM sale_items WHERE product_id <= 31;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE product_id <= 31;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L209",
+  "order": 209
+}

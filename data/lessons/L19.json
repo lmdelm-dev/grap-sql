@@ -1,0 +1,81 @@
+{
+  "id": "L19",
+  "order": 19,
+  "difficulty": 4,
+  "tags": [
+    "transaction",
+    "rollback"
+  ],
+  "title": "Transactions: an undo button for the shop",
+  "steps": [
+    {
+      "type": "type",
+      "title": "BEGIN, break, ROLLBACK",
+      "prompt": "A TRANSACTION is a group of steps that either ALL happen, or NONE do - like baking: all or nothing.\nBEGIN opens a transaction. ROLLBACK rewinds everything since BEGIN.",
+      "task": "Try typing the rewind demo:\nBEGIN; UPDATE products SET stock = 0; ROLLBACK; SELECT count(*) FROM products WHERE stock = 0;",
+      "hints": [
+        "Four statements, one after another.",
+        "BEGIN opens the transaction.",
+        "The UPDATE sneaks in a disaster, ROLLBACK undoes it.",
+        "The final SELECT shows zero damaged rows."
+      ],
+      "expected_sql": "BEGIN; UPDATE products SET stock = 0; ROLLBACK; SELECT count(*) FROM products WHERE stock = 0;",
+      "memory_trick": "ROLLBACK = 'rewind to the last checkpoint'."
+    },
+    {
+      "type": "answer",
+      "title": "ROLLBACK guessed?",
+      "prompt": "Run this: BEGIN; UPDATE products SET stock = 0; ROLLBACK; SELECT count(*) FROM products WHERE stock = 0;\nThe final SELECT returns 7, not 40 - because stock = 0 already existed for seven products.\nROLLBACK undid the mass change. Without ROLLBACK, all 40 products would have been zeroed.",
+      "task": "What undoes everything done since BEGIN?",
+      "check": {
+        "answer": [
+          "rollback",
+          "rollback;",
+          "the rollback command"
+        ]
+      },
+      "hints": [
+        "It means 'rewind'.",
+        "It comes after a disaster.",
+        "It's written as one word after the broken UPDATE.",
+        "Answer: ROLLBACK."
+      ],
+      "memory_trick": "BEGIN…ROLLBACK = your safety rewind."
+    },
+    {
+      "type": "type",
+      "title": "SAVEPOINT: a midway bookmark",
+      "prompt": "SAVEPOINT drops a bookmark; ROLLBACK TO jumps back to it.\nTry: mark the clean state, make a mess, rewind to the mark.",
+      "task": "Try typing: SAVEPOINT before_tweak; UPDATE products SET price = price * 2 WHERE id = 1; ROLLBACK TO before_tweak; SELECT price FROM products WHERE id = 1;",
+      "hints": [
+        "SAVEPOINT before_tweak marks the clean state.",
+        "The UPDATE doubles product 1's price.",
+        "ROLLBACK TO before_tweak jumps back.",
+        "The SELECT confirms the original price returned."
+      ],
+      "expected_sql": "SAVEPOINT before_tweak; UPDATE products SET price = price * 2 WHERE id = 1; ROLLBACK TO before_tweak; SELECT price FROM products WHERE id = 1;",
+      "memory_trick": "SAVEPOINT = bookmark, ROLLBACK TO = jump back to it."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the final price",
+      "prompt": "Run this and watch the price go out and come back:\nSAVEPOINT before_tweak; UPDATE products SET price = price * 2 WHERE id = 1; ROLLBACK TO before_tweak; SELECT price FROM products WHERE id = 1;\nThe doubling is undone by ROLLBACK TO, so the final SELECT shows the original price.",
+      "task": "What price shows at the end?",
+      "check": {
+        "answer": [
+          "45.63",
+          "45.63 mad",
+          "the original price",
+          "45.63 mad "
+        ]
+      },
+      "hints": [
+        "The ROLLBACK TO undid the doubling.",
+        "Product 1 started at 45.63.",
+        "The rewind restores exactly that.",
+        "Answer: 45.63."
+      ],
+      "memory_trick": "Rewinds are exact: the state returns, price and all."
+    }
+  ]
+}

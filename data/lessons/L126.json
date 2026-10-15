@@ -1,0 +1,772 @@
+{
+  "title": "Grouping the products table",
+  "tags": [
+    "group by",
+    "having"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, count(*).",
+        "FROM products.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT name, sum(id) FROM products GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, sum(id).",
+        "FROM products.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, sum(id) FROM products GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, sum(id) FROM products GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT name, avg(id) FROM products GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, avg(id).",
+        "FROM products.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, avg(id) FROM products GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, avg(id) FROM products GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen sum(category_id) works on each pile.",
+      "task": "Try typing: SELECT name, sum(category_id) FROM products GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, sum(category_id).",
+        "FROM products.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, sum(category_id) FROM products GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, sum(category_id) FROM products GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen avg(category_id) works on each pile.",
+      "task": "Try typing: SELECT name, avg(category_id) FROM products GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, avg(category_id).",
+        "FROM products.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, avg(category_id) FROM products GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, avg(category_id) FROM products GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen sum(supplier_id) works on each pile.",
+      "task": "Try typing: SELECT name, sum(supplier_id) FROM products GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, sum(supplier_id).",
+        "FROM products.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, sum(supplier_id) FROM products GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, sum(supplier_id) FROM products GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen avg(supplier_id) works on each pile.",
+      "task": "Try typing: SELECT name, avg(supplier_id) FROM products GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, avg(supplier_id).",
+        "FROM products.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, avg(supplier_id) FROM products GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, avg(supplier_id) FROM products GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Amlou Spread 200g)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Amlou Spread 200g';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Amlou Spread 200g'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Amlou Spread 200g';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Amlou Spread 200g';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Argan Butter 250g)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Butter 250g';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Argan Butter 250g'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Butter 250g';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Butter 250g';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Argan Oil Cosmetic 100ml)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Oil Cosmetic 100ml';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Argan Oil Cosmetic 100ml'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Oil Cosmetic 100ml';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Oil Cosmetic 100ml';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Argan Oil Culinary 500ml)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Oil Culinary 500ml';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Argan Oil Culinary 500ml'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Oil Culinary 500ml';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Oil Culinary 500ml';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Argan Soap Bar)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Soap Bar';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Argan Soap Bar'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Soap Bar';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Argan Soap Bar';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Babouches Slippers)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Babouches Slippers';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Babouches Slippers'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Babouches Slippers';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Babouches Slippers';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Beni Ourain Rug 200x150)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Beni Ourain Rug 200x150';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Beni Ourain Rug 200x150'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Beni Ourain Rug 200x150';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Beni Ourain Rug 200x150';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Black Pepper Whole 100g)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Black Pepper Whole 100g';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Black Pepper Whole 100g'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Black Pepper Whole 100g';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Black Pepper Whole 100g';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Brass Lantern Large)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Brass Lantern Large';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Brass Lantern Large'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Brass Lantern Large';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Brass Lantern Large';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Ceramic Bowl Set (4))",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Ceramic Bowl Set (4)';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Ceramic Bowl Set (4)'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Ceramic Bowl Set (4)';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Ceramic Bowl Set (4)';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Cinnamon Sticks 100g)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Cinnamon Sticks 100g';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Cinnamon Sticks 100g'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Cinnamon Sticks 100g';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Cinnamon Sticks 100g';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Copper Lantern Small)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Copper Lantern Small';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Copper Lantern Small'.",
+        "Write: SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Copper Lantern Small';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM products GROUP BY name HAVING name = 'Copper Lantern Small';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT per category_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same category_id.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, count(*).",
+        "FROM products.",
+        "Finish with GROUP BY category_id.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per category_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same category_id.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT category_id, sum(id) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, sum(id).",
+        "FROM products.",
+        "Finish with GROUP BY category_id.",
+        "Write: SELECT category_id, sum(id) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, sum(id) FROM products GROUP BY category_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per category_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same category_id.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT category_id, avg(id) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, avg(id).",
+        "FROM products.",
+        "Finish with GROUP BY category_id.",
+        "Write: SELECT category_id, avg(id) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, avg(id) FROM products GROUP BY category_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per category_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same category_id.\nThen sum(category_id) works on each pile.",
+      "task": "Try typing: SELECT category_id, sum(category_id) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, sum(category_id).",
+        "FROM products.",
+        "Finish with GROUP BY category_id.",
+        "Write: SELECT category_id, sum(category_id) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, sum(category_id) FROM products GROUP BY category_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per category_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same category_id.\nThen avg(category_id) works on each pile.",
+      "task": "Try typing: SELECT category_id, avg(category_id) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, avg(category_id).",
+        "FROM products.",
+        "Finish with GROUP BY category_id.",
+        "Write: SELECT category_id, avg(category_id) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, avg(category_id) FROM products GROUP BY category_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per category_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same category_id.\nThen sum(supplier_id) works on each pile.",
+      "task": "Try typing: SELECT category_id, sum(supplier_id) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, sum(supplier_id).",
+        "FROM products.",
+        "Finish with GROUP BY category_id.",
+        "Write: SELECT category_id, sum(supplier_id) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, sum(supplier_id) FROM products GROUP BY category_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per category_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same category_id.\nThen avg(supplier_id) works on each pile.",
+      "task": "Try typing: SELECT category_id, avg(supplier_id) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, avg(supplier_id).",
+        "FROM products.",
+        "Finish with GROUP BY category_id.",
+        "Write: SELECT category_id, avg(supplier_id) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, avg(supplier_id) FROM products GROUP BY category_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the category_id pile (1)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 1;",
+      "hints": [
+        "Build the piles with GROUP BY category_id.",
+        "Add HAVING to keep one pile.",
+        "The test is category_id = 1.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 1;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 1;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the category_id pile (2)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 2;",
+      "hints": [
+        "Build the piles with GROUP BY category_id.",
+        "Add HAVING to keep one pile.",
+        "The test is category_id = 2.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 2;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 2;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the category_id pile (3)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 3;",
+      "hints": [
+        "Build the piles with GROUP BY category_id.",
+        "Add HAVING to keep one pile.",
+        "The test is category_id = 3.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 3;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 3;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the category_id pile (4)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 4;",
+      "hints": [
+        "Build the piles with GROUP BY category_id.",
+        "Add HAVING to keep one pile.",
+        "The test is category_id = 4.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 4;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 4;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the category_id pile (5)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 5;",
+      "hints": [
+        "Build the piles with GROUP BY category_id.",
+        "Add HAVING to keep one pile.",
+        "The test is category_id = 5.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 5;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 5;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the category_id pile (6)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 6;",
+      "hints": [
+        "Build the piles with GROUP BY category_id.",
+        "Add HAVING to keep one pile.",
+        "The test is category_id = 6.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 6;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 6;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the category_id pile (7)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 7;",
+      "hints": [
+        "Build the piles with GROUP BY category_id.",
+        "Add HAVING to keep one pile.",
+        "The test is category_id = 7.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 7;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 7;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the category_id pile (8)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 8;",
+      "hints": [
+        "Build the piles with GROUP BY category_id.",
+        "Add HAVING to keep one pile.",
+        "The test is category_id = 8.",
+        "Write: SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 8;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id HAVING category_id = 8;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT per supplier_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same supplier_id.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id;",
+      "hints": [
+        "Start with SELECT supplier_id, count(*).",
+        "FROM products.",
+        "Finish with GROUP BY supplier_id.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per supplier_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same supplier_id.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT supplier_id, sum(id) FROM products GROUP BY supplier_id;",
+      "hints": [
+        "Start with SELECT supplier_id, sum(id).",
+        "FROM products.",
+        "Finish with GROUP BY supplier_id.",
+        "Write: SELECT supplier_id, sum(id) FROM products GROUP BY supplier_id;"
+      ],
+      "expected_sql": "SELECT supplier_id, sum(id) FROM products GROUP BY supplier_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per supplier_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same supplier_id.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT supplier_id, avg(id) FROM products GROUP BY supplier_id;",
+      "hints": [
+        "Start with SELECT supplier_id, avg(id).",
+        "FROM products.",
+        "Finish with GROUP BY supplier_id.",
+        "Write: SELECT supplier_id, avg(id) FROM products GROUP BY supplier_id;"
+      ],
+      "expected_sql": "SELECT supplier_id, avg(id) FROM products GROUP BY supplier_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per supplier_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same supplier_id.\nThen sum(category_id) works on each pile.",
+      "task": "Try typing: SELECT supplier_id, sum(category_id) FROM products GROUP BY supplier_id;",
+      "hints": [
+        "Start with SELECT supplier_id, sum(category_id).",
+        "FROM products.",
+        "Finish with GROUP BY supplier_id.",
+        "Write: SELECT supplier_id, sum(category_id) FROM products GROUP BY supplier_id;"
+      ],
+      "expected_sql": "SELECT supplier_id, sum(category_id) FROM products GROUP BY supplier_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per supplier_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same supplier_id.\nThen avg(category_id) works on each pile.",
+      "task": "Try typing: SELECT supplier_id, avg(category_id) FROM products GROUP BY supplier_id;",
+      "hints": [
+        "Start with SELECT supplier_id, avg(category_id).",
+        "FROM products.",
+        "Finish with GROUP BY supplier_id.",
+        "Write: SELECT supplier_id, avg(category_id) FROM products GROUP BY supplier_id;"
+      ],
+      "expected_sql": "SELECT supplier_id, avg(category_id) FROM products GROUP BY supplier_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per supplier_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same supplier_id.\nThen sum(supplier_id) works on each pile.",
+      "task": "Try typing: SELECT supplier_id, sum(supplier_id) FROM products GROUP BY supplier_id;",
+      "hints": [
+        "Start with SELECT supplier_id, sum(supplier_id).",
+        "FROM products.",
+        "Finish with GROUP BY supplier_id.",
+        "Write: SELECT supplier_id, sum(supplier_id) FROM products GROUP BY supplier_id;"
+      ],
+      "expected_sql": "SELECT supplier_id, sum(supplier_id) FROM products GROUP BY supplier_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    }
+  ],
+  "id": "L126",
+  "order": 126
+}

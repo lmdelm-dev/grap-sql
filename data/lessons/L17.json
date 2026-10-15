@@ -1,0 +1,62 @@
+{
+  "id": "L17",
+  "order": 17,
+  "difficulty": 4,
+  "tags": [
+    "cte",
+    "with"
+  ],
+  "title": "WITH: giving your subquery a name",
+  "steps": [
+    {
+      "type": "type",
+      "title": "Name your table-on-the-fly",
+      "prompt": "A CTE (say: 'see-tee-ee') is a subquery with a NAME, written at the top with WITH.\nIt's like sketching the plan on a napkin before writing the menu.",
+      "task": "Try typing: WITH busy AS (SELECT category_id, count(*) AS c FROM products GROUP BY category_id) SELECT * FROM busy WHERE c > 5;",
+      "hints": [
+        "WITH introduces the temporary list.",
+        "busy AS wraps the GROUP BY query.",
+        "Then a plain SELECT reads FROM busy.",
+        "Filter the named list with WHERE c > 5."
+      ],
+      "expected_sql": "WITH busy AS (SELECT category_id, count(*) AS c FROM products GROUP BY category_id) SELECT * FROM busy WHERE c > 5;",
+      "memory_trick": "WITH name AS (…) = 'here's a temporary list, call it this'."
+    },
+    {
+      "type": "fill",
+      "title": "Fill the temporary name",
+      "prompt": "Fill the blank with a name for the temporary list:\nWITH ___ AS (SELECT category_id, count(*) AS c FROM products GROUP BY category_id) SELECT * FROM ___ WHERE c = 3;",
+      "task": "Use the same name in both blanks.",
+      "hints": [
+        "The name is yours to invent.",
+        "Both blanks must hold the same word.",
+        "This list holds category counts.",
+        "Fill both with 'cheap'."
+      ],
+      "expected_sql": "WITH cheap AS (SELECT category_id, count(*) AS c FROM products GROUP BY category_id) SELECT * FROM cheap WHERE c = 3;",
+      "seed_sql": "WITH ___ AS (SELECT category_id, count(*) AS c FROM products GROUP BY category_id) SELECT * FROM ___ WHERE c = 3;",
+      "memory_trick": "Same name twice: once created, once used."
+    },
+    {
+      "type": "answer",
+      "title": "Why bother with WITH?",
+      "prompt": "WITH makes long questions readable: name the messy part once, use it after.\nIt also lets you reuse the same list later in the same query - no copy-paste.",
+      "task": "What is the temporary list called in SQL?",
+      "check": {
+        "answer": [
+          "cte",
+          "a cte",
+          "common table expression",
+          "a common table expression"
+        ]
+      },
+      "hints": [
+        "The letters C-T-E …",
+        "It starts with 'Common'.",
+        "'Table Expression' - like a mini table.",
+        "Answer: CTE (Common Table Expression)."
+      ],
+      "memory_trick": "CTE = a named napkin sketch you can reuse."
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "title": "Pick from a list in customers",
+  "tags": [
+    "where",
+    "in"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep a short list of id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM customers WHERE id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM customers WHERE id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM customers WHERE id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM customers WHERE id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of name",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM customers WHERE name IN ('Brahim Belkadi', 'Fatima Bennani', 'Fatima Berrada');",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE name IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM customers WHERE name IN ('Brahim Belkadi', 'Fatima Bennani', 'Fatima Berrada');"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE name IN ('Brahim Belkadi', 'Fatima Bennani', 'Fatima Berrada');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep name NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM customers WHERE name NOT IN ('Brahim Belkadi', 'Fatima Bennani', 'Fatima Berrada', 'Fatima Fassi');",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE name NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM customers WHERE name NOT IN ('Brahim Belkadi', 'Fatima Bennani', 'Fatima Berrada', 'Fatima Fassi');"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE name NOT IN ('Brahim Belkadi', 'Fatima Bennani', 'Fatima Berrada', 'Fatima Fassi');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of email",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM customers WHERE email IN ('user10@shop.ma', 'user11@shop.ma', 'user14@shop.ma');",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE email IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM customers WHERE email IN ('user10@shop.ma', 'user11@shop.ma', 'user14@shop.ma');"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE email IN ('user10@shop.ma', 'user11@shop.ma', 'user14@shop.ma');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep email NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM customers WHERE email NOT IN ('user10@shop.ma', 'user11@shop.ma', 'user14@shop.ma', 'user15@shop.ma');",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE email NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM customers WHERE email NOT IN ('user10@shop.ma', 'user11@shop.ma', 'user14@shop.ma', 'user15@shop.ma');"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE email NOT IN ('user10@shop.ma', 'user11@shop.ma', 'user14@shop.ma', 'user15@shop.ma');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of city",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM customers WHERE city IN ('Agadir', 'Casablanca', 'El Jadida');",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE city IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM customers WHERE city IN ('Agadir', 'Casablanca', 'El Jadida');"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE city IN ('Agadir', 'Casablanca', 'El Jadida');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep city NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM customers WHERE city NOT IN ('Agadir', 'Casablanca', 'El Jadida', 'Fes');",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE city NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM customers WHERE city NOT IN ('Agadir', 'Casablanca', 'El Jadida', 'Fes');"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE city NOT IN ('Agadir', 'Casablanca', 'El Jadida', 'Fes');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of created_at",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM customers WHERE created_at IN ('2025-01-12', '2025-01-27', '2025-02-03');",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE created_at IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM customers WHERE created_at IN ('2025-01-12', '2025-01-27', '2025-02-03');"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE created_at IN ('2025-01-12', '2025-01-27', '2025-02-03');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep created_at NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM customers WHERE created_at NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE created_at NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM customers WHERE created_at NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE created_at NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L054",
+  "order": 54
+}

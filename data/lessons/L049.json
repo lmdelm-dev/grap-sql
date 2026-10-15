@@ -1,0 +1,697 @@
+{
+  "title": "Sorting and trimming the customers table",
+  "tags": [
+    "order by",
+    "limit"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Sort id smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM customers ORDER BY id ;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM customers ORDER BY id ;"
+      ],
+      "expected_sql": "SELECT id FROM customers ORDER BY id ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort id biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM customers ORDER BY id DESC;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM customers ORDER BY id DESC;"
+      ],
+      "expected_sql": "SELECT id FROM customers ORDER BY id DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT id FROM customers ORDER BY id DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT id FROM customers ORDER BY id DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT id FROM customers ORDER BY id DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT id FROM customers ORDER BY id DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT id FROM customers ORDER BY id DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM customers ORDER BY id DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT id FROM customers ORDER BY id DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT id FROM customers ORDER BY id DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT id FROM customers ORDER BY id DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT id FROM customers ORDER BY id DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT id FROM customers ORDER BY id DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT id FROM customers ORDER BY id DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of id",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different id values exist?'",
+      "task": "Try typing: SELECT DISTINCT id FROM customers ORDER BY id;",
+      "hints": [
+        "Start with SELECT DISTINCT id.",
+        "FROM customers.",
+        "Add ORDER BY id to sort them.",
+        "Write: SELECT DISTINCT id FROM customers ORDER BY id;"
+      ],
+      "expected_sql": "SELECT DISTINCT id FROM customers ORDER BY id;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort name smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT name FROM customers ORDER BY name ;",
+      "hints": [
+        "Start with SELECT name FROM customers.",
+        "Add ORDER BY name.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT name FROM customers ORDER BY name ;"
+      ],
+      "expected_sql": "SELECT name FROM customers ORDER BY name ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort name biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT name FROM customers ORDER BY name DESC;",
+      "hints": [
+        "Start with SELECT name FROM customers.",
+        "Add ORDER BY name.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT name FROM customers ORDER BY name DESC;"
+      ],
+      "expected_sql": "SELECT name FROM customers ORDER BY name DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT name FROM customers ORDER BY name DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT name FROM customers.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT name FROM customers ORDER BY name DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT name FROM customers ORDER BY name DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT name FROM customers ORDER BY name DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT name FROM customers.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT name FROM customers ORDER BY name DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT name FROM customers ORDER BY name DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT name FROM customers ORDER BY name DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT name FROM customers.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT name FROM customers ORDER BY name DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT name FROM customers ORDER BY name DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT name FROM customers ORDER BY name DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT name FROM customers.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT name FROM customers ORDER BY name DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT name FROM customers ORDER BY name DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of name",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different name values exist?'",
+      "task": "Try typing: SELECT DISTINCT name FROM customers ORDER BY name;",
+      "hints": [
+        "Start with SELECT DISTINCT name.",
+        "FROM customers.",
+        "Add ORDER BY name to sort them.",
+        "Write: SELECT DISTINCT name FROM customers ORDER BY name;"
+      ],
+      "expected_sql": "SELECT DISTINCT name FROM customers ORDER BY name;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort email smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT email FROM customers ORDER BY email ;",
+      "hints": [
+        "Start with SELECT email FROM customers.",
+        "Add ORDER BY email.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT email FROM customers ORDER BY email ;"
+      ],
+      "expected_sql": "SELECT email FROM customers ORDER BY email ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort email biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT email FROM customers ORDER BY email DESC;",
+      "hints": [
+        "Start with SELECT email FROM customers.",
+        "Add ORDER BY email.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT email FROM customers ORDER BY email DESC;"
+      ],
+      "expected_sql": "SELECT email FROM customers ORDER BY email DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by email",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT email FROM customers ORDER BY email DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT email FROM customers.",
+        "Add ORDER BY email DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT email FROM customers ORDER BY email DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT email FROM customers ORDER BY email DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by email",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT email FROM customers ORDER BY email DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT email FROM customers.",
+        "Add ORDER BY email DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT email FROM customers ORDER BY email DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT email FROM customers ORDER BY email DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by email",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT email FROM customers ORDER BY email DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT email FROM customers.",
+        "Add ORDER BY email DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT email FROM customers ORDER BY email DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT email FROM customers ORDER BY email DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by email",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT email FROM customers ORDER BY email DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT email FROM customers.",
+        "Add ORDER BY email DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT email FROM customers ORDER BY email DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT email FROM customers ORDER BY email DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of email",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different email values exist?'",
+      "task": "Try typing: SELECT DISTINCT email FROM customers ORDER BY email;",
+      "hints": [
+        "Start with SELECT DISTINCT email.",
+        "FROM customers.",
+        "Add ORDER BY email to sort them.",
+        "Write: SELECT DISTINCT email FROM customers ORDER BY email;"
+      ],
+      "expected_sql": "SELECT DISTINCT email FROM customers ORDER BY email;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort city smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT city FROM customers ORDER BY city ;",
+      "hints": [
+        "Start with SELECT city FROM customers.",
+        "Add ORDER BY city.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT city FROM customers ORDER BY city ;"
+      ],
+      "expected_sql": "SELECT city FROM customers ORDER BY city ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort city biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT city FROM customers ORDER BY city DESC;",
+      "hints": [
+        "Start with SELECT city FROM customers.",
+        "Add ORDER BY city.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT city FROM customers ORDER BY city DESC;"
+      ],
+      "expected_sql": "SELECT city FROM customers ORDER BY city DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by city",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT city FROM customers ORDER BY city DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT city FROM customers.",
+        "Add ORDER BY city DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT city FROM customers ORDER BY city DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT city FROM customers ORDER BY city DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by city",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT city FROM customers ORDER BY city DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT city FROM customers.",
+        "Add ORDER BY city DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT city FROM customers ORDER BY city DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT city FROM customers ORDER BY city DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by city",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT city FROM customers ORDER BY city DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT city FROM customers.",
+        "Add ORDER BY city DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT city FROM customers ORDER BY city DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT city FROM customers ORDER BY city DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by city",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT city FROM customers ORDER BY city DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT city FROM customers.",
+        "Add ORDER BY city DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT city FROM customers ORDER BY city DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT city FROM customers ORDER BY city DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of city",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different city values exist?'",
+      "task": "Try typing: SELECT DISTINCT city FROM customers ORDER BY city;",
+      "hints": [
+        "Start with SELECT DISTINCT city.",
+        "FROM customers.",
+        "Add ORDER BY city to sort them.",
+        "Write: SELECT DISTINCT city FROM customers ORDER BY city;"
+      ],
+      "expected_sql": "SELECT DISTINCT city FROM customers ORDER BY city;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort created_at smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT created_at FROM customers ORDER BY created_at ;",
+      "hints": [
+        "Start with SELECT created_at FROM customers.",
+        "Add ORDER BY created_at.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT created_at FROM customers ORDER BY created_at ;"
+      ],
+      "expected_sql": "SELECT created_at FROM customers ORDER BY created_at ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort created_at biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT created_at FROM customers ORDER BY created_at DESC;",
+      "hints": [
+        "Start with SELECT created_at FROM customers.",
+        "Add ORDER BY created_at.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT created_at FROM customers ORDER BY created_at DESC;"
+      ],
+      "expected_sql": "SELECT created_at FROM customers ORDER BY created_at DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by created_at",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT created_at FROM customers.",
+        "Add ORDER BY created_at DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by created_at",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT created_at FROM customers.",
+        "Add ORDER BY created_at DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by created_at",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT created_at FROM customers.",
+        "Add ORDER BY created_at DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by created_at",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT created_at FROM customers.",
+        "Add ORDER BY created_at DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT created_at FROM customers ORDER BY created_at DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of created_at",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different created_at values exist?'",
+      "task": "Try typing: SELECT DISTINCT created_at FROM customers ORDER BY created_at;",
+      "hints": [
+        "Start with SELECT DISTINCT created_at.",
+        "FROM customers.",
+        "Add ORDER BY created_at to sort them.",
+        "Write: SELECT DISTINCT created_at FROM customers ORDER BY created_at;"
+      ],
+      "expected_sql": "SELECT DISTINCT created_at FROM customers ORDER BY created_at;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    }
+  ],
+  "id": "L049",
+  "order": 49
+}

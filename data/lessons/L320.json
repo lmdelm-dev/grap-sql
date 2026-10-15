@@ -1,0 +1,138 @@
+{
+  "title": "Counting and totals in suppliers",
+  "tags": [
+    "aggregate",
+    "count"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "How many rows in suppliers?",
+      "prompt": "COUNT(*) answers 'how many rows?' with one number.",
+      "task": "Try typing: SELECT count(*) FROM suppliers;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Finish with a semicolon.",
+        "Write: SELECT count(*) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers;",
+      "memory_trick": "count(*) = 'how many rows?'"
+    },
+    {
+      "type": "type",
+      "title": "Count the id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(id) FROM suppliers;",
+      "hints": [
+        "Start with SELECT count(id).",
+        "FROM suppliers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(id) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT count(id) FROM suppliers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the name values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(name) FROM suppliers;",
+      "hints": [
+        "Start with SELECT count(name).",
+        "FROM suppliers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(name) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT count(name) FROM suppliers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the city values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(city) FROM suppliers;",
+      "hints": [
+        "Start with SELECT count(city).",
+        "FROM suppliers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(city) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT count(city) FROM suppliers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the phone values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(phone) FROM suppliers;",
+      "hints": [
+        "Start with SELECT count(phone).",
+        "FROM suppliers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(phone) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT count(phone) FROM suppliers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "SUM of id",
+      "prompt": "SUM id: add up the values.",
+      "task": "Try typing: SELECT sum(id) FROM suppliers;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM suppliers.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(id) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM suppliers;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of id",
+      "prompt": "AVG id: work out the average.",
+      "task": "Try typing: SELECT avg(id) FROM suppliers;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM suppliers.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(id) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM suppliers;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of id",
+      "prompt": "MIN id: find the smallest value.",
+      "task": "Try typing: SELECT min(id) FROM suppliers;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM suppliers.",
+        "MIN works on numbers.",
+        "Write: SELECT min(id) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT min(id) FROM suppliers;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of id",
+      "prompt": "MAX id: find the biggest value.",
+      "task": "Try typing: SELECT max(id) FROM suppliers;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM suppliers.",
+        "MAX works on numbers.",
+        "Write: SELECT max(id) FROM suppliers;"
+      ],
+      "expected_sql": "SELECT max(id) FROM suppliers;",
+      "memory_trick": "max = find the biggest value."
+    }
+  ],
+  "id": "L320",
+  "order": 320
+}

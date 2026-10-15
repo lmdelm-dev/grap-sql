@@ -1,0 +1,240 @@
+{
+  "title": "Filtering the suppliers table by numbers · part 3",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id != 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 7.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id != 7;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id != 7.",
+        "Write: SELECT id FROM suppliers WHERE id != 7;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id != 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id != 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id != 7.",
+        "Write: SELECT count(*) FROM suppliers WHERE id != 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id != 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 8",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 8.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id >= 8;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id >= 8.",
+        "Write: SELECT id FROM suppliers WHERE id >= 8;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id >= 8;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 8",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id >= 8;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id >= 8.",
+        "Write: SELECT count(*) FROM suppliers WHERE id >= 8;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id >= 8;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 8",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 8.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id < 8;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id < 8.",
+        "Write: SELECT id FROM suppliers WHERE id < 8;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id < 8;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 8",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id < 8;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id < 8.",
+        "Write: SELECT count(*) FROM suppliers WHERE id < 8;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id < 8;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 8",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 8.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id <= 8;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id <= 8.",
+        "Write: SELECT id FROM suppliers WHERE id <= 8;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id <= 8;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 8",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id <= 8;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id <= 8.",
+        "Write: SELECT count(*) FROM suppliers WHERE id <= 8;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id <= 8;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 8",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 8.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id = 8;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id = 8.",
+        "Write: SELECT id FROM suppliers WHERE id = 8;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id = 8;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 8",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id = 8;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id = 8.",
+        "Write: SELECT count(*) FROM suppliers WHERE id = 8;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id = 8;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 8",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 8.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id != 8;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id != 8.",
+        "Write: SELECT id FROM suppliers WHERE id != 8;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id != 8;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 8",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id != 8;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id != 8.",
+        "Write: SELECT count(*) FROM suppliers WHERE id != 8;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id != 8;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L318",
+  "order": 318
+}

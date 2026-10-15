@@ -1,0 +1,367 @@
+{
+  "title": "Grouping with tests and ranking in sale_items",
+  "tags": [
+    "group by",
+    "having",
+    "order by"
+  ],
+  "difficulty": 4,
+  "steps": [
+    {
+      "type": "type",
+      "title": "sale_id with at least 1 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 1.",
+      "task": "Try typing: SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 1;",
+      "hints": [
+        "Start with SELECT sale_id, count(*).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add HAVING count(*) >= 1.",
+        "Write: SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 1;"
+      ],
+      "expected_sql": "SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 1;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "sale_id with at least 2 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 2.",
+      "task": "Try typing: SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 2;",
+      "hints": [
+        "Start with SELECT sale_id, count(*).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add HAVING count(*) >= 2.",
+        "Write: SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 2;"
+      ],
+      "expected_sql": "SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 2;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "sale_id with at least 3 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 3.",
+      "task": "Try typing: SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 3;",
+      "hints": [
+        "Start with SELECT sale_id, count(*).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add HAVING count(*) >= 3.",
+        "Write: SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 3;"
+      ],
+      "expected_sql": "SELECT sale_id, count(*) FROM sale_items GROUP BY sale_id HAVING count(*) >= 3;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by sum(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY sum(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT sale_id, sum(id) FROM sale_items GROUP BY sale_id ORDER BY sum(id) DESC;",
+      "hints": [
+        "Start with SELECT sale_id, sum(id).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add ORDER BY sum(id) DESC.",
+        "Write: SELECT sale_id, sum(id) FROM sale_items GROUP BY sale_id ORDER BY sum(id) DESC;"
+      ],
+      "expected_sql": "SELECT sale_id, sum(id) FROM sale_items GROUP BY sale_id ORDER BY sum(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by sum(sale_id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY sum(sale_id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT sale_id, sum(sale_id) FROM sale_items GROUP BY sale_id ORDER BY sum(sale_id) DESC;",
+      "hints": [
+        "Start with SELECT sale_id, sum(sale_id).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add ORDER BY sum(sale_id) DESC.",
+        "Write: SELECT sale_id, sum(sale_id) FROM sale_items GROUP BY sale_id ORDER BY sum(sale_id) DESC;"
+      ],
+      "expected_sql": "SELECT sale_id, sum(sale_id) FROM sale_items GROUP BY sale_id ORDER BY sum(sale_id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by avg(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY avg(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT sale_id, avg(id) FROM sale_items GROUP BY sale_id ORDER BY avg(id) DESC;",
+      "hints": [
+        "Start with SELECT sale_id, avg(id).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add ORDER BY avg(id) DESC.",
+        "Write: SELECT sale_id, avg(id) FROM sale_items GROUP BY sale_id ORDER BY avg(id) DESC;"
+      ],
+      "expected_sql": "SELECT sale_id, avg(id) FROM sale_items GROUP BY sale_id ORDER BY avg(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by avg(sale_id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY avg(sale_id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT sale_id, avg(sale_id) FROM sale_items GROUP BY sale_id ORDER BY avg(sale_id) DESC;",
+      "hints": [
+        "Start with SELECT sale_id, avg(sale_id).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add ORDER BY avg(sale_id) DESC.",
+        "Write: SELECT sale_id, avg(sale_id) FROM sale_items GROUP BY sale_id ORDER BY avg(sale_id) DESC;"
+      ],
+      "expected_sql": "SELECT sale_id, avg(sale_id) FROM sale_items GROUP BY sale_id ORDER BY avg(sale_id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by max(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY max(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT sale_id, max(id) FROM sale_items GROUP BY sale_id ORDER BY max(id) DESC;",
+      "hints": [
+        "Start with SELECT sale_id, max(id).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add ORDER BY max(id) DESC.",
+        "Write: SELECT sale_id, max(id) FROM sale_items GROUP BY sale_id ORDER BY max(id) DESC;"
+      ],
+      "expected_sql": "SELECT sale_id, max(id) FROM sale_items GROUP BY sale_id ORDER BY max(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by max(sale_id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY max(sale_id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT sale_id, max(sale_id) FROM sale_items GROUP BY sale_id ORDER BY max(sale_id) DESC;",
+      "hints": [
+        "Start with SELECT sale_id, max(sale_id).",
+        "FROM sale_items GROUP BY sale_id.",
+        "Add ORDER BY max(sale_id) DESC.",
+        "Write: SELECT sale_id, max(sale_id) FROM sale_items GROUP BY sale_id ORDER BY max(sale_id) DESC;"
+      ],
+      "expected_sql": "SELECT sale_id, max(sale_id) FROM sale_items GROUP BY sale_id ORDER BY max(sale_id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "product_id with at least 1 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 1.",
+      "task": "Try typing: SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 1;",
+      "hints": [
+        "Start with SELECT product_id, count(*).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add HAVING count(*) >= 1.",
+        "Write: SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 1;"
+      ],
+      "expected_sql": "SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 1;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "product_id with at least 2 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 2.",
+      "task": "Try typing: SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 2;",
+      "hints": [
+        "Start with SELECT product_id, count(*).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add HAVING count(*) >= 2.",
+        "Write: SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 2;"
+      ],
+      "expected_sql": "SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 2;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "product_id with at least 3 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 3.",
+      "task": "Try typing: SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 3;",
+      "hints": [
+        "Start with SELECT product_id, count(*).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add HAVING count(*) >= 3.",
+        "Write: SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 3;"
+      ],
+      "expected_sql": "SELECT product_id, count(*) FROM sale_items GROUP BY product_id HAVING count(*) >= 3;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by sum(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY sum(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT product_id, sum(id) FROM sale_items GROUP BY product_id ORDER BY sum(id) DESC;",
+      "hints": [
+        "Start with SELECT product_id, sum(id).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add ORDER BY sum(id) DESC.",
+        "Write: SELECT product_id, sum(id) FROM sale_items GROUP BY product_id ORDER BY sum(id) DESC;"
+      ],
+      "expected_sql": "SELECT product_id, sum(id) FROM sale_items GROUP BY product_id ORDER BY sum(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by sum(sale_id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY sum(sale_id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT product_id, sum(sale_id) FROM sale_items GROUP BY product_id ORDER BY sum(sale_id) DESC;",
+      "hints": [
+        "Start with SELECT product_id, sum(sale_id).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add ORDER BY sum(sale_id) DESC.",
+        "Write: SELECT product_id, sum(sale_id) FROM sale_items GROUP BY product_id ORDER BY sum(sale_id) DESC;"
+      ],
+      "expected_sql": "SELECT product_id, sum(sale_id) FROM sale_items GROUP BY product_id ORDER BY sum(sale_id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by avg(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY avg(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT product_id, avg(id) FROM sale_items GROUP BY product_id ORDER BY avg(id) DESC;",
+      "hints": [
+        "Start with SELECT product_id, avg(id).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add ORDER BY avg(id) DESC.",
+        "Write: SELECT product_id, avg(id) FROM sale_items GROUP BY product_id ORDER BY avg(id) DESC;"
+      ],
+      "expected_sql": "SELECT product_id, avg(id) FROM sale_items GROUP BY product_id ORDER BY avg(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by avg(sale_id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY avg(sale_id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT product_id, avg(sale_id) FROM sale_items GROUP BY product_id ORDER BY avg(sale_id) DESC;",
+      "hints": [
+        "Start with SELECT product_id, avg(sale_id).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add ORDER BY avg(sale_id) DESC.",
+        "Write: SELECT product_id, avg(sale_id) FROM sale_items GROUP BY product_id ORDER BY avg(sale_id) DESC;"
+      ],
+      "expected_sql": "SELECT product_id, avg(sale_id) FROM sale_items GROUP BY product_id ORDER BY avg(sale_id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by max(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY max(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT product_id, max(id) FROM sale_items GROUP BY product_id ORDER BY max(id) DESC;",
+      "hints": [
+        "Start with SELECT product_id, max(id).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add ORDER BY max(id) DESC.",
+        "Write: SELECT product_id, max(id) FROM sale_items GROUP BY product_id ORDER BY max(id) DESC;"
+      ],
+      "expected_sql": "SELECT product_id, max(id) FROM sale_items GROUP BY product_id ORDER BY max(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by max(sale_id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY max(sale_id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT product_id, max(sale_id) FROM sale_items GROUP BY product_id ORDER BY max(sale_id) DESC;",
+      "hints": [
+        "Start with SELECT product_id, max(sale_id).",
+        "FROM sale_items GROUP BY product_id.",
+        "Add ORDER BY max(sale_id) DESC.",
+        "Write: SELECT product_id, max(sale_id) FROM sale_items GROUP BY product_id ORDER BY max(sale_id) DESC;"
+      ],
+      "expected_sql": "SELECT product_id, max(sale_id) FROM sale_items GROUP BY product_id ORDER BY max(sale_id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    }
+  ],
+  "id": "L253",
+  "order": 253
+}

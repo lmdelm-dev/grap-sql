@@ -1,0 +1,798 @@
+{
+  "title": "Filtering the products table by numbers · part 21",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep price != 25.22",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is not equal to 25.22.",
+      "task": "Try typing: SELECT id FROM products WHERE price != 25.22;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price != 25.22.",
+        "Write: SELECT id FROM products WHERE price != 25.22;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price != 25.22;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price != 25.22",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price != 25.22;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price != 25.22.",
+        "Write: SELECT count(*) FROM products WHERE price != 25.22;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price != 25.22;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price != 25.22",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price != 25.22 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price != 25.22.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price != 25.22 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price != 25.22 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price > 30.73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is bigger than 30.73.",
+      "task": "Try typing: SELECT id FROM products WHERE price > 30.73;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price > 30.73.",
+        "Write: SELECT id FROM products WHERE price > 30.73;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price > 30.73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price > 30.73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 30.73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 30.73.",
+        "Write: SELECT count(*) FROM products WHERE price > 30.73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 30.73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price > 30.73",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price > 30.73 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price > 30.73.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price > 30.73 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price > 30.73 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price >= 30.73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is at least 30.73.",
+      "task": "Try typing: SELECT id FROM products WHERE price >= 30.73;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price >= 30.73.",
+        "Write: SELECT id FROM products WHERE price >= 30.73;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price >= 30.73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price >= 30.73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price >= 30.73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price >= 30.73.",
+        "Write: SELECT count(*) FROM products WHERE price >= 30.73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price >= 30.73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price >= 30.73",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price >= 30.73 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price >= 30.73.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price >= 30.73 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price >= 30.73 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price < 30.73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is smaller than 30.73.",
+      "task": "Try typing: SELECT id FROM products WHERE price < 30.73;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price < 30.73.",
+        "Write: SELECT id FROM products WHERE price < 30.73;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price < 30.73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price < 30.73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price < 30.73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price < 30.73.",
+        "Write: SELECT count(*) FROM products WHERE price < 30.73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price < 30.73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price < 30.73",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price < 30.73 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price < 30.73.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price < 30.73 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price < 30.73 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price <= 30.73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is at most 30.73.",
+      "task": "Try typing: SELECT id FROM products WHERE price <= 30.73;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price <= 30.73.",
+        "Write: SELECT id FROM products WHERE price <= 30.73;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price <= 30.73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price <= 30.73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price <= 30.73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price <= 30.73.",
+        "Write: SELECT count(*) FROM products WHERE price <= 30.73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price <= 30.73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price <= 30.73",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price <= 30.73 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price <= 30.73.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price <= 30.73 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price <= 30.73 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price = 30.73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is exactly 30.73.",
+      "task": "Try typing: SELECT id FROM products WHERE price = 30.73;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price = 30.73.",
+        "Write: SELECT id FROM products WHERE price = 30.73;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price = 30.73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price = 30.73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price = 30.73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price = 30.73.",
+        "Write: SELECT count(*) FROM products WHERE price = 30.73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price = 30.73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price = 30.73",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price = 30.73 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price = 30.73.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price = 30.73 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price = 30.73 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price != 30.73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is not equal to 30.73.",
+      "task": "Try typing: SELECT id FROM products WHERE price != 30.73;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price != 30.73.",
+        "Write: SELECT id FROM products WHERE price != 30.73;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price != 30.73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price != 30.73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price != 30.73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price != 30.73.",
+        "Write: SELECT count(*) FROM products WHERE price != 30.73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price != 30.73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price != 30.73",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price != 30.73 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price != 30.73.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price != 30.73 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price != 30.73 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price > 36.24",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is bigger than 36.24.",
+      "task": "Try typing: SELECT id FROM products WHERE price > 36.24;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price > 36.24.",
+        "Write: SELECT id FROM products WHERE price > 36.24;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price > 36.24;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price > 36.24",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 36.24;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 36.24.",
+        "Write: SELECT count(*) FROM products WHERE price > 36.24;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 36.24;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price > 36.24",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price > 36.24 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price > 36.24.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price > 36.24 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price > 36.24 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price >= 36.24",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is at least 36.24.",
+      "task": "Try typing: SELECT id FROM products WHERE price >= 36.24;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price >= 36.24.",
+        "Write: SELECT id FROM products WHERE price >= 36.24;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price >= 36.24;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price >= 36.24",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price >= 36.24;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price >= 36.24.",
+        "Write: SELECT count(*) FROM products WHERE price >= 36.24;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price >= 36.24;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price >= 36.24",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price >= 36.24 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price >= 36.24.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price >= 36.24 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price >= 36.24 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price < 36.24",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is smaller than 36.24.",
+      "task": "Try typing: SELECT id FROM products WHERE price < 36.24;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price < 36.24.",
+        "Write: SELECT id FROM products WHERE price < 36.24;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price < 36.24;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price < 36.24",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price < 36.24;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price < 36.24.",
+        "Write: SELECT count(*) FROM products WHERE price < 36.24;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price < 36.24;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price < 36.24",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price < 36.24 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price < 36.24.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price < 36.24 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price < 36.24 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price <= 36.24",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is at most 36.24.",
+      "task": "Try typing: SELECT id FROM products WHERE price <= 36.24;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price <= 36.24.",
+        "Write: SELECT id FROM products WHERE price <= 36.24;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price <= 36.24;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price <= 36.24",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price <= 36.24;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price <= 36.24.",
+        "Write: SELECT count(*) FROM products WHERE price <= 36.24;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price <= 36.24;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price <= 36.24",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price <= 36.24 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price <= 36.24.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price <= 36.24 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price <= 36.24 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price = 36.24",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is exactly 36.24.",
+      "task": "Try typing: SELECT id FROM products WHERE price = 36.24;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price = 36.24.",
+        "Write: SELECT id FROM products WHERE price = 36.24;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price = 36.24;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price = 36.24",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price = 36.24;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price = 36.24.",
+        "Write: SELECT count(*) FROM products WHERE price = 36.24;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price = 36.24;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price = 36.24",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price = 36.24 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price = 36.24.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price = 36.24 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price = 36.24 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price != 36.24",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is not equal to 36.24.",
+      "task": "Try typing: SELECT id FROM products WHERE price != 36.24;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price != 36.24.",
+        "Write: SELECT id FROM products WHERE price != 36.24;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price != 36.24;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows price != 36.24",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price != 36.24;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price != 36.24.",
+        "Write: SELECT count(*) FROM products WHERE price != 36.24;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price != 36.24;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: price != 36.24",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE price != 36.24 ORDER BY price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price != 36.24.",
+        "Add ORDER BY price LIMIT 3.",
+        "Write: SELECT id FROM products WHERE price != 36.24 ORDER BY price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price != 36.24 ORDER BY price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price > 38.82",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where price is bigger than 38.82.",
+      "task": "Try typing: SELECT id FROM products WHERE price > 38.82;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is price > 38.82.",
+        "Write: SELECT id FROM products WHERE price > 38.82;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price > 38.82;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L102",
+  "order": 102
+}

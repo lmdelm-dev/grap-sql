@@ -1,0 +1,130 @@
+{
+  "title": "Grouping with tests and ranking in customers",
+  "tags": [
+    "group by",
+    "having",
+    "order by"
+  ],
+  "difficulty": 4,
+  "steps": [
+    {
+      "type": "type",
+      "title": "city with at least 1 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 1.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 1;",
+      "hints": [
+        "Start with SELECT city, count(*).",
+        "FROM customers GROUP BY city.",
+        "Add HAVING count(*) >= 1.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 1;"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 1;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "city with at least 2 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 2.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 2;",
+      "hints": [
+        "Start with SELECT city, count(*).",
+        "FROM customers GROUP BY city.",
+        "Add HAVING count(*) >= 2.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 2;"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 2;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "city with at least 3 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 3.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 3;",
+      "hints": [
+        "Start with SELECT city, count(*).",
+        "FROM customers GROUP BY city.",
+        "Add HAVING count(*) >= 3.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 3;"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING count(*) >= 3;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by sum(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY sum(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT city, sum(id) FROM customers GROUP BY city ORDER BY sum(id) DESC;",
+      "hints": [
+        "Start with SELECT city, sum(id).",
+        "FROM customers GROUP BY city.",
+        "Add ORDER BY sum(id) DESC.",
+        "Write: SELECT city, sum(id) FROM customers GROUP BY city ORDER BY sum(id) DESC;"
+      ],
+      "expected_sql": "SELECT city, sum(id) FROM customers GROUP BY city ORDER BY sum(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by avg(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY avg(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT city, avg(id) FROM customers GROUP BY city ORDER BY avg(id) DESC;",
+      "hints": [
+        "Start with SELECT city, avg(id).",
+        "FROM customers GROUP BY city.",
+        "Add ORDER BY avg(id) DESC.",
+        "Write: SELECT city, avg(id) FROM customers GROUP BY city ORDER BY avg(id) DESC;"
+      ],
+      "expected_sql": "SELECT city, avg(id) FROM customers GROUP BY city ORDER BY avg(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Groups ranked by max(id)",
+      "prompt": "You can sort by a total, not just a column.\nORDER BY max(id) DESC puts the biggest pile-total first.",
+      "task": "Try typing: SELECT city, max(id) FROM customers GROUP BY city ORDER BY max(id) DESC;",
+      "hints": [
+        "Start with SELECT city, max(id).",
+        "FROM customers GROUP BY city.",
+        "Add ORDER BY max(id) DESC.",
+        "Write: SELECT city, max(id) FROM customers GROUP BY city ORDER BY max(id) DESC;"
+      ],
+      "expected_sql": "SELECT city, max(id) FROM customers GROUP BY city ORDER BY max(id) DESC;",
+      "memory_trick": "You may sort by an aggregate you computed.",
+      "check": {
+        "require": [
+          "group by",
+          "order by"
+        ]
+      }
+    }
+  ],
+  "id": "L058",
+  "order": 58
+}

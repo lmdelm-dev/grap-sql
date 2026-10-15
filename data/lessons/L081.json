@@ -1,0 +1,50 @@
+{
+  "title": "Filtering the products table by text · part 4",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-09-20",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-09-20'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-09-20';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-09-20';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-09-20';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-10-05",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-10-05'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-10-05';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-10-05';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-10-05';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L081",
+  "order": 81
+}

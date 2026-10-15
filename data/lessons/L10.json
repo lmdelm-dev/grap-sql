@@ -1,0 +1,93 @@
+{
+  "id": "L10",
+  "order": 10,
+  "difficulty": 3,
+  "tags": [
+    "left join",
+    "null"
+  ],
+  "title": "LEFT JOIN: keeping lonely rows",
+  "steps": [
+    {
+      "type": "type",
+      "title": "The lonely product",
+      "prompt": "An INNER JOIN throws away rows without a partner.\nLEFT JOIN keeps every row of the LEFT table, even partnerless ones.\nFind the product nobody ever sold: its sale_items row just won't exist (NULL).",
+      "task": "Try typing: SELECT p.name, si.sale_id FROM products p LEFT JOIN sale_items si ON si.product_id = p.id WHERE si.sale_id IS NULL;",
+      "hints": [
+        "Products are the LEFT table here.",
+        "A never-sold product has no sale_items row.",
+        "IS NULL finds the gaps.",
+        "Write the LEFT JOIN with WHERE si.sale_id IS NULL."
+      ],
+      "expected_sql": "SELECT p.name, si.sale_id FROM products p LEFT JOIN sale_items si ON si.product_id = p.id WHERE si.sale_id IS NULL;",
+      "memory_trick": "LEFT JOIN = 'keep everyone on the left side'.",
+      "check": {
+        "require": [
+          "left join"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The twenty quiet customers",
+      "prompt": "Same trick, new heroes: which customers have never ordered?\nTheir sales row is missing.",
+      "task": "Try typing: SELECT c.name, s.id AS sale_id FROM customers c LEFT JOIN sales s ON s.customer_id = c.id WHERE s.id IS NULL;",
+      "hints": [
+        "Customers go LEFT, sales go RIGHT.",
+        "Match s.customer_id to c.id.",
+        "Keep only the rows where s.id is missing.",
+        "Write the LEFT JOIN and filter with WHERE s.id IS NULL."
+      ],
+      "expected_sql": "SELECT c.name, s.id AS sale_id FROM customers c LEFT JOIN sales s ON s.customer_id = c.id WHERE s.id IS NULL;",
+      "memory_trick": "AS gives a column a nicer name for reading.",
+      "check": {
+        "require": [
+          "left join"
+        ]
+      }
+    },
+    {
+      "type": "answer",
+      "title": "What does LEFT mean?",
+      "prompt": "In FROM customers c LEFT JOIN sales s, every customer is kept - even ones with no sales.\nA customer with no sales shows NULL for the sales columns. INNER JOIN would hide those rows entirely.",
+      "task": "Which table's rows are ALL kept by a LEFT JOIN?",
+      "check": {
+        "answer": [
+          "the left table",
+          "left table",
+          "the table on the left",
+          "products",
+          "the first table",
+          "the table written before join"
+        ]
+      },
+      "hints": [
+        "The name hides the answer.",
+        "'LEFT' points at the first table written.",
+        "In FROM customers c LEFT JOIN sales s, it's customers.",
+        "Answer: the left (first) table."
+      ],
+      "memory_trick": "LEFT = love your left table unconditionally."
+    },
+    {
+      "type": "predict",
+      "title": "Predict: INNER vs LEFT",
+      "prompt": "In the shop there is 1 never-sold product and 20 customers without orders.\nSELECT count(*) FROM products p INNER JOIN sale_items si ON si.product_id = p.id;\nWhat does the INNER JOIN return?",
+      "task": "How many rows (products with at least one sale)?",
+      "check": {
+        "answer": [
+          "39",
+          "39 rows",
+          "thirty nine"
+        ]
+      },
+      "hints": [
+        "INNER JOIN drops lonely rows.",
+        "40 products, 1 never sold.",
+        "40 minus 1.",
+        "Answer: 39."
+      ],
+      "memory_trick": "INNER drops the lonely; LEFT keeps them."
+    }
+  ]
+}

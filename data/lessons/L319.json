@@ -1,0 +1,560 @@
+{
+  "title": "Sorting and trimming the suppliers table",
+  "tags": [
+    "order by",
+    "limit"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Sort id smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM suppliers ORDER BY id ;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM suppliers ORDER BY id ;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers ORDER BY id ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort id biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM suppliers ORDER BY id DESC;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM suppliers ORDER BY id DESC;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers ORDER BY id DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT id FROM suppliers ORDER BY id DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT id FROM suppliers ORDER BY id DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers ORDER BY id DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT id FROM suppliers ORDER BY id DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT id FROM suppliers ORDER BY id DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers ORDER BY id DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT id FROM suppliers ORDER BY id DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT id FROM suppliers ORDER BY id DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers ORDER BY id DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT id FROM suppliers ORDER BY id DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT id FROM suppliers ORDER BY id DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers ORDER BY id DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of id",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different id values exist?'",
+      "task": "Try typing: SELECT DISTINCT id FROM suppliers ORDER BY id;",
+      "hints": [
+        "Start with SELECT DISTINCT id.",
+        "FROM suppliers.",
+        "Add ORDER BY id to sort them.",
+        "Write: SELECT DISTINCT id FROM suppliers ORDER BY id;"
+      ],
+      "expected_sql": "SELECT DISTINCT id FROM suppliers ORDER BY id;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort name smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT name FROM suppliers ORDER BY name ;",
+      "hints": [
+        "Start with SELECT name FROM suppliers.",
+        "Add ORDER BY name.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT name FROM suppliers ORDER BY name ;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers ORDER BY name ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort name biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT name FROM suppliers ORDER BY name DESC;",
+      "hints": [
+        "Start with SELECT name FROM suppliers.",
+        "Add ORDER BY name.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT name FROM suppliers ORDER BY name DESC;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers ORDER BY name DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT name FROM suppliers ORDER BY name DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT name FROM suppliers.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT name FROM suppliers ORDER BY name DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers ORDER BY name DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT name FROM suppliers ORDER BY name DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT name FROM suppliers.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT name FROM suppliers ORDER BY name DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers ORDER BY name DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT name FROM suppliers ORDER BY name DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT name FROM suppliers.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT name FROM suppliers ORDER BY name DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers ORDER BY name DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT name FROM suppliers ORDER BY name DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT name FROM suppliers.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT name FROM suppliers ORDER BY name DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers ORDER BY name DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of name",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different name values exist?'",
+      "task": "Try typing: SELECT DISTINCT name FROM suppliers ORDER BY name;",
+      "hints": [
+        "Start with SELECT DISTINCT name.",
+        "FROM suppliers.",
+        "Add ORDER BY name to sort them.",
+        "Write: SELECT DISTINCT name FROM suppliers ORDER BY name;"
+      ],
+      "expected_sql": "SELECT DISTINCT name FROM suppliers ORDER BY name;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort city smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT city FROM suppliers ORDER BY city ;",
+      "hints": [
+        "Start with SELECT city FROM suppliers.",
+        "Add ORDER BY city.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT city FROM suppliers ORDER BY city ;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers ORDER BY city ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort city biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT city FROM suppliers ORDER BY city DESC;",
+      "hints": [
+        "Start with SELECT city FROM suppliers.",
+        "Add ORDER BY city.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT city FROM suppliers ORDER BY city DESC;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers ORDER BY city DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by city",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT city FROM suppliers ORDER BY city DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT city FROM suppliers.",
+        "Add ORDER BY city DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT city FROM suppliers ORDER BY city DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers ORDER BY city DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by city",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT city FROM suppliers ORDER BY city DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT city FROM suppliers.",
+        "Add ORDER BY city DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT city FROM suppliers ORDER BY city DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers ORDER BY city DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by city",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT city FROM suppliers ORDER BY city DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT city FROM suppliers.",
+        "Add ORDER BY city DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT city FROM suppliers ORDER BY city DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers ORDER BY city DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by city",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT city FROM suppliers ORDER BY city DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT city FROM suppliers.",
+        "Add ORDER BY city DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT city FROM suppliers ORDER BY city DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers ORDER BY city DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of city",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different city values exist?'",
+      "task": "Try typing: SELECT DISTINCT city FROM suppliers ORDER BY city;",
+      "hints": [
+        "Start with SELECT DISTINCT city.",
+        "FROM suppliers.",
+        "Add ORDER BY city to sort them.",
+        "Write: SELECT DISTINCT city FROM suppliers ORDER BY city;"
+      ],
+      "expected_sql": "SELECT DISTINCT city FROM suppliers ORDER BY city;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort phone smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT phone FROM suppliers ORDER BY phone ;",
+      "hints": [
+        "Start with SELECT phone FROM suppliers.",
+        "Add ORDER BY phone.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT phone FROM suppliers ORDER BY phone ;"
+      ],
+      "expected_sql": "SELECT phone FROM suppliers ORDER BY phone ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort phone biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT phone FROM suppliers ORDER BY phone DESC;",
+      "hints": [
+        "Start with SELECT phone FROM suppliers.",
+        "Add ORDER BY phone.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT phone FROM suppliers ORDER BY phone DESC;"
+      ],
+      "expected_sql": "SELECT phone FROM suppliers ORDER BY phone DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by phone",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT phone FROM suppliers.",
+        "Add ORDER BY phone DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by phone",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT phone FROM suppliers.",
+        "Add ORDER BY phone DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by phone",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT phone FROM suppliers.",
+        "Add ORDER BY phone DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by phone",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT phone FROM suppliers.",
+        "Add ORDER BY phone DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT phone FROM suppliers ORDER BY phone DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of phone",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different phone values exist?'",
+      "task": "Try typing: SELECT DISTINCT phone FROM suppliers ORDER BY phone;",
+      "hints": [
+        "Start with SELECT DISTINCT phone.",
+        "FROM suppliers.",
+        "Add ORDER BY phone to sort them.",
+        "Write: SELECT DISTINCT phone FROM suppliers ORDER BY phone;"
+      ],
+      "expected_sql": "SELECT DISTINCT phone FROM suppliers ORDER BY phone;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    }
+  ],
+  "id": "L319",
+  "order": 319
+}

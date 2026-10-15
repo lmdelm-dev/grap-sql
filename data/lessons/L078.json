@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the products table by text",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where name is Amlou Spread 200g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Amlou Spread 200g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Amlou Spread 200g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Amlou Spread 200g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Amlou Spread 200g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Aml'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nAml% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Aml%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Aml%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Aml%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'mlo' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %mlo% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%mlo%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%mlo%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%mlo%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Argan Butter 250g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Argan Butter 250g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Argan Butter 250g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Argan Butter 250g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Argan Butter 250g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Arg'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nArg% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Arg%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Arg%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Arg%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'rga' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %rga% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%rga%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%rga%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%rga%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Argan Oil Cosmetic 100ml",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Argan Oil Cosmetic 100ml'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Argan Oil Cosmetic 100ml';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Argan Oil Cosmetic 100ml';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Argan Oil Cosmetic 100ml';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Argan Oil Culinary 500ml",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Argan Oil Culinary 500ml'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Argan Oil Culinary 500ml';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Argan Oil Culinary 500ml';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Argan Oil Culinary 500ml';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Argan Soap Bar",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Argan Soap Bar'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Argan Soap Bar';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Argan Soap Bar';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Argan Soap Bar';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Babouches Slippers",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Babouches Slippers'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Babouches Slippers';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Babouches Slippers';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Babouches Slippers';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Bab'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nBab% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Bab%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Bab%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Bab%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'abo' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %abo% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%abo%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%abo%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%abo%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Beni Ourain Rug 200x150",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Beni Ourain Rug 200x150'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Beni Ourain Rug 200x150';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Beni Ourain Rug 200x150';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Beni Ourain Rug 200x150';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Ben'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nBen% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Ben%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Ben%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Ben%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'eni' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %eni% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%eni%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%eni%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%eni%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Black Pepper Whole 100g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Black Pepper Whole 100g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Black Pepper Whole 100g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Black Pepper Whole 100g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Black Pepper Whole 100g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Bla'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nBla% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Bla%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Bla%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Bla%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'lac' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %lac% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%lac%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%lac%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%lac%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Brass Lantern Large",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Brass Lantern Large'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Brass Lantern Large';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Brass Lantern Large';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Brass Lantern Large';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Bra'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nBra% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Bra%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Bra%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Bra%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ras' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ras% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%ras%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%ras%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%ras%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Ceramic Bowl Set (4)",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Ceramic Bowl Set (4)'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Ceramic Bowl Set (4)';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Ceramic Bowl Set (4)';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Ceramic Bowl Set (4)';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Cer'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nCer% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Cer%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Cer%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Cer%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'era' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %era% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%era%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%era%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%era%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Cinnamon Sticks 100g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Cinnamon Sticks 100g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Cinnamon Sticks 100g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Cinnamon Sticks 100g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Cinnamon Sticks 100g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Cin'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nCin% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Cin%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Cin%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Cin%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'inn' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %inn% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%inn%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%inn%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%inn%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Copper Lantern Small",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Copper Lantern Small'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Copper Lantern Small';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Copper Lantern Small';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Copper Lantern Small';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Cop'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nCop% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Cop%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Cop%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Cop%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'opp' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %opp% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%opp%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%opp%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%opp%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Cotton Blanket 200cm",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Cotton Blanket 200cm'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Cotton Blanket 200cm';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Cotton Blanket 200cm';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Cotton Blanket 200cm';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Cot'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nCot% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Cot%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Cot%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Cot%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ott' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ott% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%ott%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%ott%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%ott%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Cumin Ground 80g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Cumin Ground 80g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Cumin Ground 80g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Cumin Ground 80g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Cumin Ground 80g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Cum'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nCum% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Cum%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Cum%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Cum%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'umi' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %umi% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%umi%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%umi%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%umi%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Date Syrup 350ml",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Date Syrup 350ml'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Date Syrup 350ml';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Date Syrup 350ml';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Date Syrup 350ml';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Dat'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nDat% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Dat%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Dat%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Dat%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ate' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ate% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%ate%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%ate%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%ate%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Dried Figs 500g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Dried Figs 500g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Dried Figs 500g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Dried Figs 500g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Dried Figs 500g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L078",
+  "order": 78
+}

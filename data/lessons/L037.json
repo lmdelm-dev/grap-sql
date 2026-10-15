@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the customers table by text · part 2",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where name is Sara Sabri",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Sara Sabri'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Sara Sabri';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Sara Sabri';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Sara Sabri';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Sar'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nSar% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Sar%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Sar%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Sar%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ara' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ara% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%ara%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%ara%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%ara%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Sara Sekkat",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Sara Sekkat'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Sara Sekkat';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Sara Sekkat';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Sara Sekkat';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Sara Tazi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Sara Tazi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Sara Tazi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Sara Tazi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Sara Tazi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Tariq Alaoui",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Tariq Alaoui'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Tariq Alaoui';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Tariq Alaoui';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Tariq Alaoui';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tar'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTar% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Tar%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Tar%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Tar%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Tariq Chtaini",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Tariq Chtaini'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Tariq Chtaini';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Tariq Chtaini';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Tariq Chtaini';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Youssef Alaoui",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Youssef Alaoui'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Youssef Alaoui';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Youssef Alaoui';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Youssef Alaoui';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'You'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nYou% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'You%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'You%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'You%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ous' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ous% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%ous%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%ous%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%ous%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Zineb Alaoui",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Zineb Alaoui'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Zineb Alaoui';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Zineb Alaoui';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Zineb Alaoui';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Zin'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nZin% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Zin%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Zin%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Zin%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ine' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ine% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%ine%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%ine%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%ine%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Zineb Berrada",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Zineb Berrada'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Zineb Berrada';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Zineb Berrada';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Zineb Berrada';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Zineb Idrissi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Zineb Idrissi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Zineb Idrissi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Zineb Idrissi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Zineb Idrissi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user10@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user10@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user10@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user10@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user10@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'use'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nuse% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email LIKE 'use%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE email LIKE 'use%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email LIKE 'use%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ser' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ser% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email LIKE '%ser%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE email LIKE '%ser%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email LIKE '%ser%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user11@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user11@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user11@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user11@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user11@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user14@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user14@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user14@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user14@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user14@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user15@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user15@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user15@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user15@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user15@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user16@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user16@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user16@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user16@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user16@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user18@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user18@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user18@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user18@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user18@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user19@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user19@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user19@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user19@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user19@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user1@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user1@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user1@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user1@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user1@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user20@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user20@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user20@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user20@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user20@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user21@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user21@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user21@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user21@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user21@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user22@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user22@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user22@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user22@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user22@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user23@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user23@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user23@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user23@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user23@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user24@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user24@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user24@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user24@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user24@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user25@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user25@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user25@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user25@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user25@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user26@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user26@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user26@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user26@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user26@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user27@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user27@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user27@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user27@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user27@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user28@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user28@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user28@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user28@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user28@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user29@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user29@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user29@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user29@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user29@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user2@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user2@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user2@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user2@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user2@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user30@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user30@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user30@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user30@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user30@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user3@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user3@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user3@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user3@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user3@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user4@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user4@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user4@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user4@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user4@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L037",
+  "order": 37
+}

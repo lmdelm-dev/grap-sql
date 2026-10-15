@@ -1,0 +1,800 @@
+{
+  "title": "Filtering the products table by numbers · part 38",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Filter then sort: stock != 0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock != 0 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock != 0.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock != 0 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock != 0 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock > 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is bigger than 3.",
+      "task": "Try typing: SELECT id FROM products WHERE stock > 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock > 3.",
+        "Write: SELECT id FROM products WHERE stock > 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock > 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock > 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 3.",
+        "Write: SELECT count(*) FROM products WHERE stock > 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock > 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock > 3 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock > 3.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock > 3 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock > 3 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock >= 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is at least 3.",
+      "task": "Try typing: SELECT id FROM products WHERE stock >= 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock >= 3.",
+        "Write: SELECT id FROM products WHERE stock >= 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock >= 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock >= 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock >= 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock >= 3.",
+        "Write: SELECT count(*) FROM products WHERE stock >= 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock >= 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock >= 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock >= 3 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock >= 3.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock >= 3 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock >= 3 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock < 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is smaller than 3.",
+      "task": "Try typing: SELECT id FROM products WHERE stock < 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock < 3.",
+        "Write: SELECT id FROM products WHERE stock < 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock < 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock < 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock < 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock < 3.",
+        "Write: SELECT count(*) FROM products WHERE stock < 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock < 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock < 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock < 3 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock < 3.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock < 3 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock < 3 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock <= 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is at most 3.",
+      "task": "Try typing: SELECT id FROM products WHERE stock <= 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock <= 3.",
+        "Write: SELECT id FROM products WHERE stock <= 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock <= 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock <= 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock <= 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock <= 3.",
+        "Write: SELECT count(*) FROM products WHERE stock <= 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock <= 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock <= 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock <= 3 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock <= 3.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock <= 3 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock <= 3 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock = 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is exactly 3.",
+      "task": "Try typing: SELECT id FROM products WHERE stock = 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock = 3.",
+        "Write: SELECT id FROM products WHERE stock = 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock = 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock = 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock = 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock = 3.",
+        "Write: SELECT count(*) FROM products WHERE stock = 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock = 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock = 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock = 3 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock = 3.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock = 3 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock = 3 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock != 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is not equal to 3.",
+      "task": "Try typing: SELECT id FROM products WHERE stock != 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock != 3.",
+        "Write: SELECT id FROM products WHERE stock != 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock != 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock != 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock != 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock != 3.",
+        "Write: SELECT count(*) FROM products WHERE stock != 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock != 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock != 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock != 3 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock != 3.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock != 3 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock != 3 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock > 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is bigger than 7.",
+      "task": "Try typing: SELECT id FROM products WHERE stock > 7;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock > 7.",
+        "Write: SELECT id FROM products WHERE stock > 7;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock > 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock > 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 7.",
+        "Write: SELECT count(*) FROM products WHERE stock > 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock > 7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock > 7 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock > 7.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock > 7 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock > 7 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock >= 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is at least 7.",
+      "task": "Try typing: SELECT id FROM products WHERE stock >= 7;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock >= 7.",
+        "Write: SELECT id FROM products WHERE stock >= 7;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock >= 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock >= 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock >= 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock >= 7.",
+        "Write: SELECT count(*) FROM products WHERE stock >= 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock >= 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock >= 7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock >= 7 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock >= 7.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock >= 7 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock >= 7 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock < 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is smaller than 7.",
+      "task": "Try typing: SELECT id FROM products WHERE stock < 7;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock < 7.",
+        "Write: SELECT id FROM products WHERE stock < 7;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock < 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock < 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock < 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock < 7.",
+        "Write: SELECT count(*) FROM products WHERE stock < 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock < 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock < 7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock < 7 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock < 7.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock < 7 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock < 7 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock <= 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is at most 7.",
+      "task": "Try typing: SELECT id FROM products WHERE stock <= 7;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock <= 7.",
+        "Write: SELECT id FROM products WHERE stock <= 7;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock <= 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock <= 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock <= 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock <= 7.",
+        "Write: SELECT count(*) FROM products WHERE stock <= 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock <= 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock <= 7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock <= 7 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock <= 7.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock <= 7 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock <= 7 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock = 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is exactly 7.",
+      "task": "Try typing: SELECT id FROM products WHERE stock = 7;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock = 7.",
+        "Write: SELECT id FROM products WHERE stock = 7;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock = 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock = 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock = 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock = 7.",
+        "Write: SELECT count(*) FROM products WHERE stock = 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock = 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock = 7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock = 7 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock = 7.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock = 7 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock = 7 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock != 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is not equal to 7.",
+      "task": "Try typing: SELECT id FROM products WHERE stock != 7;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock != 7.",
+        "Write: SELECT id FROM products WHERE stock != 7;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock != 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock != 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock != 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock != 7.",
+        "Write: SELECT count(*) FROM products WHERE stock != 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock != 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock != 7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock != 7 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock != 7.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock != 7 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock != 7 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock > 12",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where stock is bigger than 12.",
+      "task": "Try typing: SELECT id FROM products WHERE stock > 12;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is stock > 12.",
+        "Write: SELECT id FROM products WHERE stock > 12;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock > 12;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows stock > 12",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 12.",
+        "Write: SELECT count(*) FROM products WHERE stock > 12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 12;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: stock > 12",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock > 12 ORDER BY stock LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock > 12.",
+        "Add ORDER BY stock LIMIT 3.",
+        "Write: SELECT id FROM products WHERE stock > 12 ORDER BY stock LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock > 12 ORDER BY stock LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    }
+  ],
+  "id": "L119",
+  "order": 119
+}

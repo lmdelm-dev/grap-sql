@@ -1,0 +1,780 @@
+{
+  "title": "Filtering the employees table by numbers · part 2",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id <= 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 4.",
+      "task": "Try typing: SELECT id FROM employees WHERE id <= 4;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id <= 4.",
+        "Write: SELECT id FROM employees WHERE id <= 4;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id <= 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id <= 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id <= 4.",
+        "Write: SELECT count(*) FROM employees WHERE id <= 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id <= 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 4.",
+      "task": "Try typing: SELECT id FROM employees WHERE id = 4;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id = 4.",
+        "Write: SELECT id FROM employees WHERE id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id = 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id = 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id = 4.",
+        "Write: SELECT count(*) FROM employees WHERE id = 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id = 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 4.",
+      "task": "Try typing: SELECT id FROM employees WHERE id != 4;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id != 4.",
+        "Write: SELECT id FROM employees WHERE id != 4;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id != 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id != 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id != 4.",
+        "Write: SELECT count(*) FROM employees WHERE id != 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id != 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 5.",
+      "task": "Try typing: SELECT id FROM employees WHERE id > 5;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id > 5.",
+        "Write: SELECT id FROM employees WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id > 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id > 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id > 5.",
+        "Write: SELECT count(*) FROM employees WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id > 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 5.",
+      "task": "Try typing: SELECT id FROM employees WHERE id >= 5;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id >= 5.",
+        "Write: SELECT id FROM employees WHERE id >= 5;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id >= 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id >= 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id >= 5.",
+        "Write: SELECT count(*) FROM employees WHERE id >= 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id >= 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 5.",
+      "task": "Try typing: SELECT id FROM employees WHERE id < 5;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id < 5.",
+        "Write: SELECT id FROM employees WHERE id < 5;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id < 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id < 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id < 5.",
+        "Write: SELECT count(*) FROM employees WHERE id < 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id < 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 5.",
+      "task": "Try typing: SELECT id FROM employees WHERE id <= 5;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id <= 5.",
+        "Write: SELECT id FROM employees WHERE id <= 5;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id <= 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id <= 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id <= 5.",
+        "Write: SELECT count(*) FROM employees WHERE id <= 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id <= 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 5.",
+      "task": "Try typing: SELECT id FROM employees WHERE id = 5;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id = 5.",
+        "Write: SELECT id FROM employees WHERE id = 5;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id = 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id = 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id = 5.",
+        "Write: SELECT count(*) FROM employees WHERE id = 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id = 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 5.",
+      "task": "Try typing: SELECT id FROM employees WHERE id != 5;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id != 5.",
+        "Write: SELECT id FROM employees WHERE id != 5;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id != 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id != 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id != 5.",
+        "Write: SELECT count(*) FROM employees WHERE id != 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id != 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 6.",
+      "task": "Try typing: SELECT id FROM employees WHERE id >= 6;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id >= 6.",
+        "Write: SELECT id FROM employees WHERE id >= 6;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id >= 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id >= 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id >= 6.",
+        "Write: SELECT count(*) FROM employees WHERE id >= 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id >= 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 6.",
+      "task": "Try typing: SELECT id FROM employees WHERE id < 6;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id < 6.",
+        "Write: SELECT id FROM employees WHERE id < 6;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id < 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id < 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id < 6.",
+        "Write: SELECT count(*) FROM employees WHERE id < 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id < 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 6.",
+      "task": "Try typing: SELECT id FROM employees WHERE id <= 6;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id <= 6.",
+        "Write: SELECT id FROM employees WHERE id <= 6;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id <= 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id <= 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id <= 6.",
+        "Write: SELECT count(*) FROM employees WHERE id <= 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id <= 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 6.",
+      "task": "Try typing: SELECT id FROM employees WHERE id = 6;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id = 6.",
+        "Write: SELECT id FROM employees WHERE id = 6;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id = 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id = 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id = 6.",
+        "Write: SELECT count(*) FROM employees WHERE id = 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id = 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 6.",
+      "task": "Try typing: SELECT id FROM employees WHERE id != 6;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is id != 6.",
+        "Write: SELECT id FROM employees WHERE id != 6;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id != 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id != 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id != 6.",
+        "Write: SELECT count(*) FROM employees WHERE id != 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id != 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary > 5200.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is bigger than 5200.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary > 5200.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary > 5200.0.",
+        "Write: SELECT id FROM employees WHERE salary > 5200.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary > 5200.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary > 5200.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary > 5200.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary > 5200.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary > 5200.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary > 5200.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary > 5200.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary > 5200.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary > 5200.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary > 5200.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary > 5200.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary >= 5200.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is at least 5200.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary >= 5200.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary >= 5200.0.",
+        "Write: SELECT id FROM employees WHERE salary >= 5200.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary >= 5200.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary >= 5200.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary >= 5200.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary >= 5200.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary >= 5200.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary >= 5200.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary >= 5200.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary >= 5200.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary >= 5200.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary >= 5200.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary >= 5200.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary <= 5200.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is at most 5200.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary <= 5200.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary <= 5200.0.",
+        "Write: SELECT id FROM employees WHERE salary <= 5200.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary <= 5200.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary <= 5200.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary <= 5200.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary <= 5200.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary <= 5200.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary <= 5200.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary <= 5200.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary <= 5200.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary <= 5200.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary <= 5200.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary <= 5200.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary = 5200.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is exactly 5200.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary = 5200.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary = 5200.0.",
+        "Write: SELECT id FROM employees WHERE salary = 5200.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary = 5200.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary = 5200.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary = 5200.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary = 5200.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary = 5200.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary = 5200.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary = 5200.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary = 5200.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary = 5200.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary = 5200.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary = 5200.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    }
+  ],
+  "id": "L063",
+  "order": 63
+}

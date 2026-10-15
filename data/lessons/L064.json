@@ -1,0 +1,798 @@
+{
+  "title": "Filtering the employees table by numbers · part 3",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep salary != 5200.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is not equal to 5200.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary != 5200.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary != 5200.0.",
+        "Write: SELECT id FROM employees WHERE salary != 5200.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary != 5200.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary != 5200.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary != 5200.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary != 5200.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary != 5200.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary != 5200.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary != 5200.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary != 5200.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary != 5200.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary != 5200.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary != 5200.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary > 5800.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is bigger than 5800.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary > 5800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary > 5800.0.",
+        "Write: SELECT id FROM employees WHERE salary > 5800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary > 5800.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary > 5800.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary > 5800.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary > 5800.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary > 5800.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary > 5800.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary > 5800.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary > 5800.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary > 5800.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary > 5800.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary > 5800.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary >= 5800.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is at least 5800.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary >= 5800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary >= 5800.0.",
+        "Write: SELECT id FROM employees WHERE salary >= 5800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary >= 5800.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary >= 5800.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary >= 5800.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary >= 5800.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary >= 5800.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary >= 5800.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary >= 5800.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary >= 5800.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary >= 5800.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary >= 5800.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary >= 5800.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary < 5800.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is smaller than 5800.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary < 5800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary < 5800.0.",
+        "Write: SELECT id FROM employees WHERE salary < 5800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary < 5800.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary < 5800.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary < 5800.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary < 5800.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary < 5800.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary < 5800.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary < 5800.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary < 5800.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary < 5800.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary < 5800.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary < 5800.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary <= 5800.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is at most 5800.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary <= 5800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary <= 5800.0.",
+        "Write: SELECT id FROM employees WHERE salary <= 5800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary <= 5800.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary <= 5800.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary <= 5800.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary <= 5800.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary <= 5800.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary <= 5800.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary <= 5800.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary <= 5800.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary <= 5800.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary <= 5800.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary <= 5800.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary = 5800.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is exactly 5800.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary = 5800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary = 5800.0.",
+        "Write: SELECT id FROM employees WHERE salary = 5800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary = 5800.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary = 5800.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary = 5800.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary = 5800.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary = 5800.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary = 5800.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary = 5800.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary = 5800.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary = 5800.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary = 5800.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary = 5800.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary != 5800.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is not equal to 5800.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary != 5800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary != 5800.0.",
+        "Write: SELECT id FROM employees WHERE salary != 5800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary != 5800.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary != 5800.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary != 5800.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary != 5800.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary != 5800.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary != 5800.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary != 5800.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary != 5800.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary != 5800.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary != 5800.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary != 5800.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary > 6500.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is bigger than 6500.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary > 6500.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary > 6500.0.",
+        "Write: SELECT id FROM employees WHERE salary > 6500.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary > 6500.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary > 6500.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary > 6500.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary > 6500.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary > 6500.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary > 6500.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary > 6500.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary > 6500.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary > 6500.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary > 6500.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary > 6500.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary >= 6500.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is at least 6500.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary >= 6500.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary >= 6500.0.",
+        "Write: SELECT id FROM employees WHERE salary >= 6500.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary >= 6500.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary >= 6500.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary >= 6500.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary >= 6500.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary >= 6500.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary >= 6500.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary >= 6500.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary >= 6500.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary >= 6500.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary >= 6500.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary >= 6500.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary < 6500.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is smaller than 6500.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary < 6500.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary < 6500.0.",
+        "Write: SELECT id FROM employees WHERE salary < 6500.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary < 6500.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary < 6500.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary < 6500.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary < 6500.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary < 6500.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary < 6500.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary < 6500.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary < 6500.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary < 6500.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary < 6500.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary < 6500.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary <= 6500.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is at most 6500.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary <= 6500.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary <= 6500.0.",
+        "Write: SELECT id FROM employees WHERE salary <= 6500.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary <= 6500.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary <= 6500.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary <= 6500.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary <= 6500.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary <= 6500.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary <= 6500.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary <= 6500.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary <= 6500.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary <= 6500.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary <= 6500.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary <= 6500.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary = 6500.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is exactly 6500.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary = 6500.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary = 6500.0.",
+        "Write: SELECT id FROM employees WHERE salary = 6500.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary = 6500.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary = 6500.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary = 6500.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary = 6500.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary = 6500.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary = 6500.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary = 6500.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary = 6500.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary = 6500.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary = 6500.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary = 6500.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary != 6500.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is not equal to 6500.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary != 6500.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary != 6500.0.",
+        "Write: SELECT id FROM employees WHERE salary != 6500.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary != 6500.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows salary != 6500.0",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary != 6500.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary != 6500.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary != 6500.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary != 6500.0;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: salary != 6500.0",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary != 6500.0 ORDER BY salary LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary != 6500.0.",
+        "Add ORDER BY salary LIMIT 3.",
+        "Write: SELECT id FROM employees WHERE salary != 6500.0 ORDER BY salary LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary != 6500.0 ORDER BY salary LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary > 6800.0",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where salary is bigger than 6800.0.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary > 6800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE after the table name.",
+        "The test is salary > 6800.0.",
+        "Write: SELECT id FROM employees WHERE salary > 6800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary > 6800.0;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L064",
+  "order": 64
+}

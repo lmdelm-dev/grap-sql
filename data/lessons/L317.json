@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the suppliers table by numbers · part 2",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id <= 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 4.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id <= 4;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id <= 4.",
+        "Write: SELECT id FROM suppliers WHERE id <= 4;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id <= 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id <= 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id <= 4.",
+        "Write: SELECT count(*) FROM suppliers WHERE id <= 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id <= 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 4.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id = 4;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id = 4.",
+        "Write: SELECT id FROM suppliers WHERE id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id = 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id = 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id = 4.",
+        "Write: SELECT count(*) FROM suppliers WHERE id = 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id = 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 4.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id != 4;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id != 4.",
+        "Write: SELECT id FROM suppliers WHERE id != 4;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id != 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id != 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id != 4.",
+        "Write: SELECT count(*) FROM suppliers WHERE id != 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id != 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 5.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id > 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id > 5.",
+        "Write: SELECT id FROM suppliers WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id > 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id > 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id > 5.",
+        "Write: SELECT count(*) FROM suppliers WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id > 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 5.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id >= 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id >= 5.",
+        "Write: SELECT id FROM suppliers WHERE id >= 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id >= 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id >= 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id >= 5.",
+        "Write: SELECT count(*) FROM suppliers WHERE id >= 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id >= 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 5.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id < 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id < 5.",
+        "Write: SELECT id FROM suppliers WHERE id < 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id < 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id < 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id < 5.",
+        "Write: SELECT count(*) FROM suppliers WHERE id < 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id < 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 5.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id <= 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id <= 5.",
+        "Write: SELECT id FROM suppliers WHERE id <= 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id <= 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id <= 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id <= 5.",
+        "Write: SELECT count(*) FROM suppliers WHERE id <= 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id <= 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 5.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id = 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id = 5.",
+        "Write: SELECT id FROM suppliers WHERE id = 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id = 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id = 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id = 5.",
+        "Write: SELECT count(*) FROM suppliers WHERE id = 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id = 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 5.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id != 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id != 5.",
+        "Write: SELECT id FROM suppliers WHERE id != 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id != 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id != 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id != 5.",
+        "Write: SELECT count(*) FROM suppliers WHERE id != 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id != 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 6.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id > 6;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id > 6.",
+        "Write: SELECT id FROM suppliers WHERE id > 6;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id > 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id > 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id > 6.",
+        "Write: SELECT count(*) FROM suppliers WHERE id > 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id > 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 6.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id >= 6;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id >= 6.",
+        "Write: SELECT id FROM suppliers WHERE id >= 6;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id >= 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id >= 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id >= 6.",
+        "Write: SELECT count(*) FROM suppliers WHERE id >= 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id >= 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 6.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id < 6;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id < 6.",
+        "Write: SELECT id FROM suppliers WHERE id < 6;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id < 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id < 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id < 6.",
+        "Write: SELECT count(*) FROM suppliers WHERE id < 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id < 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 6.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id <= 6;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id <= 6.",
+        "Write: SELECT id FROM suppliers WHERE id <= 6;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id <= 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id <= 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id <= 6.",
+        "Write: SELECT count(*) FROM suppliers WHERE id <= 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id <= 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 6.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id = 6;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id = 6.",
+        "Write: SELECT id FROM suppliers WHERE id = 6;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id = 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id = 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id = 6.",
+        "Write: SELECT count(*) FROM suppliers WHERE id = 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id = 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 6",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 6.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id != 6;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id != 6.",
+        "Write: SELECT id FROM suppliers WHERE id != 6;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id != 6;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 6",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id != 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id != 6.",
+        "Write: SELECT count(*) FROM suppliers WHERE id != 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id != 6;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 7.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id > 7;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id > 7.",
+        "Write: SELECT id FROM suppliers WHERE id > 7;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id > 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id > 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id > 7.",
+        "Write: SELECT count(*) FROM suppliers WHERE id > 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id > 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 7.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id >= 7;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id >= 7.",
+        "Write: SELECT id FROM suppliers WHERE id >= 7;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id >= 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id >= 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id >= 7.",
+        "Write: SELECT count(*) FROM suppliers WHERE id >= 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id >= 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 7.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id < 7;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id < 7.",
+        "Write: SELECT id FROM suppliers WHERE id < 7;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id < 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id < 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id < 7.",
+        "Write: SELECT count(*) FROM suppliers WHERE id < 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id < 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 7.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id <= 7;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id <= 7.",
+        "Write: SELECT id FROM suppliers WHERE id <= 7;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id <= 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id <= 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id <= 7.",
+        "Write: SELECT count(*) FROM suppliers WHERE id <= 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id <= 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 7.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id = 7;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE after the table name.",
+        "The test is id = 7.",
+        "Write: SELECT id FROM suppliers WHERE id = 7;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id = 7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM suppliers WHERE id = 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM suppliers.",
+        "Add WHERE id = 7.",
+        "Write: SELECT count(*) FROM suppliers WHERE id = 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM suppliers WHERE id = 7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L317",
+  "order": 317
+}

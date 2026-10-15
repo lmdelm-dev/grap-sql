@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the categories table by text",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where name is Argan Products",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Argan Products'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name = 'Argan Products';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE name = 'Argan Products';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name = 'Argan Products';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Arg'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nArg% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE 'Arg%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE name LIKE 'Arg%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE 'Arg%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'rga' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %rga% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE '%rga%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE name LIKE '%rga%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE '%rga%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Ceramics & Pottery",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Ceramics & Pottery'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name = 'Ceramics & Pottery';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE name = 'Ceramics & Pottery';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name = 'Ceramics & Pottery';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Cer'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nCer% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE 'Cer%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE name LIKE 'Cer%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE 'Cer%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'era' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %era% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE '%era%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE name LIKE '%era%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE '%era%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Dates & Dried Fruits",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Dates & Dried Fruits'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name = 'Dates & Dried Fruits';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE name = 'Dates & Dried Fruits';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name = 'Dates & Dried Fruits';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Dat'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nDat% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE 'Dat%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE name LIKE 'Dat%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE 'Dat%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ate' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ate% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE '%ate%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE name LIKE '%ate%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE '%ate%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Leather Goods",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Leather Goods'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name = 'Leather Goods';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE name = 'Leather Goods';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name = 'Leather Goods';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Lea'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nLea% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE 'Lea%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE name LIKE 'Lea%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE 'Lea%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'eat' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %eat% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE '%eat%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE name LIKE '%eat%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE '%eat%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Metal Lanterns",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Metal Lanterns'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name = 'Metal Lanterns';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE name = 'Metal Lanterns';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name = 'Metal Lanterns';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Met'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nMet% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE 'Met%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE name LIKE 'Met%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE 'Met%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'eta' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %eta% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE '%eta%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE name LIKE '%eta%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE '%eta%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Olive Oil",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Olive Oil'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name = 'Olive Oil';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE name = 'Olive Oil';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name = 'Olive Oil';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Oli'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nOli% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE 'Oli%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE name LIKE 'Oli%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE 'Oli%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'liv' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %liv% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE '%liv%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE name LIKE '%liv%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE '%liv%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Spices & Herbs",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Spices & Herbs'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name = 'Spices & Herbs';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE name = 'Spices & Herbs';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name = 'Spices & Herbs';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Spi'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nSpi% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE 'Spi%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE name LIKE 'Spi%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE 'Spi%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'pic' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %pic% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE '%pic%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE name LIKE '%pic%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE '%pic%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Textiles",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Textiles'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name = 'Textiles';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE name = 'Textiles';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name = 'Textiles';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tex'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTex% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE 'Tex%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE name LIKE 'Tex%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE 'Tex%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ext' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ext% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE name LIKE '%ext%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE name LIKE '%ext%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE name LIKE '%ext%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where description is Argan oil, cosmetics and food",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Argan oil, cosmetics and food'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description = 'Argan oil, cosmetics and food';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE description = 'Argan oil, cosmetics and food';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description = 'Argan oil, cosmetics and food';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Arg'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nArg% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE 'Arg%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE description LIKE 'Arg%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE 'Arg%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'rga' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %rga% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE '%rga%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE description LIKE '%rga%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE '%rga%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where description is Bags, belts and poufs",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Bags, belts and poufs'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description = 'Bags, belts and poufs';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE description = 'Bags, belts and poufs';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description = 'Bags, belts and poufs';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Bag'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nBag% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE 'Bag%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE description LIKE 'Bag%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE 'Bag%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ags' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ags% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE '%ags%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE description LIKE '%ags%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE '%ags%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where description is Cold-pressed olive oils",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Cold-pressed olive oils'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description = 'Cold-pressed olive oils';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE description = 'Cold-pressed olive oils';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description = 'Cold-pressed olive oils';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Col'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nCol% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE 'Col%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE description LIKE 'Col%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE 'Col%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'old' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %old% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE '%old%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE description LIKE '%old%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE '%old%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where description is Dates, figs, almonds and raisins",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Dates, figs, almonds and raisins'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description = 'Dates, figs, almonds and raisins';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE description = 'Dates, figs, almonds and raisins';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description = 'Dates, figs, almonds and raisins';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Dat'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nDat% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE 'Dat%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE description LIKE 'Dat%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE 'Dat%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ate' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ate% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE '%ate%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE description LIKE '%ate%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE '%ate%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where description is Handcrafted brass and copper lanterns",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Handcrafted brass and copper lanterns'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description = 'Handcrafted brass and copper lanterns';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE description = 'Handcrafted brass and copper lanterns';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description = 'Handcrafted brass and copper lanterns';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Han'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nHan% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE 'Han%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM categories WHERE description LIKE 'Han%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE 'Han%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'and' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %and% means 'contains'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description LIKE '%and%';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM categories WHERE description LIKE '%and%';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description LIKE '%and%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where description is Handmade pottery from Fes and Safi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Handmade pottery from Fes and Safi'.",
+      "task": "Try typing: SELECT * FROM categories WHERE description = 'Handmade pottery from Fes and Safi';",
+      "hints": [
+        "Start with SELECT * FROM categories.",
+        "Add WHERE description = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM categories WHERE description = 'Handmade pottery from Fes and Safi';"
+      ],
+      "expected_sql": "SELECT * FROM categories WHERE description = 'Handmade pottery from Fes and Safi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L022",
+  "order": 22
+}

@@ -1,0 +1,145 @@
+{
+  "title": "Pick from a list in suppliers",
+  "tags": [
+    "where",
+    "in"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep a short list of id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM suppliers WHERE id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM suppliers WHERE id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of name",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name IN ('Atlas Supply 1', 'Atlas Supply 2', 'Atlas Supply 3');",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM suppliers WHERE name IN ('Atlas Supply 1', 'Atlas Supply 2', 'Atlas Supply 3');"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name IN ('Atlas Supply 1', 'Atlas Supply 2', 'Atlas Supply 3');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep name NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name NOT IN ('Atlas Supply 1', 'Atlas Supply 2', 'Atlas Supply 3', 'Atlas Supply 4');",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM suppliers WHERE name NOT IN ('Atlas Supply 1', 'Atlas Supply 2', 'Atlas Supply 3', 'Atlas Supply 4');"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name NOT IN ('Atlas Supply 1', 'Atlas Supply 2', 'Atlas Supply 3', 'Atlas Supply 4');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of city",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE city IN ('Kenitra', 'Marrakech', 'Tangier');",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE city IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM suppliers WHERE city IN ('Kenitra', 'Marrakech', 'Tangier');"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE city IN ('Kenitra', 'Marrakech', 'Tangier');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of phone",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE phone IN ('+212 521 11 22 33', '+212 522 11 22 33', '+212 523 11 22 33');",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE phone IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM suppliers WHERE phone IN ('+212 521 11 22 33', '+212 522 11 22 33', '+212 523 11 22 33');"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE phone IN ('+212 521 11 22 33', '+212 522 11 22 33', '+212 523 11 22 33');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep phone NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE phone NOT IN ('+212 521 11 22 33', '+212 522 11 22 33', '+212 523 11 22 33', '+212 524 11 22 33');",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE phone NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM suppliers WHERE phone NOT IN ('+212 521 11 22 33', '+212 522 11 22 33', '+212 523 11 22 33', '+212 524 11 22 33');"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE phone NOT IN ('+212 521 11 22 33', '+212 522 11 22 33', '+212 523 11 22 33', '+212 524 11 22 33');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L323",
+  "order": 323
+}

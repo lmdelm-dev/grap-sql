@@ -1,0 +1,99 @@
+{
+  "id": "L07",
+  "order": 7,
+  "difficulty": 2,
+  "tags": [
+    "count",
+    "aggregate"
+  ],
+  "title": "COUNT: how many rows are there?",
+  "steps": [
+    {
+      "type": "fill",
+      "title": "COUNT(*) - the crowd counter",
+      "prompt": "COUNT(*) answers 'how many rows?' with one number.\nIt's like a shopkeeper counting the jars on a shelf - one, two, three…\nSELECT ___(*) FROM products;",
+      "task": "Fill the blank with the word for counting.",
+      "hints": [
+        "The star inside the brackets means 'every row'.",
+        "The word starts with 'c'.",
+        "It's the same word as the title of this lesson.",
+        "Replace ___ with count."
+      ],
+      "expected_sql": "SELECT count(*) FROM products;",
+      "seed_sql": "SELECT ___(*) FROM products;",
+      "memory_trick": "count(*) = 'how many rows?'"
+    },
+    {
+      "type": "type",
+      "title": "Count with a filter",
+      "prompt": "COUNT combines beautifully with WHERE.\nAsk: 'how many customers live in Marrakech?'",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE city = 'Marrakech';",
+      "hints": [
+        "Start with SELECT count(*) FROM customers.",
+        "Add WHERE city = …",
+        "Wrap Marrakech in single quotes.",
+        "Type: SELECT count(*) FROM customers WHERE city = 'Marrakech';"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE city = 'Marrakech';",
+      "memory_trick": "WHERE narrows first, COUNT counts what's left."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the count",
+      "prompt": "Sales people often ask 'how many?':\nSELECT count(*) FROM sale_items WHERE quantity >= 2;\n(quantity >= 2 means 'bought two or more of this item').",
+      "task": "How many items were sold in pairs or more?",
+      "check": {
+        "answer": [
+          "70",
+          "70 rows",
+          "seventy"
+        ]
+      },
+      "hints": [
+        "Run the query - prediction lets you verify.",
+        "quantity >= 2 keeps rows where the number is 2, 3, 4…",
+        "It's between 60 and 80.",
+        "Answer: 70."
+      ],
+      "memory_trick": ">= means 'this much or more'."
+    },
+    {
+      "type": "answer",
+      "title": "NULL's little secret",
+      "prompt": "COUNT(*) counts every row, even ones with empty bits.\nCOUNT(name) counts rows where name is NOT empty.\nAn empty bit is called NULL (say 'null': nothing there).",
+      "task": "In SQL, COUNT(name) skips rows where name is …",
+      "check": {
+        "answer": [
+          "null",
+          "empty",
+          "missing",
+          "missing (null)",
+          "nothing",
+          "missing value",
+          "empty (null)"
+        ]
+      },
+      "hints": [
+        "It skips rows where the column has no value.",
+        "The special SQL word is four letters.",
+        "It looks like a mix of 'nil' and 'null'.",
+        "Answer: NULL."
+      ],
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the two-or-more",
+      "prompt": "Put it together for real - count the sale_items sold in pairs or more:",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity >= 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "Add FROM sale_items.",
+        "Finish with WHERE quantity >= 2.",
+        "Type: SELECT count(*) FROM sale_items WHERE quantity >= 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity >= 2;",
+      "memory_trick": "count + where = 'how many rows pass the filter?'"
+    }
+  ]
+}

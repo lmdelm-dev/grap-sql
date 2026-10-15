@@ -1,0 +1,320 @@
+{
+  "title": "Counting and totals in sales",
+  "tags": [
+    "aggregate",
+    "count"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "How many rows in sales?",
+      "prompt": "COUNT(*) answers 'how many rows?' with one number.",
+      "task": "Try typing: SELECT count(*) FROM sales;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Finish with a semicolon.",
+        "Write: SELECT count(*) FROM sales;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales;",
+      "memory_trick": "count(*) = 'how many rows?'"
+    },
+    {
+      "type": "type",
+      "title": "Count the id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(id) FROM sales;",
+      "hints": [
+        "Start with SELECT count(id).",
+        "FROM sales.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(id) FROM sales;"
+      ],
+      "expected_sql": "SELECT count(id) FROM sales;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the customer_id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(customer_id) FROM sales;",
+      "hints": [
+        "Start with SELECT count(customer_id).",
+        "FROM sales.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(customer_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT count(customer_id) FROM sales;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the employee_id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(employee_id) FROM sales;",
+      "hints": [
+        "Start with SELECT count(employee_id).",
+        "FROM sales.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(employee_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT count(employee_id) FROM sales;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the sale_date values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(sale_date) FROM sales;",
+      "hints": [
+        "Start with SELECT count(sale_date).",
+        "FROM sales.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(sale_date) FROM sales;"
+      ],
+      "expected_sql": "SELECT count(sale_date) FROM sales;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the total values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(total) FROM sales;",
+      "hints": [
+        "Start with SELECT count(total).",
+        "FROM sales.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(total) FROM sales;"
+      ],
+      "expected_sql": "SELECT count(total) FROM sales;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "SUM of id",
+      "prompt": "SUM id: add up the values.",
+      "task": "Try typing: SELECT sum(id) FROM sales;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM sales.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(id) FROM sales;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM sales;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of id",
+      "prompt": "AVG id: work out the average.",
+      "task": "Try typing: SELECT avg(id) FROM sales;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM sales.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(id) FROM sales;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM sales;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of id",
+      "prompt": "MIN id: find the smallest value.",
+      "task": "Try typing: SELECT min(id) FROM sales;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM sales.",
+        "MIN works on numbers.",
+        "Write: SELECT min(id) FROM sales;"
+      ],
+      "expected_sql": "SELECT min(id) FROM sales;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of id",
+      "prompt": "MAX id: find the biggest value.",
+      "task": "Try typing: SELECT max(id) FROM sales;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM sales.",
+        "MAX works on numbers.",
+        "Write: SELECT max(id) FROM sales;"
+      ],
+      "expected_sql": "SELECT max(id) FROM sales;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id",
+      "prompt": "SUM customer_id: add up the values.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(customer_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id",
+      "prompt": "AVG customer_id: work out the average.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(customer_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id",
+      "prompt": "MIN customer_id: find the smallest value.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "MIN works on numbers.",
+        "Write: SELECT min(customer_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id",
+      "prompt": "MAX customer_id: find the biggest value.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "MAX works on numbers.",
+        "Write: SELECT max(customer_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of employee_id",
+      "prompt": "SUM employee_id: add up the values.",
+      "task": "Try typing: SELECT sum(employee_id) FROM sales;",
+      "hints": [
+        "Start with SELECT sum(employee_id).",
+        "FROM sales.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(employee_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT sum(employee_id) FROM sales;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of employee_id",
+      "prompt": "AVG employee_id: work out the average.",
+      "task": "Try typing: SELECT avg(employee_id) FROM sales;",
+      "hints": [
+        "Start with SELECT avg(employee_id).",
+        "FROM sales.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(employee_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT avg(employee_id) FROM sales;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of employee_id",
+      "prompt": "MIN employee_id: find the smallest value.",
+      "task": "Try typing: SELECT min(employee_id) FROM sales;",
+      "hints": [
+        "Start with SELECT min(employee_id).",
+        "FROM sales.",
+        "MIN works on numbers.",
+        "Write: SELECT min(employee_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT min(employee_id) FROM sales;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of employee_id",
+      "prompt": "MAX employee_id: find the biggest value.",
+      "task": "Try typing: SELECT max(employee_id) FROM sales;",
+      "hints": [
+        "Start with SELECT max(employee_id).",
+        "FROM sales.",
+        "MAX works on numbers.",
+        "Write: SELECT max(employee_id) FROM sales;"
+      ],
+      "expected_sql": "SELECT max(employee_id) FROM sales;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of total",
+      "prompt": "SUM total: add up the values.",
+      "task": "Try typing: SELECT sum(total) FROM sales;",
+      "hints": [
+        "Start with SELECT sum(total).",
+        "FROM sales.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(total) FROM sales;"
+      ],
+      "expected_sql": "SELECT sum(total) FROM sales;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of total",
+      "prompt": "AVG total: work out the average.",
+      "task": "Try typing: SELECT avg(total) FROM sales;",
+      "hints": [
+        "Start with SELECT avg(total).",
+        "FROM sales.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(total) FROM sales;"
+      ],
+      "expected_sql": "SELECT avg(total) FROM sales;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of total",
+      "prompt": "MIN total: find the smallest value.",
+      "task": "Try typing: SELECT min(total) FROM sales;",
+      "hints": [
+        "Start with SELECT min(total).",
+        "FROM sales.",
+        "MIN works on numbers.",
+        "Write: SELECT min(total) FROM sales;"
+      ],
+      "expected_sql": "SELECT min(total) FROM sales;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of total",
+      "prompt": "MAX total: find the biggest value.",
+      "task": "Try typing: SELECT max(total) FROM sales;",
+      "hints": [
+        "Start with SELECT max(total).",
+        "FROM sales.",
+        "MAX works on numbers.",
+        "Write: SELECT max(total) FROM sales;"
+      ],
+      "expected_sql": "SELECT max(total) FROM sales;",
+      "memory_trick": "max = find the biggest value."
+    }
+  ],
+  "id": "L298",
+  "order": 298
+}

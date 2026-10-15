@@ -1,0 +1,50 @@
+{
+  "title": "Ranges and NOT in sale_items · part 10",
+  "tags": [
+    "where",
+    "between"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep unit_price from 1486.38 to 3356.82",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price BETWEEN 1486.38 AND 3356.82;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE unit_price BETWEEN 1486.38 AND 3356.82;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price BETWEEN 1486.38 AND 3356.82;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price outside 1486.38..3356.82",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (unit_price BETWEEN 1486.38 AND 3356.82);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( unit_price BETWEEN 1486.38 AND 3356.82 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (unit_price BETWEEN 1486.38 AND 3356.82);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (unit_price BETWEEN 1486.38 AND 3356.82);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L245",
+  "order": 245
+}

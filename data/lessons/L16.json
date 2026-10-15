@@ -1,0 +1,76 @@
+{
+  "id": "L16",
+  "order": 16,
+  "difficulty": 4,
+  "tags": [
+    "subquery"
+  ],
+  "title": "Subqueries: a query inside a query",
+  "steps": [
+    {
+      "type": "type",
+      "title": "The librarian's reference book",
+      "prompt": "A subquery is a query inside brackets, used like a value or a mini-table.\nFind products above the AVERAGE price: the average is itself a query.",
+      "task": "Try typing: SELECT name, price FROM products WHERE price > (SELECT avg(price) FROM products);",
+      "hints": [
+        "The inner SELECT computes the average.",
+        "avg(price) is the shop's mean price.",
+        "The outer query compares price to it.",
+        "Write the WHERE with the bracketed subquery."
+      ],
+      "expected_sql": "SELECT name, price FROM products WHERE price > (SELECT avg(price) FROM products);",
+      "memory_trick": "(SELECT … ) = ask the database first, then use the answer."
+    },
+    {
+      "type": "fill",
+      "title": "Fill the mini-query",
+      "prompt": "Fill the blank to find the most expensive product:\nSELECT name, price FROM products WHERE price = (SELECT ___ FROM products);",
+      "task": "Fill the blank with the function that returns the biggest value.",
+      "hints": [
+        "We want 'the biggest price'.",
+        "Its function starts with 'ma'.",
+        "min is the other way round.",
+        "Fill: max(price)"
+      ],
+      "expected_sql": "SELECT name, price FROM products WHERE price = (SELECT max(price) FROM products);",
+      "seed_sql": "SELECT name, price FROM products WHERE price = (SELECT ___ FROM products);",
+      "memory_trick": "max/min/avg/count are your pocket answers for comparisons."
+    },
+    {
+      "type": "type",
+      "title": "The other side of average",
+      "prompt": "The subquery gives the shop's average price; this query keeps the products BELOW it.\nFlip the operator to < to see the cheaper half.",
+      "task": "Try typing: SELECT name, price FROM products WHERE price < (SELECT avg(price) FROM products);",
+      "hints": [
+        "The inner bracket-pair is the average.",
+        "The outer part keeps price < average.",
+        "Compare with the less-than operator <.",
+        "Write SELECT name, price FROM products WHERE price < (SELECT avg(price) FROM products);"
+      ],
+      "expected_sql": "SELECT name, price FROM products WHERE price < (SELECT avg(price) FROM products);",
+      "memory_trick": "Subqueries turn 'compare to a number' into 'compare to a fact'."
+    },
+    {
+      "type": "answer",
+      "title": "Why the brackets?",
+      "prompt": "Brackets tell SQL: 'resolve this piece first, then continue with my main question.'\nWithout them, SQL reads the sentence in the wrong order.\n(Also: run the mini-query alone - SELECT avg(price) FROM products - just for the feel.)",
+      "task": "What do the round brackets do around the inner query?",
+      "check": {
+        "answer": [
+          "ask first, then use the answer",
+          "it runs first",
+          "the inner query runs first",
+          "ask the inner question first",
+          "they run the inner query first"
+        ]
+      },
+      "hints": [
+        "Think of maths: (2 + 3) * 4 …",
+        "The part in brackets is resolved before the rest.",
+        "So the average is known before comparing.",
+        "Answer: it runs first, and its answer gets used."
+      ],
+      "memory_trick": "Brackets = 'do this bit first'."
+    }
+  ]
+}

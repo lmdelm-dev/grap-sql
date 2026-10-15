@@ -1,0 +1,772 @@
+{
+  "title": "Totals over a filtered set in employees",
+  "tags": [
+    "aggregate",
+    "where"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT of * where id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id > 1;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id > 1.",
+        "Write: SELECT count(*) FROM employees WHERE id > 1;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of id where id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(id) FROM employees WHERE id > 1;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM employees.",
+        "Add WHERE id > 1.",
+        "Write: SELECT sum(id) FROM employees WHERE id > 1;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM employees WHERE id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of id where id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(id) FROM employees WHERE id > 1;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM employees.",
+        "Add WHERE id > 1.",
+        "Write: SELECT avg(id) FROM employees WHERE id > 1;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM employees WHERE id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of id where id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(id) FROM employees WHERE id > 1;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM employees.",
+        "Add WHERE id > 1.",
+        "Write: SELECT min(id) FROM employees WHERE id > 1;"
+      ],
+      "expected_sql": "SELECT min(id) FROM employees WHERE id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of id where id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(id) FROM employees WHERE id > 1;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM employees.",
+        "Add WHERE id > 1.",
+        "Write: SELECT max(id) FROM employees WHERE id > 1;"
+      ],
+      "expected_sql": "SELECT max(id) FROM employees WHERE id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id > 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id > 2.",
+        "Write: SELECT count(*) FROM employees WHERE id > 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of id where id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(id) FROM employees WHERE id > 2;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM employees.",
+        "Add WHERE id > 2.",
+        "Write: SELECT sum(id) FROM employees WHERE id > 2;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM employees WHERE id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of id where id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(id) FROM employees WHERE id > 2;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM employees.",
+        "Add WHERE id > 2.",
+        "Write: SELECT avg(id) FROM employees WHERE id > 2;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM employees WHERE id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of id where id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(id) FROM employees WHERE id > 2;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM employees.",
+        "Add WHERE id > 2.",
+        "Write: SELECT min(id) FROM employees WHERE id > 2;"
+      ],
+      "expected_sql": "SELECT min(id) FROM employees WHERE id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of id where id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(id) FROM employees WHERE id > 2;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM employees.",
+        "Add WHERE id > 2.",
+        "Write: SELECT max(id) FROM employees WHERE id > 2;"
+      ],
+      "expected_sql": "SELECT max(id) FROM employees WHERE id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id > 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id > 3.",
+        "Write: SELECT count(*) FROM employees WHERE id > 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of id where id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(id) FROM employees WHERE id > 3;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM employees.",
+        "Add WHERE id > 3.",
+        "Write: SELECT sum(id) FROM employees WHERE id > 3;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM employees WHERE id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of id where id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(id) FROM employees WHERE id > 3;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM employees.",
+        "Add WHERE id > 3.",
+        "Write: SELECT avg(id) FROM employees WHERE id > 3;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM employees WHERE id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of id where id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(id) FROM employees WHERE id > 3;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM employees.",
+        "Add WHERE id > 3.",
+        "Write: SELECT min(id) FROM employees WHERE id > 3;"
+      ],
+      "expected_sql": "SELECT min(id) FROM employees WHERE id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of id where id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(id) FROM employees WHERE id > 3;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM employees.",
+        "Add WHERE id > 3.",
+        "Write: SELECT max(id) FROM employees WHERE id > 3;"
+      ],
+      "expected_sql": "SELECT max(id) FROM employees WHERE id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id > 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id > 4.",
+        "Write: SELECT count(*) FROM employees WHERE id > 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of id where id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(id) FROM employees WHERE id > 4;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM employees.",
+        "Add WHERE id > 4.",
+        "Write: SELECT sum(id) FROM employees WHERE id > 4;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM employees WHERE id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of id where id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(id) FROM employees WHERE id > 4;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM employees.",
+        "Add WHERE id > 4.",
+        "Write: SELECT avg(id) FROM employees WHERE id > 4;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM employees WHERE id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of id where id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(id) FROM employees WHERE id > 4;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM employees.",
+        "Add WHERE id > 4.",
+        "Write: SELECT min(id) FROM employees WHERE id > 4;"
+      ],
+      "expected_sql": "SELECT min(id) FROM employees WHERE id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of id where id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(id) FROM employees WHERE id > 4;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM employees.",
+        "Add WHERE id > 4.",
+        "Write: SELECT max(id) FROM employees WHERE id > 4;"
+      ],
+      "expected_sql": "SELECT max(id) FROM employees WHERE id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id > 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id > 5.",
+        "Write: SELECT count(*) FROM employees WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of id where id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(id) FROM employees WHERE id > 5;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM employees.",
+        "Add WHERE id > 5.",
+        "Write: SELECT sum(id) FROM employees WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM employees WHERE id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of id where id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(id) FROM employees WHERE id > 5;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM employees.",
+        "Add WHERE id > 5.",
+        "Write: SELECT avg(id) FROM employees WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM employees WHERE id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of id where id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(id) FROM employees WHERE id > 5;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM employees.",
+        "Add WHERE id > 5.",
+        "Write: SELECT min(id) FROM employees WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT min(id) FROM employees WHERE id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of id where id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(id) FROM employees WHERE id > 5;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM employees.",
+        "Add WHERE id > 5.",
+        "Write: SELECT max(id) FROM employees WHERE id > 5;"
+      ],
+      "expected_sql": "SELECT max(id) FROM employees WHERE id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE id > 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE id > 6.",
+        "Write: SELECT count(*) FROM employees WHERE id > 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of id where id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(id) FROM employees WHERE id > 6;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM employees.",
+        "Add WHERE id > 6.",
+        "Write: SELECT sum(id) FROM employees WHERE id > 6;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM employees WHERE id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of id where id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(id) FROM employees WHERE id > 6;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM employees.",
+        "Add WHERE id > 6.",
+        "Write: SELECT avg(id) FROM employees WHERE id > 6;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM employees WHERE id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of id where id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(id) FROM employees WHERE id > 6;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM employees.",
+        "Add WHERE id > 6.",
+        "Write: SELECT min(id) FROM employees WHERE id > 6;"
+      ],
+      "expected_sql": "SELECT min(id) FROM employees WHERE id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of id where id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(id) FROM employees WHERE id > 6;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM employees.",
+        "Add WHERE id > 6.",
+        "Write: SELECT max(id) FROM employees WHERE id > 6;"
+      ],
+      "expected_sql": "SELECT max(id) FROM employees WHERE id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where salary > 5200.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary > 5200.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary > 5200.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary > 5200.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary > 5200.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of salary where salary > 5200.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(salary) FROM employees WHERE salary > 5200.0;",
+      "hints": [
+        "Start with SELECT sum(salary).",
+        "FROM employees.",
+        "Add WHERE salary > 5200.0.",
+        "Write: SELECT sum(salary) FROM employees WHERE salary > 5200.0;"
+      ],
+      "expected_sql": "SELECT sum(salary) FROM employees WHERE salary > 5200.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of salary where salary > 5200.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(salary) FROM employees WHERE salary > 5200.0;",
+      "hints": [
+        "Start with SELECT avg(salary).",
+        "FROM employees.",
+        "Add WHERE salary > 5200.0.",
+        "Write: SELECT avg(salary) FROM employees WHERE salary > 5200.0;"
+      ],
+      "expected_sql": "SELECT avg(salary) FROM employees WHERE salary > 5200.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of salary where salary > 5200.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(salary) FROM employees WHERE salary > 5200.0;",
+      "hints": [
+        "Start with SELECT min(salary).",
+        "FROM employees.",
+        "Add WHERE salary > 5200.0.",
+        "Write: SELECT min(salary) FROM employees WHERE salary > 5200.0;"
+      ],
+      "expected_sql": "SELECT min(salary) FROM employees WHERE salary > 5200.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of salary where salary > 5200.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(salary) FROM employees WHERE salary > 5200.0;",
+      "hints": [
+        "Start with SELECT max(salary).",
+        "FROM employees.",
+        "Add WHERE salary > 5200.0.",
+        "Write: SELECT max(salary) FROM employees WHERE salary > 5200.0;"
+      ],
+      "expected_sql": "SELECT max(salary) FROM employees WHERE salary > 5200.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where salary > 5800.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM employees WHERE salary > 5800.0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Add WHERE salary > 5800.0.",
+        "Write: SELECT count(*) FROM employees WHERE salary > 5800.0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees WHERE salary > 5800.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of salary where salary > 5800.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(salary) FROM employees WHERE salary > 5800.0;",
+      "hints": [
+        "Start with SELECT sum(salary).",
+        "FROM employees.",
+        "Add WHERE salary > 5800.0.",
+        "Write: SELECT sum(salary) FROM employees WHERE salary > 5800.0;"
+      ],
+      "expected_sql": "SELECT sum(salary) FROM employees WHERE salary > 5800.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of salary where salary > 5800.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(salary) FROM employees WHERE salary > 5800.0;",
+      "hints": [
+        "Start with SELECT avg(salary).",
+        "FROM employees.",
+        "Add WHERE salary > 5800.0.",
+        "Write: SELECT avg(salary) FROM employees WHERE salary > 5800.0;"
+      ],
+      "expected_sql": "SELECT avg(salary) FROM employees WHERE salary > 5800.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of salary where salary > 5800.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(salary) FROM employees WHERE salary > 5800.0;",
+      "hints": [
+        "Start with SELECT min(salary).",
+        "FROM employees.",
+        "Add WHERE salary > 5800.0.",
+        "Write: SELECT min(salary) FROM employees WHERE salary > 5800.0;"
+      ],
+      "expected_sql": "SELECT min(salary) FROM employees WHERE salary > 5800.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of salary where salary > 5800.0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(salary) FROM employees WHERE salary > 5800.0;",
+      "hints": [
+        "Start with SELECT max(salary).",
+        "FROM employees.",
+        "Add WHERE salary > 5800.0.",
+        "Write: SELECT max(salary) FROM employees WHERE salary > 5800.0;"
+      ],
+      "expected_sql": "SELECT max(salary) FROM employees WHERE salary > 5800.0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L074",
+  "order": 74
+}

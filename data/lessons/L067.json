@@ -1,0 +1,697 @@
+{
+  "title": "Sorting and trimming the employees table",
+  "tags": [
+    "order by",
+    "limit"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Sort id smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM employees ORDER BY id ;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM employees ORDER BY id ;"
+      ],
+      "expected_sql": "SELECT id FROM employees ORDER BY id ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort id biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM employees ORDER BY id DESC;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM employees ORDER BY id DESC;"
+      ],
+      "expected_sql": "SELECT id FROM employees ORDER BY id DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT id FROM employees ORDER BY id DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT id FROM employees ORDER BY id DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT id FROM employees ORDER BY id DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT id FROM employees ORDER BY id DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT id FROM employees ORDER BY id DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees ORDER BY id DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT id FROM employees ORDER BY id DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT id FROM employees ORDER BY id DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT id FROM employees ORDER BY id DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT id FROM employees ORDER BY id DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT id FROM employees ORDER BY id DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT id FROM employees ORDER BY id DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of id",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different id values exist?'",
+      "task": "Try typing: SELECT DISTINCT id FROM employees ORDER BY id;",
+      "hints": [
+        "Start with SELECT DISTINCT id.",
+        "FROM employees.",
+        "Add ORDER BY id to sort them.",
+        "Write: SELECT DISTINCT id FROM employees ORDER BY id;"
+      ],
+      "expected_sql": "SELECT DISTINCT id FROM employees ORDER BY id;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort name smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT name FROM employees ORDER BY name ;",
+      "hints": [
+        "Start with SELECT name FROM employees.",
+        "Add ORDER BY name.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT name FROM employees ORDER BY name ;"
+      ],
+      "expected_sql": "SELECT name FROM employees ORDER BY name ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort name biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT name FROM employees ORDER BY name DESC;",
+      "hints": [
+        "Start with SELECT name FROM employees.",
+        "Add ORDER BY name.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT name FROM employees ORDER BY name DESC;"
+      ],
+      "expected_sql": "SELECT name FROM employees ORDER BY name DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT name FROM employees ORDER BY name DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT name FROM employees.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT name FROM employees ORDER BY name DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT name FROM employees ORDER BY name DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT name FROM employees ORDER BY name DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT name FROM employees.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT name FROM employees ORDER BY name DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT name FROM employees ORDER BY name DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT name FROM employees ORDER BY name DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT name FROM employees.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT name FROM employees ORDER BY name DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT name FROM employees ORDER BY name DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT name FROM employees ORDER BY name DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT name FROM employees.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT name FROM employees ORDER BY name DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT name FROM employees ORDER BY name DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of name",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different name values exist?'",
+      "task": "Try typing: SELECT DISTINCT name FROM employees ORDER BY name;",
+      "hints": [
+        "Start with SELECT DISTINCT name.",
+        "FROM employees.",
+        "Add ORDER BY name to sort them.",
+        "Write: SELECT DISTINCT name FROM employees ORDER BY name;"
+      ],
+      "expected_sql": "SELECT DISTINCT name FROM employees ORDER BY name;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort role smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT role FROM employees ORDER BY role ;",
+      "hints": [
+        "Start with SELECT role FROM employees.",
+        "Add ORDER BY role.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT role FROM employees ORDER BY role ;"
+      ],
+      "expected_sql": "SELECT role FROM employees ORDER BY role ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort role biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT role FROM employees ORDER BY role DESC;",
+      "hints": [
+        "Start with SELECT role FROM employees.",
+        "Add ORDER BY role.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT role FROM employees ORDER BY role DESC;"
+      ],
+      "expected_sql": "SELECT role FROM employees ORDER BY role DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by role",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT role FROM employees ORDER BY role DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT role FROM employees.",
+        "Add ORDER BY role DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT role FROM employees ORDER BY role DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT role FROM employees ORDER BY role DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by role",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT role FROM employees ORDER BY role DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT role FROM employees.",
+        "Add ORDER BY role DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT role FROM employees ORDER BY role DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT role FROM employees ORDER BY role DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by role",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT role FROM employees ORDER BY role DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT role FROM employees.",
+        "Add ORDER BY role DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT role FROM employees ORDER BY role DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT role FROM employees ORDER BY role DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by role",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT role FROM employees ORDER BY role DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT role FROM employees.",
+        "Add ORDER BY role DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT role FROM employees ORDER BY role DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT role FROM employees ORDER BY role DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of role",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different role values exist?'",
+      "task": "Try typing: SELECT DISTINCT role FROM employees ORDER BY role;",
+      "hints": [
+        "Start with SELECT DISTINCT role.",
+        "FROM employees.",
+        "Add ORDER BY role to sort them.",
+        "Write: SELECT DISTINCT role FROM employees ORDER BY role;"
+      ],
+      "expected_sql": "SELECT DISTINCT role FROM employees ORDER BY role;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort hire_date smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT hire_date FROM employees ORDER BY hire_date ;",
+      "hints": [
+        "Start with SELECT hire_date FROM employees.",
+        "Add ORDER BY hire_date.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT hire_date FROM employees ORDER BY hire_date ;"
+      ],
+      "expected_sql": "SELECT hire_date FROM employees ORDER BY hire_date ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort hire_date biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT hire_date FROM employees ORDER BY hire_date DESC;",
+      "hints": [
+        "Start with SELECT hire_date FROM employees.",
+        "Add ORDER BY hire_date.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT hire_date FROM employees ORDER BY hire_date DESC;"
+      ],
+      "expected_sql": "SELECT hire_date FROM employees ORDER BY hire_date DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by hire_date",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT hire_date FROM employees.",
+        "Add ORDER BY hire_date DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by hire_date",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT hire_date FROM employees.",
+        "Add ORDER BY hire_date DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by hire_date",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT hire_date FROM employees.",
+        "Add ORDER BY hire_date DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by hire_date",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT hire_date FROM employees.",
+        "Add ORDER BY hire_date DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT hire_date FROM employees ORDER BY hire_date DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of hire_date",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different hire_date values exist?'",
+      "task": "Try typing: SELECT DISTINCT hire_date FROM employees ORDER BY hire_date;",
+      "hints": [
+        "Start with SELECT DISTINCT hire_date.",
+        "FROM employees.",
+        "Add ORDER BY hire_date to sort them.",
+        "Write: SELECT DISTINCT hire_date FROM employees ORDER BY hire_date;"
+      ],
+      "expected_sql": "SELECT DISTINCT hire_date FROM employees ORDER BY hire_date;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort salary smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT salary FROM employees ORDER BY salary ;",
+      "hints": [
+        "Start with SELECT salary FROM employees.",
+        "Add ORDER BY salary.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT salary FROM employees ORDER BY salary ;"
+      ],
+      "expected_sql": "SELECT salary FROM employees ORDER BY salary ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort salary biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT salary FROM employees ORDER BY salary DESC;",
+      "hints": [
+        "Start with SELECT salary FROM employees.",
+        "Add ORDER BY salary.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT salary FROM employees ORDER BY salary DESC;"
+      ],
+      "expected_sql": "SELECT salary FROM employees ORDER BY salary DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by salary",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT salary FROM employees ORDER BY salary DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT salary FROM employees.",
+        "Add ORDER BY salary DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT salary FROM employees ORDER BY salary DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT salary FROM employees ORDER BY salary DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by salary",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT salary FROM employees ORDER BY salary DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT salary FROM employees.",
+        "Add ORDER BY salary DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT salary FROM employees ORDER BY salary DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT salary FROM employees ORDER BY salary DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by salary",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT salary FROM employees ORDER BY salary DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT salary FROM employees.",
+        "Add ORDER BY salary DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT salary FROM employees ORDER BY salary DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT salary FROM employees ORDER BY salary DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by salary",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT salary FROM employees ORDER BY salary DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT salary FROM employees.",
+        "Add ORDER BY salary DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT salary FROM employees ORDER BY salary DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT salary FROM employees ORDER BY salary DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of salary",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different salary values exist?'",
+      "task": "Try typing: SELECT DISTINCT salary FROM employees ORDER BY salary;",
+      "hints": [
+        "Start with SELECT DISTINCT salary.",
+        "FROM employees.",
+        "Add ORDER BY salary to sort them.",
+        "Write: SELECT DISTINCT salary FROM employees ORDER BY salary;"
+      ],
+      "expected_sql": "SELECT DISTINCT salary FROM employees ORDER BY salary;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    }
+  ],
+  "id": "L067",
+  "order": 67
+}

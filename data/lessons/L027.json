@@ -1,0 +1,423 @@
+{
+  "title": "Sorting and trimming the categories table",
+  "tags": [
+    "order by",
+    "limit"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Sort id smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM categories ORDER BY id ;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM categories ORDER BY id ;"
+      ],
+      "expected_sql": "SELECT id FROM categories ORDER BY id ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort id biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM categories ORDER BY id DESC;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM categories ORDER BY id DESC;"
+      ],
+      "expected_sql": "SELECT id FROM categories ORDER BY id DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT id FROM categories ORDER BY id DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT id FROM categories ORDER BY id DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT id FROM categories ORDER BY id DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT id FROM categories ORDER BY id DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT id FROM categories ORDER BY id DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM categories ORDER BY id DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT id FROM categories ORDER BY id DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT id FROM categories ORDER BY id DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT id FROM categories ORDER BY id DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT id FROM categories ORDER BY id DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT id FROM categories ORDER BY id DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT id FROM categories ORDER BY id DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of id",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different id values exist?'",
+      "task": "Try typing: SELECT DISTINCT id FROM categories ORDER BY id;",
+      "hints": [
+        "Start with SELECT DISTINCT id.",
+        "FROM categories.",
+        "Add ORDER BY id to sort them.",
+        "Write: SELECT DISTINCT id FROM categories ORDER BY id;"
+      ],
+      "expected_sql": "SELECT DISTINCT id FROM categories ORDER BY id;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort name smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT name FROM categories ORDER BY name ;",
+      "hints": [
+        "Start with SELECT name FROM categories.",
+        "Add ORDER BY name.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT name FROM categories ORDER BY name ;"
+      ],
+      "expected_sql": "SELECT name FROM categories ORDER BY name ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort name biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT name FROM categories ORDER BY name DESC;",
+      "hints": [
+        "Start with SELECT name FROM categories.",
+        "Add ORDER BY name.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT name FROM categories ORDER BY name DESC;"
+      ],
+      "expected_sql": "SELECT name FROM categories ORDER BY name DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT name FROM categories ORDER BY name DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT name FROM categories.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT name FROM categories ORDER BY name DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT name FROM categories ORDER BY name DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT name FROM categories ORDER BY name DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT name FROM categories.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT name FROM categories ORDER BY name DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT name FROM categories ORDER BY name DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT name FROM categories ORDER BY name DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT name FROM categories.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT name FROM categories ORDER BY name DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT name FROM categories ORDER BY name DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by name",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT name FROM categories ORDER BY name DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT name FROM categories.",
+        "Add ORDER BY name DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT name FROM categories ORDER BY name DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT name FROM categories ORDER BY name DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of name",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different name values exist?'",
+      "task": "Try typing: SELECT DISTINCT name FROM categories ORDER BY name;",
+      "hints": [
+        "Start with SELECT DISTINCT name.",
+        "FROM categories.",
+        "Add ORDER BY name to sort them.",
+        "Write: SELECT DISTINCT name FROM categories ORDER BY name;"
+      ],
+      "expected_sql": "SELECT DISTINCT name FROM categories ORDER BY name;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort description smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT description FROM categories ORDER BY description ;",
+      "hints": [
+        "Start with SELECT description FROM categories.",
+        "Add ORDER BY description.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT description FROM categories ORDER BY description ;"
+      ],
+      "expected_sql": "SELECT description FROM categories ORDER BY description ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort description biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT description FROM categories ORDER BY description DESC;",
+      "hints": [
+        "Start with SELECT description FROM categories.",
+        "Add ORDER BY description.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT description FROM categories ORDER BY description DESC;"
+      ],
+      "expected_sql": "SELECT description FROM categories ORDER BY description DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by description",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT description FROM categories ORDER BY description DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT description FROM categories.",
+        "Add ORDER BY description DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT description FROM categories ORDER BY description DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT description FROM categories ORDER BY description DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by description",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT description FROM categories ORDER BY description DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT description FROM categories.",
+        "Add ORDER BY description DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT description FROM categories ORDER BY description DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT description FROM categories ORDER BY description DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by description",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT description FROM categories ORDER BY description DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT description FROM categories.",
+        "Add ORDER BY description DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT description FROM categories ORDER BY description DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT description FROM categories ORDER BY description DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by description",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT description FROM categories ORDER BY description DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT description FROM categories.",
+        "Add ORDER BY description DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT description FROM categories ORDER BY description DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT description FROM categories ORDER BY description DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of description",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different description values exist?'",
+      "task": "Try typing: SELECT DISTINCT description FROM categories ORDER BY description;",
+      "hints": [
+        "Start with SELECT DISTINCT description.",
+        "FROM categories.",
+        "Add ORDER BY description to sort them.",
+        "Write: SELECT DISTINCT description FROM categories ORDER BY description;"
+      ],
+      "expected_sql": "SELECT DISTINCT description FROM categories ORDER BY description;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    }
+  ],
+  "id": "L027",
+  "order": 27
+}

@@ -1,0 +1,798 @@
+{
+  "title": "Filtering the sales table by numbers · part 22",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Count rows total = 75.66",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total = 75.66;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total = 75.66.",
+        "Write: SELECT count(*) FROM sales WHERE total = 75.66;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total = 75.66;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total = 75.66",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total = 75.66 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total = 75.66.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total = 75.66 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total = 75.66 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total != 75.66",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is not equal to 75.66.",
+      "task": "Try typing: SELECT id FROM sales WHERE total != 75.66;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total != 75.66.",
+        "Write: SELECT id FROM sales WHERE total != 75.66;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total != 75.66;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total != 75.66",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total != 75.66;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total != 75.66.",
+        "Write: SELECT count(*) FROM sales WHERE total != 75.66;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total != 75.66;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total != 75.66",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total != 75.66 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total != 75.66.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total != 75.66 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total != 75.66 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total > 88.15",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is bigger than 88.15.",
+      "task": "Try typing: SELECT id FROM sales WHERE total > 88.15;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total > 88.15.",
+        "Write: SELECT id FROM sales WHERE total > 88.15;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total > 88.15;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total > 88.15",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total > 88.15;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total > 88.15.",
+        "Write: SELECT count(*) FROM sales WHERE total > 88.15;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total > 88.15;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total > 88.15",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total > 88.15 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total > 88.15.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total > 88.15 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total > 88.15 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total >= 88.15",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is at least 88.15.",
+      "task": "Try typing: SELECT id FROM sales WHERE total >= 88.15;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total >= 88.15.",
+        "Write: SELECT id FROM sales WHERE total >= 88.15;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total >= 88.15;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total >= 88.15",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total >= 88.15;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total >= 88.15.",
+        "Write: SELECT count(*) FROM sales WHERE total >= 88.15;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total >= 88.15;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total >= 88.15",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total >= 88.15 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total >= 88.15.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total >= 88.15 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total >= 88.15 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total < 88.15",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is smaller than 88.15.",
+      "task": "Try typing: SELECT id FROM sales WHERE total < 88.15;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total < 88.15.",
+        "Write: SELECT id FROM sales WHERE total < 88.15;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total < 88.15;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total < 88.15",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total < 88.15;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total < 88.15.",
+        "Write: SELECT count(*) FROM sales WHERE total < 88.15;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total < 88.15;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total < 88.15",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total < 88.15 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total < 88.15.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total < 88.15 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total < 88.15 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total <= 88.15",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is at most 88.15.",
+      "task": "Try typing: SELECT id FROM sales WHERE total <= 88.15;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total <= 88.15.",
+        "Write: SELECT id FROM sales WHERE total <= 88.15;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total <= 88.15;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total <= 88.15",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total <= 88.15;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total <= 88.15.",
+        "Write: SELECT count(*) FROM sales WHERE total <= 88.15;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total <= 88.15;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total <= 88.15",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total <= 88.15 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total <= 88.15.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total <= 88.15 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total <= 88.15 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total = 88.15",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is exactly 88.15.",
+      "task": "Try typing: SELECT id FROM sales WHERE total = 88.15;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total = 88.15.",
+        "Write: SELECT id FROM sales WHERE total = 88.15;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total = 88.15;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total = 88.15",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total = 88.15;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total = 88.15.",
+        "Write: SELECT count(*) FROM sales WHERE total = 88.15;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total = 88.15;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total = 88.15",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total = 88.15 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total = 88.15.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total = 88.15 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total = 88.15 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total != 88.15",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is not equal to 88.15.",
+      "task": "Try typing: SELECT id FROM sales WHERE total != 88.15;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total != 88.15.",
+        "Write: SELECT id FROM sales WHERE total != 88.15;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total != 88.15;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total != 88.15",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total != 88.15;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total != 88.15.",
+        "Write: SELECT count(*) FROM sales WHERE total != 88.15;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total != 88.15;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total != 88.15",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total != 88.15 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total != 88.15.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total != 88.15 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total != 88.15 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total > 99.7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is bigger than 99.7.",
+      "task": "Try typing: SELECT id FROM sales WHERE total > 99.7;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total > 99.7.",
+        "Write: SELECT id FROM sales WHERE total > 99.7;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total > 99.7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total > 99.7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total > 99.7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total > 99.7.",
+        "Write: SELECT count(*) FROM sales WHERE total > 99.7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total > 99.7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total > 99.7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total > 99.7 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total > 99.7.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total > 99.7 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total > 99.7 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total >= 99.7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is at least 99.7.",
+      "task": "Try typing: SELECT id FROM sales WHERE total >= 99.7;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total >= 99.7.",
+        "Write: SELECT id FROM sales WHERE total >= 99.7;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total >= 99.7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total >= 99.7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total >= 99.7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total >= 99.7.",
+        "Write: SELECT count(*) FROM sales WHERE total >= 99.7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total >= 99.7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total >= 99.7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total >= 99.7 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total >= 99.7.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total >= 99.7 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total >= 99.7 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total < 99.7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is smaller than 99.7.",
+      "task": "Try typing: SELECT id FROM sales WHERE total < 99.7;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total < 99.7.",
+        "Write: SELECT id FROM sales WHERE total < 99.7;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total < 99.7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total < 99.7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total < 99.7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total < 99.7.",
+        "Write: SELECT count(*) FROM sales WHERE total < 99.7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total < 99.7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total < 99.7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total < 99.7 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total < 99.7.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total < 99.7 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total < 99.7 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total <= 99.7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is at most 99.7.",
+      "task": "Try typing: SELECT id FROM sales WHERE total <= 99.7;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total <= 99.7.",
+        "Write: SELECT id FROM sales WHERE total <= 99.7;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total <= 99.7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total <= 99.7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total <= 99.7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total <= 99.7.",
+        "Write: SELECT count(*) FROM sales WHERE total <= 99.7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total <= 99.7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total <= 99.7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total <= 99.7 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total <= 99.7.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total <= 99.7 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total <= 99.7 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total = 99.7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is exactly 99.7.",
+      "task": "Try typing: SELECT id FROM sales WHERE total = 99.7;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total = 99.7.",
+        "Write: SELECT id FROM sales WHERE total = 99.7;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total = 99.7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total = 99.7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total = 99.7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total = 99.7.",
+        "Write: SELECT count(*) FROM sales WHERE total = 99.7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total = 99.7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: total = 99.7",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total = 99.7 ORDER BY total LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total = 99.7.",
+        "Add ORDER BY total LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE total = 99.7 ORDER BY total LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total = 99.7 ORDER BY total LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total != 99.7",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where total is not equal to 99.7.",
+      "task": "Try typing: SELECT id FROM sales WHERE total != 99.7;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is total != 99.7.",
+        "Write: SELECT id FROM sales WHERE total != 99.7;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total != 99.7;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows total != 99.7",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total != 99.7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total != 99.7.",
+        "Write: SELECT count(*) FROM sales WHERE total != 99.7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total != 99.7;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L277",
+  "order": 277
+}

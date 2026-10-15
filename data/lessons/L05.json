@@ -1,0 +1,107 @@
+{
+  "id": "L05",
+  "order": 5,
+  "difficulty": 2,
+  "tags": [
+    "order by",
+    "sort"
+  ],
+  "title": "ORDER BY: putting rows in a tidy line",
+  "steps": [
+    {
+      "type": "type",
+      "title": "Sorting from small to big",
+      "prompt": "A database returns rows in the order it stored them - not very helpful.\nORDER BY fixes that. It's like putting books on a shelf by height.",
+      "task": "Try typing: SELECT name, price FROM products ORDER BY price;",
+      "hints": [
+        "Start with SELECT name, price FROM products.",
+        "Add ORDER BY after FROM products.",
+        "We want to sort by price.",
+        "Type: SELECT name, price FROM products ORDER BY price;"
+      ],
+      "expected_sql": "SELECT name, price FROM products ORDER BY price;",
+      "memory_trick": "ORDER BY = 'sort the rows by…'",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "fill",
+      "title": "Smallest first or biggest first?",
+      "prompt": "ORDER BY price puts the SMALLEST first.\nAdd DESC (from 'descending') to flip it to the BIGGEST first:\nSELECT name, price FROM products ORDER BY price ___;",
+      "task": "Fill the blank so the most expensive product is first.",
+      "hints": [
+        "The blank comes right after price.",
+        "There's a magic word that makes it go down the ladder.",
+        "It starts with a D.",
+        "Write DESC."
+      ],
+      "expected_sql": "SELECT name, price FROM products ORDER BY price DESC;",
+      "seed_sql": "SELECT name, price FROM products ORDER BY price ___;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The most expensive three",
+      "prompt": "Combine your two new powers: ORDER BY and DESC.\nThe output will read like a countdown of prices, top row = most expensive.",
+      "task": "Try typing: SELECT name, price FROM products ORDER BY price DESC;",
+      "hints": [
+        "Start with SELECT name, price FROM products.",
+        "Add ORDER BY price, then DESC at the end.",
+        "The first row should now be the rug worth 3356.82 MAD.",
+        "Type: SELECT name, price FROM products ORDER BY price DESC;"
+      ],
+      "expected_sql": "SELECT name, price FROM products ORDER BY price DESC;",
+      "memory_trick": "DESC turns the list into a countdown.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "fix",
+      "title": "Fix the typo",
+      "prompt": "A sleepy learner mixed up the letters:\nSELECT name, stock FROM products ORDEY BY stock;\nThe database pointed at the spelling. Fix it.",
+      "task": "Fix the query so it sorts by stock.",
+      "hints": [
+        "Run it first and read the error.",
+        "One word is misspelled.",
+        "ORDER BY has five letters in the first word.",
+        "Change ORDEY to ORDER."
+      ],
+      "expected_sql": "SELECT name, stock FROM products ORDER BY stock;",
+      "seed_sql": "SELECT name, stock FROM products ORDEY BY stock;",
+      "memory_trick": "Read errors like a friend: they are clues, not scoldings."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the first row",
+      "prompt": "SELECT name, stock FROM products ORDER BY stock; \nstarts from the smallest stock. Which product is at the TOP?",
+      "task": "Which product name appears first?",
+      "check": {
+        "answer": [
+          "ras el hanout blend 100g",
+          "ras el hanout",
+          "ras el hanout blend",
+          "cumin ground 80g",
+          "the ras el hanout blend 100g"
+        ]
+      },
+      "hints": [
+        "There are several products with 0 stock.",
+        "Run the query to see them.",
+        "The first one is decided by the order the table stores them in.",
+        "It starts with 'Ras el Hanout…'."
+      ],
+      "memory_trick": "When stocks tie, the tie order isn't promised - notes to self: ORDER BY stock, name is the tidy way."
+    }
+  ]
+}

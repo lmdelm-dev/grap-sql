@@ -1,0 +1,772 @@
+{
+  "title": "Totals over a filtered set in products · part 5",
+  "tags": [
+    "aggregate",
+    "where"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT of * where stock > 0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 0;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 0.",
+        "Write: SELECT count(*) FROM products WHERE stock > 0;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock where stock > 0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(stock) FROM products WHERE stock > 0;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "Add WHERE stock > 0.",
+        "Write: SELECT sum(stock) FROM products WHERE stock > 0;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products WHERE stock > 0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock where stock > 0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(stock) FROM products WHERE stock > 0;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "Add WHERE stock > 0.",
+        "Write: SELECT avg(stock) FROM products WHERE stock > 0;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products WHERE stock > 0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock where stock > 0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(stock) FROM products WHERE stock > 0;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "Add WHERE stock > 0.",
+        "Write: SELECT min(stock) FROM products WHERE stock > 0;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products WHERE stock > 0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock where stock > 0",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(stock) FROM products WHERE stock > 0;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "Add WHERE stock > 0.",
+        "Write: SELECT max(stock) FROM products WHERE stock > 0;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products WHERE stock > 0;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where stock > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 3.",
+        "Write: SELECT count(*) FROM products WHERE stock > 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock where stock > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(stock) FROM products WHERE stock > 3;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "Add WHERE stock > 3.",
+        "Write: SELECT sum(stock) FROM products WHERE stock > 3;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products WHERE stock > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock where stock > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(stock) FROM products WHERE stock > 3;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "Add WHERE stock > 3.",
+        "Write: SELECT avg(stock) FROM products WHERE stock > 3;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products WHERE stock > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock where stock > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(stock) FROM products WHERE stock > 3;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "Add WHERE stock > 3.",
+        "Write: SELECT min(stock) FROM products WHERE stock > 3;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products WHERE stock > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock where stock > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(stock) FROM products WHERE stock > 3;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "Add WHERE stock > 3.",
+        "Write: SELECT max(stock) FROM products WHERE stock > 3;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products WHERE stock > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where stock > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 7.",
+        "Write: SELECT count(*) FROM products WHERE stock > 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock where stock > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(stock) FROM products WHERE stock > 7;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "Add WHERE stock > 7.",
+        "Write: SELECT sum(stock) FROM products WHERE stock > 7;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products WHERE stock > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock where stock > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(stock) FROM products WHERE stock > 7;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "Add WHERE stock > 7.",
+        "Write: SELECT avg(stock) FROM products WHERE stock > 7;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products WHERE stock > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock where stock > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(stock) FROM products WHERE stock > 7;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "Add WHERE stock > 7.",
+        "Write: SELECT min(stock) FROM products WHERE stock > 7;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products WHERE stock > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock where stock > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(stock) FROM products WHERE stock > 7;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "Add WHERE stock > 7.",
+        "Write: SELECT max(stock) FROM products WHERE stock > 7;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products WHERE stock > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where stock > 12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 12.",
+        "Write: SELECT count(*) FROM products WHERE stock > 12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock where stock > 12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(stock) FROM products WHERE stock > 12;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "Add WHERE stock > 12.",
+        "Write: SELECT sum(stock) FROM products WHERE stock > 12;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products WHERE stock > 12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock where stock > 12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(stock) FROM products WHERE stock > 12;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "Add WHERE stock > 12.",
+        "Write: SELECT avg(stock) FROM products WHERE stock > 12;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products WHERE stock > 12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock where stock > 12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(stock) FROM products WHERE stock > 12;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "Add WHERE stock > 12.",
+        "Write: SELECT min(stock) FROM products WHERE stock > 12;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products WHERE stock > 12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock where stock > 12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(stock) FROM products WHERE stock > 12;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "Add WHERE stock > 12.",
+        "Write: SELECT max(stock) FROM products WHERE stock > 12;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products WHERE stock > 12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where stock > 25",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 25;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 25.",
+        "Write: SELECT count(*) FROM products WHERE stock > 25;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 25;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock where stock > 25",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(stock) FROM products WHERE stock > 25;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "Add WHERE stock > 25.",
+        "Write: SELECT sum(stock) FROM products WHERE stock > 25;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products WHERE stock > 25;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock where stock > 25",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(stock) FROM products WHERE stock > 25;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "Add WHERE stock > 25.",
+        "Write: SELECT avg(stock) FROM products WHERE stock > 25;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products WHERE stock > 25;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock where stock > 25",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(stock) FROM products WHERE stock > 25;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "Add WHERE stock > 25.",
+        "Write: SELECT min(stock) FROM products WHERE stock > 25;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products WHERE stock > 25;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock where stock > 25",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(stock) FROM products WHERE stock > 25;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "Add WHERE stock > 25.",
+        "Write: SELECT max(stock) FROM products WHERE stock > 25;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products WHERE stock > 25;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where stock > 40",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 40;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 40.",
+        "Write: SELECT count(*) FROM products WHERE stock > 40;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 40;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock where stock > 40",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(stock) FROM products WHERE stock > 40;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "Add WHERE stock > 40.",
+        "Write: SELECT sum(stock) FROM products WHERE stock > 40;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products WHERE stock > 40;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock where stock > 40",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(stock) FROM products WHERE stock > 40;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "Add WHERE stock > 40.",
+        "Write: SELECT avg(stock) FROM products WHERE stock > 40;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products WHERE stock > 40;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock where stock > 40",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(stock) FROM products WHERE stock > 40;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "Add WHERE stock > 40.",
+        "Write: SELECT min(stock) FROM products WHERE stock > 40;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products WHERE stock > 40;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock where stock > 40",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(stock) FROM products WHERE stock > 40;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "Add WHERE stock > 40.",
+        "Write: SELECT max(stock) FROM products WHERE stock > 40;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products WHERE stock > 40;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where stock > 80",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 80;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 80.",
+        "Write: SELECT count(*) FROM products WHERE stock > 80;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 80;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock where stock > 80",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(stock) FROM products WHERE stock > 80;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "Add WHERE stock > 80.",
+        "Write: SELECT sum(stock) FROM products WHERE stock > 80;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products WHERE stock > 80;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock where stock > 80",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(stock) FROM products WHERE stock > 80;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "Add WHERE stock > 80.",
+        "Write: SELECT avg(stock) FROM products WHERE stock > 80;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products WHERE stock > 80;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock where stock > 80",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(stock) FROM products WHERE stock > 80;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "Add WHERE stock > 80.",
+        "Write: SELECT min(stock) FROM products WHERE stock > 80;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products WHERE stock > 80;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock where stock > 80",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(stock) FROM products WHERE stock > 80;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "Add WHERE stock > 80.",
+        "Write: SELECT max(stock) FROM products WHERE stock > 80;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products WHERE stock > 80;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where stock > 150",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE stock > 150;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE stock > 150.",
+        "Write: SELECT count(*) FROM products WHERE stock > 150;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE stock > 150;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock where stock > 150",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(stock) FROM products WHERE stock > 150;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "Add WHERE stock > 150.",
+        "Write: SELECT sum(stock) FROM products WHERE stock > 150;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products WHERE stock > 150;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock where stock > 150",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(stock) FROM products WHERE stock > 150;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "Add WHERE stock > 150.",
+        "Write: SELECT avg(stock) FROM products WHERE stock > 150;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products WHERE stock > 150;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock where stock > 150",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(stock) FROM products WHERE stock > 150;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "Add WHERE stock > 150.",
+        "Write: SELECT min(stock) FROM products WHERE stock > 150;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products WHERE stock > 150;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock where stock > 150",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(stock) FROM products WHERE stock > 150;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "Add WHERE stock > 150.",
+        "Write: SELECT max(stock) FROM products WHERE stock > 150;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products WHERE stock > 150;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L140",
+  "order": 140
+}

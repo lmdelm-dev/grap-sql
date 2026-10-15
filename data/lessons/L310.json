@@ -1,0 +1,772 @@
+{
+  "title": "Totals over a filtered set in sales · part 2",
+  "tags": [
+    "aggregate",
+    "where"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT of * where customer_id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id > 1;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id > 1.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id > 1;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id where customer_id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales WHERE customer_id > 1;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 1.",
+        "Write: SELECT sum(customer_id) FROM sales WHERE customer_id > 1;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales WHERE customer_id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id where customer_id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales WHERE customer_id > 1;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 1.",
+        "Write: SELECT avg(customer_id) FROM sales WHERE customer_id > 1;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales WHERE customer_id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id where customer_id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales WHERE customer_id > 1;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 1.",
+        "Write: SELECT min(customer_id) FROM sales WHERE customer_id > 1;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales WHERE customer_id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id where customer_id > 1",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales WHERE customer_id > 1;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 1.",
+        "Write: SELECT max(customer_id) FROM sales WHERE customer_id > 1;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales WHERE customer_id > 1;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where customer_id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id > 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id > 2.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id > 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id where customer_id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales WHERE customer_id > 2;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 2.",
+        "Write: SELECT sum(customer_id) FROM sales WHERE customer_id > 2;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales WHERE customer_id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id where customer_id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales WHERE customer_id > 2;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 2.",
+        "Write: SELECT avg(customer_id) FROM sales WHERE customer_id > 2;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales WHERE customer_id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id where customer_id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales WHERE customer_id > 2;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 2.",
+        "Write: SELECT min(customer_id) FROM sales WHERE customer_id > 2;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales WHERE customer_id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id where customer_id > 2",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales WHERE customer_id > 2;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 2.",
+        "Write: SELECT max(customer_id) FROM sales WHERE customer_id > 2;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales WHERE customer_id > 2;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where customer_id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id > 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id > 3.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id > 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id where customer_id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales WHERE customer_id > 3;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 3.",
+        "Write: SELECT sum(customer_id) FROM sales WHERE customer_id > 3;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales WHERE customer_id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id where customer_id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales WHERE customer_id > 3;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 3.",
+        "Write: SELECT avg(customer_id) FROM sales WHERE customer_id > 3;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales WHERE customer_id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id where customer_id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales WHERE customer_id > 3;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 3.",
+        "Write: SELECT min(customer_id) FROM sales WHERE customer_id > 3;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales WHERE customer_id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id where customer_id > 3",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales WHERE customer_id > 3;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 3.",
+        "Write: SELECT max(customer_id) FROM sales WHERE customer_id > 3;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales WHERE customer_id > 3;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where customer_id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id > 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id > 4.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id > 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id where customer_id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales WHERE customer_id > 4;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 4.",
+        "Write: SELECT sum(customer_id) FROM sales WHERE customer_id > 4;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales WHERE customer_id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id where customer_id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales WHERE customer_id > 4;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 4.",
+        "Write: SELECT avg(customer_id) FROM sales WHERE customer_id > 4;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales WHERE customer_id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id where customer_id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales WHERE customer_id > 4;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 4.",
+        "Write: SELECT min(customer_id) FROM sales WHERE customer_id > 4;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales WHERE customer_id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id where customer_id > 4",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales WHERE customer_id > 4;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 4.",
+        "Write: SELECT max(customer_id) FROM sales WHERE customer_id > 4;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales WHERE customer_id > 4;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where customer_id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id > 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id > 5.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id > 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id where customer_id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales WHERE customer_id > 5;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 5.",
+        "Write: SELECT sum(customer_id) FROM sales WHERE customer_id > 5;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales WHERE customer_id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id where customer_id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales WHERE customer_id > 5;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 5.",
+        "Write: SELECT avg(customer_id) FROM sales WHERE customer_id > 5;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales WHERE customer_id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id where customer_id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales WHERE customer_id > 5;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 5.",
+        "Write: SELECT min(customer_id) FROM sales WHERE customer_id > 5;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales WHERE customer_id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id where customer_id > 5",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales WHERE customer_id > 5;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 5.",
+        "Write: SELECT max(customer_id) FROM sales WHERE customer_id > 5;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales WHERE customer_id > 5;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where customer_id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id > 6;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id > 6.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id > 6;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id where customer_id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales WHERE customer_id > 6;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 6.",
+        "Write: SELECT sum(customer_id) FROM sales WHERE customer_id > 6;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales WHERE customer_id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id where customer_id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales WHERE customer_id > 6;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 6.",
+        "Write: SELECT avg(customer_id) FROM sales WHERE customer_id > 6;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales WHERE customer_id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id where customer_id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales WHERE customer_id > 6;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 6.",
+        "Write: SELECT min(customer_id) FROM sales WHERE customer_id > 6;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales WHERE customer_id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id where customer_id > 6",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales WHERE customer_id > 6;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 6.",
+        "Write: SELECT max(customer_id) FROM sales WHERE customer_id > 6;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales WHERE customer_id > 6;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where customer_id > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id > 7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id > 7.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id > 7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id where customer_id > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales WHERE customer_id > 7;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 7.",
+        "Write: SELECT sum(customer_id) FROM sales WHERE customer_id > 7;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales WHERE customer_id > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id where customer_id > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales WHERE customer_id > 7;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 7.",
+        "Write: SELECT avg(customer_id) FROM sales WHERE customer_id > 7;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales WHERE customer_id > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id where customer_id > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales WHERE customer_id > 7;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 7.",
+        "Write: SELECT min(customer_id) FROM sales WHERE customer_id > 7;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales WHERE customer_id > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id where customer_id > 7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales WHERE customer_id > 7;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 7.",
+        "Write: SELECT max(customer_id) FROM sales WHERE customer_id > 7;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales WHERE customer_id > 7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where customer_id > 8",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id > 8;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id > 8.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id > 8;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id > 8;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of customer_id where customer_id > 8",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(customer_id) FROM sales WHERE customer_id > 8;",
+      "hints": [
+        "Start with SELECT sum(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 8.",
+        "Write: SELECT sum(customer_id) FROM sales WHERE customer_id > 8;"
+      ],
+      "expected_sql": "SELECT sum(customer_id) FROM sales WHERE customer_id > 8;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of customer_id where customer_id > 8",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(customer_id) FROM sales WHERE customer_id > 8;",
+      "hints": [
+        "Start with SELECT avg(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 8.",
+        "Write: SELECT avg(customer_id) FROM sales WHERE customer_id > 8;"
+      ],
+      "expected_sql": "SELECT avg(customer_id) FROM sales WHERE customer_id > 8;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of customer_id where customer_id > 8",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(customer_id) FROM sales WHERE customer_id > 8;",
+      "hints": [
+        "Start with SELECT min(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 8.",
+        "Write: SELECT min(customer_id) FROM sales WHERE customer_id > 8;"
+      ],
+      "expected_sql": "SELECT min(customer_id) FROM sales WHERE customer_id > 8;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of customer_id where customer_id > 8",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(customer_id) FROM sales WHERE customer_id > 8;",
+      "hints": [
+        "Start with SELECT max(customer_id).",
+        "FROM sales.",
+        "Add WHERE customer_id > 8.",
+        "Write: SELECT max(customer_id) FROM sales WHERE customer_id > 8;"
+      ],
+      "expected_sql": "SELECT max(customer_id) FROM sales WHERE customer_id > 8;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L310",
+  "order": 310
+}

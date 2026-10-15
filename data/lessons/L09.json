@@ -1,0 +1,104 @@
+{
+  "id": "L09",
+  "order": 9,
+  "difficulty": 3,
+  "tags": [
+    "join",
+    "inner join"
+  ],
+  "title": "JOIN: gluing two tables together",
+  "steps": [
+    {
+      "type": "type",
+      "title": "The glue word: JOIN",
+      "prompt": "Products only have a category NUMBER (category_id) - the name lives in another table.\nJOIN glues two tables side by side by matching keys, like puzzle pieces.\nON p.category_id = c.id is the instruction: 'glue where the product's category number matches the category's own number.'",
+      "task": "Try typing: SELECT p.name, c.name FROM products p JOIN categories c ON p.category_id = c.id;",
+      "hints": [
+        "Short names p and c are nicknames for the tables.",
+        "ON tells SQL which columns to match.",
+        "Products carry category_id; categories carry id.",
+        "Type the JOIN with ON p.category_id = c.id."
+      ],
+      "expected_sql": "SELECT p.name, c.name FROM products p JOIN categories c ON p.category_id = c.id;",
+      "memory_trick": "JOIN = glue; ON = where to glue.",
+      "check": {
+        "require": [
+          "join"
+        ]
+      }
+    },
+    {
+      "type": "fill",
+      "title": "Fill the ON",
+      "prompt": "The glue needs its matching instruction. Fill the blank:\nSELECT p.name, c.name FROM products p JOIN categories c ON ___.category_id = ___.id;",
+      "task": "Fill both blanks with the table nicknames.",
+      "hints": [
+        "The nicknames are p and c.",
+        "The first condition is about products.",
+        "Product's column is category_id; the category's is id.",
+        "Fill with p then c."
+      ],
+      "expected_sql": "SELECT p.name, c.name FROM products p JOIN categories c ON p.category_id = c.id;",
+      "seed_sql": "SELECT p.name, c.name FROM products p JOIN categories c ON ___.category_id = ___.id;",
+      "memory_trick": "ON = 'match these two keys'."
+    },
+    {
+      "type": "type",
+      "title": "Sales need names",
+      "prompt": "Invoices record customer NUMBERS, not names. JOIN brings the names in:\nSELECT s.id, c.name FROM sales s JOIN customers c ON s.customer_id = c.id;",
+      "task": "Try typing: SELECT s.id, c.name FROM sales s JOIN customers c ON s.customer_id = c.id;",
+      "hints": [
+        "Nickname sales as s and customers as c.",
+        "ON matches customer_id to id.",
+        "Show the sale id and the customer's name.",
+        "Type: SELECT s.id, c.name FROM sales s JOIN customers c ON s.customer_id = c.id;"
+      ],
+      "expected_sql": "SELECT s.id, c.name FROM sales s JOIN customers c ON s.customer_id = c.id;",
+      "memory_trick": "Keys in one table become names when you JOIN.",
+      "check": {
+        "require": [
+          "join"
+        ]
+      }
+    },
+    {
+      "type": "predict",
+      "title": "Predict the row count",
+      "prompt": "There are 45 sales and 30 customers. JOIN matches every sale to one customer.\nSELECT count(*) FROM sales s JOIN customers c ON s.customer_id = c.id;",
+      "task": "How many rows does the join return?",
+      "check": {
+        "answer": [
+          "45",
+          "forty five",
+          "45 rows"
+        ]
+      },
+      "hints": [
+        "Each sale glues to exactly one customer.",
+        "There are 45 sales.",
+        "No sale is left behind in an inner join.",
+        "Answer: 45."
+      ],
+      "memory_trick": "INNER JOIN keeps only rows that find a partner."
+    },
+    {
+      "type": "type",
+      "title": "Products with real category names",
+      "prompt": "Final puzzle piece - switch the numbers for names on the full products list:",
+      "task": "Try typing: SELECT p.name, c.name FROM products p JOIN categories c ON p.category_id = c.id;",
+      "hints": [
+        "Join products p to categories c.",
+        "ON p.category_id = c.id.",
+        "Show p.name and c.name.",
+        "Write: SELECT p.name, c.name FROM products p JOIN categories c ON p.category_id = c.id;"
+      ],
+      "expected_sql": "SELECT p.name, c.name FROM products p JOIN categories c ON p.category_id = c.id;",
+      "memory_trick": "From now on, JOIN is your everyday friend.",
+      "check": {
+        "require": [
+          "join"
+        ]
+      }
+    }
+  ]
+}

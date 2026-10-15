@@ -1,0 +1,798 @@
+{
+  "title": "Filtering the sale_items table by numbers · part 85",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Count rows unit_price > 214.78",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price > 214.78;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 214.78.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price > 214.78;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price > 214.78;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price > 214.78",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price > 214.78 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price > 214.78.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price > 214.78 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price > 214.78 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price >= 214.78",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is at least 214.78.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price >= 214.78;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price >= 214.78.",
+        "Write: SELECT id FROM sale_items WHERE unit_price >= 214.78;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price >= 214.78;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price >= 214.78",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price >= 214.78;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price >= 214.78.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price >= 214.78;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price >= 214.78;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price >= 214.78",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price >= 214.78 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price >= 214.78.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price >= 214.78 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price >= 214.78 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price < 214.78",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is smaller than 214.78.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price < 214.78;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price < 214.78.",
+        "Write: SELECT id FROM sale_items WHERE unit_price < 214.78;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price < 214.78;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price < 214.78",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price < 214.78;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price < 214.78.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price < 214.78;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price < 214.78;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price < 214.78",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price < 214.78 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price < 214.78.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price < 214.78 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price < 214.78 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price <= 214.78",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is at most 214.78.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price <= 214.78;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price <= 214.78.",
+        "Write: SELECT id FROM sale_items WHERE unit_price <= 214.78;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price <= 214.78;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price <= 214.78",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price <= 214.78;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price <= 214.78.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price <= 214.78;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price <= 214.78;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price <= 214.78",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price <= 214.78 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price <= 214.78.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price <= 214.78 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price <= 214.78 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price = 214.78",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is exactly 214.78.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price = 214.78;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price = 214.78.",
+        "Write: SELECT id FROM sale_items WHERE unit_price = 214.78;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price = 214.78;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price = 214.78",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price = 214.78;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price = 214.78.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price = 214.78;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price = 214.78;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price = 214.78",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price = 214.78 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price = 214.78.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price = 214.78 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price = 214.78 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price != 214.78",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is not equal to 214.78.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price != 214.78;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price != 214.78.",
+        "Write: SELECT id FROM sale_items WHERE unit_price != 214.78;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price != 214.78;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price != 214.78",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price != 214.78;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price != 214.78.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price != 214.78;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price != 214.78;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price != 214.78",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price != 214.78 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price != 214.78.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price != 214.78 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price != 214.78 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price > 269.68",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is bigger than 269.68.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price > 269.68;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price > 269.68.",
+        "Write: SELECT id FROM sale_items WHERE unit_price > 269.68;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price > 269.68;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price > 269.68",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price > 269.68;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 269.68.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price > 269.68;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price > 269.68;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price > 269.68",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price > 269.68 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price > 269.68.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price > 269.68 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price > 269.68 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price >= 269.68",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is at least 269.68.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price >= 269.68;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price >= 269.68.",
+        "Write: SELECT id FROM sale_items WHERE unit_price >= 269.68;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price >= 269.68;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price >= 269.68",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price >= 269.68;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price >= 269.68.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price >= 269.68;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price >= 269.68;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price >= 269.68",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price >= 269.68 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price >= 269.68.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price >= 269.68 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price >= 269.68 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price < 269.68",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is smaller than 269.68.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price < 269.68;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price < 269.68.",
+        "Write: SELECT id FROM sale_items WHERE unit_price < 269.68;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price < 269.68;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price < 269.68",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price < 269.68;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price < 269.68.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price < 269.68;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price < 269.68;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price < 269.68",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price < 269.68 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price < 269.68.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price < 269.68 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price < 269.68 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price <= 269.68",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is at most 269.68.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price <= 269.68;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price <= 269.68.",
+        "Write: SELECT id FROM sale_items WHERE unit_price <= 269.68;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price <= 269.68;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price <= 269.68",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price <= 269.68;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price <= 269.68.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price <= 269.68;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price <= 269.68;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price <= 269.68",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price <= 269.68 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price <= 269.68.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price <= 269.68 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price <= 269.68 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price = 269.68",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is exactly 269.68.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price = 269.68;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price = 269.68.",
+        "Write: SELECT id FROM sale_items WHERE unit_price = 269.68;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price = 269.68;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price = 269.68",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price = 269.68;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price = 269.68.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price = 269.68;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price = 269.68;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price = 269.68",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price = 269.68 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price = 269.68.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price = 269.68 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price = 269.68 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price != 269.68",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is not equal to 269.68.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price != 269.68;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price != 269.68.",
+        "Write: SELECT id FROM sale_items WHERE unit_price != 269.68;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price != 269.68;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price != 269.68",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price != 269.68;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price != 269.68.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price != 269.68;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price != 269.68;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price != 269.68",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price != 269.68 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price != 269.68.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price != 269.68 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price != 269.68 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price > 318.51",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is bigger than 318.51.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price > 318.51;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price > 318.51.",
+        "Write: SELECT id FROM sale_items WHERE unit_price > 318.51;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price > 318.51;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price > 318.51",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price > 318.51;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 318.51.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price > 318.51;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price > 318.51;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price > 318.51",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price > 318.51 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price > 318.51.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price > 318.51 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price > 318.51 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price >= 318.51",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is at least 318.51.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price >= 318.51;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price >= 318.51.",
+        "Write: SELECT id FROM sale_items WHERE unit_price >= 318.51;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price >= 318.51;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price >= 318.51",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price >= 318.51;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price >= 318.51.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price >= 318.51;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price >= 318.51;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L227",
+  "order": 227
+}

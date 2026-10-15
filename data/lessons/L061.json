@@ -1,0 +1,88 @@
+{
+  "title": "Filtering the employees table by text · part 2",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where hire_date is 2023-01-10",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2023-01-10'.",
+      "task": "Try typing: SELECT * FROM employees WHERE hire_date = '2023-01-10';",
+      "hints": [
+        "Start with SELECT * FROM employees.",
+        "Add WHERE hire_date = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM employees WHERE hire_date = '2023-01-10';"
+      ],
+      "expected_sql": "SELECT * FROM employees WHERE hire_date = '2023-01-10';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for '023' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %023% means 'contains'.",
+      "task": "Try typing: SELECT * FROM employees WHERE hire_date LIKE '%023%';",
+      "hints": [
+        "Start with SELECT * FROM employees.",
+        "Add WHERE hire_date LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM employees WHERE hire_date LIKE '%023%';"
+      ],
+      "expected_sql": "SELECT * FROM employees WHERE hire_date LIKE '%023%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where hire_date is 2024-02-05",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2024-02-05'.",
+      "task": "Try typing: SELECT * FROM employees WHERE hire_date = '2024-02-05';",
+      "hints": [
+        "Start with SELECT * FROM employees.",
+        "Add WHERE hire_date = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM employees WHERE hire_date = '2024-02-05';"
+      ],
+      "expected_sql": "SELECT * FROM employees WHERE hire_date = '2024-02-05';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for '024' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %024% means 'contains'.",
+      "task": "Try typing: SELECT * FROM employees WHERE hire_date LIKE '%024%';",
+      "hints": [
+        "Start with SELECT * FROM employees.",
+        "Add WHERE hire_date LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM employees WHERE hire_date LIKE '%024%';"
+      ],
+      "expected_sql": "SELECT * FROM employees WHERE hire_date LIKE '%024%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L061",
+  "order": 61
+}

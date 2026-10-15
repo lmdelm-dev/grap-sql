@@ -1,0 +1,297 @@
+{
+  "title": "Totals over a filtered set in sale_items · part 5",
+  "tags": [
+    "aggregate",
+    "where"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT of * where unit_price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price > 38.82;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 38.82.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price > 38.82;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of unit_price where unit_price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(unit_price) FROM sale_items WHERE unit_price > 38.82;",
+      "hints": [
+        "Start with SELECT sum(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 38.82.",
+        "Write: SELECT sum(unit_price) FROM sale_items WHERE unit_price > 38.82;"
+      ],
+      "expected_sql": "SELECT sum(unit_price) FROM sale_items WHERE unit_price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of unit_price where unit_price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(unit_price) FROM sale_items WHERE unit_price > 38.82;",
+      "hints": [
+        "Start with SELECT avg(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 38.82.",
+        "Write: SELECT avg(unit_price) FROM sale_items WHERE unit_price > 38.82;"
+      ],
+      "expected_sql": "SELECT avg(unit_price) FROM sale_items WHERE unit_price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of unit_price where unit_price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(unit_price) FROM sale_items WHERE unit_price > 38.82;",
+      "hints": [
+        "Start with SELECT min(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 38.82.",
+        "Write: SELECT min(unit_price) FROM sale_items WHERE unit_price > 38.82;"
+      ],
+      "expected_sql": "SELECT min(unit_price) FROM sale_items WHERE unit_price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of unit_price where unit_price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(unit_price) FROM sale_items WHERE unit_price > 38.82;",
+      "hints": [
+        "Start with SELECT max(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 38.82.",
+        "Write: SELECT max(unit_price) FROM sale_items WHERE unit_price > 38.82;"
+      ],
+      "expected_sql": "SELECT max(unit_price) FROM sale_items WHERE unit_price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where unit_price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price > 40.54;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 40.54.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price > 40.54;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of unit_price where unit_price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(unit_price) FROM sale_items WHERE unit_price > 40.54;",
+      "hints": [
+        "Start with SELECT sum(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 40.54.",
+        "Write: SELECT sum(unit_price) FROM sale_items WHERE unit_price > 40.54;"
+      ],
+      "expected_sql": "SELECT sum(unit_price) FROM sale_items WHERE unit_price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of unit_price where unit_price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(unit_price) FROM sale_items WHERE unit_price > 40.54;",
+      "hints": [
+        "Start with SELECT avg(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 40.54.",
+        "Write: SELECT avg(unit_price) FROM sale_items WHERE unit_price > 40.54;"
+      ],
+      "expected_sql": "SELECT avg(unit_price) FROM sale_items WHERE unit_price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of unit_price where unit_price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(unit_price) FROM sale_items WHERE unit_price > 40.54;",
+      "hints": [
+        "Start with SELECT min(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 40.54.",
+        "Write: SELECT min(unit_price) FROM sale_items WHERE unit_price > 40.54;"
+      ],
+      "expected_sql": "SELECT min(unit_price) FROM sale_items WHERE unit_price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of unit_price where unit_price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(unit_price) FROM sale_items WHERE unit_price > 40.54;",
+      "hints": [
+        "Start with SELECT max(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 40.54.",
+        "Write: SELECT max(unit_price) FROM sale_items WHERE unit_price > 40.54;"
+      ],
+      "expected_sql": "SELECT max(unit_price) FROM sale_items WHERE unit_price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where unit_price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price > 45.63;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 45.63.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price > 45.63;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of unit_price where unit_price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(unit_price) FROM sale_items WHERE unit_price > 45.63;",
+      "hints": [
+        "Start with SELECT sum(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 45.63.",
+        "Write: SELECT sum(unit_price) FROM sale_items WHERE unit_price > 45.63;"
+      ],
+      "expected_sql": "SELECT sum(unit_price) FROM sale_items WHERE unit_price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of unit_price where unit_price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(unit_price) FROM sale_items WHERE unit_price > 45.63;",
+      "hints": [
+        "Start with SELECT avg(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 45.63.",
+        "Write: SELECT avg(unit_price) FROM sale_items WHERE unit_price > 45.63;"
+      ],
+      "expected_sql": "SELECT avg(unit_price) FROM sale_items WHERE unit_price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of unit_price where unit_price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(unit_price) FROM sale_items WHERE unit_price > 45.63;",
+      "hints": [
+        "Start with SELECT min(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 45.63.",
+        "Write: SELECT min(unit_price) FROM sale_items WHERE unit_price > 45.63;"
+      ],
+      "expected_sql": "SELECT min(unit_price) FROM sale_items WHERE unit_price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of unit_price where unit_price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(unit_price) FROM sale_items WHERE unit_price > 45.63;",
+      "hints": [
+        "Start with SELECT max(unit_price).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 45.63.",
+        "Write: SELECT max(unit_price) FROM sale_items WHERE unit_price > 45.63;"
+      ],
+      "expected_sql": "SELECT max(unit_price) FROM sale_items WHERE unit_price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L252",
+  "order": 252
+}

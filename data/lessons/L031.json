@@ -1,0 +1,126 @@
+{
+  "title": "Pick from a list in categories",
+  "tags": [
+    "where",
+    "in"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep a short list of id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM categories WHERE id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM categories WHERE id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM categories WHERE id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM categories WHERE id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of name",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM categories WHERE name IN ('Argan Products', 'Ceramics & Pottery', 'Dates & Dried Fruits');",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM categories WHERE name IN ('Argan Products', 'Ceramics & Pottery', 'Dates & Dried Fruits');"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name IN ('Argan Products', 'Ceramics & Pottery', 'Dates & Dried Fruits');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep name NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM categories WHERE name NOT IN ('Argan Products', 'Ceramics & Pottery', 'Dates & Dried Fruits', 'Leather Goods');",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM categories WHERE name NOT IN ('Argan Products', 'Ceramics & Pottery', 'Dates & Dried Fruits', 'Leather Goods');"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name NOT IN ('Argan Products', 'Ceramics & Pottery', 'Dates & Dried Fruits', 'Leather Goods');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of description",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM categories WHERE description IN ('Argan oil, cosmetics and food', 'Bags, belts and poufs', 'Cold-pressed olive oils');",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE description IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM categories WHERE description IN ('Argan oil, cosmetics and food', 'Bags, belts and poufs', 'Cold-pressed olive oils');"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE description IN ('Argan oil, cosmetics and food', 'Bags, belts and poufs', 'Cold-pressed olive oils');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep description NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM categories WHERE description NOT IN ('Argan oil, cosmetics and food', 'Bags, belts and poufs', 'Cold-pressed olive oils', 'Dates, figs, almonds and raisins');",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE description NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM categories WHERE description NOT IN ('Argan oil, cosmetics and food', 'Bags, belts and poufs', 'Cold-pressed olive oils', 'Dates, figs, almonds and raisins');"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE description NOT IN ('Argan oil, cosmetics and food', 'Bags, belts and poufs', 'Cold-pressed olive oils', 'Dates, figs, almonds and raisins');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L031",
+  "order": 31
+}

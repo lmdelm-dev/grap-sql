@@ -1,0 +1,697 @@
+{
+  "title": "Sorting and trimming the sales table",
+  "tags": [
+    "order by",
+    "limit"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Sort id smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM sales ORDER BY id ;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM sales ORDER BY id ;"
+      ],
+      "expected_sql": "SELECT id FROM sales ORDER BY id ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort id biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT id FROM sales ORDER BY id DESC;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add ORDER BY id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT id FROM sales ORDER BY id DESC;"
+      ],
+      "expected_sql": "SELECT id FROM sales ORDER BY id DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT id FROM sales ORDER BY id DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT id FROM sales ORDER BY id DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT id FROM sales ORDER BY id DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT id FROM sales ORDER BY id DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT id FROM sales ORDER BY id DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales ORDER BY id DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT id FROM sales ORDER BY id DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT id FROM sales ORDER BY id DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT id FROM sales ORDER BY id DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT id FROM sales ORDER BY id DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add ORDER BY id DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT id FROM sales ORDER BY id DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT id FROM sales ORDER BY id DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of id",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different id values exist?'",
+      "task": "Try typing: SELECT DISTINCT id FROM sales ORDER BY id;",
+      "hints": [
+        "Start with SELECT DISTINCT id.",
+        "FROM sales.",
+        "Add ORDER BY id to sort them.",
+        "Write: SELECT DISTINCT id FROM sales ORDER BY id;"
+      ],
+      "expected_sql": "SELECT DISTINCT id FROM sales ORDER BY id;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort customer_id smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT customer_id FROM sales ORDER BY customer_id ;",
+      "hints": [
+        "Start with SELECT customer_id FROM sales.",
+        "Add ORDER BY customer_id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT customer_id FROM sales ORDER BY customer_id ;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales ORDER BY customer_id ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort customer_id biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT customer_id FROM sales ORDER BY customer_id DESC;",
+      "hints": [
+        "Start with SELECT customer_id FROM sales.",
+        "Add ORDER BY customer_id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT customer_id FROM sales ORDER BY customer_id DESC;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales ORDER BY customer_id DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by customer_id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT customer_id FROM sales.",
+        "Add ORDER BY customer_id DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by customer_id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT customer_id FROM sales.",
+        "Add ORDER BY customer_id DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by customer_id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT customer_id FROM sales.",
+        "Add ORDER BY customer_id DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by customer_id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT customer_id FROM sales.",
+        "Add ORDER BY customer_id DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales ORDER BY customer_id DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of customer_id",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different customer_id values exist?'",
+      "task": "Try typing: SELECT DISTINCT customer_id FROM sales ORDER BY customer_id;",
+      "hints": [
+        "Start with SELECT DISTINCT customer_id.",
+        "FROM sales.",
+        "Add ORDER BY customer_id to sort them.",
+        "Write: SELECT DISTINCT customer_id FROM sales ORDER BY customer_id;"
+      ],
+      "expected_sql": "SELECT DISTINCT customer_id FROM sales ORDER BY customer_id;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort employee_id smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT employee_id FROM sales ORDER BY employee_id ;",
+      "hints": [
+        "Start with SELECT employee_id FROM sales.",
+        "Add ORDER BY employee_id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT employee_id FROM sales ORDER BY employee_id ;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales ORDER BY employee_id ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort employee_id biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT employee_id FROM sales ORDER BY employee_id DESC;",
+      "hints": [
+        "Start with SELECT employee_id FROM sales.",
+        "Add ORDER BY employee_id.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT employee_id FROM sales ORDER BY employee_id DESC;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales ORDER BY employee_id DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by employee_id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT employee_id FROM sales.",
+        "Add ORDER BY employee_id DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by employee_id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT employee_id FROM sales.",
+        "Add ORDER BY employee_id DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by employee_id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT employee_id FROM sales.",
+        "Add ORDER BY employee_id DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by employee_id",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT employee_id FROM sales.",
+        "Add ORDER BY employee_id DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales ORDER BY employee_id DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of employee_id",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different employee_id values exist?'",
+      "task": "Try typing: SELECT DISTINCT employee_id FROM sales ORDER BY employee_id;",
+      "hints": [
+        "Start with SELECT DISTINCT employee_id.",
+        "FROM sales.",
+        "Add ORDER BY employee_id to sort them.",
+        "Write: SELECT DISTINCT employee_id FROM sales ORDER BY employee_id;"
+      ],
+      "expected_sql": "SELECT DISTINCT employee_id FROM sales ORDER BY employee_id;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort sale_date smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT sale_date FROM sales ORDER BY sale_date ;",
+      "hints": [
+        "Start with SELECT sale_date FROM sales.",
+        "Add ORDER BY sale_date.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT sale_date FROM sales ORDER BY sale_date ;"
+      ],
+      "expected_sql": "SELECT sale_date FROM sales ORDER BY sale_date ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort sale_date biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT sale_date FROM sales ORDER BY sale_date DESC;",
+      "hints": [
+        "Start with SELECT sale_date FROM sales.",
+        "Add ORDER BY sale_date.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT sale_date FROM sales ORDER BY sale_date DESC;"
+      ],
+      "expected_sql": "SELECT sale_date FROM sales ORDER BY sale_date DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by sale_date",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT sale_date FROM sales.",
+        "Add ORDER BY sale_date DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by sale_date",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT sale_date FROM sales.",
+        "Add ORDER BY sale_date DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by sale_date",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT sale_date FROM sales.",
+        "Add ORDER BY sale_date DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by sale_date",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT sale_date FROM sales.",
+        "Add ORDER BY sale_date DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT sale_date FROM sales ORDER BY sale_date DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of sale_date",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different sale_date values exist?'",
+      "task": "Try typing: SELECT DISTINCT sale_date FROM sales ORDER BY sale_date;",
+      "hints": [
+        "Start with SELECT DISTINCT sale_date.",
+        "FROM sales.",
+        "Add ORDER BY sale_date to sort them.",
+        "Write: SELECT DISTINCT sale_date FROM sales ORDER BY sale_date;"
+      ],
+      "expected_sql": "SELECT DISTINCT sale_date FROM sales ORDER BY sale_date;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort total smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT total FROM sales ORDER BY total ;",
+      "hints": [
+        "Start with SELECT total FROM sales.",
+        "Add ORDER BY total.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT total FROM sales ORDER BY total ;"
+      ],
+      "expected_sql": "SELECT total FROM sales ORDER BY total ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort total biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT total FROM sales ORDER BY total DESC;",
+      "hints": [
+        "Start with SELECT total FROM sales.",
+        "Add ORDER BY total.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT total FROM sales ORDER BY total DESC;"
+      ],
+      "expected_sql": "SELECT total FROM sales ORDER BY total DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by total",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT total FROM sales ORDER BY total DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT total FROM sales.",
+        "Add ORDER BY total DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT total FROM sales ORDER BY total DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT total FROM sales ORDER BY total DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by total",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT total FROM sales ORDER BY total DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT total FROM sales.",
+        "Add ORDER BY total DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT total FROM sales ORDER BY total DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT total FROM sales ORDER BY total DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by total",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT total FROM sales ORDER BY total DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT total FROM sales.",
+        "Add ORDER BY total DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT total FROM sales ORDER BY total DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT total FROM sales ORDER BY total DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by total",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT total FROM sales ORDER BY total DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT total FROM sales.",
+        "Add ORDER BY total DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT total FROM sales ORDER BY total DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT total FROM sales ORDER BY total DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of total",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different total values exist?'",
+      "task": "Try typing: SELECT DISTINCT total FROM sales ORDER BY total;",
+      "hints": [
+        "Start with SELECT DISTINCT total.",
+        "FROM sales.",
+        "Add ORDER BY total to sort them.",
+        "Write: SELECT DISTINCT total FROM sales ORDER BY total;"
+      ],
+      "expected_sql": "SELECT DISTINCT total FROM sales ORDER BY total;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    }
+  ],
+  "id": "L297",
+  "order": 297
+}

@@ -1,0 +1,800 @@
+{
+  "title": "Filtering the products table by numbers · part 14",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id <= 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id <= 3 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id <= 3.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id <= 3 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id <= 3 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id = 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is exactly 3.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id = 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id = 3.",
+        "Write: SELECT id FROM products WHERE category_id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id = 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id = 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id = 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id = 3.",
+        "Write: SELECT count(*) FROM products WHERE category_id = 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id = 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id = 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id = 3 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id = 3.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id = 3 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id = 3 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id != 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is not equal to 3.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id != 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id != 3.",
+        "Write: SELECT id FROM products WHERE category_id != 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id != 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id != 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id != 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id != 3.",
+        "Write: SELECT count(*) FROM products WHERE category_id != 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id != 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id != 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id != 3 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id != 3.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id != 3 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id != 3 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id > 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is bigger than 4.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id > 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id > 4.",
+        "Write: SELECT id FROM products WHERE category_id > 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id > 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id > 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id > 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id > 4.",
+        "Write: SELECT count(*) FROM products WHERE category_id > 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id > 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id > 4",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id > 4 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id > 4.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id > 4 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id > 4 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id >= 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is at least 4.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id >= 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id >= 4.",
+        "Write: SELECT id FROM products WHERE category_id >= 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id >= 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id >= 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id >= 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id >= 4.",
+        "Write: SELECT count(*) FROM products WHERE category_id >= 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id >= 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id >= 4",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id >= 4 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id >= 4.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id >= 4 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id >= 4 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id < 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is smaller than 4.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id < 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id < 4.",
+        "Write: SELECT id FROM products WHERE category_id < 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id < 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id < 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id < 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id < 4.",
+        "Write: SELECT count(*) FROM products WHERE category_id < 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id < 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id < 4",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id < 4 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id < 4.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id < 4 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id < 4 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id <= 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is at most 4.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id <= 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id <= 4.",
+        "Write: SELECT id FROM products WHERE category_id <= 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id <= 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id <= 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id <= 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id <= 4.",
+        "Write: SELECT count(*) FROM products WHERE category_id <= 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id <= 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id <= 4",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id <= 4 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id <= 4.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id <= 4 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id <= 4 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id = 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is exactly 4.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id = 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id = 4.",
+        "Write: SELECT id FROM products WHERE category_id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id = 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id = 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id = 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id = 4.",
+        "Write: SELECT count(*) FROM products WHERE category_id = 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id = 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id = 4",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id = 4 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id = 4.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id = 4 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id = 4 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id != 4",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is not equal to 4.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id != 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id != 4.",
+        "Write: SELECT id FROM products WHERE category_id != 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id != 4;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id != 4",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id != 4;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id != 4.",
+        "Write: SELECT count(*) FROM products WHERE category_id != 4;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id != 4;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id != 4",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id != 4 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id != 4.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id != 4 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id != 4 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id > 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is bigger than 5.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id > 5;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id > 5.",
+        "Write: SELECT id FROM products WHERE category_id > 5;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id > 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id > 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id > 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id > 5.",
+        "Write: SELECT count(*) FROM products WHERE category_id > 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id > 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id > 5",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id > 5 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id > 5.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id > 5 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id > 5 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id >= 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is at least 5.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id >= 5;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id >= 5.",
+        "Write: SELECT id FROM products WHERE category_id >= 5;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id >= 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id >= 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id >= 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id >= 5.",
+        "Write: SELECT count(*) FROM products WHERE category_id >= 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id >= 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id >= 5",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id >= 5 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id >= 5.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id >= 5 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id >= 5 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id < 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is smaller than 5.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id < 5;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id < 5.",
+        "Write: SELECT id FROM products WHERE category_id < 5;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id < 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id < 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id < 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id < 5.",
+        "Write: SELECT count(*) FROM products WHERE category_id < 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id < 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id < 5",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id < 5 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id < 5.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id < 5 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id < 5 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id <= 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is at most 5.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id <= 5;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id <= 5.",
+        "Write: SELECT id FROM products WHERE category_id <= 5;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id <= 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id <= 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id <= 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id <= 5.",
+        "Write: SELECT count(*) FROM products WHERE category_id <= 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id <= 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id <= 5",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id <= 5 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id <= 5.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id <= 5 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id <= 5 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id = 5",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where category_id is exactly 5.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id = 5;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is category_id = 5.",
+        "Write: SELECT id FROM products WHERE category_id = 5;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id = 5;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows category_id = 5",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE category_id = 5;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE category_id = 5.",
+        "Write: SELECT count(*) FROM products WHERE category_id = 5;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE category_id = 5;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: category_id = 5",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id = 5 ORDER BY category_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id = 5.",
+        "Add ORDER BY category_id LIMIT 3.",
+        "Write: SELECT id FROM products WHERE category_id = 5 ORDER BY category_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id = 5 ORDER BY category_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    }
+  ],
+  "id": "L095",
+  "order": 95
+}

@@ -1,0 +1,90 @@
+{
+  "id": "L13",
+  "order": 13,
+  "difficulty": 3,
+  "tags": [
+    "delete",
+    "write"
+  ],
+  "title": "DELETE: removing rows",
+  "steps": [
+    {
+      "type": "type",
+      "title": "Say goodbye nicely",
+      "prompt": "DELETE removes rows - like crossing a name off a guest list.\nAlways use WHERE, so only the intended row goes.",
+      "task": "Try typing: DELETE FROM customers WHERE name = 'Khadija Sabri';",
+      "hints": [
+        "Start with DELETE FROM customers.",
+        "Name the customer you want to remove.",
+        "Use WHERE with the name in quotes.",
+        "Write: DELETE FROM customers WHERE name = 'Khadija Sabri';"
+      ],
+      "expected_sql": "DELETE FROM customers WHERE name = 'Khadija Sabri';",
+      "memory_trick": "DELETE FROM + WHERE = 'remove exactly these rows'.",
+      "check": {
+        "require": [
+          "delete"
+        ]
+      }
+    },
+    {
+      "type": "fill",
+      "title": "Delete by id",
+      "prompt": "Rows are safer to delete by their ID - it's unique. Fill the blank:\nDELETE FROM customers WHERE id = ___;",
+      "task": "Delete the customer with id 12.",
+      "hints": [
+        "WHERE picks the row.",
+        "We delete the one with id 12.",
+        "The blank is a number.",
+        "Fill: 12"
+      ],
+      "expected_sql": "DELETE FROM customers WHERE id = 12;",
+      "seed_sql": "DELETE FROM customers WHERE id = ___;",
+      "memory_trick": "id = the row's unique fingerprint."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the scariest DELETE",
+      "prompt": "What does this do?\nDELETE FROM products;",
+      "task": "How many rows are removed?",
+      "check": {
+        "answer": [
+          "40",
+          "all of them",
+          "all 40",
+          "every row",
+          "all rows"
+        ]
+      },
+      "hints": [
+        "There's no WHERE anywhere.",
+        "An unfiltered DELETE clears the whole table.",
+        "The products table has 40 rows.",
+        "Answer: all 40."
+      ],
+      "memory_trick": "DELETE without WHERE = the whole table. You'll be warned first."
+    },
+    {
+      "type": "answer",
+      "title": "Why the warning?",
+      "prompt": "Real databases can't be Reset. In a real shop, DELETE FROM products; would empty the shelves for good.\nThat's why the app gently warns you - and why you practice so a real DELETE never surprises you.",
+      "task": "In a REAL (non-practice) database, what happens to DELETEd rows?",
+      "check": {
+        "answer": [
+          "they are gone for good",
+          "they are gone",
+          "they disappear",
+          "they're gone permanently",
+          "permanently deleted"
+        ]
+      },
+      "hints": [
+        "There's no Reset button in real life.",
+        "Think of a paper register being cut up.",
+        "The rows are removed from the table.",
+        "Answer: gone for good."
+      ],
+      "memory_trick": "Practice habits become real-world safety."
+    }
+  ]
+}

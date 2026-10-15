@@ -1,0 +1,373 @@
+{
+  "title": "Filtering the customers table by text · part 4",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-02-03",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-02-03'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-02-03';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-02-03';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-02-03';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-02-18",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-02-18'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-02-18';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-02-18';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-02-18';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-03-01",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-03-01'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-03-01';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-03-01';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-03-01';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-04-02",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-04-02'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-04-02';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-04-02';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-04-02';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-04-19",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-04-19'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-04-19';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-04-19';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-04-19';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-05-22",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-05-22'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-05-22';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-05-22';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-05-22';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-06-08",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-06-08'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-06-08';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-06-08';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-06-08';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-07-29",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-07-29'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-07-29';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-07-29';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-07-29';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-08-14",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-08-14'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-08-14';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-08-14';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-08-14';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-09-03",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-09-03'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-09-03';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-09-03';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-09-03';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-09-20",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-09-20'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-09-20';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-09-20';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-09-20';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-10-21",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-10-21'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-10-21';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-10-21';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-10-21';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-11-24",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-11-24'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-11-24';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-11-24';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-11-24';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2026-01-15",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2026-01-15'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2026-01-15';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2026-01-15';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2026-01-15';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for '026' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %026% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at LIKE '%026%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE created_at LIKE '%026%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at LIKE '%026%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2026-02-02",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2026-02-02'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2026-02-02';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2026-02-02';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2026-02-02';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2026-03-07",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2026-03-07'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2026-03-07';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2026-03-07';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2026-03-07';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2026-04-28",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2026-04-28'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2026-04-28';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2026-04-28';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2026-04-28';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2026-05-15",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2026-05-15'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2026-05-15';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2026-05-15';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2026-05-15';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L039",
+  "order": 39
+}

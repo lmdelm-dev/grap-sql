@@ -1,0 +1,183 @@
+{
+  "title": "Grouping the products table · part 2",
+  "tags": [
+    "group by",
+    "having"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "AVG per supplier_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same supplier_id.\nThen avg(supplier_id) works on each pile.",
+      "task": "Try typing: SELECT supplier_id, avg(supplier_id) FROM products GROUP BY supplier_id;",
+      "hints": [
+        "Start with SELECT supplier_id, avg(supplier_id).",
+        "FROM products.",
+        "Finish with GROUP BY supplier_id.",
+        "Write: SELECT supplier_id, avg(supplier_id) FROM products GROUP BY supplier_id;"
+      ],
+      "expected_sql": "SELECT supplier_id, avg(supplier_id) FROM products GROUP BY supplier_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the supplier_id pile (1)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 1;",
+      "hints": [
+        "Build the piles with GROUP BY supplier_id.",
+        "Add HAVING to keep one pile.",
+        "The test is supplier_id = 1.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 1;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 1;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the supplier_id pile (2)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 2;",
+      "hints": [
+        "Build the piles with GROUP BY supplier_id.",
+        "Add HAVING to keep one pile.",
+        "The test is supplier_id = 2.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 2;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 2;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the supplier_id pile (3)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 3;",
+      "hints": [
+        "Build the piles with GROUP BY supplier_id.",
+        "Add HAVING to keep one pile.",
+        "The test is supplier_id = 3.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 3;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 3;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the supplier_id pile (4)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 4;",
+      "hints": [
+        "Build the piles with GROUP BY supplier_id.",
+        "Add HAVING to keep one pile.",
+        "The test is supplier_id = 4.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 4;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 4;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the supplier_id pile (5)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 5;",
+      "hints": [
+        "Build the piles with GROUP BY supplier_id.",
+        "Add HAVING to keep one pile.",
+        "The test is supplier_id = 5.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 5;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 5;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the supplier_id pile (6)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 6;",
+      "hints": [
+        "Build the piles with GROUP BY supplier_id.",
+        "Add HAVING to keep one pile.",
+        "The test is supplier_id = 6.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 6;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 6;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the supplier_id pile (7)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 7;",
+      "hints": [
+        "Build the piles with GROUP BY supplier_id.",
+        "Add HAVING to keep one pile.",
+        "The test is supplier_id = 7.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 7;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 7;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the supplier_id pile (8)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 8;",
+      "hints": [
+        "Build the piles with GROUP BY supplier_id.",
+        "Add HAVING to keep one pile.",
+        "The test is supplier_id = 8.",
+        "Write: SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 8;"
+      ],
+      "expected_sql": "SELECT supplier_id, count(*) FROM products GROUP BY supplier_id HAVING supplier_id = 8;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    }
+  ],
+  "id": "L127",
+  "order": 127
+}

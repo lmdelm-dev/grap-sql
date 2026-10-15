@@ -1,0 +1,90 @@
+{
+  "id": "L04",
+  "order": 4,
+  "difficulty": 2,
+  "tags": [
+    "where",
+    "filter"
+  ],
+  "title": "WHERE: asking for only the rows you want",
+  "steps": [
+    {
+      "type": "type",
+      "title": "The big new word: WHERE",
+      "prompt": "SELECT picks the COLUMNS. WHERE picks the ROWS.\nWHERE is a filter - imagine a sieve. Only the rows that pass through the holes stay.\nWHERE price > 100 means: 'only rows whose price is above 100.'",
+      "task": "Try typing: SELECT name FROM products WHERE price > 100;",
+      "hints": [
+        "Start with SELECT name FROM products.",
+        "Add WHERE after FROM products.",
+        "Write the condition: price > 100.",
+        "Type: SELECT name FROM products WHERE price > 100;"
+      ],
+      "expected_sql": "SELECT name FROM products WHERE price > 100;",
+      "memory_trick": "WHERE = 'only the rows that…'"
+    },
+    {
+      "type": "fill",
+      "title": "Fill in the comparison symbol",
+      "prompt": "SQL compares numbers with three little symbols:\n > means 'bigger than'    < means 'smaller than'    = means 'is exactly'\nThe query below should list products that are OUT OF STOCK (0 left).\nOne symbol is missing - it has been replaced by a blank ( ___ ).\nChange the ___ so the query means 'stock is exactly 0':\nSELECT name FROM products WHERE stock ___ 0;",
+      "task": "Replace the ___ with a symbol so it says 'stock is exactly 0'.",
+      "hints": [
+        "A blank ( ___) sits where a symbol should be. Delete it and type a symbol.",
+        "We want 'stock is exactly 0' - not bigger than 0 and not smaller than 0.",
+        "The symbol for 'is exactly' is one equals sign.",
+        "Final query: SELECT name FROM products WHERE stock = 0;"
+      ],
+      "expected_sql": "SELECT name FROM products WHERE stock = 0;",
+      "seed_sql": "SELECT name FROM products WHERE stock ___ 0;",
+      "memory_trick": "= means 'is exactly'. Write it once (not ==)."
+    },
+    {
+      "type": "type",
+      "title": "Text needs little wings",
+      "prompt": "Words in SQL are written inside single quotes, like little wings: 'Marrakech'.\nNumbers never need quotes - only text does.",
+      "task": "Try typing: SELECT name, city FROM customers WHERE city = 'Marrakech';",
+      "hints": [
+        "Start with SELECT name, city FROM customers.",
+        "Add WHERE city = …",
+        "Wrap Marrakech in single quotes.",
+        "Type: SELECT name, city FROM customers WHERE city = 'Marrakech';"
+      ],
+      "expected_sql": "SELECT name, city FROM customers WHERE city = 'Marrakech';",
+      "memory_trick": "Text in quotes, numbers bare."
+    },
+    {
+      "type": "fix",
+      "title": "Fix the double equals",
+      "prompt": "A learner typed two equals signs - SQL only wants one:\nSELECT name FROM products WHERE stock == 0;\nFix it.",
+      "task": "Fix the query so it returns products with zero stock.",
+      "hints": [
+        "Something is doubled.",
+        "In SQL, one equals sign means 'is exactly'.",
+        "One = is enough. Two is a mistake here.",
+        "Change == to a single =."
+      ],
+      "expected_sql": "SELECT name FROM products WHERE stock = 0;",
+      "seed_sql": "SELECT name FROM products WHERE stock == 0;",
+      "memory_trick": "Exactly one equals sign in SQL."
+    },
+    {
+      "type": "predict",
+      "title": "Predict: how many?",
+      "prompt": "Predict a NUMBER before it runs:\nSELECT count(*) FROM products WHERE price > 100;\ncount(*) returns a single number: how many rows pass the filter.",
+      "task": "How many products cost more than 100 MAD?",
+      "check": {
+        "answer": [
+          "21",
+          "21 products",
+          "twenty one"
+        ]
+      },
+      "hints": [
+        "This query filters with price > 100.",
+        "count(*) counts the rows that pass.",
+        "Run it to check your guess - prediction lets you peek.",
+        "Answer: 21."
+      ],
+      "memory_trick": "Predicting numbers trains your database intuition."
+    }
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "title": "Combining tests with AND and OR in categories",
+  "tags": [
+    "where",
+    "and",
+    "or"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Argan Products' AND id = 2;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Argan Products' AND id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Argan Products' AND id = 2;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' AND id = 3;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' AND id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Ceramics & Pottery' AND id = 3;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' AND id = 6;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' AND id = 6;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' AND id = 6;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Leather Goods' AND id = 4;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Leather Goods' AND id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Leather Goods' AND id = 4;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Argan Products' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Argan Products' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Argan Products' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Argan Products' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Argan Products' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Argan Products' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Argan Products' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Argan Products' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Argan Products' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Argan Products' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Argan Products' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Argan Products' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Ceramics & Pottery' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Dates & Dried Fruits' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM categories.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM categories WHERE name = 'Leather Goods' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L032",
+  "order": 32
+}

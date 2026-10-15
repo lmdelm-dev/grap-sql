@@ -1,0 +1,772 @@
+{
+  "title": "Totals over a filtered set in products · part 4",
+  "tags": [
+    "aggregate",
+    "where"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT of * where price > 21.39",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 21.39;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 21.39.",
+        "Write: SELECT count(*) FROM products WHERE price > 21.39;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 21.39;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of price where price > 21.39",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(price) FROM products WHERE price > 21.39;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "Add WHERE price > 21.39.",
+        "Write: SELECT sum(price) FROM products WHERE price > 21.39;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products WHERE price > 21.39;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of price where price > 21.39",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(price) FROM products WHERE price > 21.39;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "Add WHERE price > 21.39.",
+        "Write: SELECT avg(price) FROM products WHERE price > 21.39;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products WHERE price > 21.39;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of price where price > 21.39",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(price) FROM products WHERE price > 21.39;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "Add WHERE price > 21.39.",
+        "Write: SELECT min(price) FROM products WHERE price > 21.39;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products WHERE price > 21.39;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of price where price > 21.39",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(price) FROM products WHERE price > 21.39;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "Add WHERE price > 21.39.",
+        "Write: SELECT max(price) FROM products WHERE price > 21.39;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products WHERE price > 21.39;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where price > 23.62",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 23.62;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 23.62.",
+        "Write: SELECT count(*) FROM products WHERE price > 23.62;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 23.62;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of price where price > 23.62",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(price) FROM products WHERE price > 23.62;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "Add WHERE price > 23.62.",
+        "Write: SELECT sum(price) FROM products WHERE price > 23.62;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products WHERE price > 23.62;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of price where price > 23.62",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(price) FROM products WHERE price > 23.62;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "Add WHERE price > 23.62.",
+        "Write: SELECT avg(price) FROM products WHERE price > 23.62;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products WHERE price > 23.62;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of price where price > 23.62",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(price) FROM products WHERE price > 23.62;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "Add WHERE price > 23.62.",
+        "Write: SELECT min(price) FROM products WHERE price > 23.62;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products WHERE price > 23.62;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of price where price > 23.62",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(price) FROM products WHERE price > 23.62;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "Add WHERE price > 23.62.",
+        "Write: SELECT max(price) FROM products WHERE price > 23.62;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products WHERE price > 23.62;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where price > 25.22",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 25.22;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 25.22.",
+        "Write: SELECT count(*) FROM products WHERE price > 25.22;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 25.22;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of price where price > 25.22",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(price) FROM products WHERE price > 25.22;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "Add WHERE price > 25.22.",
+        "Write: SELECT sum(price) FROM products WHERE price > 25.22;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products WHERE price > 25.22;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of price where price > 25.22",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(price) FROM products WHERE price > 25.22;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "Add WHERE price > 25.22.",
+        "Write: SELECT avg(price) FROM products WHERE price > 25.22;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products WHERE price > 25.22;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of price where price > 25.22",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(price) FROM products WHERE price > 25.22;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "Add WHERE price > 25.22.",
+        "Write: SELECT min(price) FROM products WHERE price > 25.22;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products WHERE price > 25.22;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of price where price > 25.22",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(price) FROM products WHERE price > 25.22;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "Add WHERE price > 25.22.",
+        "Write: SELECT max(price) FROM products WHERE price > 25.22;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products WHERE price > 25.22;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where price > 30.73",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 30.73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 30.73.",
+        "Write: SELECT count(*) FROM products WHERE price > 30.73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 30.73;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of price where price > 30.73",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(price) FROM products WHERE price > 30.73;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "Add WHERE price > 30.73.",
+        "Write: SELECT sum(price) FROM products WHERE price > 30.73;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products WHERE price > 30.73;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of price where price > 30.73",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(price) FROM products WHERE price > 30.73;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "Add WHERE price > 30.73.",
+        "Write: SELECT avg(price) FROM products WHERE price > 30.73;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products WHERE price > 30.73;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of price where price > 30.73",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(price) FROM products WHERE price > 30.73;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "Add WHERE price > 30.73.",
+        "Write: SELECT min(price) FROM products WHERE price > 30.73;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products WHERE price > 30.73;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of price where price > 30.73",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(price) FROM products WHERE price > 30.73;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "Add WHERE price > 30.73.",
+        "Write: SELECT max(price) FROM products WHERE price > 30.73;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products WHERE price > 30.73;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where price > 36.24",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 36.24;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 36.24.",
+        "Write: SELECT count(*) FROM products WHERE price > 36.24;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 36.24;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of price where price > 36.24",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(price) FROM products WHERE price > 36.24;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "Add WHERE price > 36.24.",
+        "Write: SELECT sum(price) FROM products WHERE price > 36.24;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products WHERE price > 36.24;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of price where price > 36.24",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(price) FROM products WHERE price > 36.24;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "Add WHERE price > 36.24.",
+        "Write: SELECT avg(price) FROM products WHERE price > 36.24;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products WHERE price > 36.24;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of price where price > 36.24",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(price) FROM products WHERE price > 36.24;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "Add WHERE price > 36.24.",
+        "Write: SELECT min(price) FROM products WHERE price > 36.24;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products WHERE price > 36.24;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of price where price > 36.24",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(price) FROM products WHERE price > 36.24;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "Add WHERE price > 36.24.",
+        "Write: SELECT max(price) FROM products WHERE price > 36.24;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products WHERE price > 36.24;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 38.82;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 38.82.",
+        "Write: SELECT count(*) FROM products WHERE price > 38.82;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of price where price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(price) FROM products WHERE price > 38.82;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "Add WHERE price > 38.82.",
+        "Write: SELECT sum(price) FROM products WHERE price > 38.82;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products WHERE price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of price where price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(price) FROM products WHERE price > 38.82;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "Add WHERE price > 38.82.",
+        "Write: SELECT avg(price) FROM products WHERE price > 38.82;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products WHERE price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of price where price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(price) FROM products WHERE price > 38.82;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "Add WHERE price > 38.82.",
+        "Write: SELECT min(price) FROM products WHERE price > 38.82;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products WHERE price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of price where price > 38.82",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(price) FROM products WHERE price > 38.82;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "Add WHERE price > 38.82.",
+        "Write: SELECT max(price) FROM products WHERE price > 38.82;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products WHERE price > 38.82;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 40.54;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 40.54.",
+        "Write: SELECT count(*) FROM products WHERE price > 40.54;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of price where price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(price) FROM products WHERE price > 40.54;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "Add WHERE price > 40.54.",
+        "Write: SELECT sum(price) FROM products WHERE price > 40.54;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products WHERE price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of price where price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(price) FROM products WHERE price > 40.54;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "Add WHERE price > 40.54.",
+        "Write: SELECT avg(price) FROM products WHERE price > 40.54;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products WHERE price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of price where price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(price) FROM products WHERE price > 40.54;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "Add WHERE price > 40.54.",
+        "Write: SELECT min(price) FROM products WHERE price > 40.54;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products WHERE price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of price where price > 40.54",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(price) FROM products WHERE price > 40.54;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "Add WHERE price > 40.54.",
+        "Write: SELECT max(price) FROM products WHERE price > 40.54;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products WHERE price > 40.54;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE price > 45.63;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE price > 45.63.",
+        "Write: SELECT count(*) FROM products WHERE price > 45.63;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of price where price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(price) FROM products WHERE price > 45.63;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "Add WHERE price > 45.63.",
+        "Write: SELECT sum(price) FROM products WHERE price > 45.63;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products WHERE price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of price where price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(price) FROM products WHERE price > 45.63;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "Add WHERE price > 45.63.",
+        "Write: SELECT avg(price) FROM products WHERE price > 45.63;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products WHERE price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of price where price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(price) FROM products WHERE price > 45.63;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "Add WHERE price > 45.63.",
+        "Write: SELECT min(price) FROM products WHERE price > 45.63;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products WHERE price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of price where price > 45.63",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(price) FROM products WHERE price > 45.63;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "Add WHERE price > 45.63.",
+        "Write: SELECT max(price) FROM products WHERE price > 45.63;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products WHERE price > 45.63;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L139",
+  "order": 139
+}

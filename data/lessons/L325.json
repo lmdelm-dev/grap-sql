@@ -1,0 +1,171 @@
+{
+  "title": "More sorting tricks in suppliers",
+  "tags": [
+    "order by",
+    "limit",
+    "offset"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Sort by two columns",
+      "prompt": "ORDER BY can take more than one column.\nRows tie on the first column, then the second breaks the tie.",
+      "task": "Try typing: SELECT id, name FROM suppliers ORDER BY id, name;",
+      "hints": [
+        "Start with SELECT id, name FROM suppliers.",
+        "Add ORDER BY id,",
+        "Then the tie-breaker name.",
+        "Write: SELECT id, name FROM suppliers ORDER BY id, name;"
+      ],
+      "expected_sql": "SELECT id, name FROM suppliers ORDER BY id, name;",
+      "memory_trick": "List keys left to right: primary, then tie-breaker.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort by two columns",
+      "prompt": "ORDER BY can take more than one column.\nRows tie on the first column, then the second breaks the tie.",
+      "task": "Try typing: SELECT name, id FROM suppliers ORDER BY name, id;",
+      "hints": [
+        "Start with SELECT name, id FROM suppliers.",
+        "Add ORDER BY name,",
+        "Then the tie-breaker id.",
+        "Write: SELECT name, id FROM suppliers ORDER BY name, id;"
+      ],
+      "expected_sql": "SELECT name, id FROM suppliers ORDER BY name, id;",
+      "memory_trick": "List keys left to right: primary, then tie-breaker.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 2 then take 2 of id",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT id FROM suppliers ORDER BY id LIMIT 2 OFFSET 2;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "ORDER BY id first.",
+        "Finish with LIMIT 2 OFFSET 2.",
+        "Write: SELECT id FROM suppliers ORDER BY id LIMIT 2 OFFSET 2;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers ORDER BY id LIMIT 2 OFFSET 2;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 5 then take 5 of id",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT id FROM suppliers ORDER BY id LIMIT 5 OFFSET 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "ORDER BY id first.",
+        "Finish with LIMIT 5 OFFSET 5.",
+        "Write: SELECT id FROM suppliers ORDER BY id LIMIT 5 OFFSET 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers ORDER BY id LIMIT 5 OFFSET 5;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 2 then take 2 of name",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT name FROM suppliers ORDER BY name LIMIT 2 OFFSET 2;",
+      "hints": [
+        "Start with SELECT name FROM suppliers.",
+        "ORDER BY name first.",
+        "Finish with LIMIT 2 OFFSET 2.",
+        "Write: SELECT name FROM suppliers ORDER BY name LIMIT 2 OFFSET 2;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers ORDER BY name LIMIT 2 OFFSET 2;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 5 then take 5 of name",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT name FROM suppliers ORDER BY name LIMIT 5 OFFSET 5;",
+      "hints": [
+        "Start with SELECT name FROM suppliers.",
+        "ORDER BY name first.",
+        "Finish with LIMIT 5 OFFSET 5.",
+        "Write: SELECT name FROM suppliers ORDER BY name LIMIT 5 OFFSET 5;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers ORDER BY name LIMIT 5 OFFSET 5;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 2 then take 2 of city",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT city FROM suppliers ORDER BY city LIMIT 2 OFFSET 2;",
+      "hints": [
+        "Start with SELECT city FROM suppliers.",
+        "ORDER BY city first.",
+        "Finish with LIMIT 2 OFFSET 2.",
+        "Write: SELECT city FROM suppliers ORDER BY city LIMIT 2 OFFSET 2;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers ORDER BY city LIMIT 2 OFFSET 2;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 5 then take 5 of city",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT city FROM suppliers ORDER BY city LIMIT 5 OFFSET 5;",
+      "hints": [
+        "Start with SELECT city FROM suppliers.",
+        "ORDER BY city first.",
+        "Finish with LIMIT 5 OFFSET 5.",
+        "Write: SELECT city FROM suppliers ORDER BY city LIMIT 5 OFFSET 5;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers ORDER BY city LIMIT 5 OFFSET 5;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    }
+  ],
+  "id": "L325",
+  "order": 325
+}

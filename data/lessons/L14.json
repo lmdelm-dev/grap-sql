@@ -1,0 +1,75 @@
+{
+  "id": "L14",
+  "order": 14,
+  "difficulty": 3,
+  "tags": [
+    "create",
+    "ddl"
+  ],
+  "title": "CREATE TABLE: making a new home for data",
+  "steps": [
+    {
+      "type": "fill",
+      "title": "The table recipe",
+      "prompt": "So far the tables were given to us. CREATE TABLE builds a new one.\nYou name the table, then list columns: name TYPE.\nCREATE TABLE favorites (id INTEGER PRIMARY KEY, product_name ___);",
+      "task": "Fill the blank with the type for text.",
+      "hints": [
+        "product_name holds words.",
+        "The type for words is four letters.",
+        "INTEGER is for numbers; this one starts with T.",
+        "Fill: TEXT"
+      ],
+      "expected_sql": "CREATE TABLE favorites (id INTEGER PRIMARY KEY, product_name TEXT);",
+      "seed_sql": "CREATE TABLE favorites (id INTEGER PRIMARY KEY, product_name ___);",
+      "memory_trick": "TEXT holds words, INTEGER holds numbers, REAL holds decimal numbers."
+    },
+    {
+      "type": "type",
+      "title": "Build and admire",
+      "prompt": "CREATE TABLE IF NOT EXISTS says 'only make it if it isn't already made' - safe to run twice.\nBuild the wishlist box for your favourite products.",
+      "task": "Try typing: CREATE TABLE IF NOT EXISTS wishlist (id INTEGER PRIMARY KEY, name TEXT, price REAL);",
+      "hints": [
+        "Start with CREATE TABLE IF NOT EXISTS wishlist.",
+        "Inside the brackets: id INTEGER PRIMARY KEY.",
+        "Then name TEXT, then price REAL.",
+        "Write the full CREATE statement."
+      ],
+      "expected_sql": "CREATE TABLE IF NOT EXISTS wishlist (id INTEGER PRIMARY KEY, name TEXT, price REAL);",
+      "memory_trick": "IF NOT EXISTS = 'don't break if it's already there'."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the PRIMARY KEY",
+      "prompt": "PRIMARY KEY id does two jobs at once:\n1. every row gets a unique number\n2. the database finds rows fast.",
+      "task": "What makes each row's id number unique?",
+      "check": {
+        "answer": [
+          "primary key",
+          "the primary key",
+          "unique"
+        ]
+      },
+      "hints": [
+        "It's not just any column - it's special.",
+        "Two words, both in your CREATE statement.",
+        "'PRIMARY' means top, 'KEY' means the one that opens the row.",
+        "Answer: PRIMARY KEY."
+      ],
+      "memory_trick": "PRIMARY KEY = unique identity card per row."
+    },
+    {
+      "type": "type",
+      "title": "Make the empty home feel alive",
+      "prompt": "Now fill it with one row:\nCREATE TABLE IF NOT EXISTS wishlist (id INTEGER PRIMARY KEY, name TEXT, price REAL);\nINSERT INTO wishlist (name, price) VALUES ('Beni Ourain Rug', 3356.82);",
+      "task": "Run the CREATE then the INSERT.",
+      "hints": [
+        "Two statements, one after the other.",
+        "First: CREATE TABLE IF NOT EXISTS wishlist (id INTEGER PRIMARY KEY, name TEXT, price REAL);",
+        "Then INSERT INTO wishlist (name, price).",
+        "Run CREATE first, INSERT second."
+      ],
+      "expected_sql": "CREATE TABLE IF NOT EXISTS wishlist (id INTEGER PRIMARY KEY, name TEXT, price REAL);\nINSERT INTO wishlist (name, price) VALUES ('Beni Ourain Rug', 3356.82);",
+      "memory_trick": "CREATE the shape, INSERT the life."
+    }
+  ]
+}

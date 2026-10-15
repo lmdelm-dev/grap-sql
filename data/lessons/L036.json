@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the customers table by text",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where name is Brahim Belkadi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Brahim Belkadi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Brahim Belkadi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Brahim Belkadi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Brahim Belkadi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Bra'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nBra% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Bra%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Bra%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Bra%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'rah' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %rah% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%rah%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%rah%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%rah%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Fatima Bennani",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Fatima Bennani'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Fatima Bennani';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Fatima Bennani';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Fatima Bennani';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Fat'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nFat% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Fat%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Fat%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Fat%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ati' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ati% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%ati%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%ati%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%ati%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Fatima Berrada",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Fatima Berrada'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Fatima Berrada';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Fatima Berrada';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Fatima Berrada';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Fatima Fassi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Fatima Fassi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Fatima Fassi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Fatima Fassi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Fatima Fassi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Fatima Mansouri",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Fatima Mansouri'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Fatima Mansouri';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Fatima Mansouri';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Fatima Mansouri';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Hassan Bennani",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Hassan Bennani'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Hassan Bennani';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Hassan Bennani';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Hassan Bennani';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Has'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nHas% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Has%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Has%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Has%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ass' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ass% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%ass%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%ass%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%ass%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Hassan Lahlou",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Hassan Lahlou'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Hassan Lahlou';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Hassan Lahlou';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Hassan Lahlou';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Karim Chraibi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Karim Chraibi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Karim Chraibi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Karim Chraibi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Karim Chraibi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Kar'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nKar% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Kar%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Kar%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Kar%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ari' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ari% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%ari%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%ari%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%ari%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Khadija Bennani",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Khadija Bennani'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Khadija Bennani';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Khadija Bennani';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Khadija Bennani';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Kha'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nKha% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Kha%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Kha%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Kha%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'had' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %had% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%had%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%had%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%had%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Khadija Sabri",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Khadija Sabri'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Khadija Sabri';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Khadija Sabri';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Khadija Sabri';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Leila Bennani",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Leila Bennani'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Leila Bennani';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Leila Bennani';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Leila Bennani';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Lei'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nLei% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Lei%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Lei%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Lei%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'eil' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %eil% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%eil%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%eil%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%eil%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Leila Chraibi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Leila Chraibi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Leila Chraibi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Leila Chraibi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Leila Chraibi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Leila El Amrani",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Leila El Amrani'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Leila El Amrani';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Leila El Amrani';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Leila El Amrani';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Leila Fassi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Leila Fassi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Leila Fassi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Leila Fassi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Leila Fassi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Mehdi Chraibi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Mehdi Chraibi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Mehdi Chraibi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Mehdi Chraibi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Mehdi Chraibi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Meh'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nMeh% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Meh%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Meh%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Meh%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ehd' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ehd% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%ehd%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%ehd%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%ehd%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Mohamed Mansouri",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Mohamed Mansouri'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Mohamed Mansouri';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Mohamed Mansouri';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Mohamed Mansouri';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Moh'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nMoh% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Moh%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Moh%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Moh%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'oha' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %oha% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%oha%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%oha%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%oha%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Nadia Berrada",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Nadia Berrada'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Nadia Berrada';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Nadia Berrada';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Nadia Berrada';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Nad'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nNad% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Nad%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Nad%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Nad%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'adi' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %adi% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%adi%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%adi%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%adi%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Nadia Lahlou",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Nadia Lahlou'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Nadia Lahlou';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Nadia Lahlou';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Nadia Lahlou';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Nadia Zerouali",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Nadia Zerouali'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Nadia Zerouali';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Nadia Zerouali';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Nadia Zerouali';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Rachid Idrissi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Rachid Idrissi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name = 'Rachid Idrissi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE name = 'Rachid Idrissi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name = 'Rachid Idrissi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Rac'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nRac% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE 'Rac%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE name LIKE 'Rac%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE 'Rac%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ach' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ach% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE name LIKE '%ach%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE name LIKE '%ach%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE name LIKE '%ach%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L036",
+  "order": 36
+}

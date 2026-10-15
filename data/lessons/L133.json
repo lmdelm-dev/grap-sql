@@ -1,0 +1,278 @@
+{
+  "title": "Pick from a list in products",
+  "tags": [
+    "where",
+    "in"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep a short list of id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM products WHERE id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM products WHERE id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM products WHERE id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM products WHERE id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of name",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM products WHERE name IN ('Amlou Spread 200g', 'Argan Butter 250g', 'Argan Oil Cosmetic 100ml');",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM products WHERE name IN ('Amlou Spread 200g', 'Argan Butter 250g', 'Argan Oil Cosmetic 100ml');"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name IN ('Amlou Spread 200g', 'Argan Butter 250g', 'Argan Oil Cosmetic 100ml');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep name NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM products WHERE name NOT IN ('Amlou Spread 200g', 'Argan Butter 250g', 'Argan Oil Cosmetic 100ml', 'Argan Oil Culinary 500ml');",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM products WHERE name NOT IN ('Amlou Spread 200g', 'Argan Butter 250g', 'Argan Oil Cosmetic 100ml', 'Argan Oil Culinary 500ml');"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name NOT IN ('Amlou Spread 200g', 'Argan Butter 250g', 'Argan Oil Cosmetic 100ml', 'Argan Oil Culinary 500ml');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of category_id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM products WHERE category_id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep category_id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM products WHERE category_id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE category_id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM products WHERE category_id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE category_id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of supplier_id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM products WHERE supplier_id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE supplier_id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM products WHERE supplier_id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE supplier_id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep supplier_id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM products WHERE supplier_id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE supplier_id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM products WHERE supplier_id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE supplier_id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of price",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM products WHERE price IN (21.39, 23.62, 25.22);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM products WHERE price IN (21.39, 23.62, 25.22);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price IN (21.39, 23.62, 25.22);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM products WHERE price NOT IN (21.39, 23.62, 25.22, 30.73);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM products WHERE price NOT IN (21.39, 23.62, 25.22, 30.73);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price NOT IN (21.39, 23.62, 25.22, 30.73);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of stock",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM products WHERE stock IN (0, 3, 7);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM products WHERE stock IN (0, 3, 7);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock IN (0, 3, 7);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep stock NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM products WHERE stock NOT IN (0, 3, 7, 12);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE stock NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM products WHERE stock NOT IN (0, 3, 7, 12);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE stock NOT IN (0, 3, 7, 12);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of created_at",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM products WHERE created_at IN ('2025-01-12', '2025-01-27', '2025-02-03');",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE created_at IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM products WHERE created_at IN ('2025-01-12', '2025-01-27', '2025-02-03');"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE created_at IN ('2025-01-12', '2025-01-27', '2025-02-03');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep created_at NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM products WHERE created_at NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE created_at NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM products WHERE created_at NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE created_at NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L133",
+  "order": 133
+}

@@ -1,0 +1,582 @@
+{
+  "title": "Totals over a filtered set in sales · part 4",
+  "tags": [
+    "aggregate",
+    "where"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT of * where total > 88.15",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total > 88.15;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total > 88.15.",
+        "Write: SELECT count(*) FROM sales WHERE total > 88.15;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total > 88.15;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of total where total > 88.15",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(total) FROM sales WHERE total > 88.15;",
+      "hints": [
+        "Start with SELECT sum(total).",
+        "FROM sales.",
+        "Add WHERE total > 88.15.",
+        "Write: SELECT sum(total) FROM sales WHERE total > 88.15;"
+      ],
+      "expected_sql": "SELECT sum(total) FROM sales WHERE total > 88.15;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of total where total > 88.15",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(total) FROM sales WHERE total > 88.15;",
+      "hints": [
+        "Start with SELECT avg(total).",
+        "FROM sales.",
+        "Add WHERE total > 88.15.",
+        "Write: SELECT avg(total) FROM sales WHERE total > 88.15;"
+      ],
+      "expected_sql": "SELECT avg(total) FROM sales WHERE total > 88.15;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of total where total > 88.15",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(total) FROM sales WHERE total > 88.15;",
+      "hints": [
+        "Start with SELECT min(total).",
+        "FROM sales.",
+        "Add WHERE total > 88.15.",
+        "Write: SELECT min(total) FROM sales WHERE total > 88.15;"
+      ],
+      "expected_sql": "SELECT min(total) FROM sales WHERE total > 88.15;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of total where total > 88.15",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(total) FROM sales WHERE total > 88.15;",
+      "hints": [
+        "Start with SELECT max(total).",
+        "FROM sales.",
+        "Add WHERE total > 88.15.",
+        "Write: SELECT max(total) FROM sales WHERE total > 88.15;"
+      ],
+      "expected_sql": "SELECT max(total) FROM sales WHERE total > 88.15;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where total > 99.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total > 99.7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total > 99.7.",
+        "Write: SELECT count(*) FROM sales WHERE total > 99.7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total > 99.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of total where total > 99.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(total) FROM sales WHERE total > 99.7;",
+      "hints": [
+        "Start with SELECT sum(total).",
+        "FROM sales.",
+        "Add WHERE total > 99.7.",
+        "Write: SELECT sum(total) FROM sales WHERE total > 99.7;"
+      ],
+      "expected_sql": "SELECT sum(total) FROM sales WHERE total > 99.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of total where total > 99.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(total) FROM sales WHERE total > 99.7;",
+      "hints": [
+        "Start with SELECT avg(total).",
+        "FROM sales.",
+        "Add WHERE total > 99.7.",
+        "Write: SELECT avg(total) FROM sales WHERE total > 99.7;"
+      ],
+      "expected_sql": "SELECT avg(total) FROM sales WHERE total > 99.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of total where total > 99.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(total) FROM sales WHERE total > 99.7;",
+      "hints": [
+        "Start with SELECT min(total).",
+        "FROM sales.",
+        "Add WHERE total > 99.7.",
+        "Write: SELECT min(total) FROM sales WHERE total > 99.7;"
+      ],
+      "expected_sql": "SELECT min(total) FROM sales WHERE total > 99.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of total where total > 99.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(total) FROM sales WHERE total > 99.7;",
+      "hints": [
+        "Start with SELECT max(total).",
+        "FROM sales.",
+        "Add WHERE total > 99.7.",
+        "Write: SELECT max(total) FROM sales WHERE total > 99.7;"
+      ],
+      "expected_sql": "SELECT max(total) FROM sales WHERE total > 99.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where total > 121.09",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total > 121.09;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total > 121.09.",
+        "Write: SELECT count(*) FROM sales WHERE total > 121.09;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total > 121.09;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of total where total > 121.09",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(total) FROM sales WHERE total > 121.09;",
+      "hints": [
+        "Start with SELECT sum(total).",
+        "FROM sales.",
+        "Add WHERE total > 121.09.",
+        "Write: SELECT sum(total) FROM sales WHERE total > 121.09;"
+      ],
+      "expected_sql": "SELECT sum(total) FROM sales WHERE total > 121.09;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of total where total > 121.09",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(total) FROM sales WHERE total > 121.09;",
+      "hints": [
+        "Start with SELECT avg(total).",
+        "FROM sales.",
+        "Add WHERE total > 121.09.",
+        "Write: SELECT avg(total) FROM sales WHERE total > 121.09;"
+      ],
+      "expected_sql": "SELECT avg(total) FROM sales WHERE total > 121.09;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of total where total > 121.09",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(total) FROM sales WHERE total > 121.09;",
+      "hints": [
+        "Start with SELECT min(total).",
+        "FROM sales.",
+        "Add WHERE total > 121.09.",
+        "Write: SELECT min(total) FROM sales WHERE total > 121.09;"
+      ],
+      "expected_sql": "SELECT min(total) FROM sales WHERE total > 121.09;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of total where total > 121.09",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(total) FROM sales WHERE total > 121.09;",
+      "hints": [
+        "Start with SELECT max(total).",
+        "FROM sales.",
+        "Add WHERE total > 121.09.",
+        "Write: SELECT max(total) FROM sales WHERE total > 121.09;"
+      ],
+      "expected_sql": "SELECT max(total) FROM sales WHERE total > 121.09;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where total > 158.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total > 158.7;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total > 158.7.",
+        "Write: SELECT count(*) FROM sales WHERE total > 158.7;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total > 158.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of total where total > 158.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(total) FROM sales WHERE total > 158.7;",
+      "hints": [
+        "Start with SELECT sum(total).",
+        "FROM sales.",
+        "Add WHERE total > 158.7.",
+        "Write: SELECT sum(total) FROM sales WHERE total > 158.7;"
+      ],
+      "expected_sql": "SELECT sum(total) FROM sales WHERE total > 158.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of total where total > 158.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(total) FROM sales WHERE total > 158.7;",
+      "hints": [
+        "Start with SELECT avg(total).",
+        "FROM sales.",
+        "Add WHERE total > 158.7.",
+        "Write: SELECT avg(total) FROM sales WHERE total > 158.7;"
+      ],
+      "expected_sql": "SELECT avg(total) FROM sales WHERE total > 158.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of total where total > 158.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(total) FROM sales WHERE total > 158.7;",
+      "hints": [
+        "Start with SELECT min(total).",
+        "FROM sales.",
+        "Add WHERE total > 158.7.",
+        "Write: SELECT min(total) FROM sales WHERE total > 158.7;"
+      ],
+      "expected_sql": "SELECT min(total) FROM sales WHERE total > 158.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of total where total > 158.7",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(total) FROM sales WHERE total > 158.7;",
+      "hints": [
+        "Start with SELECT max(total).",
+        "FROM sales.",
+        "Add WHERE total > 158.7.",
+        "Write: SELECT max(total) FROM sales WHERE total > 158.7;"
+      ],
+      "expected_sql": "SELECT max(total) FROM sales WHERE total > 158.7;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where total > 174.95",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total > 174.95;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total > 174.95.",
+        "Write: SELECT count(*) FROM sales WHERE total > 174.95;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total > 174.95;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of total where total > 174.95",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(total) FROM sales WHERE total > 174.95;",
+      "hints": [
+        "Start with SELECT sum(total).",
+        "FROM sales.",
+        "Add WHERE total > 174.95.",
+        "Write: SELECT sum(total) FROM sales WHERE total > 174.95;"
+      ],
+      "expected_sql": "SELECT sum(total) FROM sales WHERE total > 174.95;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of total where total > 174.95",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(total) FROM sales WHERE total > 174.95;",
+      "hints": [
+        "Start with SELECT avg(total).",
+        "FROM sales.",
+        "Add WHERE total > 174.95.",
+        "Write: SELECT avg(total) FROM sales WHERE total > 174.95;"
+      ],
+      "expected_sql": "SELECT avg(total) FROM sales WHERE total > 174.95;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of total where total > 174.95",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(total) FROM sales WHERE total > 174.95;",
+      "hints": [
+        "Start with SELECT min(total).",
+        "FROM sales.",
+        "Add WHERE total > 174.95.",
+        "Write: SELECT min(total) FROM sales WHERE total > 174.95;"
+      ],
+      "expected_sql": "SELECT min(total) FROM sales WHERE total > 174.95;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of total where total > 174.95",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(total) FROM sales WHERE total > 174.95;",
+      "hints": [
+        "Start with SELECT max(total).",
+        "FROM sales.",
+        "Add WHERE total > 174.95.",
+        "Write: SELECT max(total) FROM sales WHERE total > 174.95;"
+      ],
+      "expected_sql": "SELECT max(total) FROM sales WHERE total > 174.95;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT of * where total > 175.12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then count runs on what is left.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE total > 175.12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE total > 175.12.",
+        "Write: SELECT count(*) FROM sales WHERE total > 175.12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE total > 175.12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM of total where total > 175.12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then sum runs on what is left.",
+      "task": "Try typing: SELECT sum(total) FROM sales WHERE total > 175.12;",
+      "hints": [
+        "Start with SELECT sum(total).",
+        "FROM sales.",
+        "Add WHERE total > 175.12.",
+        "Write: SELECT sum(total) FROM sales WHERE total > 175.12;"
+      ],
+      "expected_sql": "SELECT sum(total) FROM sales WHERE total > 175.12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG of total where total > 175.12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then avg runs on what is left.",
+      "task": "Try typing: SELECT avg(total) FROM sales WHERE total > 175.12;",
+      "hints": [
+        "Start with SELECT avg(total).",
+        "FROM sales.",
+        "Add WHERE total > 175.12.",
+        "Write: SELECT avg(total) FROM sales WHERE total > 175.12;"
+      ],
+      "expected_sql": "SELECT avg(total) FROM sales WHERE total > 175.12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MIN of total where total > 175.12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then min runs on what is left.",
+      "task": "Try typing: SELECT min(total) FROM sales WHERE total > 175.12;",
+      "hints": [
+        "Start with SELECT min(total).",
+        "FROM sales.",
+        "Add WHERE total > 175.12.",
+        "Write: SELECT min(total) FROM sales WHERE total > 175.12;"
+      ],
+      "expected_sql": "SELECT min(total) FROM sales WHERE total > 175.12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "MAX of total where total > 175.12",
+      "prompt": "A WHERE filter can narrow a total.\nSQL filters the rows first, then max runs on what is left.",
+      "task": "Try typing: SELECT max(total) FROM sales WHERE total > 175.12;",
+      "hints": [
+        "Start with SELECT max(total).",
+        "FROM sales.",
+        "Add WHERE total > 175.12.",
+        "Write: SELECT max(total) FROM sales WHERE total > 175.12;"
+      ],
+      "expected_sql": "SELECT max(total) FROM sales WHERE total > 175.12;",
+      "memory_trick": "WHERE first, then the total - the filter still counts.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L312",
+  "order": 312
+}

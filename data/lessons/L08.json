@@ -1,0 +1,101 @@
+{
+  "id": "L08",
+  "order": 8,
+  "difficulty": 3,
+  "tags": [
+    "group by",
+    "aggregate"
+  ],
+  "title": "GROUP BY: bundling rows into piles",
+  "steps": [
+    {
+      "type": "fill",
+      "title": "Piles by category",
+      "prompt": "GROUP BY splits rows into piles that share something.\n'How many products live in each category?' - each category becomes one pile, and count(*) counts the pile.\nSELECT category_id, count(*) FROM products GROUP BY ___;",
+      "task": "Fill the blank with the column we group the piles by.",
+      "hints": [
+        "We pile products by…",
+        "The piles are the categories.",
+        "Each category has an id number.",
+        "Replace ___ with category_id."
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id;",
+      "seed_sql": "SELECT category_id, count(*) FROM products GROUP BY ___;",
+      "memory_trick": "GROUP BY = 'make a pile for each…'"
+    },
+    {
+      "type": "type",
+      "title": "Run the piles",
+      "prompt": "Type the pile query for real. The Output pane shows one row per category, with its count.",
+      "task": "Try typing: SELECT category_id, count(*) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, count(*).",
+        "Add FROM products.",
+        "Finish with GROUP BY category_id.",
+        "Type: SELECT category_id, count(*) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id;",
+      "memory_trick": "One output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "fix",
+      "title": "Fix the missing GROUP BY",
+      "prompt": "Someone forgot the rules of piles:\nSELECT category_id, count(*) FROM products;\nThe database complains: mixing per-row values with the grand total is confusing.",
+      "task": "Fix it by adding the missing GROUP BY.",
+      "hints": [
+        "The error is about mixing a column with an aggregate.",
+        "One pile per category_id makes it legal.",
+        "Add a clause after FROM products.",
+        "Fix by appending GROUP BY category_id."
+      ],
+      "expected_sql": "SELECT category_id, count(*) FROM products GROUP BY category_id;",
+      "seed_sql": "SELECT category_id, count(*) FROM products;",
+      "memory_trick": "Aggregates get lonely: give them a GROUP BY."
+    },
+    {
+      "type": "type",
+      "title": "SUM - money piles",
+      "prompt": "COUNT counts; SUM adds. 'What is each category worth?'\nSUM(price) adds all the prices in each pile.",
+      "task": "Try typing: SELECT category_id, sum(price) FROM products GROUP BY category_id;",
+      "hints": [
+        "Start with SELECT category_id, sum(price).",
+        "Add FROM products.",
+        "Group by category_id.",
+        "Type: SELECT category_id, sum(price) FROM products GROUP BY category_id;"
+      ],
+      "expected_sql": "SELECT category_id, sum(price) FROM products GROUP BY category_id;",
+      "memory_trick": "sum(price) = 'add up the prices in each pile'.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "predict",
+      "title": "Predict the biggest pile",
+      "prompt": "Each pile from GROUP BY can be turned back into a name with a JOIN:\nSELECT c.name, count(*) AS n FROM products p JOIN categories c ON p.category_id = c.id GROUP BY c.name;\nThe pile with the highest count holds the most products.",
+      "task": "Which category has the most products?",
+      "check": {
+        "answer": [
+          "spices & herbs",
+          "spices and herbs",
+          "spices",
+          "spices and herb"
+        ]
+      },
+      "hints": [
+        "The biggest count is 8.",
+        "The names come from the categories table.",
+        "It's where ras el hanout and saffron live.",
+        "Answer: Spices & Herbs."
+      ],
+      "memory_trick": "Read piles like a top-ten chart."
+    }
+  ]
+}

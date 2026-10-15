@@ -1,0 +1,102 @@
+{
+  "id": "L11",
+  "order": 11,
+  "difficulty": 3,
+  "tags": [
+    "insert",
+    "write"
+  ],
+  "title": "INSERT: adding a new row",
+  "steps": [
+    {
+      "type": "type",
+      "title": "The friendly new customer",
+      "prompt": "So far we only READ. INSERT ADDS a row - like a guest book getting a new signature.\nYou name the columns, then list the VALUES in the same order.",
+      "task": "Try typing: INSERT INTO customers (name, email, city, created_at) VALUES ('Amina', 'amina@shop.ma', 'Rabat', '2026-05-01');",
+      "hints": [
+        "Start with INSERT INTO customers.",
+        "List the columns you're filling in brackets.",
+        "VALUES holds the facts, in the same order.",
+        "Write the full INSERT with 'Amina' first."
+      ],
+      "expected_sql": "INSERT INTO customers (name, email, city, created_at) VALUES ('Amina', 'amina@shop.ma', 'Rabat', '2026-05-01');",
+      "memory_trick": "INSERT INTO = 'add to…', VALUES = 'these are the facts'.",
+      "check": {
+        "require": [
+          "insert"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Add a product",
+      "prompt": "Practice the muscle memory - add a fresh jar of argan oil:\nINSERT INTO products (name, category_id, supplier_id, price, stock, created_at) VALUES ('Argan Oil 250ml', 2, 1, 149.99, 12, '2026-05-02');",
+      "task": "Try typing the INSERT for the argan oil.",
+      "hints": [
+        "It's an INSERT INTO products query.",
+        "Fill the columns: name, category_id, supplier_id, price, stock, created_at.",
+        "The values come in brackets after VALUES.",
+        "Watch the quotes around text and the commas between values."
+      ],
+      "expected_sql": "INSERT INTO products (name, category_id, supplier_id, price, stock, created_at) VALUES ('Argan Oil 250ml', 2, 1, 149.99, 12, '2026-05-02');",
+      "memory_trick": "Column list and value list must march in the same order."
+    },
+    {
+      "type": "fill",
+      "title": "Fill the values",
+      "prompt": "Your turn to invent one fact at a time. Fill the blanks:\nINSERT INTO customers (name, city) VALUES (___, ___);",
+      "task": "Add the customer Yasmine from Casablanca.",
+      "hints": [
+        "Two columns, two values.",
+        "Text needs single quotes.",
+        "Name comes first, then city.",
+        "Fill: 'Yasmine', 'Casablanca'."
+      ],
+      "expected_sql": "INSERT INTO customers (name, city) VALUES ('Yasmine', 'Casablanca');",
+      "seed_sql": "INSERT INTO customers (name, city) VALUES (___, ___);",
+      "memory_trick": "Every value keeps its own quote-needing or bare nature."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the missing email",
+      "prompt": "This INSERT fills only name and city:\nINSERT INTO customers (name, city) VALUES ('Omar', 'Tangier');\nThe email column is left out. The table lets email be missing (it's nullable).\nWhat value fills the empty email?",
+      "task": "What's the special word for 'this value is missing'?",
+      "check": {
+        "answer": [
+          "null",
+          "missing",
+          "empty",
+          "nothing",
+          "no value"
+        ]
+      },
+      "hints": [
+        "You've met this word in the COUNT lesson.",
+        "It's the word for 'no value there'.",
+        "Four letters, starts with n.",
+        "Answer: NULL."
+      ],
+      "memory_trick": "NULL = the honest way to say 'nothing here'."
+    },
+    {
+      "type": "type",
+      "title": "Add and check",
+      "prompt": "Final run - insert, then immediately SELECT to see the new row:\nINSERT INTO customers (name, city) VALUES ('Yasmine', 'Casablanca');\nSELECT name, city FROM customers WHERE name = 'Yasmine';",
+      "task": "Run the INSERT, then the SELECT.",
+      "check": {
+        "ordered": false,
+        "require": [
+          "insert"
+        ]
+      },
+      "hints": [
+        "Two statements, separated by a new line.",
+        "First add Yasmine.",
+        "Then look her up with WHERE name = 'Yasmine'.",
+        "Run INSERT first and SELECT second."
+      ],
+      "expected_sql": "INSERT INTO customers (name, city) VALUES ('Yasmine', 'Casablanca');\nSELECT name, city FROM customers WHERE name = 'Yasmine';",
+      "memory_trick": "Write first, verify second - always."
+    }
+  ]
+}

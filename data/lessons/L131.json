@@ -1,0 +1,772 @@
+{
+  "title": "Ranges and NOT in products · part 4",
+  "tags": [
+    "where",
+    "between"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep price from 45.63 to 50.01",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 45.63 AND 50.01;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 45.63 AND 50.01;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 45.63 AND 50.01;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 45.63..50.01",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 45.63 AND 50.01);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 45.63 AND 50.01 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 45.63 AND 50.01);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 45.63 AND 50.01);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 50.01 to 53.45",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 50.01 AND 53.45;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 50.01 AND 53.45;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 50.01 AND 53.45;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 50.01..53.45",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 50.01 AND 53.45);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 50.01 AND 53.45 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 50.01 AND 53.45);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 50.01 AND 53.45);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 53.45 to 62.83",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 53.45 AND 62.83;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 53.45 AND 62.83;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 53.45 AND 62.83;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 53.45..62.83",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 53.45 AND 62.83);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 53.45 AND 62.83 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 53.45 AND 62.83);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 53.45 AND 62.83);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 62.83 to 64.22",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 62.83 AND 64.22;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 62.83 AND 64.22;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 62.83 AND 64.22;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 62.83..64.22",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 62.83 AND 64.22);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 62.83 AND 64.22 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 62.83 AND 64.22);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 62.83 AND 64.22);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 64.22 to 73.45",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 64.22 AND 73.45;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 64.22 AND 73.45;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 64.22 AND 73.45;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 64.22..73.45",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 64.22 AND 73.45);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 64.22 AND 73.45 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 64.22 AND 73.45);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 64.22 AND 73.45);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 73.45 to 81.14",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 73.45 AND 81.14;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 73.45 AND 81.14;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 73.45 AND 81.14;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 73.45..81.14",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 73.45 AND 81.14);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 73.45 AND 81.14 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 73.45 AND 81.14);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 73.45 AND 81.14);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 81.14 to 87.56",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 81.14 AND 87.56;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 81.14 AND 87.56;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 81.14 AND 87.56;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 81.14..87.56",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 81.14 AND 87.56);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 81.14 AND 87.56 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 81.14 AND 87.56);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 81.14 AND 87.56);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 87.56 to 88.15",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 87.56 AND 88.15;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 87.56 AND 88.15;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 87.56 AND 88.15;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 87.56..88.15",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 87.56 AND 88.15);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 87.56 AND 88.15 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 87.56 AND 88.15);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 87.56 AND 88.15);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 88.15 to 94.38",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 88.15 AND 94.38;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 88.15 AND 94.38;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 88.15 AND 94.38;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 88.15..94.38",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 88.15 AND 94.38);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 88.15 AND 94.38 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 88.15 AND 94.38);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 88.15 AND 94.38);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 94.38 to 95.34",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 94.38 AND 95.34;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 94.38 AND 95.34;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 94.38 AND 95.34;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 94.38..95.34",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 94.38 AND 95.34);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 94.38 AND 95.34 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 94.38 AND 95.34);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 94.38 AND 95.34);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 95.34 to 99.7",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 95.34 AND 99.7;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 95.34 AND 99.7;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 95.34 AND 99.7;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 95.34..99.7",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 95.34 AND 99.7);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 95.34 AND 99.7 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 95.34 AND 99.7);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 95.34 AND 99.7);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 99.7 to 121.09",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 99.7 AND 121.09;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 99.7 AND 121.09;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 99.7 AND 121.09;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 99.7..121.09",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 99.7 AND 121.09);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 99.7 AND 121.09 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 99.7 AND 121.09);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 99.7 AND 121.09);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 121.09 to 124.95",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 121.09 AND 124.95;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 121.09 AND 124.95;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 121.09 AND 124.95;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 121.09..124.95",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 121.09 AND 124.95);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 121.09 AND 124.95 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 121.09 AND 124.95);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 121.09 AND 124.95);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 124.95 to 125.65",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 124.95 AND 125.65;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 124.95 AND 125.65;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 124.95 AND 125.65;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 124.95..125.65",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 124.95 AND 125.65);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 124.95 AND 125.65 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 124.95 AND 125.65);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 124.95 AND 125.65);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 125.65 to 145.5",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 125.65 AND 145.5;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 125.65 AND 145.5;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 125.65 AND 145.5;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 125.65..145.5",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 125.65 AND 145.5);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 125.65 AND 145.5 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 125.65 AND 145.5);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 125.65 AND 145.5);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 145.5 to 146.47",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 145.5 AND 146.47;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 145.5 AND 146.47;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 145.5 AND 146.47;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 145.5..146.47",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 145.5 AND 146.47);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 145.5 AND 146.47 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 145.5 AND 146.47);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 145.5 AND 146.47);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 146.47 to 174.95",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 146.47 AND 174.95;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 146.47 AND 174.95;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 146.47 AND 174.95;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 146.47..174.95",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 146.47 AND 174.95);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 146.47 AND 174.95 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 146.47 AND 174.95);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 146.47 AND 174.95);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 174.95 to 186.25",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 174.95 AND 186.25;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 174.95 AND 186.25;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 174.95 AND 186.25;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 174.95..186.25",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 174.95 AND 186.25);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 174.95 AND 186.25 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 174.95 AND 186.25);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 174.95 AND 186.25);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 186.25 to 200.72",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 186.25 AND 200.72;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 186.25 AND 200.72;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 186.25 AND 200.72;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 186.25..200.72",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 186.25 AND 200.72);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 186.25 AND 200.72 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 186.25 AND 200.72);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 186.25 AND 200.72);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price from 200.72 to 206.96",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM products WHERE price BETWEEN 200.72 AND 206.96;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE price BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM products WHERE price BETWEEN 200.72 AND 206.96;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE price BETWEEN 200.72 AND 206.96;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep price outside 200.72..206.96",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM products WHERE NOT (price BETWEEN 200.72 AND 206.96);",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( price BETWEEN 200.72 AND 206.96 ).",
+        "Write: SELECT id FROM products WHERE NOT (price BETWEEN 200.72 AND 206.96);"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE NOT (price BETWEEN 200.72 AND 206.96);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L131",
+  "order": 131
+}

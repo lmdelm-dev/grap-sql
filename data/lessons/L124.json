@@ -1,0 +1,188 @@
+{
+  "title": "Sorting and trimming the products table · part 2",
+  "tags": [
+    "order by",
+    "limit"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Top 10 by stock",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT stock FROM products ORDER BY stock DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT stock FROM products.",
+        "Add ORDER BY stock DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT stock FROM products ORDER BY stock DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT stock FROM products ORDER BY stock DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of stock",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different stock values exist?'",
+      "task": "Try typing: SELECT DISTINCT stock FROM products ORDER BY stock;",
+      "hints": [
+        "Start with SELECT DISTINCT stock.",
+        "FROM products.",
+        "Add ORDER BY stock to sort them.",
+        "Write: SELECT DISTINCT stock FROM products ORDER BY stock;"
+      ],
+      "expected_sql": "SELECT DISTINCT stock FROM products ORDER BY stock;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort created_at smallest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT created_at FROM products ORDER BY created_at ;",
+      "hints": [
+        "Start with SELECT created_at FROM products.",
+        "Add ORDER BY created_at.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT created_at FROM products ORDER BY created_at ;"
+      ],
+      "expected_sql": "SELECT created_at FROM products ORDER BY created_at ;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort created_at biggest first",
+      "prompt": "ORDER BY puts rows in a tidy line.\nAdd DESC to flip from smallest-first to biggest-first.",
+      "task": "Try typing: SELECT created_at FROM products ORDER BY created_at DESC;",
+      "hints": [
+        "Start with SELECT created_at FROM products.",
+        "Add ORDER BY created_at.",
+        "Add DESC for biggest-first (leave it out for smallest).",
+        "Write: SELECT created_at FROM products ORDER BY created_at DESC;"
+      ],
+      "expected_sql": "SELECT created_at FROM products ORDER BY created_at DESC;",
+      "memory_trick": "DESC = descending = biggest on top.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 1 by created_at",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 1.",
+      "task": "Try typing: SELECT created_at FROM products ORDER BY created_at DESC LIMIT 1;",
+      "hints": [
+        "Start with SELECT created_at FROM products.",
+        "Add ORDER BY created_at DESC.",
+        "Finish with LIMIT 1.",
+        "Write: SELECT created_at FROM products ORDER BY created_at DESC LIMIT 1;"
+      ],
+      "expected_sql": "SELECT created_at FROM products ORDER BY created_at DESC LIMIT 1;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 3 by created_at",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 3.",
+      "task": "Try typing: SELECT created_at FROM products ORDER BY created_at DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT created_at FROM products.",
+        "Add ORDER BY created_at DESC.",
+        "Finish with LIMIT 3.",
+        "Write: SELECT created_at FROM products ORDER BY created_at DESC LIMIT 3;"
+      ],
+      "expected_sql": "SELECT created_at FROM products ORDER BY created_at DESC LIMIT 3;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 5 by created_at",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 5.",
+      "task": "Try typing: SELECT created_at FROM products ORDER BY created_at DESC LIMIT 5;",
+      "hints": [
+        "Start with SELECT created_at FROM products.",
+        "Add ORDER BY created_at DESC.",
+        "Finish with LIMIT 5.",
+        "Write: SELECT created_at FROM products ORDER BY created_at DESC LIMIT 5;"
+      ],
+      "expected_sql": "SELECT created_at FROM products ORDER BY created_at DESC LIMIT 5;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Top 10 by created_at",
+      "prompt": "LIMIT cuts the list after N rows.\nSort first, then keep only 10.",
+      "task": "Try typing: SELECT created_at FROM products ORDER BY created_at DESC LIMIT 10;",
+      "hints": [
+        "Start with SELECT created_at FROM products.",
+        "Add ORDER BY created_at DESC.",
+        "Finish with LIMIT 10.",
+        "Write: SELECT created_at FROM products ORDER BY created_at DESC LIMIT 10;"
+      ],
+      "expected_sql": "SELECT created_at FROM products ORDER BY created_at DESC LIMIT 10;",
+      "memory_trick": "ORDER BY then LIMIT = a top-N chart.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "The distinct values of created_at",
+      "prompt": "DISTINCT removes duplicate rows from the result.\nIt answers 'which different created_at values exist?'",
+      "task": "Try typing: SELECT DISTINCT created_at FROM products ORDER BY created_at;",
+      "hints": [
+        "Start with SELECT DISTINCT created_at.",
+        "FROM products.",
+        "Add ORDER BY created_at to sort them.",
+        "Write: SELECT DISTINCT created_at FROM products ORDER BY created_at;"
+      ],
+      "expected_sql": "SELECT DISTINCT created_at FROM products ORDER BY created_at;",
+      "memory_trick": "DISTINCT = 'each value only once'.",
+      "check": {
+        "require": [
+          "distinct"
+        ]
+      }
+    }
+  ],
+  "id": "L124",
+  "order": 124
+}

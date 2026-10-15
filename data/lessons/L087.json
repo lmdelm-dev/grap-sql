@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the products table by numbers · part 6",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id != 17",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 17.",
+      "task": "Try typing: SELECT id FROM products WHERE id != 17;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id != 17.",
+        "Write: SELECT id FROM products WHERE id != 17;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id != 17;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 17",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id != 17;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id != 17.",
+        "Write: SELECT count(*) FROM products WHERE id != 17;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id != 17;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 18",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 18.",
+      "task": "Try typing: SELECT id FROM products WHERE id > 18;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id > 18.",
+        "Write: SELECT id FROM products WHERE id > 18;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id > 18;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 18",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id > 18;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id > 18.",
+        "Write: SELECT count(*) FROM products WHERE id > 18;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id > 18;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 18",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 18.",
+      "task": "Try typing: SELECT id FROM products WHERE id >= 18;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id >= 18.",
+        "Write: SELECT id FROM products WHERE id >= 18;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id >= 18;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 18",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id >= 18;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id >= 18.",
+        "Write: SELECT count(*) FROM products WHERE id >= 18;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id >= 18;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 18",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 18.",
+      "task": "Try typing: SELECT id FROM products WHERE id < 18;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id < 18.",
+        "Write: SELECT id FROM products WHERE id < 18;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id < 18;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 18",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id < 18;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id < 18.",
+        "Write: SELECT count(*) FROM products WHERE id < 18;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id < 18;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 18",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 18.",
+      "task": "Try typing: SELECT id FROM products WHERE id <= 18;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id <= 18.",
+        "Write: SELECT id FROM products WHERE id <= 18;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id <= 18;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 18",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id <= 18;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id <= 18.",
+        "Write: SELECT count(*) FROM products WHERE id <= 18;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id <= 18;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 18",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 18.",
+      "task": "Try typing: SELECT id FROM products WHERE id = 18;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id = 18.",
+        "Write: SELECT id FROM products WHERE id = 18;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id = 18;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 18",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id = 18;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id = 18.",
+        "Write: SELECT count(*) FROM products WHERE id = 18;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id = 18;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 18",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 18.",
+      "task": "Try typing: SELECT id FROM products WHERE id != 18;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id != 18.",
+        "Write: SELECT id FROM products WHERE id != 18;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id != 18;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 18",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id != 18;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id != 18.",
+        "Write: SELECT count(*) FROM products WHERE id != 18;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id != 18;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 19",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 19.",
+      "task": "Try typing: SELECT id FROM products WHERE id > 19;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id > 19.",
+        "Write: SELECT id FROM products WHERE id > 19;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id > 19;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 19",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id > 19;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id > 19.",
+        "Write: SELECT count(*) FROM products WHERE id > 19;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id > 19;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 19",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 19.",
+      "task": "Try typing: SELECT id FROM products WHERE id >= 19;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id >= 19.",
+        "Write: SELECT id FROM products WHERE id >= 19;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id >= 19;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 19",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id >= 19;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id >= 19.",
+        "Write: SELECT count(*) FROM products WHERE id >= 19;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id >= 19;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 19",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 19.",
+      "task": "Try typing: SELECT id FROM products WHERE id < 19;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id < 19.",
+        "Write: SELECT id FROM products WHERE id < 19;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id < 19;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 19",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id < 19;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id < 19.",
+        "Write: SELECT count(*) FROM products WHERE id < 19;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id < 19;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 19",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 19.",
+      "task": "Try typing: SELECT id FROM products WHERE id <= 19;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id <= 19.",
+        "Write: SELECT id FROM products WHERE id <= 19;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id <= 19;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 19",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id <= 19;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id <= 19.",
+        "Write: SELECT count(*) FROM products WHERE id <= 19;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id <= 19;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 19",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 19.",
+      "task": "Try typing: SELECT id FROM products WHERE id = 19;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id = 19.",
+        "Write: SELECT id FROM products WHERE id = 19;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id = 19;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 19",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id = 19;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id = 19.",
+        "Write: SELECT count(*) FROM products WHERE id = 19;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id = 19;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 19",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 19.",
+      "task": "Try typing: SELECT id FROM products WHERE id != 19;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id != 19.",
+        "Write: SELECT id FROM products WHERE id != 19;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id != 19;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 19",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id != 19;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id != 19.",
+        "Write: SELECT count(*) FROM products WHERE id != 19;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id != 19;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 20",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 20.",
+      "task": "Try typing: SELECT id FROM products WHERE id > 20;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id > 20.",
+        "Write: SELECT id FROM products WHERE id > 20;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id > 20;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 20",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id > 20;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id > 20.",
+        "Write: SELECT count(*) FROM products WHERE id > 20;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id > 20;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 20",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 20.",
+      "task": "Try typing: SELECT id FROM products WHERE id >= 20;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id >= 20.",
+        "Write: SELECT id FROM products WHERE id >= 20;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id >= 20;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 20",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id >= 20;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id >= 20.",
+        "Write: SELECT count(*) FROM products WHERE id >= 20;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id >= 20;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 20",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 20.",
+      "task": "Try typing: SELECT id FROM products WHERE id < 20;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id < 20.",
+        "Write: SELECT id FROM products WHERE id < 20;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id < 20;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 20",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id < 20;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id < 20.",
+        "Write: SELECT count(*) FROM products WHERE id < 20;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id < 20;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 20",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 20.",
+      "task": "Try typing: SELECT id FROM products WHERE id <= 20;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id <= 20.",
+        "Write: SELECT id FROM products WHERE id <= 20;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id <= 20;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 20",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id <= 20;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id <= 20.",
+        "Write: SELECT count(*) FROM products WHERE id <= 20;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id <= 20;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 20",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 20.",
+      "task": "Try typing: SELECT id FROM products WHERE id = 20;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id = 20.",
+        "Write: SELECT id FROM products WHERE id = 20;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id = 20;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 20",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id = 20;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id = 20.",
+        "Write: SELECT count(*) FROM products WHERE id = 20;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id = 20;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 20",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 20.",
+      "task": "Try typing: SELECT id FROM products WHERE id != 20;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id != 20.",
+        "Write: SELECT id FROM products WHERE id != 20;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id != 20;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 20",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id != 20;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id != 20.",
+        "Write: SELECT count(*) FROM products WHERE id != 20;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id != 20;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 21",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 21.",
+      "task": "Try typing: SELECT id FROM products WHERE id > 21;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE after the table name.",
+        "The test is id > 21.",
+        "Write: SELECT id FROM products WHERE id > 21;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE id > 21;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 21",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM products WHERE id > 21;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Add WHERE id > 21.",
+        "Write: SELECT count(*) FROM products WHERE id > 21;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products WHERE id > 21;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L087",
+  "order": 87
+}

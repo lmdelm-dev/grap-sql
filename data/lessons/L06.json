@@ -1,0 +1,91 @@
+{
+  "id": "L06",
+  "order": 6,
+  "difficulty": 2,
+  "tags": [
+    "limit",
+    "top n"
+  ],
+  "title": "LIMIT: the database's 'just the first few'",
+  "steps": [
+    {
+      "type": "fill",
+      "title": "Top 3 heavyweights",
+      "prompt": "LIMIT chops the result after N rows - like asking the librarian to start at the top and only read the first three cards.\nCombine it with ORDER BY … DESC to get the three most expensive products:",
+      "task": "Fill the blank: SELECT name, price FROM products ORDER BY price DESC LIMIT ___;",
+      "hints": [
+        "We want the heavyweights - the priciest.",
+        "The query already sorts DESC.",
+        "LIMIT is like saying 'stop after…'.",
+        "Write 3."
+      ],
+      "expected_sql": "SELECT name, price FROM products ORDER BY price DESC LIMIT 3;",
+      "seed_sql": "SELECT name, price FROM products ORDER BY price DESC LIMIT ___;",
+      "memory_trick": "LIMIT cuts the list after N rows.",
+      "check": {
+        "require": [
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Run it for real",
+      "prompt": "Now type the whole thing yourself, no blank this time.",
+      "task": "Try typing: SELECT name, price FROM products ORDER BY price DESC LIMIT 3;",
+      "hints": [
+        "Start with SELECT name, price FROM products.",
+        "Add ORDER BY price DESC.",
+        "Finish with LIMIT and a number.",
+        "Write LIMIT 3 at the very end."
+      ],
+      "expected_sql": "SELECT name, price FROM products ORDER BY price DESC LIMIT 3;",
+      "memory_trick": "Bottom line of the query = how many rows you keep.",
+      "check": {
+        "require": [
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "A quick peek",
+      "prompt": "LIMIT is brilliant for a quick look at strange tables: 'just show me a sample.'\nYou type * to get all columns, then LIMIT 5 to only take five rows.",
+      "task": "Try typing: SELECT * FROM products LIMIT 5;",
+      "hints": [
+        "Show every column.",
+        "The star does that.",
+        "Limit the rows to five.",
+        "Type: SELECT * FROM products LIMIT 5;"
+      ],
+      "expected_sql": "SELECT * FROM products LIMIT 5;",
+      "memory_trick": "SELECT * + LIMIT = a quick sample, fast to read.",
+      "check": {
+        "require": [
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "predict",
+      "title": "Predict the row count",
+      "prompt": "Numbers first, explanation after:\nSELECT * FROM products LIMIT 5;\nHow many rows will it return?",
+      "task": "How many rows does the result show?",
+      "check": {
+        "answer": [
+          "5",
+          "five",
+          "5 rows",
+          "five rows"
+        ]
+      },
+      "hints": [
+        "Look at the last word of the query.",
+        "LIMIT means 'stop after'.",
+        "The number after LIMIT is the answer.",
+        "Answer: 5."
+      ],
+      "memory_trick": "The number after LIMIT is your row count."
+    }
+  ]
+}

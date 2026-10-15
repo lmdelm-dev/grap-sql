@@ -1,0 +1,772 @@
+{
+  "title": "Ranges and NOT in sales · part 4",
+  "tags": [
+    "where",
+    "between"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep total from 88.15 to 99.7",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 88.15 AND 99.7;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 88.15 AND 99.7;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 88.15 AND 99.7;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 88.15..99.7",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 88.15 AND 99.7);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 88.15 AND 99.7 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 88.15 AND 99.7);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 88.15 AND 99.7);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 99.7 to 121.09",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 99.7 AND 121.09;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 99.7 AND 121.09;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 99.7 AND 121.09;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 99.7..121.09",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 99.7 AND 121.09);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 99.7 AND 121.09 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 99.7 AND 121.09);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 99.7 AND 121.09);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 121.09 to 158.7",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 121.09 AND 158.7;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 121.09 AND 158.7;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 121.09 AND 158.7;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 121.09..158.7",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 121.09 AND 158.7);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 121.09 AND 158.7 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 121.09 AND 158.7);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 121.09 AND 158.7);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 158.7 to 174.95",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 158.7 AND 174.95;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 158.7 AND 174.95;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 158.7 AND 174.95;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 158.7..174.95",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 158.7 AND 174.95);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 158.7 AND 174.95 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 158.7 AND 174.95);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 158.7 AND 174.95);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 174.95 to 175.12",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 174.95 AND 175.12;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 174.95 AND 175.12;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 174.95 AND 175.12;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 174.95..175.12",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 174.95 AND 175.12);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 174.95 AND 175.12 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 174.95 AND 175.12);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 174.95 AND 175.12);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 175.12 to 186.25",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 175.12 AND 186.25;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 175.12 AND 186.25;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 175.12 AND 186.25;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 175.12..186.25",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 175.12 AND 186.25);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 175.12 AND 186.25 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 175.12 AND 186.25);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 175.12 AND 186.25);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 186.25 to 214.78",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 186.25 AND 214.78;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 186.25 AND 214.78;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 186.25 AND 214.78;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 186.25..214.78",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 186.25 AND 214.78);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 186.25 AND 214.78 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 186.25 AND 214.78);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 186.25 AND 214.78);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 214.78 to 320.37",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 214.78 AND 320.37;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 214.78 AND 320.37;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 214.78 AND 320.37;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 214.78..320.37",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 214.78 AND 320.37);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 214.78 AND 320.37 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 214.78 AND 320.37);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 214.78 AND 320.37);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 320.37 to 339.13",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 320.37 AND 339.13;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 320.37 AND 339.13;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 320.37 AND 339.13;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 320.37..339.13",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 320.37 AND 339.13);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 320.37 AND 339.13 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 320.37 AND 339.13);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 320.37 AND 339.13);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 339.13 to 343.61",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 339.13 AND 343.61;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 339.13 AND 343.61;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 339.13 AND 343.61;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 339.13..343.61",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 339.13 AND 343.61);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 339.13 AND 343.61 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 339.13 AND 343.61);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 339.13 AND 343.61);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 343.61 to 352.97",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 343.61 AND 352.97;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 343.61 AND 352.97;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 343.61 AND 352.97;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 343.61..352.97",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 343.61 AND 352.97);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 343.61 AND 352.97 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 343.61 AND 352.97);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 343.61 AND 352.97);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 352.97 to 376.95",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 352.97 AND 376.95;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 352.97 AND 376.95;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 352.97 AND 376.95;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 352.97..376.95",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 352.97 AND 376.95);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 352.97 AND 376.95 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 352.97 AND 376.95);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 352.97 AND 376.95);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 376.95 to 438.77",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 376.95 AND 438.77;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 376.95 AND 438.77;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 376.95 AND 438.77;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 376.95..438.77",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 376.95 AND 438.77);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 376.95 AND 438.77 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 376.95 AND 438.77);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 376.95 AND 438.77);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 438.77 to 468.85",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 438.77 AND 468.85;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 438.77 AND 468.85;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 438.77 AND 468.85;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 438.77..468.85",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 438.77 AND 468.85);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 438.77 AND 468.85 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 438.77 AND 468.85);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 438.77 AND 468.85);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 468.85 to 472.52",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 468.85 AND 472.52;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 468.85 AND 472.52;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 468.85 AND 472.52;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 468.85..472.52",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 468.85 AND 472.52);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 468.85 AND 472.52 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 468.85 AND 472.52);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 468.85 AND 472.52);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 472.52 to 528.21",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 472.52 AND 528.21;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 472.52 AND 528.21;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 472.52 AND 528.21;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 472.52..528.21",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 472.52 AND 528.21);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 472.52 AND 528.21 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 472.52 AND 528.21);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 472.52 AND 528.21);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 528.21 to 557.17",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 528.21 AND 557.17;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 528.21 AND 557.17;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 528.21 AND 557.17;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 528.21..557.17",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 528.21 AND 557.17);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 528.21 AND 557.17 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 528.21 AND 557.17);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 528.21 AND 557.17);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 557.17 to 569.81",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 557.17 AND 569.81;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 557.17 AND 569.81;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 557.17 AND 569.81;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 557.17..569.81",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 557.17 AND 569.81);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 557.17 AND 569.81 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 557.17 AND 569.81);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 557.17 AND 569.81);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 569.81 to 624.97",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 569.81 AND 624.97;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 569.81 AND 624.97;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 569.81 AND 624.97;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 569.81..624.97",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 569.81 AND 624.97);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 569.81 AND 624.97 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 569.81 AND 624.97);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 569.81 AND 624.97);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total from 624.97 to 721.56",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sales WHERE total BETWEEN 624.97 AND 721.56;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sales WHERE total BETWEEN 624.97 AND 721.56;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total BETWEEN 624.97 AND 721.56;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total outside 624.97..721.56",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sales WHERE NOT (total BETWEEN 624.97 AND 721.56);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( total BETWEEN 624.97 AND 721.56 ).",
+        "Write: SELECT id FROM sales WHERE NOT (total BETWEEN 624.97 AND 721.56);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE NOT (total BETWEEN 624.97 AND 721.56);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L303",
+  "order": 303
+}

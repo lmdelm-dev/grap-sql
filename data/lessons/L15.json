@@ -1,0 +1,75 @@
+{
+  "id": "L15",
+  "order": 15,
+  "difficulty": 4,
+  "tags": [
+    "case",
+    "having"
+  ],
+  "title": "CASE and HAVING: labels and group filters",
+  "steps": [
+    {
+      "type": "type",
+      "title": "CASE: if-this-then-that labels",
+      "prompt": "CASE makes a new column from rules, like a price tag sticker: 'pricey' or 'ok'.\nWHEN the rule fits, THEN the value; ELSE is the fallback; END closes it.",
+      "task": "Try typing: SELECT name, price, CASE WHEN price > 300 THEN 'pricey' ELSE 'ok' END AS tag FROM products;",
+      "hints": [
+        "SELECT name, price, then the CASE.",
+        "CASE WHEN price > 300 THEN 'pricey'.",
+        "ELSE 'ok' covers the rest, END finishes.",
+        "Write the compact CASE expression and alias it AS tag."
+      ],
+      "expected_sql": "SELECT name, price, CASE WHEN price > 300 THEN 'pricey' ELSE 'ok' END AS tag FROM products;",
+      "memory_trick": "CASE = 'decide as you go, row by row'."
+    },
+    {
+      "type": "fill",
+      "title": "Fill the CASE elbow",
+      "prompt": "Fill the blank so expensive products get the 'luxury' label:\nSELECT name, CASE WHEN price > 1000 THEN 'luxury' ___ 'standard' END FROM products;",
+      "task": "Fill the blank with the else-word.",
+      "hints": [
+        "THEN gives the true-case value.",
+        "The else-case word is four letters.",
+        "It sits between the two labels.",
+        "Fill: ELSE"
+      ],
+      "expected_sql": "SELECT name, CASE WHEN price > 1000 THEN 'luxury' ELSE 'standard' END FROM products;",
+      "seed_sql": "SELECT name, CASE WHEN price > 1000 THEN 'luxury' ___ 'standard' END FROM products;",
+      "memory_trick": "WHEN … THEN … ELSE … END - the full decision recipe."
+    },
+    {
+      "type": "type",
+      "title": "HAVING: a WHERE for piles",
+      "prompt": "WHERE filters ROWS. HAVING filters PILES (groups).\nFind the categories with more than five products.",
+      "task": "Try typing: SELECT category_id, count(*) AS c FROM products GROUP BY category_id HAVING c > 5;",
+      "hints": [
+        "Build the GROUP BY query first.",
+        "count(*) AS c gives the count a name.",
+        "HAVING c > 5 filters the piles.",
+        "Write the GROUP BY … HAVING query."
+      ],
+      "expected_sql": "SELECT category_id, count(*) AS c FROM products GROUP BY category_id HAVING c > 5;",
+      "memory_trick": "HAVING = the WHERE of the GROUP BY world."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the pile filter",
+      "prompt": "This query piles products by category, then keeps only the big piles:\nSELECT category_id, count(*) FROM products GROUP BY category_id HAVING count(*) > 5;\nProduct counts per category_id are: 8, 5, 5, 5, 5, 5, 3, 4.\nWith HAVING count(*) > 5, only ONE pile survives.",
+      "task": "Which category_id survives the HAVING?",
+      "check": {
+        "answer": [
+          "1",
+          "category 1",
+          "category_id 1"
+        ]
+      },
+      "hints": [
+        "Candidates: which count is above 5?",
+        "Only one pile has more than 5 products - it has 8.",
+        "That pile is category_id 1.",
+        "Answer: 1."
+      ],
+      "memory_trick": "HAVING shaves the chart to the tall bars."
+    }
+  ]
+}

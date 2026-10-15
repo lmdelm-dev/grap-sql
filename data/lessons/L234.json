@@ -1,0 +1,376 @@
+{
+  "title": "Counting and totals in sale_items",
+  "tags": [
+    "aggregate",
+    "count"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "How many rows in sale_items?",
+      "prompt": "COUNT(*) answers 'how many rows?' with one number.",
+      "task": "Try typing: SELECT count(*) FROM sale_items;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Finish with a semicolon.",
+        "Write: SELECT count(*) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items;",
+      "memory_trick": "count(*) = 'how many rows?'"
+    },
+    {
+      "type": "type",
+      "title": "Count the id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT count(id).",
+        "FROM sale_items.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT count(id) FROM sale_items;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the sale_id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(sale_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT count(sale_id).",
+        "FROM sale_items.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(sale_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT count(sale_id) FROM sale_items;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the product_id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(product_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT count(product_id).",
+        "FROM sale_items.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(product_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT count(product_id) FROM sale_items;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the quantity values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(quantity) FROM sale_items;",
+      "hints": [
+        "Start with SELECT count(quantity).",
+        "FROM sale_items.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(quantity) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT count(quantity) FROM sale_items;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the unit_price values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(unit_price) FROM sale_items;",
+      "hints": [
+        "Start with SELECT count(unit_price).",
+        "FROM sale_items.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(unit_price) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT count(unit_price) FROM sale_items;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "SUM of id",
+      "prompt": "SUM id: add up the values.",
+      "task": "Try typing: SELECT sum(id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM sale_items.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM sale_items;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of id",
+      "prompt": "AVG id: work out the average.",
+      "task": "Try typing: SELECT avg(id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM sale_items.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM sale_items;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of id",
+      "prompt": "MIN id: find the smallest value.",
+      "task": "Try typing: SELECT min(id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM sale_items.",
+        "MIN works on numbers.",
+        "Write: SELECT min(id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT min(id) FROM sale_items;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of id",
+      "prompt": "MAX id: find the biggest value.",
+      "task": "Try typing: SELECT max(id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM sale_items.",
+        "MAX works on numbers.",
+        "Write: SELECT max(id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT max(id) FROM sale_items;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of sale_id",
+      "prompt": "SUM sale_id: add up the values.",
+      "task": "Try typing: SELECT sum(sale_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT sum(sale_id).",
+        "FROM sale_items.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(sale_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT sum(sale_id) FROM sale_items;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of sale_id",
+      "prompt": "AVG sale_id: work out the average.",
+      "task": "Try typing: SELECT avg(sale_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT avg(sale_id).",
+        "FROM sale_items.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(sale_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT avg(sale_id) FROM sale_items;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of sale_id",
+      "prompt": "MIN sale_id: find the smallest value.",
+      "task": "Try typing: SELECT min(sale_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT min(sale_id).",
+        "FROM sale_items.",
+        "MIN works on numbers.",
+        "Write: SELECT min(sale_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT min(sale_id) FROM sale_items;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of sale_id",
+      "prompt": "MAX sale_id: find the biggest value.",
+      "task": "Try typing: SELECT max(sale_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT max(sale_id).",
+        "FROM sale_items.",
+        "MAX works on numbers.",
+        "Write: SELECT max(sale_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT max(sale_id) FROM sale_items;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of product_id",
+      "prompt": "SUM product_id: add up the values.",
+      "task": "Try typing: SELECT sum(product_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT sum(product_id).",
+        "FROM sale_items.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(product_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT sum(product_id) FROM sale_items;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of product_id",
+      "prompt": "AVG product_id: work out the average.",
+      "task": "Try typing: SELECT avg(product_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT avg(product_id).",
+        "FROM sale_items.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(product_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT avg(product_id) FROM sale_items;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of product_id",
+      "prompt": "MIN product_id: find the smallest value.",
+      "task": "Try typing: SELECT min(product_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT min(product_id).",
+        "FROM sale_items.",
+        "MIN works on numbers.",
+        "Write: SELECT min(product_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT min(product_id) FROM sale_items;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of product_id",
+      "prompt": "MAX product_id: find the biggest value.",
+      "task": "Try typing: SELECT max(product_id) FROM sale_items;",
+      "hints": [
+        "Start with SELECT max(product_id).",
+        "FROM sale_items.",
+        "MAX works on numbers.",
+        "Write: SELECT max(product_id) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT max(product_id) FROM sale_items;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of quantity",
+      "prompt": "SUM quantity: add up the values.",
+      "task": "Try typing: SELECT sum(quantity) FROM sale_items;",
+      "hints": [
+        "Start with SELECT sum(quantity).",
+        "FROM sale_items.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(quantity) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT sum(quantity) FROM sale_items;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of quantity",
+      "prompt": "AVG quantity: work out the average.",
+      "task": "Try typing: SELECT avg(quantity) FROM sale_items;",
+      "hints": [
+        "Start with SELECT avg(quantity).",
+        "FROM sale_items.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(quantity) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT avg(quantity) FROM sale_items;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of quantity",
+      "prompt": "MIN quantity: find the smallest value.",
+      "task": "Try typing: SELECT min(quantity) FROM sale_items;",
+      "hints": [
+        "Start with SELECT min(quantity).",
+        "FROM sale_items.",
+        "MIN works on numbers.",
+        "Write: SELECT min(quantity) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT min(quantity) FROM sale_items;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of quantity",
+      "prompt": "MAX quantity: find the biggest value.",
+      "task": "Try typing: SELECT max(quantity) FROM sale_items;",
+      "hints": [
+        "Start with SELECT max(quantity).",
+        "FROM sale_items.",
+        "MAX works on numbers.",
+        "Write: SELECT max(quantity) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT max(quantity) FROM sale_items;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of unit_price",
+      "prompt": "SUM unit_price: add up the values.",
+      "task": "Try typing: SELECT sum(unit_price) FROM sale_items;",
+      "hints": [
+        "Start with SELECT sum(unit_price).",
+        "FROM sale_items.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(unit_price) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT sum(unit_price) FROM sale_items;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of unit_price",
+      "prompt": "AVG unit_price: work out the average.",
+      "task": "Try typing: SELECT avg(unit_price) FROM sale_items;",
+      "hints": [
+        "Start with SELECT avg(unit_price).",
+        "FROM sale_items.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(unit_price) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT avg(unit_price) FROM sale_items;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of unit_price",
+      "prompt": "MIN unit_price: find the smallest value.",
+      "task": "Try typing: SELECT min(unit_price) FROM sale_items;",
+      "hints": [
+        "Start with SELECT min(unit_price).",
+        "FROM sale_items.",
+        "MIN works on numbers.",
+        "Write: SELECT min(unit_price) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT min(unit_price) FROM sale_items;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of unit_price",
+      "prompt": "MAX unit_price: find the biggest value.",
+      "task": "Try typing: SELECT max(unit_price) FROM sale_items;",
+      "hints": [
+        "Start with SELECT max(unit_price).",
+        "FROM sale_items.",
+        "MAX works on numbers.",
+        "Write: SELECT max(unit_price) FROM sale_items;"
+      ],
+      "expected_sql": "SELECT max(unit_price) FROM sale_items;",
+      "memory_trick": "max = find the biggest value."
+    }
+  ],
+  "id": "L234",
+  "order": 234
+}

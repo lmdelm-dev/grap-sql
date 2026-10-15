@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the customers table by text · part 3",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where email is user6@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user6@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user6@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user6@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user6@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user7@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user7@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user7@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user7@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user7@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user8@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user8@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user8@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user8@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user8@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where email is user9@shop.ma",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'user9@shop.ma'.",
+      "task": "Try typing: SELECT * FROM customers WHERE email = 'user9@shop.ma';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE email = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE email = 'user9@shop.ma';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE email = 'user9@shop.ma';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Agadir",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Agadir'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Agadir';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Agadir';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Agadir';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Aga'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nAga% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Aga%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Aga%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Aga%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'gad' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %gad% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%gad%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%gad%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%gad%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Casablanca",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Casablanca'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Casablanca';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Casablanca';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Casablanca';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Cas'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nCas% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Cas%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Cas%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Cas%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'asa' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %asa% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%asa%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%asa%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%asa%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is El Jadida",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'El Jadida'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'El Jadida';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'El Jadida';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'El Jadida';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'El '",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nEl % means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'El %';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'El %';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'El %';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'l J' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %l J% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%l J%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%l J%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%l J%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Fes",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Fes'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Fes';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Fes';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Fes';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Fes'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nFes% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Fes%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Fes%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Fes%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Kenitra",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Kenitra'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Kenitra';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Kenitra';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Kenitra';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Ken'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nKen% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Ken%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Ken%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Ken%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'eni' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %eni% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%eni%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%eni%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%eni%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Marrakech",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Marrakech'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Marrakech';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Marrakech';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Marrakech';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Mar'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nMar% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Mar%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Mar%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Mar%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'arr' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %arr% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%arr%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%arr%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%arr%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Meknes",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Meknes'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Meknes';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Meknes';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Meknes';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Mek'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nMek% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Mek%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Mek%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Mek%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ekn' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ekn% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%ekn%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%ekn%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%ekn%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Rabat",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Rabat'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Rabat';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Rabat';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Rabat';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Rab'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nRab% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Rab%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Rab%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Rab%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'aba' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %aba% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%aba%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%aba%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%aba%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Safi",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Safi'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Safi';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Safi';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Safi';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Saf'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nSaf% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Saf%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Saf%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Saf%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'afi' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %afi% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%afi%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%afi%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%afi%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Tangier",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Tangier'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Tangier';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Tangier';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Tangier';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tan'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTan% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Tan%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Tan%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Tan%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ang' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ang% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%ang%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%ang%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%ang%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Tetouan",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Tetouan'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city = 'Tetouan';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE city = 'Tetouan';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city = 'Tetouan';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tet'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTet% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE 'Tet%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE city LIKE 'Tet%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE 'Tet%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'eto' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %eto% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE city LIKE '%eto%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE city LIKE '%eto%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE city LIKE '%eto%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-01-12",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-01-12'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-01-12';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-01-12';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-01-12';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting '202'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\n202% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at LIKE '202%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM customers WHERE created_at LIKE '202%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at LIKE '202%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for '025' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %025% means 'contains'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at LIKE '%025%';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM customers WHERE created_at LIKE '%025%';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at LIKE '%025%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-01-27",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-01-27'.",
+      "task": "Try typing: SELECT * FROM customers WHERE created_at = '2025-01-27';",
+      "hints": [
+        "Start with SELECT * FROM customers.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM customers WHERE created_at = '2025-01-27';"
+      ],
+      "expected_sql": "SELECT * FROM customers WHERE created_at = '2025-01-27';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L038",
+  "order": 38
+}

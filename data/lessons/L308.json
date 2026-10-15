@@ -1,0 +1,171 @@
+{
+  "title": "More sorting tricks in sales",
+  "tags": [
+    "order by",
+    "limit",
+    "offset"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Sort by two columns",
+      "prompt": "ORDER BY can take more than one column.\nRows tie on the first column, then the second breaks the tie.",
+      "task": "Try typing: SELECT id, customer_id FROM sales ORDER BY id, customer_id;",
+      "hints": [
+        "Start with SELECT id, customer_id FROM sales.",
+        "Add ORDER BY id,",
+        "Then the tie-breaker customer_id.",
+        "Write: SELECT id, customer_id FROM sales ORDER BY id, customer_id;"
+      ],
+      "expected_sql": "SELECT id, customer_id FROM sales ORDER BY id, customer_id;",
+      "memory_trick": "List keys left to right: primary, then tie-breaker.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Sort by two columns",
+      "prompt": "ORDER BY can take more than one column.\nRows tie on the first column, then the second breaks the tie.",
+      "task": "Try typing: SELECT customer_id, id FROM sales ORDER BY customer_id, id;",
+      "hints": [
+        "Start with SELECT customer_id, id FROM sales.",
+        "Add ORDER BY customer_id,",
+        "Then the tie-breaker id.",
+        "Write: SELECT customer_id, id FROM sales ORDER BY customer_id, id;"
+      ],
+      "expected_sql": "SELECT customer_id, id FROM sales ORDER BY customer_id, id;",
+      "memory_trick": "List keys left to right: primary, then tie-breaker.",
+      "check": {
+        "require": [
+          "order by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 2 then take 2 of id",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT id FROM sales ORDER BY id LIMIT 2 OFFSET 2;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "ORDER BY id first.",
+        "Finish with LIMIT 2 OFFSET 2.",
+        "Write: SELECT id FROM sales ORDER BY id LIMIT 2 OFFSET 2;"
+      ],
+      "expected_sql": "SELECT id FROM sales ORDER BY id LIMIT 2 OFFSET 2;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 5 then take 5 of id",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT id FROM sales ORDER BY id LIMIT 5 OFFSET 5;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "ORDER BY id first.",
+        "Finish with LIMIT 5 OFFSET 5.",
+        "Write: SELECT id FROM sales ORDER BY id LIMIT 5 OFFSET 5;"
+      ],
+      "expected_sql": "SELECT id FROM sales ORDER BY id LIMIT 5 OFFSET 5;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 2 then take 2 of customer_id",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT customer_id FROM sales ORDER BY customer_id LIMIT 2 OFFSET 2;",
+      "hints": [
+        "Start with SELECT customer_id FROM sales.",
+        "ORDER BY customer_id first.",
+        "Finish with LIMIT 2 OFFSET 2.",
+        "Write: SELECT customer_id FROM sales ORDER BY customer_id LIMIT 2 OFFSET 2;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales ORDER BY customer_id LIMIT 2 OFFSET 2;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 5 then take 5 of customer_id",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT customer_id FROM sales ORDER BY customer_id LIMIT 5 OFFSET 5;",
+      "hints": [
+        "Start with SELECT customer_id FROM sales.",
+        "ORDER BY customer_id first.",
+        "Finish with LIMIT 5 OFFSET 5.",
+        "Write: SELECT customer_id FROM sales ORDER BY customer_id LIMIT 5 OFFSET 5;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales ORDER BY customer_id LIMIT 5 OFFSET 5;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 2 then take 2 of employee_id",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT employee_id FROM sales ORDER BY employee_id LIMIT 2 OFFSET 2;",
+      "hints": [
+        "Start with SELECT employee_id FROM sales.",
+        "ORDER BY employee_id first.",
+        "Finish with LIMIT 2 OFFSET 2.",
+        "Write: SELECT employee_id FROM sales ORDER BY employee_id LIMIT 2 OFFSET 2;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales ORDER BY employee_id LIMIT 2 OFFSET 2;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Skip 5 then take 5 of employee_id",
+      "prompt": "OFFSET skips that many rows before LIMIT starts counting.\nTogether they page through a long list.",
+      "task": "Try typing: SELECT employee_id FROM sales ORDER BY employee_id LIMIT 5 OFFSET 5;",
+      "hints": [
+        "Start with SELECT employee_id FROM sales.",
+        "ORDER BY employee_id first.",
+        "Finish with LIMIT 5 OFFSET 5.",
+        "Write: SELECT employee_id FROM sales ORDER BY employee_id LIMIT 5 OFFSET 5;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales ORDER BY employee_id LIMIT 5 OFFSET 5;",
+      "memory_trick": "LIMIT = how many; OFFSET = how many to skip.",
+      "check": {
+        "require": [
+          "order by",
+          "limit"
+        ]
+      }
+    }
+  ],
+  "id": "L308",
+  "order": 308
+}

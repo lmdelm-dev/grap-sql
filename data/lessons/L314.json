@@ -1,0 +1,110 @@
+{
+  "title": "Reading the suppliers table",
+  "tags": [
+    "select",
+    "columns"
+  ],
+  "difficulty": 1,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Every column with *",
+      "prompt": "The star ( * ) means 'every column'.\nHere we open the whole suppliers table and take every column it has.",
+      "task": "Try typing: SELECT * FROM suppliers;",
+      "hints": [
+        "Start with SELECT *.",
+        "Then FROM suppliers.",
+        "Finish with a semicolon ;",
+        "Write: SELECT * FROM suppliers;"
+      ],
+      "expected_sql": "SELECT * FROM suppliers;",
+      "memory_trick": "* = all the columns, in table order."
+    },
+    {
+      "type": "type",
+      "title": "Read the id column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the id column from the suppliers table.",
+      "task": "Try typing: SELECT id FROM suppliers;",
+      "hints": [
+        "Start with SELECT id.",
+        "The table is suppliers.",
+        "FROM names the table you read from.",
+        "Write: SELECT id FROM suppliers;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the name column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the name column from the suppliers table.",
+      "task": "Try typing: SELECT name FROM suppliers;",
+      "hints": [
+        "Start with SELECT name.",
+        "The table is suppliers.",
+        "FROM names the table you read from.",
+        "Write: SELECT name FROM suppliers;"
+      ],
+      "expected_sql": "SELECT name FROM suppliers;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the city column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the city column from the suppliers table.",
+      "task": "Try typing: SELECT city FROM suppliers;",
+      "hints": [
+        "Start with SELECT city.",
+        "The table is suppliers.",
+        "FROM names the table you read from.",
+        "Write: SELECT city FROM suppliers;"
+      ],
+      "expected_sql": "SELECT city FROM suppliers;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the phone column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the phone column from the suppliers table.",
+      "task": "Try typing: SELECT phone FROM suppliers;",
+      "hints": [
+        "Start with SELECT phone.",
+        "The table is suppliers.",
+        "FROM names the table you read from.",
+        "Write: SELECT phone FROM suppliers;"
+      ],
+      "expected_sql": "SELECT phone FROM suppliers;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Two columns at once",
+      "prompt": "List columns after SELECT, separated by commas.\nHere we ask for id and name together.",
+      "task": "Try typing: SELECT id, name FROM suppliers;",
+      "hints": [
+        "Start with SELECT id,",
+        "Add the second column name.",
+        "FROM suppliers.",
+        "Write: SELECT id, name FROM suppliers;"
+      ],
+      "expected_sql": "SELECT id, name FROM suppliers;",
+      "memory_trick": "A comma says 'and also show me this'."
+    },
+    {
+      "type": "type",
+      "title": "Three columns",
+      "prompt": "More columns, same idea - just keep adding commas.",
+      "task": "Try typing: SELECT id, name, city FROM suppliers;",
+      "hints": [
+        "Start with SELECT id, name,",
+        "Add the third column city.",
+        "Two commas in total.",
+        "Write: SELECT id, name, city FROM suppliers;"
+      ],
+      "expected_sql": "SELECT id, name, city FROM suppliers;",
+      "memory_trick": "Three columns need two commas."
+    }
+  ],
+  "id": "L314",
+  "order": 314
+}

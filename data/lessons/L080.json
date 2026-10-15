@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the products table by text · part 3",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'apr' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %apr% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%apr%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%apr%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%apr%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Picholine Olive Oil 1L",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Picholine Olive Oil 1L'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Picholine Olive Oil 1L';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Picholine Olive Oil 1L';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Picholine Olive Oil 1L';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Pic'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nPic% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Pic%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Pic%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Pic%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ich' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ich% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%ich%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%ich%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%ich%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Ras el Hanout Blend 100g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Ras el Hanout Blend 100g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Ras el Hanout Blend 100g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Ras el Hanout Blend 100g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Ras el Hanout Blend 100g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Ras'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nRas% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Ras%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Ras%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Ras%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'as ' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %as % means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%as %';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%as %';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%as %';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Roasted Almonds 500g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Roasted Almonds 500g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Roasted Almonds 500g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Roasted Almonds 500g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Roasted Almonds 500g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Roa'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nRoa% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Roa%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Roa%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Roa%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'oas' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %oas% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%oas%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%oas%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%oas%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Saffron Threads 2g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Saffron Threads 2g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Saffron Threads 2g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Saffron Threads 2g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Saffron Threads 2g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Saf'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nSaf% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Saf%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Saf%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Saf%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'aff' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %aff% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%aff%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%aff%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%aff%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Safi Blue Plate 28cm",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Safi Blue Plate 28cm'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Safi Blue Plate 28cm';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Safi Blue Plate 28cm';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Safi Blue Plate 28cm';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'afi' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %afi% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%afi%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%afi%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%afi%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Tagine Dish 32cm",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Tagine Dish 32cm'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Tagine Dish 32cm';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Tagine Dish 32cm';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Tagine Dish 32cm';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tag'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTag% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Tag%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Tag%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Tag%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'agi' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %agi% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%agi%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%agi%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%agi%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Tea Candle Holder Set",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Tea Candle Holder Set'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Tea Candle Holder Set';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Tea Candle Holder Set';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Tea Candle Holder Set';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tea'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTea% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Tea%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Tea%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Tea%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ea ' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ea % means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%ea %';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%ea %';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%ea %';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Turmeric Powder 90g",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Turmeric Powder 90g'.",
+      "task": "Try typing: SELECT * FROM products WHERE name = 'Turmeric Powder 90g';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE name = 'Turmeric Powder 90g';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name = 'Turmeric Powder 90g';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tur'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTur% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE 'Tur%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE name LIKE 'Tur%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE 'Tur%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'urm' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %urm% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE name LIKE '%urm%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE name LIKE '%urm%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE name LIKE '%urm%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-01-12",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-01-12'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-01-12';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-01-12';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-01-12';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting '202'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\n202% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at LIKE '202%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM products WHERE created_at LIKE '202%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at LIKE '202%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for '025' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %025% means 'contains'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at LIKE '%025%';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM products WHERE created_at LIKE '%025%';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at LIKE '%025%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-01-27",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-01-27'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-01-27';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-01-27';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-01-27';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-02-03",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-02-03'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-02-03';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-02-03';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-02-03';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-02-18",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-02-18'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-02-18';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-02-18';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-02-18';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-03-01",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-03-01'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-03-01';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-03-01';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-03-01';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-03-15",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-03-15'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-03-15';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-03-15';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-03-15';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-04-02",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-04-02'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-04-02';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-04-02';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-04-02';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-04-19",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-04-19'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-04-19';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-04-19';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-04-19';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-05-06",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-05-06'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-05-06';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-05-06';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-05-06';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-05-22",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-05-22'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-05-22';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-05-22';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-05-22';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-06-08",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-06-08'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-06-08';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-06-08';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-06-08';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-07-11",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-07-11'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-07-11';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-07-11';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-07-11';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-08-14",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-08-14'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-08-14';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-08-14';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-08-14';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where created_at is 2025-09-03",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '2025-09-03'.",
+      "task": "Try typing: SELECT * FROM products WHERE created_at = '2025-09-03';",
+      "hints": [
+        "Start with SELECT * FROM products.",
+        "Add WHERE created_at = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM products WHERE created_at = '2025-09-03';"
+      ],
+      "expected_sql": "SELECT * FROM products WHERE created_at = '2025-09-03';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L080",
+  "order": 80
+}

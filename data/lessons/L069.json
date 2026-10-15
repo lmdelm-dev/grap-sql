@@ -1,0 +1,392 @@
+{
+  "title": "Grouping the employees table",
+  "tags": [
+    "group by",
+    "having"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT name, count(*) FROM employees GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, count(*).",
+        "FROM employees.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, count(*) FROM employees GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM employees GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT name, sum(id) FROM employees GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, sum(id).",
+        "FROM employees.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, sum(id) FROM employees GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, sum(id) FROM employees GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT name, avg(id) FROM employees GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, avg(id).",
+        "FROM employees.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, avg(id) FROM employees GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, avg(id) FROM employees GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen sum(salary) works on each pile.",
+      "task": "Try typing: SELECT name, sum(salary) FROM employees GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, sum(salary).",
+        "FROM employees.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, sum(salary) FROM employees GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, sum(salary) FROM employees GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen avg(salary) works on each pile.",
+      "task": "Try typing: SELECT name, avg(salary) FROM employees GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, avg(salary).",
+        "FROM employees.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, avg(salary) FROM employees GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, avg(salary) FROM employees GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Imane Naciri)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Imane Naciri';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Imane Naciri'.",
+        "Write: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Imane Naciri';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Imane Naciri';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Karim Tazi)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Karim Tazi';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Karim Tazi'.",
+        "Write: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Karim Tazi';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Karim Tazi';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Mehdi Alaoui)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Mehdi Alaoui';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Mehdi Alaoui'.",
+        "Write: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Mehdi Alaoui';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Mehdi Alaoui';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Nadia Bennani)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Nadia Bennani';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Nadia Bennani'.",
+        "Write: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Nadia Bennani';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Nadia Bennani';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Rachid El Amrani)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Rachid El Amrani';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Rachid El Amrani'.",
+        "Write: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Rachid El Amrani';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Rachid El Amrani';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Salma Chraibi)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Salma Chraibi';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Salma Chraibi'.",
+        "Write: SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Salma Chraibi';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM employees GROUP BY name HAVING name = 'Salma Chraibi';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT per role",
+      "prompt": "GROUP BY bundles rows into piles that share the same role.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT role, count(*) FROM employees GROUP BY role;",
+      "hints": [
+        "Start with SELECT role, count(*).",
+        "FROM employees.",
+        "Finish with GROUP BY role.",
+        "Write: SELECT role, count(*) FROM employees GROUP BY role;"
+      ],
+      "expected_sql": "SELECT role, count(*) FROM employees GROUP BY role;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per role",
+      "prompt": "GROUP BY bundles rows into piles that share the same role.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT role, sum(id) FROM employees GROUP BY role;",
+      "hints": [
+        "Start with SELECT role, sum(id).",
+        "FROM employees.",
+        "Finish with GROUP BY role.",
+        "Write: SELECT role, sum(id) FROM employees GROUP BY role;"
+      ],
+      "expected_sql": "SELECT role, sum(id) FROM employees GROUP BY role;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per role",
+      "prompt": "GROUP BY bundles rows into piles that share the same role.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT role, avg(id) FROM employees GROUP BY role;",
+      "hints": [
+        "Start with SELECT role, avg(id).",
+        "FROM employees.",
+        "Finish with GROUP BY role.",
+        "Write: SELECT role, avg(id) FROM employees GROUP BY role;"
+      ],
+      "expected_sql": "SELECT role, avg(id) FROM employees GROUP BY role;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per role",
+      "prompt": "GROUP BY bundles rows into piles that share the same role.\nThen sum(salary) works on each pile.",
+      "task": "Try typing: SELECT role, sum(salary) FROM employees GROUP BY role;",
+      "hints": [
+        "Start with SELECT role, sum(salary).",
+        "FROM employees.",
+        "Finish with GROUP BY role.",
+        "Write: SELECT role, sum(salary) FROM employees GROUP BY role;"
+      ],
+      "expected_sql": "SELECT role, sum(salary) FROM employees GROUP BY role;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per role",
+      "prompt": "GROUP BY bundles rows into piles that share the same role.\nThen avg(salary) works on each pile.",
+      "task": "Try typing: SELECT role, avg(salary) FROM employees GROUP BY role;",
+      "hints": [
+        "Start with SELECT role, avg(salary).",
+        "FROM employees.",
+        "Finish with GROUP BY role.",
+        "Write: SELECT role, avg(salary) FROM employees GROUP BY role;"
+      ],
+      "expected_sql": "SELECT role, avg(salary) FROM employees GROUP BY role;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the role pile (Cashier)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Cashier';",
+      "hints": [
+        "Build the piles with GROUP BY role.",
+        "Add HAVING to keep one pile.",
+        "The test is role = 'Cashier'.",
+        "Write: SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Cashier';"
+      ],
+      "expected_sql": "SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Cashier';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the role pile (Manager)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Manager';",
+      "hints": [
+        "Build the piles with GROUP BY role.",
+        "Add HAVING to keep one pile.",
+        "The test is role = 'Manager'.",
+        "Write: SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Manager';"
+      ],
+      "expected_sql": "SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Manager';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the role pile (Salesperson)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Salesperson';",
+      "hints": [
+        "Build the piles with GROUP BY role.",
+        "Add HAVING to keep one pile.",
+        "The test is role = 'Salesperson'.",
+        "Write: SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Salesperson';"
+      ],
+      "expected_sql": "SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Salesperson';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the role pile (Storekeeper)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Storekeeper';",
+      "hints": [
+        "Build the piles with GROUP BY role.",
+        "Add HAVING to keep one pile.",
+        "The test is role = 'Storekeeper'.",
+        "Write: SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Storekeeper';"
+      ],
+      "expected_sql": "SELECT role, count(*) FROM employees GROUP BY role HAVING role = 'Storekeeper';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    }
+  ],
+  "id": "L069",
+  "order": 69
+}

@@ -1,0 +1,124 @@
+{
+  "title": "Reading the sales table",
+  "tags": [
+    "select",
+    "columns"
+  ],
+  "difficulty": 1,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Every column with *",
+      "prompt": "The star ( * ) means 'every column'.\nHere we open the whole sales table and take every column it has.",
+      "task": "Try typing: SELECT * FROM sales;",
+      "hints": [
+        "Start with SELECT *.",
+        "Then FROM sales.",
+        "Finish with a semicolon ;",
+        "Write: SELECT * FROM sales;"
+      ],
+      "expected_sql": "SELECT * FROM sales;",
+      "memory_trick": "* = all the columns, in table order."
+    },
+    {
+      "type": "type",
+      "title": "Read the id column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the id column from the sales table.",
+      "task": "Try typing: SELECT id FROM sales;",
+      "hints": [
+        "Start with SELECT id.",
+        "The table is sales.",
+        "FROM names the table you read from.",
+        "Write: SELECT id FROM sales;"
+      ],
+      "expected_sql": "SELECT id FROM sales;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the customer_id column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the customer_id column from the sales table.",
+      "task": "Try typing: SELECT customer_id FROM sales;",
+      "hints": [
+        "Start with SELECT customer_id.",
+        "The table is sales.",
+        "FROM names the table you read from.",
+        "Write: SELECT customer_id FROM sales;"
+      ],
+      "expected_sql": "SELECT customer_id FROM sales;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the employee_id column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the employee_id column from the sales table.",
+      "task": "Try typing: SELECT employee_id FROM sales;",
+      "hints": [
+        "Start with SELECT employee_id.",
+        "The table is sales.",
+        "FROM names the table you read from.",
+        "Write: SELECT employee_id FROM sales;"
+      ],
+      "expected_sql": "SELECT employee_id FROM sales;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the sale_date column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the sale_date column from the sales table.",
+      "task": "Try typing: SELECT sale_date FROM sales;",
+      "hints": [
+        "Start with SELECT sale_date.",
+        "The table is sales.",
+        "FROM names the table you read from.",
+        "Write: SELECT sale_date FROM sales;"
+      ],
+      "expected_sql": "SELECT sale_date FROM sales;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Read the total column",
+      "prompt": "SELECT chooses the COLUMNS you see.\nAsk for just the total column from the sales table.",
+      "task": "Try typing: SELECT total FROM sales;",
+      "hints": [
+        "Start with SELECT total.",
+        "The table is sales.",
+        "FROM names the table you read from.",
+        "Write: SELECT total FROM sales;"
+      ],
+      "expected_sql": "SELECT total FROM sales;",
+      "memory_trick": "You get back only the column you name."
+    },
+    {
+      "type": "type",
+      "title": "Two columns at once",
+      "prompt": "List columns after SELECT, separated by commas.\nHere we ask for id and customer_id together.",
+      "task": "Try typing: SELECT id, customer_id FROM sales;",
+      "hints": [
+        "Start with SELECT id,",
+        "Add the second column customer_id.",
+        "FROM sales.",
+        "Write: SELECT id, customer_id FROM sales;"
+      ],
+      "expected_sql": "SELECT id, customer_id FROM sales;",
+      "memory_trick": "A comma says 'and also show me this'."
+    },
+    {
+      "type": "type",
+      "title": "Three columns",
+      "prompt": "More columns, same idea - just keep adding commas.",
+      "task": "Try typing: SELECT id, customer_id, employee_id FROM sales;",
+      "hints": [
+        "Start with SELECT id, customer_id,",
+        "Add the third column employee_id.",
+        "Two commas in total.",
+        "Write: SELECT id, customer_id, employee_id FROM sales;"
+      ],
+      "expected_sql": "SELECT id, customer_id, employee_id FROM sales;",
+      "memory_trick": "Three columns need two commas."
+    }
+  ],
+  "id": "L254",
+  "order": 254
+}

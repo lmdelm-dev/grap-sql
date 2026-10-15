@@ -1,0 +1,32 @@
+{
+  "title": "Grouping with tests and ranking in suppliers",
+  "tags": [
+    "group by",
+    "having",
+    "order by"
+  ],
+  "difficulty": 4,
+  "steps": [
+    {
+      "type": "type",
+      "title": "city with at least 1 rows",
+      "prompt": "HAVING can hold any test about the piles.\nHere we keep only piles with count(*) >= 1.",
+      "task": "Try typing: SELECT city, count(*) FROM suppliers GROUP BY city HAVING count(*) >= 1;",
+      "hints": [
+        "Start with SELECT city, count(*).",
+        "FROM suppliers GROUP BY city.",
+        "Add HAVING count(*) >= 1.",
+        "Write: SELECT city, count(*) FROM suppliers GROUP BY city HAVING count(*) >= 1;"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM suppliers GROUP BY city HAVING count(*) >= 1;",
+      "memory_trick": "HAVING = WHERE for piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    }
+  ],
+  "id": "L327",
+  "order": 327
+}

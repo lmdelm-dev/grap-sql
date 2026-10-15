@@ -1,0 +1,772 @@
+{
+  "title": "Ranges and NOT in sale_items · part 3",
+  "tags": [
+    "where",
+    "between"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id from 41 to 42",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 41 AND 42;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 41 AND 42;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 41 AND 42;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 41..42",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 41 AND 42);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 41 AND 42 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 41 AND 42);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 41 AND 42);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 42 to 43",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 42 AND 43;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 42 AND 43;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 42 AND 43;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 42..43",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 42 AND 43);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 42 AND 43 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 42 AND 43);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 42 AND 43);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 43 to 44",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 43 AND 44;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 43 AND 44;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 43 AND 44;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 43..44",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 43 AND 44);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 43 AND 44 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 43 AND 44);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 43 AND 44);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 44 to 45",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 44 AND 45;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 44 AND 45;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 44 AND 45;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 44..45",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 44 AND 45);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 44 AND 45 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 44 AND 45);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 44 AND 45);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 45 to 46",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 45 AND 46;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 45 AND 46;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 45 AND 46;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 45..46",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 45 AND 46);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 45 AND 46 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 45 AND 46);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 45 AND 46);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 46 to 47",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 46 AND 47;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 46 AND 47;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 46 AND 47;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 46..47",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 46 AND 47);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 46 AND 47 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 46 AND 47);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 46 AND 47);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 47 to 48",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 47 AND 48;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 47 AND 48;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 47 AND 48;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 47..48",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 47 AND 48);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 47 AND 48 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 47 AND 48);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 47 AND 48);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 48 to 49",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 48 AND 49;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 48 AND 49;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 48 AND 49;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 48..49",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 48 AND 49);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 48 AND 49 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 48 AND 49);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 48 AND 49);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 49 to 50",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 49 AND 50;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 49 AND 50;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 49 AND 50;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 49..50",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 49 AND 50);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 49 AND 50 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 49 AND 50);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 49 AND 50);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 50 to 51",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 50 AND 51;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 50 AND 51;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 50 AND 51;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 50..51",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 50 AND 51);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 50 AND 51 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 50 AND 51);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 50 AND 51);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 51 to 52",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 51 AND 52;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 51 AND 52;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 51 AND 52;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 51..52",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 51 AND 52);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 51 AND 52 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 51 AND 52);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 51 AND 52);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 52 to 53",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 52 AND 53;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 52 AND 53;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 52 AND 53;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 52..53",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 52 AND 53);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 52 AND 53 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 52 AND 53);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 52 AND 53);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 53 to 54",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 53 AND 54;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 53 AND 54;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 53 AND 54;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 53..54",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 53 AND 54);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 53 AND 54 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 53 AND 54);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 53 AND 54);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 54 to 55",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 54 AND 55;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 54 AND 55;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 54 AND 55;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 54..55",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 54 AND 55);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 54 AND 55 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 54 AND 55);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 54 AND 55);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 55 to 56",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 55 AND 56;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 55 AND 56;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 55 AND 56;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 55..56",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 55 AND 56);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 55 AND 56 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 55 AND 56);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 55 AND 56);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 56 to 57",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 56 AND 57;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 56 AND 57;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 56 AND 57;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 56..57",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 56 AND 57);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 56 AND 57 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 56 AND 57);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 56 AND 57);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 57 to 58",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 57 AND 58;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 57 AND 58;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 57 AND 58;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 57..58",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 57 AND 58);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 57 AND 58 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 57 AND 58);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 57 AND 58);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 58 to 59",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 58 AND 59;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 58 AND 59;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 58 AND 59;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 58..59",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 58 AND 59);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 58 AND 59 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 58 AND 59);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 58 AND 59);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 59 to 60",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id BETWEEN 59 AND 60;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE id BETWEEN 59 AND 60;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id BETWEEN 59 AND 60;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 59..60",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (id BETWEEN 59 AND 60);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 59 AND 60 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (id BETWEEN 59 AND 60);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (id BETWEEN 59 AND 60);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep sale_id from 1 to 2",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE sale_id BETWEEN 1 AND 2;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE sale_id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM sale_items WHERE sale_id BETWEEN 1 AND 2;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE sale_id BETWEEN 1 AND 2;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep sale_id outside 1..2",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE NOT (sale_id BETWEEN 1 AND 2);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( sale_id BETWEEN 1 AND 2 ).",
+        "Write: SELECT id FROM sale_items WHERE NOT (sale_id BETWEEN 1 AND 2);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE NOT (sale_id BETWEEN 1 AND 2);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L238",
+  "order": 238
+}

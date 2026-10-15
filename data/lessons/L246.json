@@ -1,0 +1,183 @@
+{
+  "title": "Pick from a list in sale_items",
+  "tags": [
+    "where",
+    "in"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep a short list of id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sale_items WHERE id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sale_items WHERE id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of sale_id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE sale_id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE sale_id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sale_items WHERE sale_id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE sale_id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep sale_id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE sale_id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE sale_id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sale_items WHERE sale_id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE sale_id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of product_id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sale_items WHERE product_id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep product_id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE product_id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE product_id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sale_items WHERE product_id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE product_id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of quantity",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sale_items WHERE quantity IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of unit_price",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price IN (21.39, 23.62, 25.22);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sale_items WHERE unit_price IN (21.39, 23.62, 25.22);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price IN (21.39, 23.62, 25.22);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price NOT IN (21.39, 23.62, 25.22, 30.73);",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sale_items WHERE unit_price NOT IN (21.39, 23.62, 25.22, 30.73);"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price NOT IN (21.39, 23.62, 25.22, 30.73);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L246",
+  "order": 246
+}

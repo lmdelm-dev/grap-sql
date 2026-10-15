@@ -1,0 +1,404 @@
+{
+  "title": "Counting and totals in products",
+  "tags": [
+    "aggregate",
+    "count"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "How many rows in products?",
+      "prompt": "COUNT(*) answers 'how many rows?' with one number.",
+      "task": "Try typing: SELECT count(*) FROM products;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM products.",
+        "Finish with a semicolon.",
+        "Write: SELECT count(*) FROM products;"
+      ],
+      "expected_sql": "SELECT count(*) FROM products;",
+      "memory_trick": "count(*) = 'how many rows?'"
+    },
+    {
+      "type": "type",
+      "title": "Count the id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(id) FROM products;",
+      "hints": [
+        "Start with SELECT count(id).",
+        "FROM products.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(id) FROM products;"
+      ],
+      "expected_sql": "SELECT count(id) FROM products;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the name values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(name) FROM products;",
+      "hints": [
+        "Start with SELECT count(name).",
+        "FROM products.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(name) FROM products;"
+      ],
+      "expected_sql": "SELECT count(name) FROM products;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the category_id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(category_id) FROM products;",
+      "hints": [
+        "Start with SELECT count(category_id).",
+        "FROM products.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(category_id) FROM products;"
+      ],
+      "expected_sql": "SELECT count(category_id) FROM products;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the supplier_id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(supplier_id) FROM products;",
+      "hints": [
+        "Start with SELECT count(supplier_id).",
+        "FROM products.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(supplier_id) FROM products;"
+      ],
+      "expected_sql": "SELECT count(supplier_id) FROM products;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the price values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(price) FROM products;",
+      "hints": [
+        "Start with SELECT count(price).",
+        "FROM products.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(price) FROM products;"
+      ],
+      "expected_sql": "SELECT count(price) FROM products;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the stock values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(stock) FROM products;",
+      "hints": [
+        "Start with SELECT count(stock).",
+        "FROM products.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(stock) FROM products;"
+      ],
+      "expected_sql": "SELECT count(stock) FROM products;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the created_at values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(created_at) FROM products;",
+      "hints": [
+        "Start with SELECT count(created_at).",
+        "FROM products.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(created_at) FROM products;"
+      ],
+      "expected_sql": "SELECT count(created_at) FROM products;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "SUM of id",
+      "prompt": "SUM id: add up the values.",
+      "task": "Try typing: SELECT sum(id) FROM products;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM products.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(id) FROM products;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM products;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of id",
+      "prompt": "AVG id: work out the average.",
+      "task": "Try typing: SELECT avg(id) FROM products;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM products.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(id) FROM products;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM products;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of id",
+      "prompt": "MIN id: find the smallest value.",
+      "task": "Try typing: SELECT min(id) FROM products;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM products.",
+        "MIN works on numbers.",
+        "Write: SELECT min(id) FROM products;"
+      ],
+      "expected_sql": "SELECT min(id) FROM products;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of id",
+      "prompt": "MAX id: find the biggest value.",
+      "task": "Try typing: SELECT max(id) FROM products;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM products.",
+        "MAX works on numbers.",
+        "Write: SELECT max(id) FROM products;"
+      ],
+      "expected_sql": "SELECT max(id) FROM products;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of category_id",
+      "prompt": "SUM category_id: add up the values.",
+      "task": "Try typing: SELECT sum(category_id) FROM products;",
+      "hints": [
+        "Start with SELECT sum(category_id).",
+        "FROM products.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(category_id) FROM products;"
+      ],
+      "expected_sql": "SELECT sum(category_id) FROM products;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of category_id",
+      "prompt": "AVG category_id: work out the average.",
+      "task": "Try typing: SELECT avg(category_id) FROM products;",
+      "hints": [
+        "Start with SELECT avg(category_id).",
+        "FROM products.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(category_id) FROM products;"
+      ],
+      "expected_sql": "SELECT avg(category_id) FROM products;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of category_id",
+      "prompt": "MIN category_id: find the smallest value.",
+      "task": "Try typing: SELECT min(category_id) FROM products;",
+      "hints": [
+        "Start with SELECT min(category_id).",
+        "FROM products.",
+        "MIN works on numbers.",
+        "Write: SELECT min(category_id) FROM products;"
+      ],
+      "expected_sql": "SELECT min(category_id) FROM products;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of category_id",
+      "prompt": "MAX category_id: find the biggest value.",
+      "task": "Try typing: SELECT max(category_id) FROM products;",
+      "hints": [
+        "Start with SELECT max(category_id).",
+        "FROM products.",
+        "MAX works on numbers.",
+        "Write: SELECT max(category_id) FROM products;"
+      ],
+      "expected_sql": "SELECT max(category_id) FROM products;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of supplier_id",
+      "prompt": "SUM supplier_id: add up the values.",
+      "task": "Try typing: SELECT sum(supplier_id) FROM products;",
+      "hints": [
+        "Start with SELECT sum(supplier_id).",
+        "FROM products.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(supplier_id) FROM products;"
+      ],
+      "expected_sql": "SELECT sum(supplier_id) FROM products;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of supplier_id",
+      "prompt": "AVG supplier_id: work out the average.",
+      "task": "Try typing: SELECT avg(supplier_id) FROM products;",
+      "hints": [
+        "Start with SELECT avg(supplier_id).",
+        "FROM products.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(supplier_id) FROM products;"
+      ],
+      "expected_sql": "SELECT avg(supplier_id) FROM products;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of supplier_id",
+      "prompt": "MIN supplier_id: find the smallest value.",
+      "task": "Try typing: SELECT min(supplier_id) FROM products;",
+      "hints": [
+        "Start with SELECT min(supplier_id).",
+        "FROM products.",
+        "MIN works on numbers.",
+        "Write: SELECT min(supplier_id) FROM products;"
+      ],
+      "expected_sql": "SELECT min(supplier_id) FROM products;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of supplier_id",
+      "prompt": "MAX supplier_id: find the biggest value.",
+      "task": "Try typing: SELECT max(supplier_id) FROM products;",
+      "hints": [
+        "Start with SELECT max(supplier_id).",
+        "FROM products.",
+        "MAX works on numbers.",
+        "Write: SELECT max(supplier_id) FROM products;"
+      ],
+      "expected_sql": "SELECT max(supplier_id) FROM products;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of price",
+      "prompt": "SUM price: add up the values.",
+      "task": "Try typing: SELECT sum(price) FROM products;",
+      "hints": [
+        "Start with SELECT sum(price).",
+        "FROM products.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(price) FROM products;"
+      ],
+      "expected_sql": "SELECT sum(price) FROM products;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of price",
+      "prompt": "AVG price: work out the average.",
+      "task": "Try typing: SELECT avg(price) FROM products;",
+      "hints": [
+        "Start with SELECT avg(price).",
+        "FROM products.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(price) FROM products;"
+      ],
+      "expected_sql": "SELECT avg(price) FROM products;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of price",
+      "prompt": "MIN price: find the smallest value.",
+      "task": "Try typing: SELECT min(price) FROM products;",
+      "hints": [
+        "Start with SELECT min(price).",
+        "FROM products.",
+        "MIN works on numbers.",
+        "Write: SELECT min(price) FROM products;"
+      ],
+      "expected_sql": "SELECT min(price) FROM products;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of price",
+      "prompt": "MAX price: find the biggest value.",
+      "task": "Try typing: SELECT max(price) FROM products;",
+      "hints": [
+        "Start with SELECT max(price).",
+        "FROM products.",
+        "MAX works on numbers.",
+        "Write: SELECT max(price) FROM products;"
+      ],
+      "expected_sql": "SELECT max(price) FROM products;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of stock",
+      "prompt": "SUM stock: add up the values.",
+      "task": "Try typing: SELECT sum(stock) FROM products;",
+      "hints": [
+        "Start with SELECT sum(stock).",
+        "FROM products.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(stock) FROM products;"
+      ],
+      "expected_sql": "SELECT sum(stock) FROM products;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of stock",
+      "prompt": "AVG stock: work out the average.",
+      "task": "Try typing: SELECT avg(stock) FROM products;",
+      "hints": [
+        "Start with SELECT avg(stock).",
+        "FROM products.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(stock) FROM products;"
+      ],
+      "expected_sql": "SELECT avg(stock) FROM products;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of stock",
+      "prompt": "MIN stock: find the smallest value.",
+      "task": "Try typing: SELECT min(stock) FROM products;",
+      "hints": [
+        "Start with SELECT min(stock).",
+        "FROM products.",
+        "MIN works on numbers.",
+        "Write: SELECT min(stock) FROM products;"
+      ],
+      "expected_sql": "SELECT min(stock) FROM products;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of stock",
+      "prompt": "MAX stock: find the biggest value.",
+      "task": "Try typing: SELECT max(stock) FROM products;",
+      "hints": [
+        "Start with SELECT max(stock).",
+        "FROM products.",
+        "MAX works on numbers.",
+        "Write: SELECT max(stock) FROM products;"
+      ],
+      "expected_sql": "SELECT max(stock) FROM products;",
+      "memory_trick": "max = find the biggest value."
+    }
+  ],
+  "id": "L125",
+  "order": 125
+}

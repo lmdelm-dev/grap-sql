@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grap-sql"
+version = "1.0.0"
+description = "A calm, offline terminal that teaches SQL from zero."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Jamal Tiliouan" }]
+keywords = ["sql", "sqlite", "education", "learning", "offline", "qt"]
+classifiers = [
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Topic :: Education",
+    "Environment :: Win32 (MS Windows)",
+]
+dependencies = [
+    "PySide6>=6.6",
+    "sqlglot>=23.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0", "pytest-qt>=4.4"]
+build = ["pyinstaller>=6.0"]
+
+[tool.setuptools]
+packages = [
+    "sqlschool",
+    "sqlschool.db",
+    "sqlschool.engine",
+    "sqlschool.lessons",
+    "sqlschool.memory",
+    "sqlschool.ui",
+]

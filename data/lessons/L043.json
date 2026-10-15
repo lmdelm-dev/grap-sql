@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the customers table by numbers · part 4",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id >= 11",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 11.",
+      "task": "Try typing: SELECT id FROM customers WHERE id >= 11;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id >= 11.",
+        "Write: SELECT id FROM customers WHERE id >= 11;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id >= 11;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 11",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id >= 11;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id >= 11.",
+        "Write: SELECT count(*) FROM customers WHERE id >= 11;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id >= 11;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 11",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 11.",
+      "task": "Try typing: SELECT id FROM customers WHERE id < 11;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id < 11.",
+        "Write: SELECT id FROM customers WHERE id < 11;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id < 11;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 11",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id < 11;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id < 11.",
+        "Write: SELECT count(*) FROM customers WHERE id < 11;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id < 11;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 11",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 11.",
+      "task": "Try typing: SELECT id FROM customers WHERE id <= 11;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id <= 11.",
+        "Write: SELECT id FROM customers WHERE id <= 11;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id <= 11;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 11",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id <= 11;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id <= 11.",
+        "Write: SELECT count(*) FROM customers WHERE id <= 11;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id <= 11;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 11",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 11.",
+      "task": "Try typing: SELECT id FROM customers WHERE id = 11;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id = 11.",
+        "Write: SELECT id FROM customers WHERE id = 11;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id = 11;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 11",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id = 11;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id = 11.",
+        "Write: SELECT count(*) FROM customers WHERE id = 11;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id = 11;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 11",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 11.",
+      "task": "Try typing: SELECT id FROM customers WHERE id != 11;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id != 11.",
+        "Write: SELECT id FROM customers WHERE id != 11;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id != 11;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 11",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id != 11;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id != 11.",
+        "Write: SELECT count(*) FROM customers WHERE id != 11;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id != 11;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 12",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 12.",
+      "task": "Try typing: SELECT id FROM customers WHERE id > 12;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id > 12.",
+        "Write: SELECT id FROM customers WHERE id > 12;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id > 12;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 12",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id > 12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id > 12.",
+        "Write: SELECT count(*) FROM customers WHERE id > 12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id > 12;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 12",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 12.",
+      "task": "Try typing: SELECT id FROM customers WHERE id >= 12;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id >= 12.",
+        "Write: SELECT id FROM customers WHERE id >= 12;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id >= 12;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 12",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id >= 12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id >= 12.",
+        "Write: SELECT count(*) FROM customers WHERE id >= 12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id >= 12;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 12",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 12.",
+      "task": "Try typing: SELECT id FROM customers WHERE id < 12;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id < 12.",
+        "Write: SELECT id FROM customers WHERE id < 12;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id < 12;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 12",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id < 12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id < 12.",
+        "Write: SELECT count(*) FROM customers WHERE id < 12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id < 12;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 12",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 12.",
+      "task": "Try typing: SELECT id FROM customers WHERE id <= 12;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id <= 12.",
+        "Write: SELECT id FROM customers WHERE id <= 12;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id <= 12;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 12",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id <= 12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id <= 12.",
+        "Write: SELECT count(*) FROM customers WHERE id <= 12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id <= 12;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 12",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 12.",
+      "task": "Try typing: SELECT id FROM customers WHERE id = 12;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id = 12.",
+        "Write: SELECT id FROM customers WHERE id = 12;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id = 12;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 12",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id = 12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id = 12.",
+        "Write: SELECT count(*) FROM customers WHERE id = 12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id = 12;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 12",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 12.",
+      "task": "Try typing: SELECT id FROM customers WHERE id != 12;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id != 12.",
+        "Write: SELECT id FROM customers WHERE id != 12;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id != 12;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 12",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id != 12;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id != 12.",
+        "Write: SELECT count(*) FROM customers WHERE id != 12;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id != 12;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 13",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 13.",
+      "task": "Try typing: SELECT id FROM customers WHERE id > 13;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id > 13.",
+        "Write: SELECT id FROM customers WHERE id > 13;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id > 13;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 13",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id > 13;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id > 13.",
+        "Write: SELECT count(*) FROM customers WHERE id > 13;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id > 13;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 13",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 13.",
+      "task": "Try typing: SELECT id FROM customers WHERE id >= 13;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id >= 13.",
+        "Write: SELECT id FROM customers WHERE id >= 13;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id >= 13;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 13",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id >= 13;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id >= 13.",
+        "Write: SELECT count(*) FROM customers WHERE id >= 13;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id >= 13;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 13",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 13.",
+      "task": "Try typing: SELECT id FROM customers WHERE id < 13;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id < 13.",
+        "Write: SELECT id FROM customers WHERE id < 13;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id < 13;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 13",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id < 13;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id < 13.",
+        "Write: SELECT count(*) FROM customers WHERE id < 13;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id < 13;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 13",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 13.",
+      "task": "Try typing: SELECT id FROM customers WHERE id <= 13;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id <= 13.",
+        "Write: SELECT id FROM customers WHERE id <= 13;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id <= 13;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 13",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id <= 13;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id <= 13.",
+        "Write: SELECT count(*) FROM customers WHERE id <= 13;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id <= 13;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 13",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 13.",
+      "task": "Try typing: SELECT id FROM customers WHERE id = 13;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id = 13.",
+        "Write: SELECT id FROM customers WHERE id = 13;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id = 13;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 13",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id = 13;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id = 13.",
+        "Write: SELECT count(*) FROM customers WHERE id = 13;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id = 13;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 13",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 13.",
+      "task": "Try typing: SELECT id FROM customers WHERE id != 13;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id != 13.",
+        "Write: SELECT id FROM customers WHERE id != 13;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id != 13;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 13",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id != 13;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id != 13.",
+        "Write: SELECT count(*) FROM customers WHERE id != 13;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id != 13;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 14",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 14.",
+      "task": "Try typing: SELECT id FROM customers WHERE id > 14;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id > 14.",
+        "Write: SELECT id FROM customers WHERE id > 14;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id > 14;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 14",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id > 14;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id > 14.",
+        "Write: SELECT count(*) FROM customers WHERE id > 14;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id > 14;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 14",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 14.",
+      "task": "Try typing: SELECT id FROM customers WHERE id >= 14;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id >= 14.",
+        "Write: SELECT id FROM customers WHERE id >= 14;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id >= 14;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 14",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id >= 14;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id >= 14.",
+        "Write: SELECT count(*) FROM customers WHERE id >= 14;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id >= 14;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 14",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 14.",
+      "task": "Try typing: SELECT id FROM customers WHERE id < 14;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE after the table name.",
+        "The test is id < 14.",
+        "Write: SELECT id FROM customers WHERE id < 14;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id < 14;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 14",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM customers WHERE id < 14;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Add WHERE id < 14.",
+        "Write: SELECT count(*) FROM customers WHERE id < 14;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers WHERE id < 14;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L043",
+  "order": 43
+}

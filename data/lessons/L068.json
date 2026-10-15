@@ -1,0 +1,208 @@
+{
+  "title": "Counting and totals in employees",
+  "tags": [
+    "aggregate",
+    "count"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "How many rows in employees?",
+      "prompt": "COUNT(*) answers 'how many rows?' with one number.",
+      "task": "Try typing: SELECT count(*) FROM employees;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM employees.",
+        "Finish with a semicolon.",
+        "Write: SELECT count(*) FROM employees;"
+      ],
+      "expected_sql": "SELECT count(*) FROM employees;",
+      "memory_trick": "count(*) = 'how many rows?'"
+    },
+    {
+      "type": "type",
+      "title": "Count the id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(id) FROM employees;",
+      "hints": [
+        "Start with SELECT count(id).",
+        "FROM employees.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(id) FROM employees;"
+      ],
+      "expected_sql": "SELECT count(id) FROM employees;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the name values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(name) FROM employees;",
+      "hints": [
+        "Start with SELECT count(name).",
+        "FROM employees.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(name) FROM employees;"
+      ],
+      "expected_sql": "SELECT count(name) FROM employees;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the role values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(role) FROM employees;",
+      "hints": [
+        "Start with SELECT count(role).",
+        "FROM employees.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(role) FROM employees;"
+      ],
+      "expected_sql": "SELECT count(role) FROM employees;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the hire_date values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(hire_date) FROM employees;",
+      "hints": [
+        "Start with SELECT count(hire_date).",
+        "FROM employees.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(hire_date) FROM employees;"
+      ],
+      "expected_sql": "SELECT count(hire_date) FROM employees;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the salary values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(salary) FROM employees;",
+      "hints": [
+        "Start with SELECT count(salary).",
+        "FROM employees.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(salary) FROM employees;"
+      ],
+      "expected_sql": "SELECT count(salary) FROM employees;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "SUM of id",
+      "prompt": "SUM id: add up the values.",
+      "task": "Try typing: SELECT sum(id) FROM employees;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM employees.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(id) FROM employees;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM employees;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of id",
+      "prompt": "AVG id: work out the average.",
+      "task": "Try typing: SELECT avg(id) FROM employees;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM employees.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(id) FROM employees;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM employees;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of id",
+      "prompt": "MIN id: find the smallest value.",
+      "task": "Try typing: SELECT min(id) FROM employees;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM employees.",
+        "MIN works on numbers.",
+        "Write: SELECT min(id) FROM employees;"
+      ],
+      "expected_sql": "SELECT min(id) FROM employees;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of id",
+      "prompt": "MAX id: find the biggest value.",
+      "task": "Try typing: SELECT max(id) FROM employees;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM employees.",
+        "MAX works on numbers.",
+        "Write: SELECT max(id) FROM employees;"
+      ],
+      "expected_sql": "SELECT max(id) FROM employees;",
+      "memory_trick": "max = find the biggest value."
+    },
+    {
+      "type": "type",
+      "title": "SUM of salary",
+      "prompt": "SUM salary: add up the values.",
+      "task": "Try typing: SELECT sum(salary) FROM employees;",
+      "hints": [
+        "Start with SELECT sum(salary).",
+        "FROM employees.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(salary) FROM employees;"
+      ],
+      "expected_sql": "SELECT sum(salary) FROM employees;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of salary",
+      "prompt": "AVG salary: work out the average.",
+      "task": "Try typing: SELECT avg(salary) FROM employees;",
+      "hints": [
+        "Start with SELECT avg(salary).",
+        "FROM employees.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(salary) FROM employees;"
+      ],
+      "expected_sql": "SELECT avg(salary) FROM employees;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of salary",
+      "prompt": "MIN salary: find the smallest value.",
+      "task": "Try typing: SELECT min(salary) FROM employees;",
+      "hints": [
+        "Start with SELECT min(salary).",
+        "FROM employees.",
+        "MIN works on numbers.",
+        "Write: SELECT min(salary) FROM employees;"
+      ],
+      "expected_sql": "SELECT min(salary) FROM employees;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of salary",
+      "prompt": "MAX salary: find the biggest value.",
+      "task": "Try typing: SELECT max(salary) FROM employees;",
+      "hints": [
+        "Start with SELECT max(salary).",
+        "FROM employees.",
+        "MAX works on numbers.",
+        "Write: SELECT max(salary) FROM employees;"
+      ],
+      "expected_sql": "SELECT max(salary) FROM employees;",
+      "memory_trick": "max = find the biggest value."
+    }
+  ],
+  "id": "L068",
+  "order": 68
+}

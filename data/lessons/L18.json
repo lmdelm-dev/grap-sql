@@ -1,0 +1,62 @@
+{
+  "id": "L18",
+  "order": 18,
+  "difficulty": 5,
+  "tags": [
+    "window",
+    "rank"
+  ],
+  "title": "Window functions: ranking without losing the rows",
+  "steps": [
+    {
+      "type": "type",
+      "title": "ROW_NUMBER over a window",
+      "prompt": "So far every row kept its own facts. A window function looks at a WINDOW of rows around each row and computes with them - like a medal table.\nROW_NUMBER() OVER (ORDER BY price DESC) numbers rows from the most expensive down.",
+      "task": "Try typing: SELECT name, price, ROW_NUMBER() OVER (ORDER BY price DESC) AS pos FROM products LIMIT 5;",
+      "hints": [
+        "Pick name, price, and the ranking column.",
+        "ROW_NUMBER() OVER (ORDER BY price DESC).",
+        "Alias the ranking AS pos.",
+        "Finish with LIMIT 5."
+      ],
+      "expected_sql": "SELECT name, price, ROW_NUMBER() OVER (ORDER BY price DESC) AS pos FROM products LIMIT 5;",
+      "memory_trick": "OVER = 'window over these sorted rows'."
+    },
+    {
+      "type": "fill",
+      "title": "Fill the function with the sharers",
+      "prompt": "RANK() is smarter than ROW_NUMBER(): equal prices share a rank, then it skips the gap.\nFill the blank:\nSELECT name, price, ___() OVER (ORDER BY price DESC) AS r FROM products LIMIT 5;",
+      "task": "Fill the blank with the sharing-rank function.",
+      "hints": [
+        "ROW_NUMBER never shares - this one does.",
+        "It's four letters.",
+        "Row_number → the friendlier cousin.",
+        "Fill: RANK"
+      ],
+      "expected_sql": "SELECT name, price, RANK() OVER (ORDER BY price DESC) AS r FROM products LIMIT 5;",
+      "seed_sql": "SELECT name, price, ___() OVER (ORDER BY price DESC) AS r FROM products LIMIT 5;",
+      "memory_trick": "RANK shares ties; ROW_NUMBER breaks them arbitrarily."
+    },
+    {
+      "type": "answer",
+      "title": "Why 'window'?",
+      "prompt": "There's a third famous one: DENSE_RANK() - ties share, and numbering never skips.\nThese are called WINDOW functions because each row looks at the window of rows around it (sorted), not just itself.",
+      "task": "What sorts the window in the OVER clause?",
+      "check": {
+        "answer": [
+          "order by",
+          "over (order by …)",
+          "the order by clause",
+          "order by price desc"
+        ]
+      },
+      "hints": [
+        "Look inside the OVER brackets.",
+        "The window slides across sorted rows.",
+        "The sorting words start with 'Order'.",
+        "Answer: ORDER BY."
+      ],
+      "memory_trick": "OVER (ORDER BY …) = slide across this order."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "title": "Counting and totals in customers",
+  "tags": [
+    "aggregate",
+    "count"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "How many rows in customers?",
+      "prompt": "COUNT(*) answers 'how many rows?' with one number.",
+      "task": "Try typing: SELECT count(*) FROM customers;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM customers.",
+        "Finish with a semicolon.",
+        "Write: SELECT count(*) FROM customers;"
+      ],
+      "expected_sql": "SELECT count(*) FROM customers;",
+      "memory_trick": "count(*) = 'how many rows?'"
+    },
+    {
+      "type": "type",
+      "title": "Count the id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(id) FROM customers;",
+      "hints": [
+        "Start with SELECT count(id).",
+        "FROM customers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(id) FROM customers;"
+      ],
+      "expected_sql": "SELECT count(id) FROM customers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the name values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(name) FROM customers;",
+      "hints": [
+        "Start with SELECT count(name).",
+        "FROM customers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(name) FROM customers;"
+      ],
+      "expected_sql": "SELECT count(name) FROM customers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the email values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(email) FROM customers;",
+      "hints": [
+        "Start with SELECT count(email).",
+        "FROM customers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(email) FROM customers;"
+      ],
+      "expected_sql": "SELECT count(email) FROM customers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the city values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(city) FROM customers;",
+      "hints": [
+        "Start with SELECT count(city).",
+        "FROM customers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(city) FROM customers;"
+      ],
+      "expected_sql": "SELECT count(city) FROM customers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the created_at values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(created_at) FROM customers;",
+      "hints": [
+        "Start with SELECT count(created_at).",
+        "FROM customers.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(created_at) FROM customers;"
+      ],
+      "expected_sql": "SELECT count(created_at) FROM customers;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "SUM of id",
+      "prompt": "SUM id: add up the values.",
+      "task": "Try typing: SELECT sum(id) FROM customers;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM customers.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(id) FROM customers;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM customers;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of id",
+      "prompt": "AVG id: work out the average.",
+      "task": "Try typing: SELECT avg(id) FROM customers;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM customers.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(id) FROM customers;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM customers;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of id",
+      "prompt": "MIN id: find the smallest value.",
+      "task": "Try typing: SELECT min(id) FROM customers;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM customers.",
+        "MIN works on numbers.",
+        "Write: SELECT min(id) FROM customers;"
+      ],
+      "expected_sql": "SELECT min(id) FROM customers;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of id",
+      "prompt": "MAX id: find the biggest value.",
+      "task": "Try typing: SELECT max(id) FROM customers;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM customers.",
+        "MAX works on numbers.",
+        "Write: SELECT max(id) FROM customers;"
+      ],
+      "expected_sql": "SELECT max(id) FROM customers;",
+      "memory_trick": "max = find the biggest value."
+    }
+  ],
+  "id": "L050",
+  "order": 50
+}

@@ -1,0 +1,563 @@
+{
+  "title": "Grouping the customers table",
+  "tags": [
+    "group by",
+    "having"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, count(*).",
+        "FROM customers.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT name, sum(id) FROM customers GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, sum(id).",
+        "FROM customers.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, sum(id) FROM customers GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, sum(id) FROM customers GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT name, avg(id) FROM customers GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, avg(id).",
+        "FROM customers.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, avg(id) FROM customers GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, avg(id) FROM customers GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Brahim Belkadi)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Brahim Belkadi';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Brahim Belkadi'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Brahim Belkadi';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Brahim Belkadi';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Fatima Bennani)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Bennani';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Fatima Bennani'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Bennani';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Bennani';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Fatima Berrada)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Berrada';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Fatima Berrada'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Berrada';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Berrada';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Fatima Fassi)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Fassi';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Fatima Fassi'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Fassi';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Fassi';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Fatima Mansouri)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Mansouri';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Fatima Mansouri'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Mansouri';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Fatima Mansouri';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Hassan Bennani)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Hassan Bennani';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Hassan Bennani'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Hassan Bennani';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Hassan Bennani';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Hassan Lahlou)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Hassan Lahlou';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Hassan Lahlou'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Hassan Lahlou';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Hassan Lahlou';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Karim Chraibi)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Karim Chraibi';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Karim Chraibi'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Karim Chraibi';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Karim Chraibi';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Khadija Bennani)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Khadija Bennani';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Khadija Bennani'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Khadija Bennani';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Khadija Bennani';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Khadija Sabri)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Khadija Sabri';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Khadija Sabri'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Khadija Sabri';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Khadija Sabri';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Leila Bennani)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Leila Bennani';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Leila Bennani'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Leila Bennani';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Leila Bennani';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Leila Chraibi)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Leila Chraibi';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Leila Chraibi'.",
+        "Write: SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Leila Chraibi';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM customers GROUP BY name HAVING name = 'Leila Chraibi';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT per city",
+      "prompt": "GROUP BY bundles rows into piles that share the same city.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city;",
+      "hints": [
+        "Start with SELECT city, count(*).",
+        "FROM customers.",
+        "Finish with GROUP BY city.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city;"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per city",
+      "prompt": "GROUP BY bundles rows into piles that share the same city.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT city, sum(id) FROM customers GROUP BY city;",
+      "hints": [
+        "Start with SELECT city, sum(id).",
+        "FROM customers.",
+        "Finish with GROUP BY city.",
+        "Write: SELECT city, sum(id) FROM customers GROUP BY city;"
+      ],
+      "expected_sql": "SELECT city, sum(id) FROM customers GROUP BY city;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per city",
+      "prompt": "GROUP BY bundles rows into piles that share the same city.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT city, avg(id) FROM customers GROUP BY city;",
+      "hints": [
+        "Start with SELECT city, avg(id).",
+        "FROM customers.",
+        "Finish with GROUP BY city.",
+        "Write: SELECT city, avg(id) FROM customers GROUP BY city;"
+      ],
+      "expected_sql": "SELECT city, avg(id) FROM customers GROUP BY city;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Agadir)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Agadir';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Agadir'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Agadir';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Agadir';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Casablanca)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Casablanca';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Casablanca'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Casablanca';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Casablanca';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (El Jadida)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'El Jadida';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'El Jadida'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'El Jadida';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'El Jadida';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Fes)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Fes';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Fes'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Fes';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Fes';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Kenitra)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Kenitra';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Kenitra'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Kenitra';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Kenitra';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Marrakech)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Marrakech';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Marrakech'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Marrakech';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Marrakech';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Meknes)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Meknes';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Meknes'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Meknes';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Meknes';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Rabat)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Rabat';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Rabat'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Rabat';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Rabat';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Safi)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Safi';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Safi'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Safi';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Safi';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Tangier)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Tangier';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Tangier'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Tangier';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Tangier';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Tetouan)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Tetouan';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Tetouan'.",
+        "Write: SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Tetouan';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM customers GROUP BY city HAVING city = 'Tetouan';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    }
+  ],
+  "id": "L051",
+  "order": 51
+}

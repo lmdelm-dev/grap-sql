@@ -1,0 +1,431 @@
+{
+  "title": "Combining tests with AND and OR in suppliers",
+  "tags": [
+    "where",
+    "and",
+    "or"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' AND id = 1;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' AND id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' AND id = 1;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' AND id = 2;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' AND id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' AND id = 2;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' AND id = 3;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' AND id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' AND id = 3;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' AND id = 4;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' AND id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' AND id = 4;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 5' AND id = 5;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 5' AND id = 5;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 5' AND id = 5;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by AND",
+      "prompt": "AND means BOTH tests must be true for a row to stay.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 6' AND id = 6;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with AND id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 6' AND id = 6;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 6' AND id = 6;",
+      "memory_trick": "AND = both; OR = either.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 1' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 2' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 3' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM suppliers.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM suppliers WHERE name = 'Atlas Supply 4' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L324",
+  "order": 324
+}

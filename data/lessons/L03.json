@@ -1,0 +1,92 @@
+{
+  "id": "L03",
+  "order": 3,
+  "difficulty": 1,
+  "tags": [
+    "select",
+    "columns",
+    "star"
+  ],
+  "title": "Choosing exactly the columns you want",
+  "steps": [
+    {
+      "type": "fill",
+      "title": "Fill in the missing word",
+      "prompt": "Here's a query with one blank. Ask for the PRICE column:\nSELECT ___ FROM products;\nReplace the ___ with the column's name.",
+      "task": "Fill the blank so the query shows prices.",
+      "hints": [
+        "The blank sits right after SELECT.",
+        "One word, starts with 'p'.",
+        "It's the prices of products.",
+        "Replace ___ with price."
+      ],
+      "expected_sql": "SELECT price FROM products;",
+      "seed_sql": "SELECT ___ FROM products;",
+      "memory_trick": "Whatever you write after SELECT is what you see."
+    },
+    {
+      "type": "type",
+      "title": "Three columns",
+      "prompt": "More columns, same idea - just keep adding commas.\nThis is called choosing a PROJECTION: you shine a light on only the columns you need.",
+      "task": "Try typing: SELECT name, price, stock FROM products;",
+      "hints": [
+        "Start from SELECT name, price …",
+        "The third column is stock.",
+        "Add a comma before the last one.",
+        "Write: SELECT name, price, stock FROM products;"
+      ],
+      "expected_sql": "SELECT name, price, stock FROM products;",
+      "memory_trick": "Three columns, two commas. Count them!"
+    },
+    {
+      "type": "fix",
+      "title": "Fix the broken query",
+      "prompt": "Someone typed this and the database complained:\nSELECT name price FROM products;\nCan you spot the missing thing? SQL needs it to know where one column ends and the next begins.",
+      "task": "Fix the query so it returns both name and price.",
+      "hints": [
+        "Read it aloud: 'SELECT name price' - that sounds joined together.",
+        "In a list, what marks the end of one item?",
+        "Name and price are two different columns of one list.",
+        "Add a comma between name and price."
+      ],
+      "expected_sql": "SELECT name, price FROM products;",
+      "seed_sql": "SELECT name price FROM products;",
+      "memory_trick": "Columns in a list are joined by commas, like items on a shopping list."
+    },
+    {
+      "type": "type",
+      "title": "The star shortcut",
+      "prompt": "Sometimes you do want every column. The * (star) is SQL's shortcut: 'all of them.'\nSELECT * means 'every column.' It's the lazy-but-handy choice.",
+      "task": "Try typing: SELECT * FROM products;",
+      "hints": [
+        "We want every column.",
+        "There's a one-character shortcut.",
+        "It's the star symbol on your keyboard.",
+        "Type: SELECT * FROM products;"
+      ],
+      "expected_sql": "SELECT * FROM products;",
+      "memory_trick": "* = the whole row, all columns."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the output",
+      "prompt": "What will SELECT * FROM customers; show you?\n(Look at the customers table before you answer.)",
+      "task": "How many columns does the result have?",
+      "check": {
+        "answer": [
+          "4",
+          "four",
+          "four columns",
+          "4 columns"
+        ]
+      },
+      "hints": [
+        "Run the query in the Output pane to peek - prediction is fair game.",
+        "Count the headings the table has.",
+        "name, email, city, and one more.",
+        "Answer: 4 columns."
+      ],
+      "memory_trick": "* gives you exactly the same columns as the table."
+    }
+  ]
+}

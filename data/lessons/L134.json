@@ -1,0 +1,317 @@
+{
+  "title": "Combining tests with AND and OR in products",
+  "tags": [
+    "where",
+    "and",
+    "or"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Amlou Spread 200g' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Butter 250g' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Oil Cosmetic 100ml' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 1;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 1;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 2;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 2;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 2;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 3;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 3;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 3;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Two tests joined by OR",
+      "prompt": "OR means a row stays when EITHER test is true.",
+      "task": "Try typing: SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 4;",
+      "hints": [
+        "Start with SELECT id FROM products.",
+        "Add WHERE name = …",
+        "Join with OR id = …",
+        "Write: SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 4;"
+      ],
+      "expected_sql": "SELECT id FROM products WHERE name = 'Argan Oil Culinary 500ml' OR id = 4;",
+      "memory_trick": "OR widens the net; AND narrows it.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L134",
+  "order": 134
+}

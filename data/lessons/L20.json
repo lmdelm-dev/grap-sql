@@ -1,0 +1,80 @@
+{
+  "id": "L20",
+  "order": 20,
+  "difficulty": 5,
+  "tags": [
+    "project",
+    "mix"
+  ],
+  "title": "Mini project: the shop's best-seller report",
+  "steps": [
+    {
+      "type": "type",
+      "title": "Report 1: the top 5 best-sellers",
+      "prompt": "Time to fly without a net. The boss wants the five best-selling products by quantity sold.\nYou'll need: a JOIN (products × sale_items), SUM(quantity), GROUP BY, ORDER BY, LIMIT.",
+      "task": "Try typing: SELECT p.name, sum(si.quantity) AS sold FROM products p JOIN sale_items si ON si.product_id = p.id GROUP BY p.name ORDER BY sold DESC LIMIT 5;",
+      "hints": [
+        "Join products p with sale_items si on product_id.",
+        "SUM(si.quantity) with alias sold.",
+        "GROUP BY p.name, then ORDER BY sold DESC.",
+        "LIMIT 5 finishes - the top row is Mini Tagine, 11 sold."
+      ],
+      "expected_sql": "SELECT p.name, sum(si.quantity) AS sold FROM products p JOIN sale_items si ON si.product_id = p.id GROUP BY p.name ORDER BY sold DESC LIMIT 5;",
+      "memory_trick": "Project recipe: JOIN → SUM → GROUP → ORDER → LIMIT."
+    },
+    {
+      "type": "type",
+      "title": "Report 2: customers knocking, no one home",
+      "prompt": "The boss wants to reward loyal customers and gently re-engage the quiet ones.\nFind every customer with zero sales. (LEFT JOIN • IS NULL)",
+      "task": "Try typing: SELECT c.name FROM customers c LEFT JOIN sales s ON s.customer_id = c.id WHERE s.id IS NULL ORDER BY c.name;",
+      "hints": [
+        "Customers go on the LEFT.",
+        "Match s.customer_id = c.id.",
+        "Keep s.id IS NULL - sales that never happened.",
+        "ORDER BY c.name makes the list tidy."
+      ],
+      "expected_sql": "SELECT c.name FROM customers c LEFT JOIN sales s ON s.customer_id = c.id WHERE s.id IS NULL ORDER BY c.name;",
+      "memory_trick": "LEFT JOIN + WHERE … IS NULL = 'the lonely ones'."
+    },
+    {
+      "type": "type",
+      "title": "Report 3: how much each category earns",
+      "prompt": "Finally - money per category. Sale items carry unit_price and quantity; their product knows its category. That's a two-hop JOIN.",
+      "task": "Try typing: SELECT c.name AS category, sum(si.unit_price * si.quantity) AS revenue FROM sale_items si JOIN products p ON p.id = si.product_id JOIN categories c ON c.id = p.category_id GROUP BY c.name ORDER BY revenue DESC;",
+      "hints": [
+        "Start from sale_items si.",
+        "Join p on p.id = si.product_id; join c on c.id = p.category_id.",
+        "Revenue = si.unit_price * si.quantity, summed.",
+        "Group by c.name, order by revenue DESC."
+      ],
+      "expected_sql": "SELECT c.name AS category, sum(si.unit_price * si.quantity) AS revenue FROM sale_items si JOIN products p ON p.id = si.product_id JOIN categories c ON c.id = p.category_id GROUP BY c.name ORDER BY revenue DESC;",
+      "memory_trick": "Multi-hop JOIN: sale → product → category.",
+      "check": {
+        "require": [
+          "join"
+        ]
+      }
+    },
+    {
+      "type": "answer",
+      "title": "Project debrief",
+      "prompt": "You just ran a real business report: best-sellers, quiet customers, and category revenue.\nEvery piece was built from small lessons: SELECT, JOIN, GROUP BY, ORDER BY, LIMIT.\nThat's the whole secret - big queries are just small queries glued with new words.",
+      "task": "Which building block did Report 1 use to rank products?",
+      "check": {
+        "answer": [
+          "order by",
+          "order by sold desc",
+          "order by",
+          "order by … desc"
+        ]
+      },
+      "hints": [
+        "Best-sellers = a ranking.",
+        "DESC puts the biggest on top.",
+        "The sort clause comes after GROUP BY.",
+        "Answer: ORDER BY."
+      ],
+      "memory_trick": "You're not memorising SQL - you're assembling it."
+    }
+  ]
+}

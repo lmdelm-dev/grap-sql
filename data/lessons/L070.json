@@ -1,0 +1,392 @@
+{
+  "title": "Ranges and NOT in employees",
+  "tags": [
+    "where",
+    "between"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id from 1 to 2",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE id BETWEEN 1 AND 2;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE id BETWEEN 1 AND 2;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id BETWEEN 1 AND 2;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 1..2",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (id BETWEEN 1 AND 2);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 1 AND 2 ).",
+        "Write: SELECT id FROM employees WHERE NOT (id BETWEEN 1 AND 2);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (id BETWEEN 1 AND 2);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 2 to 3",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE id BETWEEN 2 AND 3;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE id BETWEEN 2 AND 3;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id BETWEEN 2 AND 3;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 2..3",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (id BETWEEN 2 AND 3);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 2 AND 3 ).",
+        "Write: SELECT id FROM employees WHERE NOT (id BETWEEN 2 AND 3);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (id BETWEEN 2 AND 3);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 3 to 4",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE id BETWEEN 3 AND 4;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE id BETWEEN 3 AND 4;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id BETWEEN 3 AND 4;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 3..4",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (id BETWEEN 3 AND 4);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 3 AND 4 ).",
+        "Write: SELECT id FROM employees WHERE NOT (id BETWEEN 3 AND 4);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (id BETWEEN 3 AND 4);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 4 to 5",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE id BETWEEN 4 AND 5;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE id BETWEEN 4 AND 5;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id BETWEEN 4 AND 5;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 4..5",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (id BETWEEN 4 AND 5);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 4 AND 5 ).",
+        "Write: SELECT id FROM employees WHERE NOT (id BETWEEN 4 AND 5);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (id BETWEEN 4 AND 5);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 5 to 6",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE id BETWEEN 5 AND 6;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE id BETWEEN 5 AND 6;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id BETWEEN 5 AND 6;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 5..6",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (id BETWEEN 5 AND 6);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 5 AND 6 ).",
+        "Write: SELECT id FROM employees WHERE NOT (id BETWEEN 5 AND 6);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (id BETWEEN 5 AND 6);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary from 5200.0 to 5800.0",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary BETWEEN 5200.0 AND 5800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE salary BETWEEN 5200.0 AND 5800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary BETWEEN 5200.0 AND 5800.0;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary outside 5200.0..5800.0",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (salary BETWEEN 5200.0 AND 5800.0);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( salary BETWEEN 5200.0 AND 5800.0 ).",
+        "Write: SELECT id FROM employees WHERE NOT (salary BETWEEN 5200.0 AND 5800.0);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (salary BETWEEN 5200.0 AND 5800.0);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary from 5800.0 to 6500.0",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary BETWEEN 5800.0 AND 6500.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE salary BETWEEN 5800.0 AND 6500.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary BETWEEN 5800.0 AND 6500.0;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary outside 5800.0..6500.0",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (salary BETWEEN 5800.0 AND 6500.0);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( salary BETWEEN 5800.0 AND 6500.0 ).",
+        "Write: SELECT id FROM employees WHERE NOT (salary BETWEEN 5800.0 AND 6500.0);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (salary BETWEEN 5800.0 AND 6500.0);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary from 6500.0 to 6800.0",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary BETWEEN 6500.0 AND 6800.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE salary BETWEEN 6500.0 AND 6800.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary BETWEEN 6500.0 AND 6800.0;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary outside 6500.0..6800.0",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (salary BETWEEN 6500.0 AND 6800.0);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( salary BETWEEN 6500.0 AND 6800.0 ).",
+        "Write: SELECT id FROM employees WHERE NOT (salary BETWEEN 6500.0 AND 6800.0);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (salary BETWEEN 6500.0 AND 6800.0);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary from 6800.0 to 7200.0",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary BETWEEN 6800.0 AND 7200.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE salary BETWEEN 6800.0 AND 7200.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary BETWEEN 6800.0 AND 7200.0;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary outside 6800.0..7200.0",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (salary BETWEEN 6800.0 AND 7200.0);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( salary BETWEEN 6800.0 AND 7200.0 ).",
+        "Write: SELECT id FROM employees WHERE NOT (salary BETWEEN 6800.0 AND 7200.0);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (salary BETWEEN 6800.0 AND 7200.0);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary from 7200.0 to 14500.0",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary BETWEEN 7200.0 AND 14500.0;",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM employees WHERE salary BETWEEN 7200.0 AND 14500.0;"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary BETWEEN 7200.0 AND 14500.0;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary outside 7200.0..14500.0",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM employees WHERE NOT (salary BETWEEN 7200.0 AND 14500.0);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( salary BETWEEN 7200.0 AND 14500.0 ).",
+        "Write: SELECT id FROM employees WHERE NOT (salary BETWEEN 7200.0 AND 14500.0);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE NOT (salary BETWEEN 7200.0 AND 14500.0);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L070",
+  "order": 70
+}

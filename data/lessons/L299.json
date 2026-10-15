@@ -1,0 +1,582 @@
+{
+  "title": "Grouping the sales table",
+  "tags": [
+    "group by",
+    "having"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT per customer_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same customer_id.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id;",
+      "hints": [
+        "Start with SELECT customer_id, count(*).",
+        "FROM sales.",
+        "Finish with GROUP BY customer_id.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per customer_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same customer_id.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT customer_id, sum(id) FROM sales GROUP BY customer_id;",
+      "hints": [
+        "Start with SELECT customer_id, sum(id).",
+        "FROM sales.",
+        "Finish with GROUP BY customer_id.",
+        "Write: SELECT customer_id, sum(id) FROM sales GROUP BY customer_id;"
+      ],
+      "expected_sql": "SELECT customer_id, sum(id) FROM sales GROUP BY customer_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per customer_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same customer_id.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT customer_id, avg(id) FROM sales GROUP BY customer_id;",
+      "hints": [
+        "Start with SELECT customer_id, avg(id).",
+        "FROM sales.",
+        "Finish with GROUP BY customer_id.",
+        "Write: SELECT customer_id, avg(id) FROM sales GROUP BY customer_id;"
+      ],
+      "expected_sql": "SELECT customer_id, avg(id) FROM sales GROUP BY customer_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per customer_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same customer_id.\nThen sum(customer_id) works on each pile.",
+      "task": "Try typing: SELECT customer_id, sum(customer_id) FROM sales GROUP BY customer_id;",
+      "hints": [
+        "Start with SELECT customer_id, sum(customer_id).",
+        "FROM sales.",
+        "Finish with GROUP BY customer_id.",
+        "Write: SELECT customer_id, sum(customer_id) FROM sales GROUP BY customer_id;"
+      ],
+      "expected_sql": "SELECT customer_id, sum(customer_id) FROM sales GROUP BY customer_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per customer_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same customer_id.\nThen avg(customer_id) works on each pile.",
+      "task": "Try typing: SELECT customer_id, avg(customer_id) FROM sales GROUP BY customer_id;",
+      "hints": [
+        "Start with SELECT customer_id, avg(customer_id).",
+        "FROM sales.",
+        "Finish with GROUP BY customer_id.",
+        "Write: SELECT customer_id, avg(customer_id) FROM sales GROUP BY customer_id;"
+      ],
+      "expected_sql": "SELECT customer_id, avg(customer_id) FROM sales GROUP BY customer_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per customer_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same customer_id.\nThen sum(employee_id) works on each pile.",
+      "task": "Try typing: SELECT customer_id, sum(employee_id) FROM sales GROUP BY customer_id;",
+      "hints": [
+        "Start with SELECT customer_id, sum(employee_id).",
+        "FROM sales.",
+        "Finish with GROUP BY customer_id.",
+        "Write: SELECT customer_id, sum(employee_id) FROM sales GROUP BY customer_id;"
+      ],
+      "expected_sql": "SELECT customer_id, sum(employee_id) FROM sales GROUP BY customer_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per customer_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same customer_id.\nThen avg(employee_id) works on each pile.",
+      "task": "Try typing: SELECT customer_id, avg(employee_id) FROM sales GROUP BY customer_id;",
+      "hints": [
+        "Start with SELECT customer_id, avg(employee_id).",
+        "FROM sales.",
+        "Finish with GROUP BY customer_id.",
+        "Write: SELECT customer_id, avg(employee_id) FROM sales GROUP BY customer_id;"
+      ],
+      "expected_sql": "SELECT customer_id, avg(employee_id) FROM sales GROUP BY customer_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (1)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 1;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 1.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 1;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 1;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (2)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 2;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 2.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 2;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 2;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (3)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 3;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 3.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 3;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 3;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (4)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 4;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 4.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 4;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 4;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (5)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 5;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 5.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 5;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 5;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (6)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 6;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 6.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 6;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 6;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (7)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 7;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 7.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 7;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 7;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (8)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 8;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 8.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 8;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 8;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (9)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 9;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 9.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 9;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 9;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the customer_id pile (10)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 10;",
+      "hints": [
+        "Build the piles with GROUP BY customer_id.",
+        "Add HAVING to keep one pile.",
+        "The test is customer_id = 10.",
+        "Write: SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 10;"
+      ],
+      "expected_sql": "SELECT customer_id, count(*) FROM sales GROUP BY customer_id HAVING customer_id = 10;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT per employee_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same employee_id.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT employee_id, count(*) FROM sales GROUP BY employee_id;",
+      "hints": [
+        "Start with SELECT employee_id, count(*).",
+        "FROM sales.",
+        "Finish with GROUP BY employee_id.",
+        "Write: SELECT employee_id, count(*) FROM sales GROUP BY employee_id;"
+      ],
+      "expected_sql": "SELECT employee_id, count(*) FROM sales GROUP BY employee_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per employee_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same employee_id.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT employee_id, sum(id) FROM sales GROUP BY employee_id;",
+      "hints": [
+        "Start with SELECT employee_id, sum(id).",
+        "FROM sales.",
+        "Finish with GROUP BY employee_id.",
+        "Write: SELECT employee_id, sum(id) FROM sales GROUP BY employee_id;"
+      ],
+      "expected_sql": "SELECT employee_id, sum(id) FROM sales GROUP BY employee_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per employee_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same employee_id.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT employee_id, avg(id) FROM sales GROUP BY employee_id;",
+      "hints": [
+        "Start with SELECT employee_id, avg(id).",
+        "FROM sales.",
+        "Finish with GROUP BY employee_id.",
+        "Write: SELECT employee_id, avg(id) FROM sales GROUP BY employee_id;"
+      ],
+      "expected_sql": "SELECT employee_id, avg(id) FROM sales GROUP BY employee_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per employee_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same employee_id.\nThen sum(customer_id) works on each pile.",
+      "task": "Try typing: SELECT employee_id, sum(customer_id) FROM sales GROUP BY employee_id;",
+      "hints": [
+        "Start with SELECT employee_id, sum(customer_id).",
+        "FROM sales.",
+        "Finish with GROUP BY employee_id.",
+        "Write: SELECT employee_id, sum(customer_id) FROM sales GROUP BY employee_id;"
+      ],
+      "expected_sql": "SELECT employee_id, sum(customer_id) FROM sales GROUP BY employee_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per employee_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same employee_id.\nThen avg(customer_id) works on each pile.",
+      "task": "Try typing: SELECT employee_id, avg(customer_id) FROM sales GROUP BY employee_id;",
+      "hints": [
+        "Start with SELECT employee_id, avg(customer_id).",
+        "FROM sales.",
+        "Finish with GROUP BY employee_id.",
+        "Write: SELECT employee_id, avg(customer_id) FROM sales GROUP BY employee_id;"
+      ],
+      "expected_sql": "SELECT employee_id, avg(customer_id) FROM sales GROUP BY employee_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per employee_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same employee_id.\nThen sum(employee_id) works on each pile.",
+      "task": "Try typing: SELECT employee_id, sum(employee_id) FROM sales GROUP BY employee_id;",
+      "hints": [
+        "Start with SELECT employee_id, sum(employee_id).",
+        "FROM sales.",
+        "Finish with GROUP BY employee_id.",
+        "Write: SELECT employee_id, sum(employee_id) FROM sales GROUP BY employee_id;"
+      ],
+      "expected_sql": "SELECT employee_id, sum(employee_id) FROM sales GROUP BY employee_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per employee_id",
+      "prompt": "GROUP BY bundles rows into piles that share the same employee_id.\nThen avg(employee_id) works on each pile.",
+      "task": "Try typing: SELECT employee_id, avg(employee_id) FROM sales GROUP BY employee_id;",
+      "hints": [
+        "Start with SELECT employee_id, avg(employee_id).",
+        "FROM sales.",
+        "Finish with GROUP BY employee_id.",
+        "Write: SELECT employee_id, avg(employee_id) FROM sales GROUP BY employee_id;"
+      ],
+      "expected_sql": "SELECT employee_id, avg(employee_id) FROM sales GROUP BY employee_id;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the employee_id pile (1)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 1;",
+      "hints": [
+        "Build the piles with GROUP BY employee_id.",
+        "Add HAVING to keep one pile.",
+        "The test is employee_id = 1.",
+        "Write: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 1;"
+      ],
+      "expected_sql": "SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 1;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the employee_id pile (2)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 2;",
+      "hints": [
+        "Build the piles with GROUP BY employee_id.",
+        "Add HAVING to keep one pile.",
+        "The test is employee_id = 2.",
+        "Write: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 2;"
+      ],
+      "expected_sql": "SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 2;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the employee_id pile (3)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 3;",
+      "hints": [
+        "Build the piles with GROUP BY employee_id.",
+        "Add HAVING to keep one pile.",
+        "The test is employee_id = 3.",
+        "Write: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 3;"
+      ],
+      "expected_sql": "SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 3;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the employee_id pile (4)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 4;",
+      "hints": [
+        "Build the piles with GROUP BY employee_id.",
+        "Add HAVING to keep one pile.",
+        "The test is employee_id = 4.",
+        "Write: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 4;"
+      ],
+      "expected_sql": "SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 4;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the employee_id pile (5)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 5;",
+      "hints": [
+        "Build the piles with GROUP BY employee_id.",
+        "Add HAVING to keep one pile.",
+        "The test is employee_id = 5.",
+        "Write: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 5;"
+      ],
+      "expected_sql": "SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 5;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the employee_id pile (6)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 6;",
+      "hints": [
+        "Build the piles with GROUP BY employee_id.",
+        "Add HAVING to keep one pile.",
+        "The test is employee_id = 6.",
+        "Write: SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 6;"
+      ],
+      "expected_sql": "SELECT employee_id, count(*) FROM sales GROUP BY employee_id HAVING employee_id = 6;",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    }
+  ],
+  "id": "L299",
+  "order": 299
+}

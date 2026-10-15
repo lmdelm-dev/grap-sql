@@ -1,0 +1,620 @@
+{
+  "title": "Filtering the suppliers table by text",
+  "tags": [
+    "where",
+    "text"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep rows where name is Atlas Supply 1",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Atlas Supply 1'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name = 'Atlas Supply 1';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE name = 'Atlas Supply 1';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name = 'Atlas Supply 1';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Atl'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nAtl% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name LIKE 'Atl%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM suppliers WHERE name LIKE 'Atl%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name LIKE 'Atl%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'tla' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %tla% means 'contains'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name LIKE '%tla%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM suppliers WHERE name LIKE '%tla%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name LIKE '%tla%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Atlas Supply 2",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Atlas Supply 2'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name = 'Atlas Supply 2';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE name = 'Atlas Supply 2';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name = 'Atlas Supply 2';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Atlas Supply 3",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Atlas Supply 3'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name = 'Atlas Supply 3';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE name = 'Atlas Supply 3';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name = 'Atlas Supply 3';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Atlas Supply 4",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Atlas Supply 4'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name = 'Atlas Supply 4';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE name = 'Atlas Supply 4';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name = 'Atlas Supply 4';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Atlas Supply 5",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Atlas Supply 5'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name = 'Atlas Supply 5';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE name = 'Atlas Supply 5';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name = 'Atlas Supply 5';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Atlas Supply 6",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Atlas Supply 6'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name = 'Atlas Supply 6';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE name = 'Atlas Supply 6';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name = 'Atlas Supply 6';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Atlas Supply 7",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Atlas Supply 7'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name = 'Atlas Supply 7';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE name = 'Atlas Supply 7';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name = 'Atlas Supply 7';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where name is Atlas Supply 8",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Atlas Supply 8'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE name = 'Atlas Supply 8';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE name = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE name = 'Atlas Supply 8';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE name = 'Atlas Supply 8';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Kenitra",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Kenitra'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city = 'Kenitra';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE city = 'Kenitra';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city = 'Kenitra';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Ken'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nKen% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city LIKE 'Ken%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM suppliers WHERE city LIKE 'Ken%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city LIKE 'Ken%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'eni' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %eni% means 'contains'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city LIKE '%eni%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM suppliers WHERE city LIKE '%eni%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city LIKE '%eni%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Marrakech",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Marrakech'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city = 'Marrakech';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE city = 'Marrakech';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city = 'Marrakech';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Mar'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nMar% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city LIKE 'Mar%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM suppliers WHERE city LIKE 'Mar%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city LIKE 'Mar%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'arr' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %arr% means 'contains'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city LIKE '%arr%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM suppliers WHERE city LIKE '%arr%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city LIKE '%arr%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Tangier",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Tangier'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city = 'Tangier';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE city = 'Tangier';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city = 'Tangier';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tan'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTan% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city LIKE 'Tan%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM suppliers WHERE city LIKE 'Tan%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city LIKE 'Tan%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'ang' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %ang% means 'contains'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city LIKE '%ang%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM suppliers WHERE city LIKE '%ang%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city LIKE '%ang%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where city is Tetouan",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like 'Tetouan'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city = 'Tetouan';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE city = 'Tetouan';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city = 'Tetouan';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting 'Tet'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\nTet% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city LIKE 'Tet%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM suppliers WHERE city LIKE 'Tet%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city LIKE 'Tet%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for 'eto' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %eto% means 'contains'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE city LIKE '%eto%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE city LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM suppliers WHERE city LIKE '%eto%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE city LIKE '%eto%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where phone is +212 521 11 22 33",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '+212 521 11 22 33'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone = '+212 521 11 22 33';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE phone = '+212 521 11 22 33';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone = '+212 521 11 22 33';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for names starting '+21'",
+      "prompt": "LIKE searches by pattern using the % wildcard.\n+21% means 'starts with'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone LIKE '+21%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone LIKE …",
+        "The %% wildcard means 'anything after'.",
+        "Write: SELECT * FROM suppliers WHERE phone LIKE '+21%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone LIKE '+21%';",
+      "memory_trick": "%% = 'any characters here'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Search with LIKE for '212' anywhere",
+      "prompt": "Putting % on BOTH sides matches the text anywhere.\nThis %212% means 'contains'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone LIKE '%212%';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone LIKE …",
+        "Wrap the text in %% on both sides.",
+        "Write: SELECT * FROM suppliers WHERE phone LIKE '%212%';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone LIKE '%212%';",
+      "memory_trick": "%%word%% = 'found anywhere inside'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where phone is +212 522 11 22 33",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '+212 522 11 22 33'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone = '+212 522 11 22 33';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE phone = '+212 522 11 22 33';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone = '+212 522 11 22 33';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where phone is +212 523 11 22 33",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '+212 523 11 22 33'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone = '+212 523 11 22 33';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE phone = '+212 523 11 22 33';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone = '+212 523 11 22 33';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where phone is +212 524 11 22 33",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '+212 524 11 22 33'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone = '+212 524 11 22 33';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE phone = '+212 524 11 22 33';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone = '+212 524 11 22 33';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where phone is +212 525 11 22 33",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '+212 525 11 22 33'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone = '+212 525 11 22 33';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE phone = '+212 525 11 22 33';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone = '+212 525 11 22 33';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where phone is +212 526 11 22 33",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '+212 526 11 22 33'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone = '+212 526 11 22 33';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE phone = '+212 526 11 22 33';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone = '+212 526 11 22 33';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where phone is +212 527 11 22 33",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '+212 527 11 22 33'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone = '+212 527 11 22 33';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE phone = '+212 527 11 22 33';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone = '+212 527 11 22 33';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep rows where phone is +212 528 11 22 33",
+      "prompt": "WHERE is a sieve: only rows that pass the test stay.\nText values wear quotes, like '+212 528 11 22 33'.",
+      "task": "Try typing: SELECT * FROM suppliers WHERE phone = '+212 528 11 22 33';",
+      "hints": [
+        "Start with SELECT * FROM suppliers.",
+        "Add WHERE phone = …",
+        "Wrap the text value in single quotes.",
+        "Write: SELECT * FROM suppliers WHERE phone = '+212 528 11 22 33';"
+      ],
+      "expected_sql": "SELECT * FROM suppliers WHERE phone = '+212 528 11 22 33';",
+      "memory_trick": "Text in quotes, numbers bare.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L315",
+  "order": 315
+}

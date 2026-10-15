@@ -1,0 +1,202 @@
+{
+  "title": "Pick from a list in sales",
+  "tags": [
+    "where",
+    "in"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep a short list of id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sales WHERE id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sales WHERE id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sales WHERE id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sales WHERE id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of customer_id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sales WHERE customer_id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sales WHERE customer_id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of employee_id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE employee_id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sales WHERE employee_id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep employee_id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE employee_id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sales WHERE employee_id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of sale_date",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sales WHERE sale_date IN ('2025-01-12', '2025-01-27', '2025-02-03');",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE sale_date IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sales WHERE sale_date IN ('2025-01-12', '2025-01-27', '2025-02-03');"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE sale_date IN ('2025-01-12', '2025-01-27', '2025-02-03');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep sale_date NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sales WHERE sale_date NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE sale_date NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sales WHERE sale_date NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE sale_date NOT IN ('2025-01-12', '2025-01-27', '2025-02-03', '2025-02-18');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of total",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM sales WHERE total IN (47.24, 75.66, 88.15);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM sales WHERE total IN (47.24, 75.66, 88.15);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total IN (47.24, 75.66, 88.15);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep total NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM sales WHERE total NOT IN (47.24, 75.66, 88.15, 99.7);",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE total NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM sales WHERE total NOT IN (47.24, 75.66, 88.15, 99.7);"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE total NOT IN (47.24, 75.66, 88.15, 99.7);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L306",
+  "order": 306
+}

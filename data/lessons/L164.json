@@ -1,0 +1,772 @@
+{
+  "title": "Filtering the sale_items table by numbers · part 22",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id >= 71",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 71.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id >= 71;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id >= 71.",
+        "Write: SELECT id FROM sale_items WHERE id >= 71;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id >= 71;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 71",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id >= 71;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id >= 71.",
+        "Write: SELECT count(*) FROM sale_items WHERE id >= 71;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id >= 71;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 71",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 71.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id < 71;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id < 71.",
+        "Write: SELECT id FROM sale_items WHERE id < 71;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id < 71;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 71",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id < 71;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id < 71.",
+        "Write: SELECT count(*) FROM sale_items WHERE id < 71;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id < 71;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 71",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 71.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id <= 71;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id <= 71.",
+        "Write: SELECT id FROM sale_items WHERE id <= 71;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id <= 71;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 71",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id <= 71;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id <= 71.",
+        "Write: SELECT count(*) FROM sale_items WHERE id <= 71;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id <= 71;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 71",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 71.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id = 71;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id = 71.",
+        "Write: SELECT id FROM sale_items WHERE id = 71;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id = 71;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 71",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id = 71;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id = 71.",
+        "Write: SELECT count(*) FROM sale_items WHERE id = 71;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id = 71;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 71",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 71.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id != 71;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id != 71.",
+        "Write: SELECT id FROM sale_items WHERE id != 71;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id != 71;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 71",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id != 71;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id != 71.",
+        "Write: SELECT count(*) FROM sale_items WHERE id != 71;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id != 71;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 72",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 72.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id > 72;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id > 72.",
+        "Write: SELECT id FROM sale_items WHERE id > 72;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id > 72;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 72",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id > 72;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id > 72.",
+        "Write: SELECT count(*) FROM sale_items WHERE id > 72;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id > 72;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 72",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 72.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id >= 72;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id >= 72.",
+        "Write: SELECT id FROM sale_items WHERE id >= 72;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id >= 72;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 72",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id >= 72;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id >= 72.",
+        "Write: SELECT count(*) FROM sale_items WHERE id >= 72;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id >= 72;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 72",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 72.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id < 72;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id < 72.",
+        "Write: SELECT id FROM sale_items WHERE id < 72;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id < 72;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 72",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id < 72;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id < 72.",
+        "Write: SELECT count(*) FROM sale_items WHERE id < 72;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id < 72;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 72",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 72.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id <= 72;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id <= 72.",
+        "Write: SELECT id FROM sale_items WHERE id <= 72;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id <= 72;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 72",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id <= 72;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id <= 72.",
+        "Write: SELECT count(*) FROM sale_items WHERE id <= 72;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id <= 72;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 72",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 72.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id = 72;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id = 72.",
+        "Write: SELECT id FROM sale_items WHERE id = 72;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id = 72;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 72",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id = 72;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id = 72.",
+        "Write: SELECT count(*) FROM sale_items WHERE id = 72;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id = 72;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 72",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 72.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id != 72;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id != 72.",
+        "Write: SELECT id FROM sale_items WHERE id != 72;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id != 72;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 72",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id != 72;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id != 72.",
+        "Write: SELECT count(*) FROM sale_items WHERE id != 72;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id != 72;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 73.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id > 73;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id > 73.",
+        "Write: SELECT id FROM sale_items WHERE id > 73;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id > 73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id > 73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id > 73.",
+        "Write: SELECT count(*) FROM sale_items WHERE id > 73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id > 73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 73.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id >= 73;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id >= 73.",
+        "Write: SELECT id FROM sale_items WHERE id >= 73;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id >= 73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id >= 73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id >= 73.",
+        "Write: SELECT count(*) FROM sale_items WHERE id >= 73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id >= 73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 73.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id < 73;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id < 73.",
+        "Write: SELECT id FROM sale_items WHERE id < 73;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id < 73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id < 73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id < 73.",
+        "Write: SELECT count(*) FROM sale_items WHERE id < 73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id < 73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id <= 73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at most 73.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id <= 73;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id <= 73.",
+        "Write: SELECT id FROM sale_items WHERE id <= 73;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id <= 73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id <= 73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id <= 73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id <= 73.",
+        "Write: SELECT count(*) FROM sale_items WHERE id <= 73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id <= 73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id = 73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is exactly 73.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id = 73;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id = 73.",
+        "Write: SELECT id FROM sale_items WHERE id = 73;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id = 73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id = 73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id = 73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id = 73.",
+        "Write: SELECT count(*) FROM sale_items WHERE id = 73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id = 73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id != 73",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is not equal to 73.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id != 73;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id != 73.",
+        "Write: SELECT id FROM sale_items WHERE id != 73;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id != 73;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id != 73",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id != 73;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id != 73.",
+        "Write: SELECT count(*) FROM sale_items WHERE id != 73;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id != 73;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id > 74",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is bigger than 74.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id > 74;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id > 74.",
+        "Write: SELECT id FROM sale_items WHERE id > 74;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id > 74;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id > 74",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id > 74;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id > 74.",
+        "Write: SELECT count(*) FROM sale_items WHERE id > 74;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id > 74;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id >= 74",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is at least 74.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id >= 74;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id >= 74.",
+        "Write: SELECT id FROM sale_items WHERE id >= 74;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id >= 74;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id >= 74",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id >= 74;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id >= 74.",
+        "Write: SELECT count(*) FROM sale_items WHERE id >= 74;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id >= 74;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id < 74",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where id is smaller than 74.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE id < 74;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is id < 74.",
+        "Write: SELECT id FROM sale_items WHERE id < 74;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE id < 74;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows id < 74",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE id < 74;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE id < 74.",
+        "Write: SELECT count(*) FROM sale_items WHERE id < 74;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE id < 74;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L164",
+  "order": 164
+}

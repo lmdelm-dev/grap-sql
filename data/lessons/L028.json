@@ -1,0 +1,124 @@
+{
+  "title": "Counting and totals in categories",
+  "tags": [
+    "aggregate",
+    "count"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "How many rows in categories?",
+      "prompt": "COUNT(*) answers 'how many rows?' with one number.",
+      "task": "Try typing: SELECT count(*) FROM categories;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM categories.",
+        "Finish with a semicolon.",
+        "Write: SELECT count(*) FROM categories;"
+      ],
+      "expected_sql": "SELECT count(*) FROM categories;",
+      "memory_trick": "count(*) = 'how many rows?'"
+    },
+    {
+      "type": "type",
+      "title": "Count the id values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(id) FROM categories;",
+      "hints": [
+        "Start with SELECT count(id).",
+        "FROM categories.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(id) FROM categories;"
+      ],
+      "expected_sql": "SELECT count(id) FROM categories;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the name values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(name) FROM categories;",
+      "hints": [
+        "Start with SELECT count(name).",
+        "FROM categories.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(name) FROM categories;"
+      ],
+      "expected_sql": "SELECT count(name) FROM categories;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "Count the description values",
+      "prompt": "COUNT(column) counts rows where that column is not empty (it skips NULLs).",
+      "task": "Try typing: SELECT count(description) FROM categories;",
+      "hints": [
+        "Start with SELECT count(description).",
+        "FROM categories.",
+        "Empty values (NULL) are skipped.",
+        "Write: SELECT count(description) FROM categories;"
+      ],
+      "expected_sql": "SELECT count(description) FROM categories;",
+      "memory_trick": "COUNT(column) skips NULLs; COUNT(*) skips nothing."
+    },
+    {
+      "type": "type",
+      "title": "SUM of id",
+      "prompt": "SUM id: add up the values.",
+      "task": "Try typing: SELECT sum(id) FROM categories;",
+      "hints": [
+        "Start with SELECT sum(id).",
+        "FROM categories.",
+        "SUM works on numbers.",
+        "Write: SELECT sum(id) FROM categories;"
+      ],
+      "expected_sql": "SELECT sum(id) FROM categories;",
+      "memory_trick": "sum = add up the values."
+    },
+    {
+      "type": "type",
+      "title": "AVG of id",
+      "prompt": "AVG id: work out the average.",
+      "task": "Try typing: SELECT avg(id) FROM categories;",
+      "hints": [
+        "Start with SELECT avg(id).",
+        "FROM categories.",
+        "AVG works on numbers.",
+        "Write: SELECT avg(id) FROM categories;"
+      ],
+      "expected_sql": "SELECT avg(id) FROM categories;",
+      "memory_trick": "avg = work out the average."
+    },
+    {
+      "type": "type",
+      "title": "MIN of id",
+      "prompt": "MIN id: find the smallest value.",
+      "task": "Try typing: SELECT min(id) FROM categories;",
+      "hints": [
+        "Start with SELECT min(id).",
+        "FROM categories.",
+        "MIN works on numbers.",
+        "Write: SELECT min(id) FROM categories;"
+      ],
+      "expected_sql": "SELECT min(id) FROM categories;",
+      "memory_trick": "min = find the smallest value."
+    },
+    {
+      "type": "type",
+      "title": "MAX of id",
+      "prompt": "MAX id: find the biggest value.",
+      "task": "Try typing: SELECT max(id) FROM categories;",
+      "hints": [
+        "Start with SELECT max(id).",
+        "FROM categories.",
+        "MAX works on numbers.",
+        "Write: SELECT max(id) FROM categories;"
+      ],
+      "expected_sql": "SELECT max(id) FROM categories;",
+      "memory_trick": "max = find the biggest value."
+    }
+  ],
+  "id": "L028",
+  "order": 28
+}

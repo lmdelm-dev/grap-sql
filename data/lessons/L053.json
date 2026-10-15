@@ -1,0 +1,354 @@
+{
+  "title": "Ranges and NOT in customers · part 2",
+  "tags": [
+    "where",
+    "between"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep id from 21 to 22",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 21 AND 22;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 21 AND 22;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 21 AND 22;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 21..22",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 21 AND 22);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 21 AND 22 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 21 AND 22);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 21 AND 22);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 22 to 23",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 22 AND 23;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 22 AND 23;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 22 AND 23;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 22..23",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 22 AND 23);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 22 AND 23 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 22 AND 23);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 22 AND 23);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 23 to 24",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 23 AND 24;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 23 AND 24;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 23 AND 24;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 23..24",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 23 AND 24);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 23 AND 24 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 23 AND 24);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 23 AND 24);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 24 to 25",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 24 AND 25;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 24 AND 25;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 24 AND 25;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 24..25",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 24 AND 25);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 24 AND 25 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 24 AND 25);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 24 AND 25);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 25 to 26",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 25 AND 26;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 25 AND 26;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 25 AND 26;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 25..26",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 25 AND 26);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 25 AND 26 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 25 AND 26);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 25 AND 26);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 26 to 27",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 26 AND 27;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 26 AND 27;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 26 AND 27;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 26..27",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 26 AND 27);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 26 AND 27 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 26 AND 27);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 26 AND 27);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 27 to 28",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 27 AND 28;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 27 AND 28;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 27 AND 28;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 27..28",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 27 AND 28);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 27 AND 28 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 27 AND 28);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 27 AND 28);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 28 to 29",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 28 AND 29;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 28 AND 29;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 28 AND 29;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 28..29",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 28 AND 29);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 28 AND 29 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 28 AND 29);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 28 AND 29);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id from 29 to 30",
+      "prompt": "BETWEEN lo AND hi keeps a range (both ends included).\nIt is a tidy way to write two comparisons at once.",
+      "task": "Try typing: SELECT id FROM customers WHERE id BETWEEN 29 AND 30;",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Add WHERE id BETWEEN …",
+        "Write the two ends with AND between them.",
+        "Write: SELECT id FROM customers WHERE id BETWEEN 29 AND 30;"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE id BETWEEN 29 AND 30;",
+      "memory_trick": "BETWEEN a AND b = a <= x <= b.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id outside 29..30",
+      "prompt": "NOT flips a test: NOT (something) means 'the opposite'.",
+      "task": "Try typing: SELECT id FROM customers WHERE NOT (id BETWEEN 29 AND 30);",
+      "hints": [
+        "Start with SELECT id FROM customers.",
+        "Wrap the range in brackets after NOT.",
+        "NOT ( id BETWEEN 29 AND 30 ).",
+        "Write: SELECT id FROM customers WHERE NOT (id BETWEEN 29 AND 30);"
+      ],
+      "expected_sql": "SELECT id FROM customers WHERE NOT (id BETWEEN 29 AND 30);",
+      "memory_trick": "NOT reverses whatever is inside the brackets.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L053",
+  "order": 53
+}

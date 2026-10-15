@@ -1,0 +1,221 @@
+{
+  "title": "Grouping the categories table",
+  "tags": [
+    "group by",
+    "having"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, count(*).",
+        "FROM categories.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT name, sum(id) FROM categories GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, sum(id).",
+        "FROM categories.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, sum(id) FROM categories GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, sum(id) FROM categories GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT name, avg(id) FROM categories GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, avg(id).",
+        "FROM categories.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, avg(id) FROM categories GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, avg(id) FROM categories GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Argan Products)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Argan Products';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Argan Products'.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Argan Products';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Argan Products';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Ceramics & Pottery)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Ceramics & Pottery';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Ceramics & Pottery'.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Ceramics & Pottery';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Ceramics & Pottery';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Dates & Dried Fruits)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Dates & Dried Fruits';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Dates & Dried Fruits'.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Dates & Dried Fruits';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Dates & Dried Fruits';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Leather Goods)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Leather Goods';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Leather Goods'.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Leather Goods';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Leather Goods';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Metal Lanterns)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Metal Lanterns';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Metal Lanterns'.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Metal Lanterns';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Metal Lanterns';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Olive Oil)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Olive Oil';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Olive Oil'.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Olive Oil';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Olive Oil';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Spices & Herbs)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Spices & Herbs';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Spices & Herbs'.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Spices & Herbs';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Spices & Herbs';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Textiles)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Textiles';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Textiles'.",
+        "Write: SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Textiles';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM categories GROUP BY name HAVING name = 'Textiles';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    }
+  ],
+  "id": "L029",
+  "order": 29
+}

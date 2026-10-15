@@ -1,0 +1,354 @@
+{
+  "title": "Grouping the suppliers table",
+  "tags": [
+    "group by",
+    "having"
+  ],
+  "difficulty": 3,
+  "steps": [
+    {
+      "type": "type",
+      "title": "COUNT per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, count(*).",
+        "FROM suppliers.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT name, sum(id) FROM suppliers GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, sum(id).",
+        "FROM suppliers.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, sum(id) FROM suppliers GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, sum(id) FROM suppliers GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per name",
+      "prompt": "GROUP BY bundles rows into piles that share the same name.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT name, avg(id) FROM suppliers GROUP BY name;",
+      "hints": [
+        "Start with SELECT name, avg(id).",
+        "FROM suppliers.",
+        "Finish with GROUP BY name.",
+        "Write: SELECT name, avg(id) FROM suppliers GROUP BY name;"
+      ],
+      "expected_sql": "SELECT name, avg(id) FROM suppliers GROUP BY name;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Atlas Supply 1)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 1';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Atlas Supply 1'.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 1';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 1';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Atlas Supply 2)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 2';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Atlas Supply 2'.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 2';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 2';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Atlas Supply 3)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 3';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Atlas Supply 3'.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 3';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 3';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Atlas Supply 4)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 4';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Atlas Supply 4'.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 4';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 4';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Atlas Supply 5)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 5';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Atlas Supply 5'.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 5';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 5';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Atlas Supply 6)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 6';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Atlas Supply 6'.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 6';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 6';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Atlas Supply 7)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 7';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Atlas Supply 7'.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 7';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 7';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the name pile (Atlas Supply 8)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 8';",
+      "hints": [
+        "Build the piles with GROUP BY name.",
+        "Add HAVING to keep one pile.",
+        "The test is name = 'Atlas Supply 8'.",
+        "Write: SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 8';"
+      ],
+      "expected_sql": "SELECT name, count(*) FROM suppliers GROUP BY name HAVING name = 'Atlas Supply 8';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "COUNT per city",
+      "prompt": "GROUP BY bundles rows into piles that share the same city.\nThen count(*) works on each pile.",
+      "task": "Try typing: SELECT city, count(*) FROM suppliers GROUP BY city;",
+      "hints": [
+        "Start with SELECT city, count(*).",
+        "FROM suppliers.",
+        "Finish with GROUP BY city.",
+        "Write: SELECT city, count(*) FROM suppliers GROUP BY city;"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM suppliers GROUP BY city;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "SUM per city",
+      "prompt": "GROUP BY bundles rows into piles that share the same city.\nThen sum(id) works on each pile.",
+      "task": "Try typing: SELECT city, sum(id) FROM suppliers GROUP BY city;",
+      "hints": [
+        "Start with SELECT city, sum(id).",
+        "FROM suppliers.",
+        "Finish with GROUP BY city.",
+        "Write: SELECT city, sum(id) FROM suppliers GROUP BY city;"
+      ],
+      "expected_sql": "SELECT city, sum(id) FROM suppliers GROUP BY city;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "AVG per city",
+      "prompt": "GROUP BY bundles rows into piles that share the same city.\nThen avg(id) works on each pile.",
+      "task": "Try typing: SELECT city, avg(id) FROM suppliers GROUP BY city;",
+      "hints": [
+        "Start with SELECT city, avg(id).",
+        "FROM suppliers.",
+        "Finish with GROUP BY city.",
+        "Write: SELECT city, avg(id) FROM suppliers GROUP BY city;"
+      ],
+      "expected_sql": "SELECT city, avg(id) FROM suppliers GROUP BY city;",
+      "memory_trick": "GROUP BY = one output row per pile.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Kenitra)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Kenitra';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Kenitra'.",
+        "Write: SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Kenitra';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Kenitra';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Marrakech)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Marrakech';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Marrakech'.",
+        "Write: SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Marrakech';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Marrakech';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Tangier)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Tangier';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Tangier'.",
+        "Write: SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Tangier';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Tangier';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Just the city pile (Tetouan)",
+      "prompt": "HAVING filters the piles after they are built - WHERE filters rows before.",
+      "task": "Try typing: SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Tetouan';",
+      "hints": [
+        "Build the piles with GROUP BY city.",
+        "Add HAVING to keep one pile.",
+        "The test is city = 'Tetouan'.",
+        "Write: SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Tetouan';"
+      ],
+      "expected_sql": "SELECT city, count(*) FROM suppliers GROUP BY city HAVING city = 'Tetouan';",
+      "memory_trick": "WHERE filters rows; HAVING filters piles.",
+      "check": {
+        "require": [
+          "group by"
+        ]
+      }
+    }
+  ],
+  "id": "L321",
+  "order": 321
+}

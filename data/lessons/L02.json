@@ -1,0 +1,96 @@
+{
+  "id": "L02",
+  "order": 2,
+  "difficulty": 1,
+  "tags": [
+    "select",
+    "columns"
+  ],
+  "title": "Your very first SELECT",
+  "steps": [
+    {
+      "type": "type",
+      "title": "Ask for one column",
+      "prompt": "SELECT means 'ask for'. To see all the product names, you write SELECT name.\nFROM products tells SQL which table to look in. In plain words: 'show me the names from the products table.'\nType it with the ghost help (the grey text turns coral, then green as you get it right):",
+      "task": "Try typing: SELECT name FROM products;",
+      "hints": [
+        "Start with the word SELECT.",
+        "The column we want is called name.",
+        "The table is called products and is named after FROM.",
+        "Write exactly: SELECT name FROM products;"
+      ],
+      "expected_sql": "SELECT name FROM products;",
+      "memory_trick": "SELECT … FROM … = ask the table for…"
+    },
+    {
+      "type": "type",
+      "title": "Two columns at once",
+      "prompt": "One column was easy - let's ask for two. You list them after SELECT, separated by a comma.\nWriting SELECT name, price means: 'show me the names AND the prices.'",
+      "task": "Try typing: SELECT name, price FROM products;",
+      "hints": [
+        "Keep SELECT name and FROM products.",
+        "Add a comma, then the second column.",
+        "The second column is called price.",
+        "Write: SELECT name, price FROM products;"
+      ],
+      "expected_sql": "SELECT name, price FROM products;",
+      "memory_trick": "A comma between columns = 'and also show me this'."
+    },
+    {
+      "type": "type",
+      "title": "Only the price",
+      "prompt": "Say you only care about prices today. You don't have to take the whole table.\nYou ask for exactly the column you want - that's the whole trick of SELECT.",
+      "task": "Try typing: SELECT price FROM products;",
+      "hints": [
+        "The column names live between SELECT and FROM.",
+        "We want prices only.",
+        "It's a single word that starts with 'p'.",
+        "Write: SELECT price FROM products;"
+      ],
+      "expected_sql": "SELECT price FROM products;",
+      "memory_trick": "You get back only what you ask for."
+    },
+    {
+      "type": "predict",
+      "title": "Predict the output",
+      "prompt": "Look at this query, and predict what you'll see: SELECT name FROM products;\nIt's like asking the librarian for one list. Visualise it before you answer.",
+      "task": "What will you see in the result?",
+      "check": {
+        "answer": [
+          "all the product names",
+          "the names of all products",
+          "a list of names",
+          "product names",
+          "names of all products"
+        ]
+      },
+      "hints": [
+        "We asked for one column.",
+        "Which one? The one that holds names.",
+        "Look at the word after SELECT.",
+        "Answer: all the product names."
+      ],
+      "memory_trick": "The output is exactly the column you named."
+    },
+    {
+      "type": "answer",
+      "title": "There is a pattern",
+      "prompt": "Every query you write today has the same skeleton:\nSELECT the things you want, FROM the table they live in.\nGet used to that skeleton - every lesson from here builds on it.",
+      "task": "Which word comes after FROM in the query SELECT name FROM products; ?",
+      "check": {
+        "answer": [
+          "products",
+          "products table",
+          "the products table"
+        ]
+      },
+      "hints": [
+        "FROM points at the place to look.",
+        "It's the name of the table.",
+        "It sells spices, rugs and lanterns.",
+        "Answer: products."
+      ],
+      "memory_trick": "FROM = 'look inside this table'."
+    }
+  ]
+}

@@ -1,0 +1,798 @@
+{
+  "title": "Filtering the sales table by numbers · part 18",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep customer_id >= 9",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is at least 9.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id >= 9;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id >= 9.",
+        "Write: SELECT id FROM sales WHERE customer_id >= 9;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id >= 9;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id >= 9",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id >= 9;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id >= 9.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id >= 9;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id >= 9;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id >= 9",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id >= 9 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id >= 9.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id >= 9 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id >= 9 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id < 9",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is smaller than 9.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id < 9;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id < 9.",
+        "Write: SELECT id FROM sales WHERE customer_id < 9;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id < 9;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id < 9",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id < 9;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id < 9.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id < 9;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id < 9;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id < 9",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id < 9 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id < 9.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id < 9 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id < 9 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id <= 9",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is at most 9.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id <= 9;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id <= 9.",
+        "Write: SELECT id FROM sales WHERE customer_id <= 9;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id <= 9;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id <= 9",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id <= 9;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id <= 9.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id <= 9;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id <= 9;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id <= 9",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id <= 9 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id <= 9.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id <= 9 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id <= 9 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id = 9",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is exactly 9.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id = 9;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id = 9.",
+        "Write: SELECT id FROM sales WHERE customer_id = 9;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id = 9;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id = 9",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id = 9;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id = 9.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id = 9;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id = 9;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id = 9",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id = 9 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id = 9.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id = 9 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id = 9 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id != 9",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is not equal to 9.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id != 9;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id != 9.",
+        "Write: SELECT id FROM sales WHERE customer_id != 9;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id != 9;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id != 9",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id != 9;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id != 9.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id != 9;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id != 9;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id != 9",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id != 9 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id != 9.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id != 9 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id != 9 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id >= 10",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is at least 10.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id >= 10;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id >= 10.",
+        "Write: SELECT id FROM sales WHERE customer_id >= 10;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id >= 10;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id >= 10",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id >= 10;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id >= 10.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id >= 10;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id >= 10;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id >= 10",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id >= 10 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id >= 10.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id >= 10 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id >= 10 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id < 10",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is smaller than 10.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id < 10;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id < 10.",
+        "Write: SELECT id FROM sales WHERE customer_id < 10;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id < 10;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id < 10",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id < 10;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id < 10.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id < 10;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id < 10;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id < 10",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id < 10 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id < 10.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id < 10 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id < 10 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id <= 10",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is at most 10.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id <= 10;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id <= 10.",
+        "Write: SELECT id FROM sales WHERE customer_id <= 10;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id <= 10;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id <= 10",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id <= 10;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id <= 10.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id <= 10;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id <= 10;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id <= 10",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id <= 10 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id <= 10.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id <= 10 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id <= 10 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id = 10",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is exactly 10.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id = 10;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id = 10.",
+        "Write: SELECT id FROM sales WHERE customer_id = 10;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id = 10;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id = 10",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id = 10;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id = 10.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id = 10;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id = 10;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id = 10",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id = 10 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id = 10.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id = 10 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id = 10 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep customer_id != 10",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where customer_id is not equal to 10.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id != 10;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is customer_id != 10.",
+        "Write: SELECT id FROM sales WHERE customer_id != 10;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id != 10;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows customer_id != 10",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE customer_id != 10;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE customer_id != 10.",
+        "Write: SELECT count(*) FROM sales WHERE customer_id != 10;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE customer_id != 10;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: customer_id != 10",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE customer_id != 10 ORDER BY customer_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE customer_id != 10.",
+        "Add ORDER BY customer_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE customer_id != 10 ORDER BY customer_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE customer_id != 10 ORDER BY customer_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep employee_id > 1",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where employee_id is bigger than 1.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id > 1;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is employee_id > 1.",
+        "Write: SELECT id FROM sales WHERE employee_id > 1;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id > 1;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows employee_id > 1",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE employee_id > 1;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE employee_id > 1.",
+        "Write: SELECT count(*) FROM sales WHERE employee_id > 1;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE employee_id > 1;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: employee_id > 1",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id > 1 ORDER BY employee_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE employee_id > 1.",
+        "Add ORDER BY employee_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE employee_id > 1 ORDER BY employee_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id > 1 ORDER BY employee_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep employee_id >= 1",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where employee_id is at least 1.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id >= 1;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is employee_id >= 1.",
+        "Write: SELECT id FROM sales WHERE employee_id >= 1;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id >= 1;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows employee_id >= 1",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE employee_id >= 1;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE employee_id >= 1.",
+        "Write: SELECT count(*) FROM sales WHERE employee_id >= 1;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE employee_id >= 1;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: employee_id >= 1",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id >= 1 ORDER BY employee_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE employee_id >= 1.",
+        "Add ORDER BY employee_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE employee_id >= 1 ORDER BY employee_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id >= 1 ORDER BY employee_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep employee_id <= 1",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where employee_id is at most 1.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id <= 1;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is employee_id <= 1.",
+        "Write: SELECT id FROM sales WHERE employee_id <= 1;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id <= 1;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows employee_id <= 1",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sales WHERE employee_id <= 1;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sales.",
+        "Add WHERE employee_id <= 1.",
+        "Write: SELECT count(*) FROM sales WHERE employee_id <= 1;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sales WHERE employee_id <= 1;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: employee_id <= 1",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id <= 1 ORDER BY employee_id LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE employee_id <= 1.",
+        "Add ORDER BY employee_id LIMIT 3.",
+        "Write: SELECT id FROM sales WHERE employee_id <= 1 ORDER BY employee_id LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id <= 1 ORDER BY employee_id LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep employee_id = 1",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where employee_id is exactly 1.",
+      "task": "Try typing: SELECT id FROM sales WHERE employee_id = 1;",
+      "hints": [
+        "Start with SELECT id FROM sales.",
+        "Add WHERE after the table name.",
+        "The test is employee_id = 1.",
+        "Write: SELECT id FROM sales WHERE employee_id = 1;"
+      ],
+      "expected_sql": "SELECT id FROM sales WHERE employee_id = 1;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L273",
+  "order": 273
+}

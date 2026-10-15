@@ -1,0 +1,798 @@
+{
+  "title": "Filtering the sale_items table by numbers · part 72",
+  "tags": [
+    "where",
+    "comparison"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep quantity != 1",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is not equal to 1.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity != 1;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity != 1.",
+        "Write: SELECT id FROM sale_items WHERE quantity != 1;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity != 1;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity != 1",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity != 1;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity != 1.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity != 1;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity != 1;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity != 1",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity != 1 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity != 1.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity != 1 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity != 1 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity > 2",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is bigger than 2.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity > 2;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity > 2.",
+        "Write: SELECT id FROM sale_items WHERE quantity > 2;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity > 2;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity > 2",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity > 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity > 2.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity > 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity > 2;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity > 2",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity > 2 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity > 2.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity > 2 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity > 2 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity >= 2",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is at least 2.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity >= 2;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity >= 2.",
+        "Write: SELECT id FROM sale_items WHERE quantity >= 2;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity >= 2;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity >= 2",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity >= 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity >= 2.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity >= 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity >= 2;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity >= 2",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity >= 2 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity >= 2.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity >= 2 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity >= 2 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity < 2",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is smaller than 2.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity < 2;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity < 2.",
+        "Write: SELECT id FROM sale_items WHERE quantity < 2;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity < 2;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity < 2",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity < 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity < 2.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity < 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity < 2;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity < 2",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity < 2 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity < 2.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity < 2 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity < 2 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity <= 2",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is at most 2.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity <= 2;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity <= 2.",
+        "Write: SELECT id FROM sale_items WHERE quantity <= 2;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity <= 2;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity <= 2",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity <= 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity <= 2.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity <= 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity <= 2;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity <= 2",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity <= 2 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity <= 2.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity <= 2 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity <= 2 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity = 2",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is exactly 2.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity = 2;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity = 2.",
+        "Write: SELECT id FROM sale_items WHERE quantity = 2;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity = 2;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity = 2",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity = 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity = 2.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity = 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity = 2;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity = 2",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity = 2 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity = 2.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity = 2 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity = 2 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity != 2",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is not equal to 2.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity != 2;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity != 2.",
+        "Write: SELECT id FROM sale_items WHERE quantity != 2;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity != 2;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity != 2",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity != 2;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity != 2.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity != 2;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity != 2;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity != 2",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity != 2 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity != 2.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity != 2 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity != 2 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity >= 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is at least 3.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity >= 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity >= 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity >= 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity >= 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity >= 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity >= 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity >= 3.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity >= 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity >= 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity >= 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity >= 3 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity >= 3.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity >= 3 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity >= 3 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity < 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is smaller than 3.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity < 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity < 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity < 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity < 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity < 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity < 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity < 3.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity < 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity < 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity < 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity < 3 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity < 3.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity < 3 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity < 3 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity <= 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is at most 3.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity <= 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity <= 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity <= 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity <= 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity <= 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity <= 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity <= 3.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity <= 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity <= 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity <= 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity <= 3 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity <= 3.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity <= 3 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity <= 3 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity = 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is exactly 3.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity = 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity = 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity = 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity = 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity = 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity = 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity = 3.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity = 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity = 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity = 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity = 3 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity = 3.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity = 3 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity = 3 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep quantity != 3",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where quantity is not equal to 3.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity != 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is quantity != 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity != 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity != 3;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows quantity != 3",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE quantity != 3;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE quantity != 3.",
+        "Write: SELECT count(*) FROM sale_items WHERE quantity != 3;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE quantity != 3;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: quantity != 3",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE quantity != 3 ORDER BY quantity LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE quantity != 3.",
+        "Add ORDER BY quantity LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE quantity != 3 ORDER BY quantity LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE quantity != 3 ORDER BY quantity LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price > 21.39",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is bigger than 21.39.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price > 21.39;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price > 21.39.",
+        "Write: SELECT id FROM sale_items WHERE unit_price > 21.39;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price > 21.39;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Count rows unit_price > 21.39",
+      "prompt": "COUNT(*) counts how many rows survive the filter.",
+      "task": "Try typing: SELECT count(*) FROM sale_items WHERE unit_price > 21.39;",
+      "hints": [
+        "Start with SELECT count(*).",
+        "FROM sale_items.",
+        "Add WHERE unit_price > 21.39.",
+        "Write: SELECT count(*) FROM sale_items WHERE unit_price > 21.39;"
+      ],
+      "expected_sql": "SELECT count(*) FROM sale_items WHERE unit_price > 21.39;",
+      "memory_trick": "count(*) + WHERE = 'how many pass?'",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Filter then sort: unit_price > 21.39",
+      "prompt": "Filter first, then ORDER BY tidies what is left.\nLIMIT 3 keeps the top of that sorted list.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price > 21.39 ORDER BY unit_price LIMIT 3;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE unit_price > 21.39.",
+        "Add ORDER BY unit_price LIMIT 3.",
+        "Write: SELECT id FROM sale_items WHERE unit_price > 21.39 ORDER BY unit_price LIMIT 3;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price > 21.39 ORDER BY unit_price LIMIT 3;",
+      "memory_trick": "WHERE trims, ORDER BY sorts, LIMIT cuts.",
+      "check": {
+        "require": [
+          "where",
+          "order by",
+          "limit"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep unit_price >= 21.39",
+      "prompt": "Numbers compare with small symbols:\n  > bigger   < smaller   = exactly   != not equal\nKeep the rows where unit_price is at least 21.39.",
+      "task": "Try typing: SELECT id FROM sale_items WHERE unit_price >= 21.39;",
+      "hints": [
+        "Start with SELECT id FROM sale_items.",
+        "Add WHERE after the table name.",
+        "The test is unit_price >= 21.39.",
+        "Write: SELECT id FROM sale_items WHERE unit_price >= 21.39;"
+      ],
+      "expected_sql": "SELECT id FROM sale_items WHERE unit_price >= 21.39;",
+      "memory_trick": "WHERE keeps only the rows that pass the test.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L214",
+  "order": 214
+}

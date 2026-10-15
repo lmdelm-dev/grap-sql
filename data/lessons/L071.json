@@ -1,0 +1,183 @@
+{
+  "title": "Pick from a list in employees",
+  "tags": [
+    "where",
+    "in"
+  ],
+  "difficulty": 2,
+  "steps": [
+    {
+      "type": "type",
+      "title": "Keep a short list of id",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM employees WHERE id IN (1, 2, 3);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE id IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM employees WHERE id IN (1, 2, 3);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id IN (1, 2, 3);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep id NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM employees WHERE id NOT IN (1, 2, 3, 4);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE id NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM employees WHERE id NOT IN (1, 2, 3, 4);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE id NOT IN (1, 2, 3, 4);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of name",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM employees WHERE name IN ('Imane Naciri', 'Karim Tazi', 'Mehdi Alaoui');",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE name IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM employees WHERE name IN ('Imane Naciri', 'Karim Tazi', 'Mehdi Alaoui');"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE name IN ('Imane Naciri', 'Karim Tazi', 'Mehdi Alaoui');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep name NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM employees WHERE name NOT IN ('Imane Naciri', 'Karim Tazi', 'Mehdi Alaoui', 'Nadia Bennani');",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE name NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM employees WHERE name NOT IN ('Imane Naciri', 'Karim Tazi', 'Mehdi Alaoui', 'Nadia Bennani');"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE name NOT IN ('Imane Naciri', 'Karim Tazi', 'Mehdi Alaoui', 'Nadia Bennani');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of role",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM employees WHERE role IN ('Cashier', 'Manager', 'Salesperson');",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE role IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM employees WHERE role IN ('Cashier', 'Manager', 'Salesperson');"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE role IN ('Cashier', 'Manager', 'Salesperson');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of hire_date",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM employees WHERE hire_date IN ('2019-03-01', '2020-11-20', '2021-06-15');",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE hire_date IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM employees WHERE hire_date IN ('2019-03-01', '2020-11-20', '2021-06-15');"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE hire_date IN ('2019-03-01', '2020-11-20', '2021-06-15');",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep hire_date NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM employees WHERE hire_date NOT IN ('2019-03-01', '2020-11-20', '2021-06-15', '2022-09-01');",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE hire_date NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM employees WHERE hire_date NOT IN ('2019-03-01', '2020-11-20', '2021-06-15', '2022-09-01');"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE hire_date NOT IN ('2019-03-01', '2020-11-20', '2021-06-15', '2022-09-01');",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep a short list of salary",
+      "prompt": "IN ( … ) keeps a row when the value is in your list.\nIt is a shorthand for several OR tests.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary IN (5200.0, 5800.0, 6500.0);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary IN (…).",
+        "Put the values inside the brackets, commas between.",
+        "Write: SELECT id FROM employees WHERE salary IN (5200.0, 5800.0, 6500.0);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary IN (5200.0, 5800.0, 6500.0);",
+      "memory_trick": "IN (a, b, c) = 'any of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    },
+    {
+      "type": "type",
+      "title": "Keep salary NOT IN a list",
+      "prompt": "NOT IN ( … ) keeps the rows whose value is not in the list.",
+      "task": "Try typing: SELECT id FROM employees WHERE salary NOT IN (5200.0, 5800.0, 6500.0, 6800.0);",
+      "hints": [
+        "Start with SELECT id FROM employees.",
+        "Add WHERE salary NOT IN (…).",
+        "List the values in brackets.",
+        "Write: SELECT id FROM employees WHERE salary NOT IN (5200.0, 5800.0, 6500.0, 6800.0);"
+      ],
+      "expected_sql": "SELECT id FROM employees WHERE salary NOT IN (5200.0, 5800.0, 6500.0, 6800.0);",
+      "memory_trick": "NOT IN = 'none of these'.",
+      "check": {
+        "require": [
+          "where"
+        ]
+      }
+    }
+  ],
+  "id": "L071",
+  "order": 71
+}

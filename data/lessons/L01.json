@@ -1,0 +1,93 @@
+{
+  "id": "L01",
+  "order": 1,
+  "difficulty": 1,
+  "tags": [
+    "intro",
+    "database"
+  ],
+  "title": "What is a database?",
+  "steps": [
+    {
+      "type": "answer",
+      "title": "A place full of tables",
+      "prompt": "Before we write anything, let's agree on the big idea.\nA DATABASE is a place where information lives, kept in an orderly way so a computer can find it fast.\nReal-life match: imagine a whole room of neatly labelled filing cabinets - each cabinet is a TABLE.",
+      "task": "In SQL, one of these shapes is a table. Which one?",
+      "check": {
+        "answer": [
+          "a grid of rows and columns",
+          "a sheet of rows and columns",
+          "rows and columns",
+          "an excel sheet",
+          "a grid",
+          "a table of rows and columns"
+        ]
+      },
+      "hints": [
+        "Picture the filing cabinet in the example.",
+        "A table has a header across the top and items going down.",
+        "Excel sheets and spreadsheets are the closest everyday thing.",
+        "Answer: a grid of rows and columns."
+      ],
+      "memory_trick": "A table = one tidy grid."
+    },
+    {
+      "type": "build",
+      "title": "Meet the shop",
+      "prompt": "Great! Our practice data is a little MOROCCAN SHOP: spices, rugs, lanterns, argan oil.\nEverything in it - products, customers, sales - lives in its own table.\nLet's open the door. Run this (the 'Type it for me' button puts it in for you):",
+      "task": "Run: SELECT * FROM products;",
+      "check": {
+        "demo": true
+      },
+      "hints": [
+        "Press the 'Type it for me' button next to the typing box.",
+        "Then press Run - or hold Ctrl and press Enter.",
+        "The star * in SQL means 'every column'.",
+        "The answer is just SELECT * FROM products;"
+      ],
+      "expected_sql": "SELECT * FROM products;",
+      "memory_trick": "SELECT = ask. The * means 'everything'."
+    },
+    {
+      "type": "answer",
+      "title": "Row vs column",
+      "prompt": "A database table is laid out in a grid.\nGoing across, one line of the table is called a ROW - one product, with all its details.\nGoing down, one heading like 'price' is called a COLUMN - one kind of fact for every product.",
+      "task": "Each line across the table (one product) is called a…?",
+      "check": {
+        "answer": [
+          "row",
+          "a row",
+          "record"
+        ]
+      },
+      "hints": [
+        "One item going across.",
+        "One whole product with all its facts.",
+        "Lying down is a row. Standing up is a column.",
+        "Answer: a row."
+      ],
+      "memory_trick": "Row = lying down, Column = standing up."
+    },
+    {
+      "type": "answer",
+      "title": "Why learn SQL?",
+      "prompt": "Talking to the database is done with SQL (say it: 'ess-cue-ell').\nSQL is just short English words the database understands: SELECT, FROM, WHERE.\nA QUERY is one question you ask the database. Like asking a librarian for a book.",
+      "task": "In SQL, what do we call one question you ask the database?",
+      "check": {
+        "answer": [
+          "query",
+          "a query",
+          "an sql query",
+          "a question"
+        ]
+      },
+      "hints": [
+        "You just asked one when you ran the shop.",
+        "It starts with SELECT.",
+        "The librarian hears it as one sentence.",
+        "Answer: a query."
+      ],
+      "memory_trick": "Query = one question to the database."
+    }
+  ]
+}
