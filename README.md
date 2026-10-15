@@ -18,6 +18,12 @@ plain words.
 
 ## Getting started (for non-coders)
 
+**Easiest — no install:** grab the standalone build from the
+[Releases page](https://github.com/lmdelm-dev/grap-sql/releases/latest), unzip
+it, and double-click `GRAP-SQL.exe`.
+
+**From source:**
+
 1. Install **Python** from <https://www.python.org/downloads/> — during
    installation, tick **“Add python.exe to PATH”**.
 2. Double-click **`run.bat`**. The first time, it installs the small libraries
