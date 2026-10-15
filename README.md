@@ -1,5 +1,10 @@
 # GRAP-SQL
 
+[![tests](https://github.com/lmdelm-dev/grap-sql/actions/workflows/tests.yml/badge.svg)](https://github.com/lmdelm-dev/grap-sql/actions/workflows/tests.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![GUI: PySide6](https://img.shields.io/badge/GUI-PySide6-green.svg)](https://pypi.org/project/PySide6/)
+
 A calm, three-pane terminal that teaches you SQL from zero — all offline, all real.
 
 **Author: Jamal Tiliouan.**
